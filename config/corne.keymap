@@ -54,11 +54,10 @@
 &sk {
     release-after-ms = <2000>;
     quick-release;
-    // ignore-modifiers;
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS>;
+    continue-list = <UNDERSCORE BACKSPACE DELETE MINUS DOT>;
 };
 
 / {
@@ -137,38 +136,38 @@
 
     /// one-handed one-shots, mirrored on both sides
 
-    COMBO(  l2_q,       L2 0,   &kp LG(LC(Q))                        )
+    COMBO(  l1_q,       L1 0,   &kp LG(LC(Q))                        )
 
-    COMBO(  l2_w,       L2 1,   &sl NUMBERS                          )
-    COMBO(  l2_e,       L2 2,   &sl CODING                           )
-    COMBO(  l2_r,       L2 3,   &sl CONTROLS                         )
-    COMBO(  l2_t,       L2 4,   &caps_word                           )
-    COMBO(  l2_a,       L2 10,  &sk LCTRL                            )
-    COMBO(  l2_s,       L2 11,  &sk LALT                             )
-    COMBO(  l2_d,       L2 12,  &sk LGUI                             )
-    COMBO(  l2_f,       L2 13,  &sk LSHIFT                           )
-    COMBO(  l2_g,       L2 14,  &sk LC(LA(LG(LSHIFT)))               ) // hyper
-    COMBO(  l2_z,       L2 20,  &kp CAPS                             )
-    COMBO(  l2_x,       L2 21,  &tog NUMBERS                         )
-    COMBO(  l2_c,       L2 22,  &tog CODING                          )
-    COMBO(  l2_v,       L2 23,  &tog CONTROLS                        )
-    COMBO(  l2_b,       L2 24,  &sk LC(LA(LSHIFT))                   ) // meh
+    COMBO(  l1_w,       L1 1,   &sl NUMBERS                          )
+    COMBO(  l1_e,       L1 2,   &sl CODING                           )
+    COMBO(  l1_r,       L1 3,   &sl CONTROLS                         )
+    COMBO(  l1_t,       L1 4,   &caps_word                           )
+    COMBO(  l1_a,       L1 10,  &sk LCTRL                            )
+    COMBO(  l1_s,       L1 11,  &sk LALT                             )
+    COMBO(  l1_d,       L1 12,  &sk LGUI                             )
+    COMBO(  l1_f,       L1 13,  &sk LSHIFT                           )
+    COMBO(  l1_g,       L1 14,  &sk LC(LA(LG(LSHIFT)))               ) // hyper
+    COMBO(  l1_z,       L1 20,  &kp CAPS                             )
+    COMBO(  l1_x,       L1 21,  &tog NUMBERS                         )
+    COMBO(  l1_c,       L1 22,  &tog CODING                          )
+    COMBO(  l1_v,       L1 23,  &tog CONTROLS                        )
+    COMBO(  l1_b,       L1 24,  &sk LC(LA(LSHIFT))                   ) // meh
 
-    COMBO(  r2_y,       R2 0,   &caps_word                           )
-    COMBO(  r2_u,       R2 1,   &sl CONTROLS                         )
-    COMBO(  r2_i,       R2 2,   &sl CODING                           )
-    COMBO(  r2_o,       R2 3,   &sl NUMBERS                          )
-    COMBO(  r2_p,       R2 4,   &to ALPHA                            ) // back to default layer
-    COMBO(  r2_h,       R2 10,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
-    COMBO(  r2_j,       R2 11,  &sk RSHIFT                           )
-    COMBO(  r2_k,       R2 12,  &sk RGUI                             )
-    COMBO(  r2_l,       R2 13,  &sk RALT                             )
-    COMBO(  r2_scln,    R2 14,  &sk RCTRL                            )
-    COMBO(  r2_n,       R2 20,  &sk LC(LA(LSHIFT))                   )
-    COMBO(  r2_m,       R2 21,  &tog CONTROLS                        )
-    COMBO(  r2_comm,    R2 22,  &tog CODING                          )
-    COMBO(  r2_dot,     R2 23,  &tog NUMBERS                         )
-    COMBO(  r2_slsh,    R2 24,  &kp CAPS                             )
+    COMBO(  r1_y,       R1 0,   &caps_word                           )
+    COMBO(  r1_u,       R1 1,   &sl CONTROLS                         )
+    COMBO(  r1_i,       R1 2,   &sl CODING                           )
+    COMBO(  r1_o,       R1 3,   &sl NUMBERS                          )
+    COMBO(  r1_p,       R1 4,   &to ALPHA                            ) // back to default layer
+    COMBO(  r1_h,       R1 10,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
+    COMBO(  r1_j,       R1 11,  &sk RSHIFT                           )
+    COMBO(  r1_k,       R1 12,  &sk RGUI                             )
+    COMBO(  r1_l,       R1 13,  &sk RALT                             )
+    COMBO(  r1_scln,    R1 14,  &sk RCTRL                            )
+    COMBO(  r1_n,       R1 20,  &sk LC(LA(LSHIFT))                   )
+    COMBO(  r1_m,       R1 21,  &tog CONTROLS                        )
+    COMBO(  r1_comm,    R1 22,  &tog CODING                          )
+    COMBO(  r1_dot,     R1 23,  &tog NUMBERS                         )
+    COMBO(  r1_slsh,    R1 24,  &kp CAPS                             )
 
     /// two-handed symmetric combos
 
@@ -191,8 +190,8 @@
     COMBO(  bn,         24 25,  &sk LC(LA(LSHIFT))                   ) // meh
 
     COMBO(  LT1RT1,     L1 R1,  &kp CAPS                             )
-    COMBO(  LT2RT2,     L2 R2,  &caps_word                           )
-    COMBO(  LT3RT3,     L3 R3,  &tog CONTROLS                        )
+    // COMBO(  LT2RT2,     L2 R2,  &caps_word                           )
+    // COMBO(  LT3RT3,     L3 R3,  &tog CONTROLS                        )
 
     /// other combos
     COMBO(  ddot,       12 28,  &macro_is_unread                     ) // types "is:unread" I use frequently in Gmail search
@@ -267,7 +266,7 @@
       */
       bindings = <
         &kp K_CMENU    &kp C_PREV     &kp C_PP       &kp C_NEXT     &kp C_VOL_UP        &kp F7         &kp F8         &kp F9         &kp F10        &kp F13
-        &bt BT_CLR     &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &kp C_VOL_DN        &kp F4         &kp F5         &kp F6         &kp F11        &kp F14
+        &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &kp C_VOL_DN        &kp F4         &kp F5         &kp F6         &kp F11        &kp F14
         &none          &none          &none          &none          &none               &kp F1         &kp F2         &kp F3         &kp F12        &kp F15
                                       &trans         &trans         &trans              &trans         &trans         &trans
       >;
