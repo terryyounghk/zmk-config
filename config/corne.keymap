@@ -141,12 +141,12 @@
     COMBO(  hu,         15 6,    &kp LS(EQUAL)                       )
     COMBO(  ji,         16 7,    &kp LS(I)                           )
     COMBO(  dv,         12 23,   &kp RETURN                          )
-    COMBO(  mk,         15 26,   &kp RETURN                          )
+    COMBO(  mk,         15 26,   &kp RETURN                          ) /////
     COMBO(  oscln,      8 19,    &kp DOUBLE_QUOTES                   )
 
     /// special
 
-    COMBO(  jl,         16 18,   &to ALPHA                           )
+    COMBO(  jl,         16 18,   &to ALPHA                           ) /////
     COMBO(  sf,         11 13,   &to ALPHA                           )
 
 
@@ -155,38 +155,38 @@
     COMBO(  l1_q,       0 32,   &kp LG(LC(Q))                        )
     COMBO(  l1_w,       1 32,   &sl NUMBERS                          )
     COMBO(  l1_e,       2 32,   &sl CODING                           )
-    COMBO(  l1_r,       3 32,   &sl CONTROLS                         )
+    COMBO(  l1_r,       3 32,   &sl CONTROLS                         ) /////
     COMBO(  l1_t,       4 32,   &caps_word                           )
 
-    COMBO(  l1_a,       10 32,  &sk LCTRL                            )
-    COMBO(  l1_s,       11 32,  &sk LALT                             )
-    COMBO(  l1_d,       12 32,  &sk LGUI                             )
-    COMBO(  l1_f,       13 32,  &sk LSHIFT                           )
-    COMBO(  l1_g,       14 32,  &sk LC(LA(LG(LSHIFT)))               ) // hyper
+    COMBO(  l1_a,       10 32,  &sk LCTRL                            ) /////
+    COMBO(  l1_s,       11 32,  &sk LALT                             ) /////
+    COMBO(  l1_d,       12 32,  &sk LGUI                             ) /////
+    COMBO(  l1_f,       13 32,  &sk LSHIFT                           ) /////
+    COMBO(  l1_g,       14 32,  &sk LC(LA(LG(LSHIFT)))               ) /////
 
-    COMBO(  l1_z,       20 32,  &kp CAPS                             )
-    COMBO(  l1_x,       21 32,  &tog NUMBERS                         )
-    COMBO(  l1_c,       22 32,  &tog CODING                          )
-    COMBO(  l1_v,       23 32,  &tog CONTROLS                        )
-    COMBO(  l1_b,       24 32,  &sk LC(LA(LSHIFT))                   ) // meh
+    COMBO(  l1_z,       20 32,  &kp CAPS                             ) /////
+    COMBO(  l1_x,       21 32,  &tog NUMBERS                         ) /////
+    COMBO(  l1_c,       22 32,  &tog CODING                          ) /////
+    COMBO(  l1_v,       23 32,  &tog CONTROLS                        ) /////
+    COMBO(  l1_b,       24 32,  &sk LC(LA(LSHIFT))                   ) /////
 
-    COMBO(  r1_y,       5 32,   &caps_word                           )
-    COMBO(  r1_u,       6 32,   &sl CONTROLS                         )
-    COMBO(  r1_i,       7 32,   &sl CODING                           )
-    COMBO(  r1_o,       8 32,   &sl NUMBERS                          )
-    COMBO(  r1_p,       9 32,   &to ALPHA                            ) // back to default layer
+    COMBO(  r1_y,       5 33,   &caps_word                           )
+    COMBO(  r1_u,       6 33,   &sl CONTROLS                         )
+    COMBO(  r1_i,       7 33,   &sl CODING                           )
+    COMBO(  r1_o,       8 33,   &sl NUMBERS                          )
+    COMBO(  r1_p,       9 33,   &to ALPHA                            ) // back to default layer
 
-    COMBO(  r1_h,       15 32,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
-    COMBO(  r1_j,       16 32,  &sk RSHIFT                           )
-    COMBO(  r1_k,       17 32,  &sk RGUI                             )
-    COMBO(  r1_l,       18 32,  &sk RALT                             )
-    COMBO(  r1_scln,    19 32,  &sk RCTRL                            )
+    COMBO(  r1_h,       15 33,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
+    COMBO(  r1_j,       16 33,  &sk RSHIFT                           )
+    COMBO(  r1_k,       17 33,  &sk RGUI                             )
+    COMBO(  r1_l,       18 33,  &sk RALT                             )
+    COMBO(  r1_scln,    19 33,  &sk RCTRL                            )
 
-    COMBO(  r1_n,       25 32,  &sk LC(LA(LSHIFT))                   )
-    COMBO(  r1_m,       26 32,  &tog CONTROLS                        )
-    COMBO(  r1_comm,    27 32,  &tog CODING                          )
-    COMBO(  r1_dot,     28 32,  &tog NUMBERS                         )
-    // COMBO(  r1_slsh,    29 32,  &tog NUMBERS                         )
+    COMBO(  r1_n,       25 33,  &sk LC(LA(LSHIFT))                   )
+    COMBO(  r1_m,       26 33,  &tog CONTROLS                        )
+    COMBO(  r1_comm,    27 33,  &tog CODING                          )
+    COMBO(  r1_dot,     28 33,  &tog NUMBERS                         )
+    // COMBO(  r1_slsh,    29 33,  &tog NUMBERS                         )
 
     /// two-handed symmetric combos
 
@@ -279,15 +279,15 @@
       label = "controls";
 
       /*
-        Ctx Menu       Prev           Play/Pause     Next           Vol Up              F7             F8             F9             F10            F13
-        BT Clr         BT 1           BT 2           BT 3           Vol Dn              F4             F5             F6             F11            F14
+        CapsLock       Prev           Play/Pause     Next           Vol Up              F7             F8             F9             F10            F13
+        BT 0           BT 1           BT 2           BT 3           Vol Dn              F4             F5             F6             F11            F14
         _____          _____          _____          _____          _____               F1             F2             F3             F12            F15
                                       _____          _____          _____               _____          _____          _____
       */
       bindings = <
-        &kp K_CMENU    &kp C_PREV     &kp C_PP       &kp C_NEXT     &kp C_VOL_UP        &kp F7         &kp F8         &kp F9         &kp F10        &kp F13
+        &kp CAPS       &kp C_PREV     &kp C_PP       &kp C_NEXT     &kp C_VOL_UP        &kp F7         &kp F8         &kp F9         &kp F10        &kp F13
         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &kp C_VOL_DN        &kp F4         &kp F5         &kp F6         &kp F11        &kp F14
-        &macro_is_unread &none        &none          &none          &none               &kp F1         &kp F2         &kp F3         &kp F12        &kp F15
+        &none          &none          &none          &none          &none               &kp F1         &kp F2         &kp F3         &kp F12        &kp F15
                                       &trans         &trans         &trans              &trans         &trans         &trans
       >;
     };
