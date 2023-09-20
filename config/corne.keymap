@@ -20,17 +20,18 @@
 #define CURR_POUND   LA(N3)
 
 // thumb key positions
-#define L3 32
-#define L2 33
-#define L1 34
-#define R1 35
-#define R2 36
-#define R3 37
+#define L3 30
+#define L2 31
+#define L1 32
+#define R1 33
+#define R2 34
+#define R3 35
 
 // combo helper
 #define COMBO(NAME, KEYPOS, BINDINGS) \
   combo_##NAME { \
     timeout-ms = <100>; \
+    slow-release = true; \
     key-positions = <KEYPOS>; \
     bindings = <BINDINGS>; \
   };
@@ -98,7 +99,7 @@
     COMBO(  kl,         17 18,  &kp DELETE                           )
     COMBO(  lscln,      18 19,  &kp APOSTROPHE                       )
 
-    COMBO(  zx,         20 21,  &kp LG(K)                            )
+    COMBO(  zx,         20 21,  &kp LG(Z)                            )
     COMBO(  xc,         21 22,  &kp LG(X)                            )
     COMBO(  cv,         22 23,  &kp LG(C)                            )
     COMBO(  vb,         23 24,  &kp LG(V)                            )
@@ -122,17 +123,17 @@
     COMBO(  ol,         8 18,   &kp GRAVE                            )
     COMBO(  pscln,      9 19,   &kp EQUAL                            )
 
-    COMBO(  az,         0 10,   &kp BSLH                             )
-    COMBO(  sx,         1 11,   &kp LT                               )
-    COMBO(  dc,         2 12,   &kp LBRC                             )
-    COMBO(  fv,         3 13,   &kp LBKT                             )
-    COMBO(  gb,         4 14,   &kp LPAR                             )
+    COMBO(  az,         10 20,   &kp BSLH                             )
+    COMBO(  sx,         11 21,   &kp LT                               )
+    COMBO(  dc,         12 22,   &kp LBRC                             )
+    COMBO(  fv,         13 23,   &kp LBKT                             )
+    COMBO(  gb,         14 24,   &kp LPAR                             )
 
-    COMBO(  hn,         5 15,   &kp RPAR                             )
-    COMBO(  jm,         6 16,   &kp RBKT                             )
-    COMBO(  kcomm,      7 17,   &kp RBRC                             )
-    COMBO(  ldot,       8 18,   &kp GT                               )
-    COMBO(  sclnslsh,   9 19,   &kp EXCL                             )
+    COMBO(  hn,         15 25,   &kp RPAR                             )
+    COMBO(  jm,         16 26,   &kp RBKT                             )
+    COMBO(  kcomm,      17 27,   &kp RBRC                             )
+    COMBO(  ldot,       18 28,   &kp GT                               )
+    COMBO(  sclnslsh,   19 29,   &kp EXCL                             )
 
     /// one-handed one-shots, mirrored on both sides
 
