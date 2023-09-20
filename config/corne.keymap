@@ -22,10 +22,9 @@
 // combo helper
 #define COMBO(NAME, KEYPOS, BINDINGS) \
   combo_##NAME { \
-    timeout-ms = <50>; \
+    timeout-ms = <100>; \
     key-positions = <KEYPOS>; \
     bindings = <BINDINGS>; \
-    layers = <0 1 2 3>; \
   };
 
 // macro helper
