@@ -129,7 +129,8 @@
 
     /// one-handed one-shots, mirrored on both sides
 
-    COMBO(  l2_q,       31 0,   &kp LGUI(LCTL(Q))                    )
+    COMBO(  l2_q,       31 0,   &kp LG(LC(Q))                        )
+
     COMBO(  l2_w,       31 1,   &sl NUMBERS                          )
     COMBO(  l2_e,       31 2,   &sl CODING                           )
     COMBO(  l2_r,       31 3,   &sl CONTROLS                         )
@@ -138,24 +139,24 @@
     COMBO(  l2_s,       31 11,  &sk LALT                             )
     COMBO(  l2_d,       31 12,  &sk LGUI                             )
     COMBO(  l2_f,       31 13,  &sk LSHIFT                           )
-    COMBO(  l2_g,       31 14,  &sk LCTRL(LALT(LGUI(LSHIFT)))        ) // hyper
+    COMBO(  l2_g,       31 14,  &sk LC(LA(LG(LSHIFT)))               ) // hyper
     COMBO(  l2_z,       31 20,  &kp CAPS                             )
     COMBO(  l2_x,       31 21,  &tog NUMBERS                         )
     COMBO(  l2_c,       31 22,  &tog CODING                          )
     COMBO(  l2_v,       31 23,  &tog CONTROLS                        )
-    COMBO(  l2_b,       31 24,  &sk LCTRL(LALT(LSHIFT))              ) // meh
+    COMBO(  l2_b,       31 24,  &sk LC(LA(LSHIFT))                   ) // meh
 
     COMBO(  r2_y,       34 0,   &caps_word                           )
     COMBO(  r2_u,       34 1,   &sl CONTROLS                         )
     COMBO(  r2_i,       34 2,   &sl CODING                           )
     COMBO(  r2_o,       34 3,   &sl NUMBERS                          )
     COMBO(  r2_p,       34 4,   &to ALPHA                            ) // back to default layer
-    COMBO(  r2_h,       34 10,  &sk RCTRL(RALT(RGUI(RSHIFT)))        ) // hyper
+    COMBO(  r2_h,       34 10,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
     COMBO(  r2_j,       34 11,  &sk RSHIFT                           )
     COMBO(  r2_k,       34 12,  &sk RGUI                             )
     COMBO(  r2_l,       34 13,  &sk RALT                             )
     COMBO(  r2_scln,    34 14,  &sk RCTRL                            )
-    COMBO(  r2_n,       34 20,  &sk LCTRL(LALT(LSHIFT))              )
+    COMBO(  r2_n,       34 20,  &sk LC(LA(LSHIFT))                   )
     COMBO(  r2_m,       34 21,  &tog CONTROLS                        )
     COMBO(  r2_comm,    34 22,  &tog CODING                          )
     COMBO(  r2_dot,     34 23,  &tog NUMBERS                         )
@@ -173,13 +174,13 @@
     COMBO(  sl,         11 18,  &sk LALT                             )
     COMBO(  dk,         12 17,  &sk LGUI                             )
     COMBO(  fj,         13 16,  &sk LSHIFT                           )
-    COMBO(  gh,         14 15,  &sk LCTRL(LALT(LGUI(LSHIFT)))        )
+    COMBO(  gh,         14 15,  &sk LC(LA(LG(LSHIFT)))               ) // hyper
 
     COMBO(  zslsh,      20 29,  &kp LGUI(Z)                          )
     COMBO(  xdot,       21 28,  &kp LGUI(X)                          )
     COMBO(  ccomm,      22 27,  &kp LGUI(C)                          )
     COMBO(  vm,         23 26,  &kp LGUI(V)                          )
-    COMBO(  bn,         24 25,  &sk LCTRL(LALT(LSHIFT))              )
+    COMBO(  bn,         24 25,  &sk LC(LA(LSHIFT))                   ) // meh
 
     COMBO(  LT1RT1,     32 33,  &kp CAPS                             )
     COMBO(  LT2RT2,     31 34,  &caps_word                           )
@@ -241,7 +242,7 @@
       */
       bindings = <
         &kp CARET      &kp AT         &kp LPAR       &kp RPAR       &kp DOLLAR          &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        &kp PIPE
-        &kp APOS       &kp GRAVE      &kp LBKT       &kp RPKT       &kp STAR            &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp BSLH
+        &kp APOS       &kp GRAVE      &kp LBKT       &kp RBKT       &kp STAR            &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp BSLH
         &kp EXCL       &kp HASH       &kp MINUS      &kp EQUAL      &kp TILDE           &kp PERCENT    &kp AMPS       &kp COMMA      &kp DOT        &kp FSLH
                                       &trans         &trans         &trans              &trans         &trans         &trans
       >;
