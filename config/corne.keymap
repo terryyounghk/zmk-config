@@ -42,8 +42,8 @@
     compatible = "zmk,behavior-macro"; \
     label = "##NAME"; \
     #binding-cells = <0>; \
-    wait-ms = <40>; \
-    tap-ms = <40>; \
+    wait-ms = <20>; \
+    tap-ms = <20>; \
     bindings = <BINDINGS>; \
   };
 
@@ -146,47 +146,47 @@
 
     /// special
 
-    COMBO(  sf,         11 13,   &to ALPHA                           )
     COMBO(  jl,         16 18,   &to ALPHA                           )
+    COMBO(  sf,         11 13,   &to ALPHA                           )
 
 
     /// one-handed one-shots, mirrored on both sides
 
-    COMBO(  l1_q,       L1 0,   &kp LG(LC(Q))                        )
-    COMBO(  l1_w,       L1 1,   &sl NUMBERS                          )
-    COMBO(  l1_e,       L1 2,   &sl CODING                           )
-    COMBO(  l1_r,       L1 3,   &sl CONTROLS                         )
-    COMBO(  l1_t,       L1 4,   &caps_word                           )
+    COMBO(  l1_q,       0 32,   &kp LG(LC(Q))                        )
+    COMBO(  l1_w,       1 32,   &sl NUMBERS                          )
+    COMBO(  l1_e,       2 32,   &sl CODING                           )
+    COMBO(  l1_r,       3 32,   &sl CONTROLS                         )
+    COMBO(  l1_t,       4 32,   &caps_word                           )
 
-    COMBO(  l1_a,       L1 10,  &sk LCTRL                            )
-    COMBO(  l1_s,       L1 11,  &sk LALT                             )
-    COMBO(  l1_d,       L1 12,  &sk LGUI                             )
-    COMBO(  l1_f,       L1 13,  &sk LSHIFT                           )
-    COMBO(  l1_g,       L1 14,  &sk LC(LA(LG(LSHIFT)))               ) // hyper
+    COMBO(  l1_a,       10 32,  &sk LCTRL                            )
+    COMBO(  l1_s,       11 32,  &sk LALT                             )
+    COMBO(  l1_d,       12 32,  &sk LGUI                             )
+    COMBO(  l1_f,       13 32,  &sk LSHIFT                           )
+    COMBO(  l1_g,       14 32,  &sk LC(LA(LG(LSHIFT)))               ) // hyper
 
-    COMBO(  l1_z,       L1 20,  &kp CAPS                             )
-    COMBO(  l1_x,       L1 21,  &tog NUMBERS                         )
-    COMBO(  l1_c,       L1 22,  &tog CODING                          )
-    COMBO(  l1_v,       L1 23,  &tog CONTROLS                        )
-    COMBO(  l1_b,       L1 24,  &sk LC(LA(LSHIFT))                   ) // meh
+    COMBO(  l1_z,       20 32,  &kp CAPS                             )
+    COMBO(  l1_x,       21 32,  &tog NUMBERS                         )
+    COMBO(  l1_c,       22 32,  &tog CODING                          )
+    COMBO(  l1_v,       23 32,  &tog CONTROLS                        )
+    COMBO(  l1_b,       24 32,  &sk LC(LA(LSHIFT))                   ) // meh
 
-    COMBO(  r1_y,       R1 5,   &caps_word                           )
-    COMBO(  r1_u,       R1 6,   &sl CONTROLS                         )
-    COMBO(  r1_i,       R1 7,   &sl CODING                           )
-    COMBO(  r1_o,       R1 8,   &sl NUMBERS                          )
-    COMBO(  r1_p,       R1 9,   &to ALPHA                            ) // back to default layer
+    COMBO(  r1_y,       5 32,   &caps_word                           )
+    COMBO(  r1_u,       6 32,   &sl CONTROLS                         )
+    COMBO(  r1_i,       7 32,   &sl CODING                           )
+    COMBO(  r1_o,       8 32,   &sl NUMBERS                          )
+    COMBO(  r1_p,       9 32,   &to ALPHA                            ) // back to default layer
 
-    COMBO(  r1_h,       R1 15,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
-    COMBO(  r1_j,       R1 16,  &sk RSHIFT                           )
-    COMBO(  r1_k,       R1 17,  &sk RGUI                             )
-    COMBO(  r1_l,       R1 18,  &sk RALT                             )
-    COMBO(  r1_scln,    R1 19,  &sk RCTRL                            )
+    COMBO(  r1_h,       15 32,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
+    COMBO(  r1_j,       16 32,  &sk RSHIFT                           )
+    COMBO(  r1_k,       17 32,  &sk RGUI                             )
+    COMBO(  r1_l,       18 32,  &sk RALT                             )
+    COMBO(  r1_scln,    19 32,  &sk RCTRL                            )
 
-    COMBO(  r1_n,       R1 25,  &sk LC(LA(LSHIFT))                   )
-    COMBO(  r1_m,       R1 26,  &tog CONTROLS                        )
-    COMBO(  r1_comm,    R1 27,  &tog CODING                          )
-    COMBO(  r1_dot,     R1 28,  &tog NUMBERS                         )
-    // COMBO(  r1_slsh,    R1 29,  &tog NUMBERS                         )
+    COMBO(  r1_n,       25 32,  &sk LC(LA(LSHIFT))                   )
+    COMBO(  r1_m,       26 32,  &tog CONTROLS                        )
+    COMBO(  r1_comm,    27 32,  &tog CODING                          )
+    COMBO(  r1_dot,     28 32,  &tog NUMBERS                         )
+    // COMBO(  r1_slsh,    29 32,  &tog NUMBERS                         )
 
     /// two-handed symmetric combos
 
@@ -208,11 +208,12 @@
     COMBO(  vm,         23 26,  &kp LG(V)                            )
     COMBO(  bn,         24 25,  &sk LC(LA(LSHIFT))                   ) // meh
 
-    COMBO(  LT1RT1,     L1 R1,  &kp CAPS                             )
-    COMBO(  LT2RT2,     L2 R2,  &caps_word                           )
-    COMBO(  LT3RT3,     L3 R3,  &tog CONTROLS                        )
+    COMBO(  LT1RT1,     32 33,  &kp CAPS                             )
+    COMBO(  LT2RT2,     31 34,  &caps_word                           )
+    COMBO(  LT3RT3,     30 35,  &tog CONTROLS                        )
 
     /// other combos
+    COMBO(  commdot,    27 28,  &macro_is_unread                     ) // types "is:unread" I use frequently in Gmail search
     COMBO(  ddot,       12 28,  &macro_is_unread                     ) // types "is:unread" I use frequently in Gmail search
   };
 
