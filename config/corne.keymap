@@ -153,21 +153,21 @@
     COMBO(  l1_v,       L1 23,  &tog CONTROLS                        )
     COMBO(  l1_b,       L1 24,  &sk LC(LA(LSHIFT))                   ) // meh
 
-    COMBO(  r1_y,       R1 0,   &caps_word                           )
-    COMBO(  r1_u,       R1 1,   &sl CONTROLS                         )
-    COMBO(  r1_i,       R1 2,   &sl CODING                           )
-    COMBO(  r1_o,       R1 3,   &sl NUMBERS                          )
-    COMBO(  r1_p,       R1 4,   &to ALPHA                            ) // back to default layer
-    COMBO(  r1_h,       R1 10,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
-    COMBO(  r1_j,       R1 11,  &sk RSHIFT                           )
-    COMBO(  r1_k,       R1 12,  &sk RGUI                             )
-    COMBO(  r1_l,       R1 13,  &sk RALT                             )
-    COMBO(  r1_scln,    R1 14,  &sk RCTRL                            )
-    COMBO(  r1_n,       R1 20,  &sk LC(LA(LSHIFT))                   )
-    COMBO(  r1_m,       R1 21,  &tog CONTROLS                        )
-    COMBO(  r1_comm,    R1 22,  &tog CODING                          )
-    COMBO(  r1_dot,     R1 23,  &tog NUMBERS                         )
-    COMBO(  r1_slsh,    R1 24,  &kp CAPS                             )
+    COMBO(  r1_y,       R1 5,   &caps_word                           )
+    COMBO(  r1_u,       R1 6,   &sl CONTROLS                         )
+    COMBO(  r1_i,       R1 7,   &sl CODING                           )
+    COMBO(  r1_o,       R1 8,   &sl NUMBERS                          )
+    COMBO(  r1_p,       R1 9,   &to ALPHA                            ) // back to default layer
+    COMBO(  r1_h,       R1 15,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
+    COMBO(  r1_j,       R1 16,  &sk RSHIFT                           )
+    COMBO(  r1_k,       R1 17,  &sk RGUI                             )
+    COMBO(  r1_l,       R1 18,  &sk RALT                             )
+    COMBO(  r1_scln,    R1 19,  &sk RCTRL                            )
+    COMBO(  r1_n,       R1 25,  &sk LC(LA(LSHIFT))                   )
+    COMBO(  r1_m,       R1 26,  &tog CONTROLS                        )
+    COMBO(  r1_comm,    R1 27,  &tog CODING                          )
+    COMBO(  r1_dot,     R1 28,  &tog NUMBERS                         )
+    COMBO(  r1_slsh,    R1 29,  &kp CAPS                             )
 
     /// two-handed symmetric combos
 
