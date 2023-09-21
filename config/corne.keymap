@@ -15,9 +15,9 @@
 #define CONTROLS 3
 
 // special characters
-#define CURR_YEN     LA(Y)
-#define CURR_EURO    LA(LS(N2))
-#define CURR_POUND   LA(N3)
+#define K_YEN     LA(Y)
+#define K_EURO    LA(LS(N2))
+#define K_POUND   LA(N3)
 
 // thumb key positions
 #define L3 30
@@ -26,6 +26,13 @@
 #define R1 33
 #define R2 34
 #define R3 35
+
+// TODO: some ideas to implement
+// #define K_ONE_PASSWORD
+// #define K_SCREENSHOT
+// #define K_KEYCAST_TOGGLE
+// #define K_PRESENTIFY_ANNOTATE
+// #define K_{various vs code shortcuts}
 
 // combo helper
 #define COMBO(NAME, KEYPOS, BINDINGS) \
@@ -105,7 +112,7 @@
 
     // COMBO(  nm,         25 26,  &kp                                  )
     // COMBO(  mcomma,     26 27,  &kp                                  )
-    // COMBO(  commdot,    27 28,  &kp                                  )
+    COMBO(  commdot,    27 28,  &macro_is_unread                     ) // types "is:unread" I use frequently in Gmail search
     // COMBO(  dotslsh,    28 29,  &kp                                  )
 
     /// vertical, adjacent
@@ -141,12 +148,12 @@
     COMBO(  hu,         15 6,    &kp LS(EQUAL)                       )
     COMBO(  ji,         16 7,    &kp LS(I)                           )
     COMBO(  dv,         12 23,   &kp RETURN                          )
-    COMBO(  mk,         15 26,   &kp RETURN                          ) /////
+    COMBO(  mk,         15 26,   &kp RETURN                          )
     COMBO(  oscln,      8 19,    &kp DOUBLE_QUOTES                   )
 
     /// special
 
-    COMBO(  jl,         16 18,   &to ALPHA                           ) /////
+    COMBO(  jl,         16 18,   &to ALPHA                           )
     COMBO(  sf,         11 13,   &to ALPHA                           )
 
 
@@ -155,20 +162,20 @@
     COMBO(  l1_q,       0 32,   &kp LG(LC(Q))                        )
     COMBO(  l1_w,       1 32,   &sl NUMBERS                          )
     COMBO(  l1_e,       2 32,   &sl CODING                           )
-    COMBO(  l1_r,       3 32,   &sl CONTROLS                         ) /////
+    COMBO(  l1_r,       3 32,   &sl CONTROLS                         )
     COMBO(  l1_t,       4 32,   &caps_word                           )
 
-    COMBO(  l1_a,       10 32,  &sk LCTRL                            ) /////
-    COMBO(  l1_s,       11 32,  &sk LALT                             ) /////
-    COMBO(  l1_d,       12 32,  &sk LGUI                             ) /////
-    COMBO(  l1_f,       13 32,  &sk LSHIFT                           ) /////
-    COMBO(  l1_g,       14 32,  &sk LC(LA(LG(LSHIFT)))               ) /////
+    COMBO(  l1_a,       10 32,  &sk LCTRL                            )
+    COMBO(  l1_s,       11 32,  &sk LALT                             )
+    COMBO(  l1_d,       12 32,  &sk LGUI                             )
+    COMBO(  l1_f,       13 32,  &sk LSHIFT                           )
+    COMBO(  l1_g,       14 32,  &sk LC(LA(LG(LSHIFT)))               )
 
-    COMBO(  l1_z,       20 32,  &kp CAPS                             ) /////
-    COMBO(  l1_x,       21 32,  &tog NUMBERS                         ) /////
-    COMBO(  l1_c,       22 32,  &tog CODING                          ) /////
-    COMBO(  l1_v,       23 32,  &tog CONTROLS                        ) /////
-    COMBO(  l1_b,       24 32,  &sk LC(LA(LSHIFT))                   ) /////
+    COMBO(  l1_z,       20 32,  &kp CAPS                             )
+    COMBO(  l1_x,       21 32,  &tog NUMBERS                         )
+    COMBO(  l1_c,       22 32,  &tog CODING                          )
+    COMBO(  l1_v,       23 32,  &tog CONTROLS                        )
+    COMBO(  l1_b,       24 32,  &sk LC(LA(LSHIFT))                   )
 
     COMBO(  r1_y,       5 33,   &caps_word                           )
     COMBO(  r1_u,       6 33,   &sl CONTROLS                         )
@@ -186,7 +193,7 @@
     COMBO(  r1_m,       26 33,  &tog CONTROLS                        )
     COMBO(  r1_comm,    27 33,  &tog CODING                          )
     COMBO(  r1_dot,     28 33,  &tog NUMBERS                         )
-    // COMBO(  r1_slsh,    29 33,  &tog NUMBERS                         )
+    COMBO(  r1_slsh,    29 33,  &kp CAPS                             )
 
     /// two-handed symmetric combos
 
@@ -213,7 +220,6 @@
     COMBO(  LT3RT3,     30 35,  &tog CONTROLS                        )
 
     /// other combos
-    COMBO(  commdot,    27 28,  &macro_is_unread                     ) // types "is:unread" I use frequently in Gmail search
     COMBO(  ddot,       12 28,  &macro_is_unread                     ) // types "is:unread" I use frequently in Gmail search
   };
 
@@ -253,7 +259,7 @@
       bindings = <
         &kp F1         &kp F2         &kp F3         &kp F4         &kp F5              &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
         &kp N1         &kp N2         &kp N3         &kp N4         &kp N5              &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
-        &kp CURR_YEN   &kp CURR_EURO  &kp MINUS      &kp EQUAL      &kp STAR            &kp CURR_POUND &kp DOLLAR     &kp COMMA      &kp DOT        &kp FSLH
+        &kp K_YEN      &kp K_EURO     &kp MINUS      &kp EQUAL      &kp STAR            &kp K_POUND    &kp DOLLAR     &kp COMMA      &kp DOT        &kp FSLH
                                       &trans         &trans         &trans              &trans         &trans         &trans
       >;
     };
