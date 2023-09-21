@@ -14,11 +14,16 @@
 #define CODING   2
 #define CONTROLS 3
 
-// special characters
-#define K_YEN     LA(Y)
-#define K_EURO    LA(LS(N2))
-#define K_POUND   LA(N3)
-
+/*
+    key positions
+    ╭────────────────────╮ ╭────────────────────╮
+    │  0   1   2   3   4 │ │  5   6   7   8   9 │
+    │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
+    │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
+    ╰───────╮ 30  31  32 │ │ 33  34  35 ╭───────╯
+            ╰────────────╯ ╰────────────╯
+      Thumbs:  L3  L2  L1     R1  R2  R3
+*/
 // thumb key positions
 #define L3 30
 #define L2 31
@@ -27,12 +32,22 @@
 #define R2 34
 #define R3 35
 
-// TODO: some ideas to implement
-// #define K_ONE_PASSWORD
-// #define K_SCREENSHOT
-// #define K_KEYCAST_TOGGLE
-// #define K_PRESENTIFY_ANNOTATE
-// #define K_{various vs code shortcuts}
+// special characters
+#define K_YEN     LA(Y)
+#define K_EURO    LA(LS(N2))
+#define K_POUND   LA(N3)
+
+// modifier aliases
+#define HYPER(K) LC(LA(LG(LS(K))))
+#define MEH(K) LC(LA(LS(K)))
+
+// special shortcuts
+#define K_ONE_PASSWORD_AUTOFILL          HYPER(X)
+#define K_ONE_PASSWORD_SHOW              MEH(X)
+#define K_ONE_PASSWORD_BROWSER           LA(LS(X))
+#define K_OKTA                           LA(LS(O))
+#define K_KEYCAST_TOGGLE                 HYPER(SEMI)
+#define K_PRESENTIFY_ANNOTATE            MEH(A)
 
 // combo helper
 #define COMBO(NAME, KEYPOS, BINDINGS) \
@@ -49,8 +64,8 @@
     compatible = "zmk,behavior-macro"; \
     label = "##NAME"; \
     #binding-cells = <0>; \
-    wait-ms = <20>; \
-    tap-ms = <20>; \
+    wait-ms = <40>; \
+    tap-ms = <40>; \
     bindings = <BINDINGS>; \
   };
 
@@ -97,7 +112,7 @@
 
     // COMBO(  as,         10 11,  &kp                                  )
     COMBO(  sd,         11 12,  &kp BACKSPACE                        )
-    COMBO(  df,         12 13,  &kp SPACE                            )
+    COMBO(  df,         12 13,  &kp ESCAPE                           )
     COMBO(  fg,         13 14,  &kp DELETE                           )
 
     COMBO(  hj,         15 16,  &kp BACKSPACE                        )
@@ -112,7 +127,7 @@
 
     // COMBO(  nm,         25 26,  &kp                                  )
     // COMBO(  mcomma,     26 27,  &kp                                  )
-    COMBO(  commdot,    27 28,  &macro_is_unread                     ) // types "is:unread" I use frequently in Gmail search
+    COMBO(  commdot,    27 28,  &macro_is_unread                     )
     // COMBO(  dotslsh,    28 29,  &kp                                  )
 
     /// vertical, adjacent
@@ -152,48 +167,50 @@
     COMBO(  oscln,      8 19,    &kp DOUBLE_QUOTES                   )
 
     /// special
-
     COMBO(  jl,         16 18,   &to ALPHA                           )
     COMBO(  sf,         11 13,   &to ALPHA                           )
-
+    COMBO(  sfjl,       11 13 16 18,   &bt BT_CLR                    )
+    COMBO(  jkl,        16 17 18,&kp K_MUTE                          )
+    COMBO(  xv,         21 23,   &kp SPACE                           )
+    COMBO(  mdot,       26 28,   &kp SPACE                           )
 
     /// one-handed one-shots, mirrored on both sides
 
-    COMBO(  l1_q,       0 32,   &kp LG(LC(Q))                        )
-    COMBO(  l1_w,       1 32,   &sl NUMBERS                          )
-    COMBO(  l1_e,       2 32,   &sl CODING                           )
-    COMBO(  l1_r,       3 32,   &sl CONTROLS                         )
-    COMBO(  l1_t,       4 32,   &caps_word                           )
+    COMBO(  l2_q,       0 L2,   &kp LG(LC(Q))                        )
+    COMBO(  l2_w,       1 L2,   &sl NUMBERS                          )
+    COMBO(  l2_e,       2 L2,   &sl CODING                           )
+    COMBO(  l2_r,       3 L2,   &sl CONTROLS                         )
+    COMBO(  l2_t,       4 L2,   &caps_word                           )
 
-    COMBO(  l1_a,       10 32,  &sk LCTRL                            )
-    COMBO(  l1_s,       11 32,  &sk LALT                             )
-    COMBO(  l1_d,       12 32,  &sk LGUI                             )
-    COMBO(  l1_f,       13 32,  &sk LSHIFT                           )
-    COMBO(  l1_g,       14 32,  &sk LC(LA(LG(LSHIFT)))               )
+    COMBO(  l2_a,       10 L2,  &sk LCTRL                            )
+    COMBO(  l2_s,       11 L2,  &sk LALT                             )
+    COMBO(  l2_d,       12 L2,  &sk LGUI                             )
+    COMBO(  l2_f,       13 L2,  &sk LSHIFT                           )
+    COMBO(  l2_g,       14 L2,  &sk LC(LA(LG(LSHIFT)))               )
 
-    COMBO(  l1_z,       20 32,  &kp CAPS                             )
-    COMBO(  l1_x,       21 32,  &tog NUMBERS                         )
-    COMBO(  l1_c,       22 32,  &tog CODING                          )
-    COMBO(  l1_v,       23 32,  &tog CONTROLS                        )
-    COMBO(  l1_b,       24 32,  &sk LC(LA(LSHIFT))                   )
+    COMBO(  l2_z,       20 L2,  &kp CAPS                             )
+    COMBO(  l2_x,       21 L2,  &tog NUMBERS                         )
+    COMBO(  l2_c,       22 L2,  &tog CODING                          )
+    COMBO(  l2_v,       23 L2,  &tog CONTROLS                        )
+    COMBO(  l2_b,       24 L2,  &sk LC(LA(LSHIFT))                   )
 
-    COMBO(  r1_y,       5 33,   &caps_word                           )
-    COMBO(  r1_u,       6 33,   &sl CONTROLS                         )
-    COMBO(  r1_i,       7 33,   &sl CODING                           )
-    COMBO(  r1_o,       8 33,   &sl NUMBERS                          )
-    COMBO(  r1_p,       9 33,   &to ALPHA                            ) // back to default layer
+    COMBO(  r2_y,       5 L2,   &caps_word                           )
+    COMBO(  r2_u,       6 L2,   &sl CONTROLS                         )
+    COMBO(  r2_i,       7 L2,   &sl CODING                           )
+    COMBO(  r2_o,       8 L2,   &sl NUMBERS                          )
+    COMBO(  r2_p,       9 L2,   &to ALPHA                            ) // back to default layer
 
-    COMBO(  r1_h,       15 33,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
-    COMBO(  r1_j,       16 33,  &sk RSHIFT                           )
-    COMBO(  r1_k,       17 33,  &sk RGUI                             )
-    COMBO(  r1_l,       18 33,  &sk RALT                             )
-    COMBO(  r1_scln,    19 33,  &sk RCTRL                            )
+    COMBO(  r2_h,       15 L2,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
+    COMBO(  r2_j,       16 L2,  &sk RSHIFT                           )
+    COMBO(  r2_k,       17 L2,  &sk RGUI                             )
+    COMBO(  r2_l,       18 L2,  &sk RALT                             )
+    COMBO(  r2_scln,    19 L2,  &sk RCTRL                            )
 
-    COMBO(  r1_n,       25 33,  &sk LC(LA(LSHIFT))                   )
-    COMBO(  r1_m,       26 33,  &tog CONTROLS                        )
-    COMBO(  r1_comm,    27 33,  &tog CODING                          )
-    COMBO(  r1_dot,     28 33,  &tog NUMBERS                         )
-    COMBO(  r1_slsh,    29 33,  &kp CAPS                             )
+    COMBO(  r2_n,       25 L2,  &sk LC(LA(LSHIFT))                   )
+    COMBO(  r2_m,       26 L2,  &tog CONTROLS                        )
+    COMBO(  r2_comm,    27 L2,  &tog CODING                          )
+    COMBO(  r2_dot,     28 L2,  &tog NUMBERS                         )
+    COMBO(  r2_slsh,    29 L2,  &kp CAPS                             )
 
     /// two-handed symmetric combos
 
@@ -215,12 +232,40 @@
     COMBO(  vm,         23 26,  &kp LG(V)                            )
     COMBO(  bn,         24 25,  &sk LC(LA(LSHIFT))                   ) // meh
 
-    COMBO(  LT1RT1,     32 33,  &kp CAPS                             )
-    COMBO(  LT2RT2,     31 34,  &caps_word                           )
-    COMBO(  LT3RT3,     30 35,  &tog CONTROLS                        )
+    COMBO(  LT1RT1,     L1 R1,  &kp CAPS                             )
+    COMBO(  LT2RT2,     L2 R2,  &caps_word                           )
+    COMBO(  LT3RT3,     L3 R3,  &tog CONTROLS                        )
 
-    /// other combos
-    COMBO(  ddot,       12 28,  &macro_is_unread                     ) // types "is:unread" I use frequently in Gmail search
+    /// more modifier combos
+    COMBO(  l2_as,      L2 10 11,     &kp LC(LALT)                   )
+    COMBO(  l2_ad,      L2 10 12,     &kp LC(LGUI)                   )
+    COMBO(  l2_af,      L2 10 13,     &kp LC(LSHIFT)                 )
+    COMBO(  l2_sd,      L2 11 12,     &kp LA(LGUI)                   )
+    COMBO(  l2_sf,      L2 11 13,     &kp LA(LSHIFT)                 )
+    COMBO(  l2_df,      L2 12 13,     &kp LG(LSHIFT)                 )
+    COMBO(  l2_asd,     L2 10 11 12,  &kp LC(LA(LGUI))               )
+    COMBO(  l2_asf,     L2 10 11 13,  &kp LC(LA(LSHIFT))             )
+    COMBO(  l2_adf,     L2 10 12 13,  &kp LC(LG(LSHIFT))             )
+    COMBO(  l2_sdf,     L2 11 12 13,  &kp LA(LG(LSHIFT))             )
+
+    COMBO(  r2_cl,      R2 19 18,     &kp LC(LALT)                   )
+    COMBO(  r2_ck,      R2 19 17,     &kp LC(LGUI)                   )
+    COMBO(  r2_cj,      R2 19 16,     &kp LC(LSHIFT)                 )
+    COMBO(  r2_lk,      R2 18 17,     &kp LA(LGUI)                   )
+    COMBO(  r2_lj,      R2 18 16,     &kp LA(LSHIFT)                 )
+    COMBO(  r2_kj,      R2 17 16,     &kp LG(LSHIFT)                 )
+    COMBO(  r2_clk,     R2 19 18 17,  &kp LC(LA(LGUI))               )
+    COMBO(  r2_clj,     R2 19 18 16,  &kp LC(LA(LSHIFT))             )
+    COMBO(  r2_ckj,     R2 19 17 16,  &kp LC(LG(LSHIFT))             )
+    COMBO(  r2_lkj,     R2 18 17 16,  &kp LA(LG(LSHIFT))             )
+
+    /// applications
+
+    COMBO(  semi_k,     19 17,        &kp K_OKTA                     )
+    COMBO(  semi_j,     19 16,        &kp K_ONE_PASSWORD_SHOW        )
+    COMBO(  semi_h,     19 15,        &kp K_ONE_PASSWORD_AUTOFILL    )
+    COMBO(  semi_g,     19 14,        &kp K_KEYCAST_TOGGLE           )
+    COMBO(  semi_f,     19 13,        &kp K_PRESENTIFY_ANNOTATE      )
   };
 
   macros {
@@ -232,7 +277,6 @@
 
     default_layer {
       label = "alpha";
-
       /*
         Q              W              E              R              T                   Y              U              I              O              P
         A              S              D              F              G                   H              J              K              L              ;
@@ -243,13 +287,12 @@
         &kp Q          &kp W          &kp E          &kp R          &kp T               &kp Y          &kp U          &kp I          &kp O          &kp P
         &kp A          &kp S          &kp D          &kp F          &kp G               &kp H          &kp J          &kp K          &kp L          &kp SEMI
         &kp Z          &kp X          &kp C          &kp V          &kp B               &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH
-                                      &tog NUMBERS   &sk LSHFT      &kp TAB             &kp RETURN     &kp SPACE      &tog CODING
+                                      &sl NUMBERS    &sk LSHFT      &kp TAB             &kp RETURN     &kp SPACE      &sl CODING
       >;
     };
 
     numbers {
       label = "numbers";
-
       /*
         F1             F2             F3             F4             F5                  F6             F7             F8             F9             F10
         1              2              3              4              5                   6              7              8              9              10
@@ -266,7 +309,6 @@
 
     coding {
       label = "coding";
-
       /*
         ^              @              (              )              $                   Home           PgDn           PgUp           End            |
         '              `              [              ]              *                   Left           Down           Up             Right          \
@@ -283,7 +325,6 @@
 
     controls {
       label = "controls";
-
       /*
         CapsLock       Prev           Play/Pause     Next           Vol Up              F7             F8             F9             F10            F13
         BT 0           BT 1           BT 2           BT 3           Vol Dn              F4             F5             F6             F11            F14
@@ -293,7 +334,7 @@
       bindings = <
         &kp CAPS       &kp C_PREV     &kp C_PP       &kp C_NEXT     &kp C_VOL_UP        &kp F7         &kp F8         &kp F9         &kp F10        &kp F13
         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &kp C_VOL_DN        &kp F4         &kp F5         &kp F6         &kp F11        &kp F14
-        &none          &none          &none          &none          &none               &kp F1         &kp F2         &kp F3         &kp F12        &kp F15
+        &none          &none          &none          &none          &kp K_MUTE          &kp F1         &kp F2         &kp F3         &kp F12        &kp F15
                                       &trans         &trans         &trans              &trans         &trans         &trans
       >;
     };
