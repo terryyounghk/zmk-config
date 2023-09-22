@@ -87,14 +87,6 @@
     zmk,matrix_transform = &five_column_transform;
   };
 
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-      tri_layer {
-        if-layers = <1 2>;
-        then-layer = <3>;
-      };
-  };
-
   combos {
     compatible = "zmk,combos";
 
@@ -179,7 +171,7 @@
     COMBO(  l2_q,       0 L2,   &kp LG(LC(Q))                        )
     COMBO(  l2_w,       1 L2,   &sl NUMBERS                          )
     COMBO(  l2_e,       2 L2,   &sl CODING                           )
-    COMBO(  l2_r,       3 L2,   &sl NUMBERS &sl CODING               ) // note: coditional layers
+    COMBO(  l2_r,       3 L2,   &sl CONTROLS                         )
     COMBO(  l2_t,       4 L2,   &caps_word                           )
 
     COMBO(  l2_a,       10 L2,  &sk LCTRL                            )
@@ -191,11 +183,11 @@
     COMBO(  l2_z,       20 L2,  &kp CAPS                             )
     COMBO(  l2_x,       21 L2,  &tog NUMBERS                         )
     COMBO(  l2_c,       22 L2,  &tog CODING                          )
-    COMBO(  l2_v,       23 L2,  &tog NUMBERS &tog CODING             ) // note: coditional layers
+    COMBO(  l2_v,       23 L2,  &tog CONTROLS                        )
     COMBO(  l2_b,       24 L2,  &sk LC(LA(LSHIFT))                   )
 
     COMBO(  r2_y,       5 R2,   &caps_word                           )
-    COMBO(  r2_u,       6 R2,   &sl NUMBERS &sl CODING               ) // note: coditional layers
+    COMBO(  r2_u,       6 R2,   &sl CONTROLS                         )
     COMBO(  r2_i,       7 R2,   &sl CODING                           )
     COMBO(  r2_o,       8 R2,   &sl NUMBERS                          )
     COMBO(  r2_p,       9 R2,   &to ALPHA                            ) // back to default layer
@@ -207,7 +199,7 @@
     COMBO(  r2_scln,    19 R2,  &sk RCTRL                            )
 
     COMBO(  r2_n,       25 R2,  &sk LC(LA(LSHIFT))                   )
-    COMBO(  r2_m,       26 R2,  &tog NUMBERS &tog CODING             ) // note: coditional layers
+    COMBO(  r2_m,       26 R2,  &tog CONTROLS                        )
     COMBO(  r2_comm,    27 R2,  &tog CODING                          )
     COMBO(  r2_dot,     28 R2,  &tog NUMBERS                         )
     COMBO(  r2_slsh,    29 R2,  &kp CAPS                             )
@@ -234,30 +226,30 @@
 
     COMBO(  LT1RT1,     L1 R1,  &kp CAPS                             )
     COMBO(  LT2RT2,     L2 R2,  &caps_word                           )
-    COMBO(  LT3RT3,     L3 R3,  &tog NUMBERS &tog CODING             ) // note: coditional layers
+    COMBO(  LT3RT3,     L3 R3,  &tog CONTROLS                        )
 
     /// more modifier combos
-    COMBO(  l2_as,      L2 10 11,     &kp LC(LALT)                   )
-    COMBO(  l2_ad,      L2 10 12,     &kp LC(LGUI)                   )
-    COMBO(  l2_af,      L2 10 13,     &kp LC(LSHIFT)                 )
-    COMBO(  l2_sd,      L2 11 12,     &kp LA(LGUI)                   )
-    COMBO(  l2_sf,      L2 11 13,     &kp LA(LSHIFT)                 )
-    COMBO(  l2_df,      L2 12 13,     &kp LG(LSHIFT)                 )
-    COMBO(  l2_asd,     L2 10 11 12,  &kp LC(LA(LGUI))               )
-    COMBO(  l2_asf,     L2 10 11 13,  &kp LC(LA(LSHIFT))             )
-    COMBO(  l2_adf,     L2 10 12 13,  &kp LC(LG(LSHIFT))             )
-    COMBO(  l2_sdf,     L2 11 12 13,  &kp LA(LG(LSHIFT))             )
+    COMBO(  l2_as,      L2 10 11,     &sk LC(LALT)                   )
+    COMBO(  l2_ad,      L2 10 12,     &sk LC(LGUI)                   )
+    COMBO(  l2_af,      L2 10 13,     &sk LC(LSHIFT)                 )
+    COMBO(  l2_sd,      L2 11 12,     &sk LA(LGUI)                   )
+    COMBO(  l2_sf,      L2 11 13,     &sk LA(LSHIFT)                 )
+    COMBO(  l2_df,      L2 12 13,     &sk LG(LSHIFT)                 )
+    COMBO(  l2_asd,     L2 10 11 12,  &sk LC(LA(LGUI))               )
+    COMBO(  l2_asf,     L2 10 11 13,  &sk LC(LA(LSHIFT))             )
+    COMBO(  l2_adf,     L2 10 12 13,  &sk LC(LG(LSHIFT))             )
+    COMBO(  l2_sdf,     L2 11 12 13,  &sk LA(LG(LSHIFT))             )
 
-    COMBO(  r2_cl,      R2 19 18,     &kp LC(LALT)                   )
-    COMBO(  r2_ck,      R2 19 17,     &kp LC(LGUI)                   )
-    COMBO(  r2_cj,      R2 19 16,     &kp LC(LSHIFT)                 )
-    COMBO(  r2_lk,      R2 18 17,     &kp LA(LGUI)                   )
-    COMBO(  r2_lj,      R2 18 16,     &kp LA(LSHIFT)                 )
-    COMBO(  r2_kj,      R2 17 16,     &kp LG(LSHIFT)                 )
-    COMBO(  r2_clk,     R2 19 18 17,  &kp LC(LA(LGUI))               )
-    COMBO(  r2_clj,     R2 19 18 16,  &kp LC(LA(LSHIFT))             )
-    COMBO(  r2_ckj,     R2 19 17 16,  &kp LC(LG(LSHIFT))             )
-    COMBO(  r2_lkj,     R2 18 17 16,  &kp LA(LG(LSHIFT))             )
+    COMBO(  r2_cl,      R2 19 18,     &sk LC(LALT)                   )
+    COMBO(  r2_ck,      R2 19 17,     &sk LC(LGUI)                   )
+    COMBO(  r2_cj,      R2 19 16,     &sk LC(LSHIFT)                 )
+    COMBO(  r2_lk,      R2 18 17,     &sk LA(LGUI)                   )
+    COMBO(  r2_lj,      R2 18 16,     &sk LA(LSHIFT)                 )
+    COMBO(  r2_kj,      R2 17 16,     &sk LG(LSHIFT)                 )
+    COMBO(  r2_clk,     R2 19 18 17,  &sk LC(LA(LGUI))               )
+    COMBO(  r2_clj,     R2 19 18 16,  &sk LC(LA(LSHIFT))             )
+    COMBO(  r2_ckj,     R2 19 17 16,  &sk LC(LG(LSHIFT))             )
+    COMBO(  r2_lkj,     R2 18 17 16,  &sk LA(LG(LSHIFT))             )
 
     /// applications
 
