@@ -179,7 +179,7 @@
     COMBO(  l2_q,       0 L2,   &kp LG(LC(Q))                        )
     COMBO(  l2_w,       1 L2,   &sl NUMBERS                          )
     COMBO(  l2_e,       2 L2,   &sl CODING                           )
-    COMBO(  l2_r,       3 L2,   &sl CONTROLS                         )
+    COMBO(  l2_r,       3 L2,   &sl NUMBERS &sl CODING               ) // note: coditional layers
     COMBO(  l2_t,       4 L2,   &caps_word                           )
 
     COMBO(  l2_a,       10 L2,  &sk LCTRL                            )
@@ -191,11 +191,11 @@
     COMBO(  l2_z,       20 L2,  &kp CAPS                             )
     COMBO(  l2_x,       21 L2,  &tog NUMBERS                         )
     COMBO(  l2_c,       22 L2,  &tog CODING                          )
-    COMBO(  l2_v,       23 L2,  &tog CONTROLS                        )
+    COMBO(  l2_v,       23 L2,  &tog NUMBERS &tog CODING             ) // note: coditional layers
     COMBO(  l2_b,       24 L2,  &sk LC(LA(LSHIFT))                   )
 
     COMBO(  r2_y,       5 R2,   &caps_word                           )
-    COMBO(  r2_u,       6 R2,   &sl CONTROLS                         )
+    COMBO(  r2_u,       6 R2,   &sl NUMBERS &sl CODING               ) // note: coditional layers
     COMBO(  r2_i,       7 R2,   &sl CODING                           )
     COMBO(  r2_o,       8 R2,   &sl NUMBERS                          )
     COMBO(  r2_p,       9 R2,   &to ALPHA                            ) // back to default layer
@@ -207,7 +207,7 @@
     COMBO(  r2_scln,    19 R2,  &sk RCTRL                            )
 
     COMBO(  r2_n,       25 R2,  &sk LC(LA(LSHIFT))                   )
-    COMBO(  r2_m,       26 R2,  &tog CONTROLS                        )
+    COMBO(  r2_m,       26 R2,  &tog NUMBERS &tog CODING             ) // note: coditional layers
     COMBO(  r2_comm,    27 R2,  &tog CODING                          )
     COMBO(  r2_dot,     28 R2,  &tog NUMBERS                         )
     COMBO(  r2_slsh,    29 R2,  &kp CAPS                             )
@@ -234,7 +234,7 @@
 
     COMBO(  LT1RT1,     L1 R1,  &kp CAPS                             )
     COMBO(  LT2RT2,     L2 R2,  &caps_word                           )
-    COMBO(  LT3RT3,     L3 R3,  &tog CONTROLS                        )
+    COMBO(  LT3RT3,     L3 R3,  &tog NUMBERS &tog CODING             ) // note: coditional layers
 
     /// more modifier combos
     COMBO(  l2_as,      L2 10 11,     &kp LC(LALT)                   )
