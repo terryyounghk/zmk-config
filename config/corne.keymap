@@ -8,14 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// layers
-#define ALPHA    0
-#define NUMBERS  1
-#define CODING   2
-#define CONTROLS 3
-
 /*
-    key positions
+  Key positions
     ╭────────────────────╮ ╭────────────────────╮
     │  0   1   2   3   4 │ │  5   6   7   8   9 │
     │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
@@ -24,6 +18,13 @@
             ╰────────────╯ ╰────────────╯
       Thumbs:  L3  L2  L1     R1  R2  R3
 */
+
+// layers
+#define ALPHA    0
+#define NUMBERS  1
+#define CODING   2
+#define CONTROLS 3
+
 // thumb key positions
 #define L3 30
 #define L2 31
@@ -33,30 +34,30 @@
 #define R3 35
 
 // special characters
-#define K_YEN     LA(Y)
-#define K_EURO    LA(LS(N2))
-#define K_POUND   LA(N3)
+#define Y_YEN     LA(Y)
+#define Y_EURO    LA(LS(N2))
+#define Y_POUND   LA(N3)
 
 // modifier aliases
 #define LHYPER LC(LA(LG(LSHIFT)))
-#define LMEH LC(LA(LSHIFT)))
+#define LMEH LC(LA(LSHIFT))
 #define HYPER(K) LC(LA(LG(LS(K))))
 #define MEH(K) LC(LA(LS(K)))
 
 // common/mac/app/shortcuts
-#define K_UNDO                           LG(Z)
-#define K_CUT                            LG(X)
-#define K_COPY                           LG(C)
-#define K_PASTE                          LG(V)
-#define K_CLOSE                          LG(W)
-#define K_QUIT                           LG(Q)
-#define K_LOCK_SCREEN                    LG(LC(Q))
-#define K_ONE_PASSWORD_AUTOFILL          HYPER(X)
-#define K_ONE_PASSWORD_SHOW              MEH(X)
-#define K_ONE_PASSWORD_BROWSER           LA(LS(X))
-#define K_OKTA                           LA(LS(O))
-#define K_KEYCAST_TOGGLE                 HYPER(SEMI)
-#define K_PRESENTIFY_ANNOTATE            MEH(A)
+#define Y_UNDO                           LG(Z)
+#define Y_CUT                            LG(X)
+#define Y_COPY                           LG(C)
+#define Y_PASTE                          LG(V)
+#define Y_CLOSE                          LG(W)
+#define Y_QUIT                           LG(Q)
+#define Y_LOCK_SCREEN                    LG(LC(Q))
+#define Y_ONE_PASSWORD_AUTOFILL          HYPER(X)
+#define Y_ONE_PASSWORD_SHOW              MEH(X)
+#define Y_ONE_PASSWORD_BROWSER           LA(LS(X))
+#define Y_OKTA                           LA(LS(O))
+#define Y_KEYCAST_TOGGLE                 HYPER(SEMI)
+#define Y_PRESENTIFY_ANNOTATE            MEH(A)
 
 // combo helper
 #define COMBO(NAME, KEYPOS, BINDINGS) \
@@ -101,7 +102,7 @@
 
     /// horizontal, adjacent
 
-    COMBO(  qw,         0 1,    &kp K_CLOSE                          )
+    COMBO(  qw,         0 1,    &kp Y_CLOSE                          )
     // COMBO(  we,         1 2,    &kp                                  )
     // COMBO(  er,         2 3,    &kp                                  )
     COMBO(  rt,         3 4,    &kp UNDERSCORE                       )
@@ -121,10 +122,10 @@
     COMBO(  kl,         17 18,  &kp DELETE                           )
     COMBO(  lscln,      18 19,  &kp APOSTROPHE                       )
 
-    COMBO(  zx,         20 21,  &kp K_UNDO                           )
-    COMBO(  xc,         21 22,  &kp K_CUT                            )
-    COMBO(  cv,         22 23,  &kp K_COPY                           )
-    COMBO(  vb,         23 24,  &kp K_PASTE                          )
+    COMBO(  zx,         20 21,  &kp Y_UNDO                           )
+    COMBO(  xc,         21 22,  &kp Y_CUT                            )
+    COMBO(  cv,         22 23,  &kp Y_COPY                           )
+    COMBO(  vb,         23 24,  &kp Y_PASTE                          )
 
     // COMBO(  nm,         25 26,  &kp                                  )
     // COMBO(  mcomma,     26 27,  &kp                                  )
@@ -177,7 +178,7 @@
 
     /// one-handed one-shots, mirrored on both sides
 
-    COMBO(  l1_q,       0 L1,   &kp K_LOCK_SCREEN                    )
+    COMBO(  l1_q,       0 L1,   &kp Y_LOCK_SCREEN                    )
     COMBO(  l1_w,       1 L1,   &sl CONTROLS                         )
     COMBO(  l1_e,       2 L1,   &sl CODING                           )
     COMBO(  l1_r,       3 L1,   &sl NUMBERS                          )
@@ -198,7 +199,7 @@
     COMBO(  r1_y,       5 R1,   &caps_word                           )
     COMBO(  r1_u,       6 R1,   &sl NUMBERS                          )
     COMBO(  r1_i,       7 R1,   &sl CODING                           )
-    COMBO(  r1_o,       8 R1,   &sl CONROLS                          )
+    COMBO(  r1_o,       8 R1,   &sl CONTROLS                         )
     COMBO(  r1_p,       9 R1,   &to ALPHA                            )
 
     COMBO(  r1_h,       15 R1,  &sk LHYPER                           )
@@ -227,10 +228,10 @@
     COMBO(  fj,         13 16,  &sk LSHIFT                           )
     COMBO(  gh,         14 15,  &sk LHYPER                           )
 
-    COMBO(  zslsh,      20 29,  &kp K_UNDO                           )
-    COMBO(  xdot,       21 28,  &kp K_CUT                            )
-    COMBO(  ccomm,      22 27,  &kp K_COPY                           )
-    COMBO(  vm,         23 26,  &kp K_PASTE                          )
+    COMBO(  zslsh,      20 29,  &kp Y_UNDO                           )
+    COMBO(  xdot,       21 28,  &kp Y_CUT                            )
+    COMBO(  ccomm,      22 27,  &kp Y_COPY                           )
+    COMBO(  vm,         23 26,  &kp Y_PASTE                          )
     COMBO(  bn,         24 25,  &sk LMEH                             )
 
     COMBO(  LT1RT1,     L1 R1,  &kp CAPS                             )
@@ -263,12 +264,12 @@
 
     /// shortcuts
 
-    COMBO(  semi_q,     19 0,         &kp K_LOCK_SCREEN              )
-    COMBO(  semi_f,     19 13,        &kp K_PRESENTIFY_ANNOTATE      )
-    COMBO(  semi_g,     19 14,        &kp K_KEYCAST_TOGGLE           )
-    COMBO(  semi_h,     19 15,        &kp K_ONE_PASSWORD_AUTOFILL    )
-    COMBO(  semi_j,     19 16,        &kp K_ONE_PASSWORD_SHOW        )
-    COMBO(  semi_k,     19 17,        &kp K_OKTA                     )
+    COMBO(  semi_q,     19 0,         &kp Y_LOCK_SCREEN              )
+    COMBO(  semi_f,     19 13,        &kp Y_PRESENTIFY_ANNOTATE      )
+    COMBO(  semi_g,     19 14,        &kp Y_KEYCAST_TOGGLE           )
+    COMBO(  semi_h,     19 15,        &kp Y_ONE_PASSWORD_AUTOFILL    )
+    COMBO(  semi_j,     19 16,        &kp Y_ONE_PASSWORD_SHOW        )
+    COMBO(  semi_k,     19 17,        &kp Y_OKTA                     )
   };
 
   macros {
@@ -305,7 +306,7 @@
       bindings = <
         &kp F1         &kp F2         &kp F3         &kp F4         &kp F5              &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
         &kp N1         &kp N2         &kp N3         &kp N4         &kp N5              &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
-        &kp K_YEN      &kp K_EURO     &kp MINUS      &kp EQUAL      &kp STAR            &kp K_POUND    &kp DOLLAR     &kp COMMA      &kp DOT        &kp FSLH
+        &kp Y_YEN      &kp Y_EURO     &kp MINUS      &kp EQUAL      &kp STAR            &kp Y_POUND    &kp DOLLAR     &kp COMMA      &kp DOT        &kp FSLH
                                       &trans         &trans         &trans              &trans         &trans         &trans
       >;
     };
