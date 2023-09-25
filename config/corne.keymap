@@ -8,22 +8,24 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// layers
-#define ALPHA    0
-#define NUMBERS  1
-#define CODING   2
-#define CONTROLS 3
-
 /*
-    key positions
+  Key positions
     ╭────────────────────╮ ╭────────────────────╮
     │  0   1   2   3   4 │ │  5   6   7   8   9 │
     │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
     │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
     ╰───────╮ 30  31  32 │ │ 33  34  35 ╭───────╯
             ╰────────────╯ ╰────────────╯
-      Thumbs:  L3  L2  L1     R1  R2  R3
+      Thumbs: L3  L2  L1     R1  R2  R3
 */
+
+// layers
+#define QWERTY   0
+#define NUMBERS  1
+#define CODING   2
+#define CONTROLS 3
+#define BLOCKED  4
+
 // thumb key positions
 #define L3 30
 #define L2 31
@@ -33,26 +35,47 @@
 #define R3 35
 
 // special characters
-#define K_YEN     LA(Y)
-#define K_EURO    LA(LS(N2))
-#define K_POUND   LA(N3)
+#define Y_EURO    LA(LS(N2))
+#define Y_POUND   LA(N3)
+#define Y_YEN     LA(Y)
 
 // modifier aliases
-#define HYPER(K) LC(LA(LG(LS(K))))
-#define MEH(K) LC(LA(LS(K)))
+#define HYPER(K)  LC(LA(LG(LS(K))))
+#define LHYPER    LC(LA(LG(LSHIFT)))
+#define LMEH      LC(LA(LSHIFT))
+#define MEH(K)    LC(LA(LS(K)))
 
-// special shortcuts
-#define K_ONE_PASSWORD_AUTOFILL          HYPER(X)
-#define K_ONE_PASSWORD_SHOW              MEH(X)
-#define K_ONE_PASSWORD_BROWSER           LA(LS(X))
-#define K_OKTA                           LA(LS(O))
-#define K_KEYCAST_TOGGLE                 HYPER(SEMI)
-#define K_PRESENTIFY_ANNOTATE            MEH(A)
+// common/mac/app/shortcuts
+#define Y_CLOSE                         LG(W)
+#define Y_COPY                          LG(C)
+#define Y_CUT                           LG(X)
+#define Y_KEYCAST_TOGGLE                HYPER(SEMI)
+#define Y_LOCK_SCREEN                   LG(LC(Q))
+#define Y_OKTA                          LA(LS(O))
+#define Y_ONE_PASSWORD_AUTOFILL         HYPER(X)
+#define Y_ONE_PASSWORD_BROWSER          LA(LS(X))
+#define Y_ONE_PASSWORD_SHOW             MEH(X)
+#define Y_PASTE                         LG(V)
+#define Y_PRESENTIFY_ANNOTATE           MEH(A)
+#define Y_QUIT                          LG(Q)
+#define Y_UNDO                          LG(Z)
+#define Y_VSCODE_TODO_TREE              HYPER(D)
+#define Y_VSCODE_EDITOR                 HYPER(E)
+#define Y_VSCODE_TERMINAL               HYPER(T)
+#define Y_VSCODE_GIT_GRAPH              HYPER(G)
+#define Y_VSCODE_SOURCE_CONTROL         LG(LS(A))
+#define Y_VSCODE_SEARCH                 LG(LS(F))
+#define Y_VSCODE_SAVE_ALL               HYPER(S)
+#define Y_VSCODE_CLOSE_ALL              HYPER(W)
+#define Y_MENUBAR                       LC(F2)
+#define Y_DOCK                          LC(F3)
+#define Y_SCREEN_CAPTURE_FULL           LG(LS(N3))
+#define Y_SCREEN_CAPTURE_AREA           LG(LS(N4))
 
 // combo helper
 #define COMBO(NAME, KEYPOS, BINDINGS) \
   combo_##NAME { \
-    timeout-ms = <50>; \
+    timeout-ms = <30>; \
     slow-release; \
     key-positions = <KEYPOS>; \
     bindings = <BINDINGS>; \
@@ -87,185 +110,195 @@
     zmk,matrix_transform = &five_column_transform;
   };
 
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-      tri_layer {
-        if-layers = <1 2>;
-        then-layer = <3>;
-      };
-  };
-
   combos {
     compatible = "zmk,combos";
 
     /// horizontal, adjacent
 
-    COMBO(  qw,         0 1,    &kp LG(W)                            )
-    // COMBO(  we,         1 2,    &kp                                  )
-    // COMBO(  er,         2 3,    &kp                                  )
-    COMBO(  rt,         3 4,    &kp UNDERSCORE                       )
+    // COMBO(  qw,         0 1,           &kp                                 )
+    // COMBO(  we,         1 2,           &kp                                 )
+    // COMBO(  er,         2 3,           &kp                                 )
+    COMBO(  rt,         3 4,           &kp EQUAL                           )
 
-    COMBO(  yu,         5 6,    &kp MINUS                            )
-    // COMBO(  ui,         6 7,    &kp                                  )
-    // COMBO(  io,         7 8,    &kp                                  )
-    // COMBO(  op,         8 9,    &kp                                  )
+    COMBO(  yu,         5 6,           &kp MINUS                           )
+    // COMBO(  ui,         6 7,           &kp                                 )
+    // COMBO(  io,         7 8,           &kp                                 )
+    // COMBO(  op,         8 9,           &kp                                 )
 
-    // COMBO(  as,         10 11,  &kp                                  )
-    COMBO(  sd,         11 12,  &kp BACKSPACE                        )
-    COMBO(  df,         12 13,  &kp ESCAPE                           )
-    COMBO(  fg,         13 14,  &kp DELETE                           )
+    // COMBO(  as,         10 11,         &kp                                 )
+    COMBO(  sd,         11 12,         &kp BACKSPACE                       )
+    COMBO(  df,         12 13,         &kp ESCAPE                          )
+    COMBO(  fg,         13 14,         &kp DELETE                          )
 
-    COMBO(  hj,         15 16,  &kp BACKSPACE                        )
-    COMBO(  jk,         16 17,  &kp ESCAPE                           )
-    COMBO(  kl,         17 18,  &kp DELETE                           )
-    COMBO(  lscln,      18 19,  &kp APOSTROPHE                       )
+    COMBO(  hj,         15 16,         &kp BACKSPACE                       )
+    COMBO(  jk,         16 17,         &kp ESCAPE                          )
+    COMBO(  kl,         17 18,         &kp DELETE                          )
+    COMBO(  lscln,      18 19,         &kp APOSTROPHE                      )
 
-    COMBO(  zx,         20 21,  &kp LG(Z)                            )
-    COMBO(  xc,         21 22,  &kp LG(X)                            )
-    COMBO(  cv,         22 23,  &kp LG(C)                            )
-    COMBO(  vb,         23 24,  &kp LG(V)                            )
+    COMBO(  zx,         20 21,         &kp Y_UNDO                          )
+    COMBO(  xc,         21 22,         &kp Y_CUT                           )
+    COMBO(  cv,         22 23,         &kp Y_COPY                          )
+    COMBO(  vb,         23 24,         &kp Y_PASTE                         )
 
-    // COMBO(  nm,         25 26,  &kp                                  )
-    // COMBO(  mcomma,     26 27,  &kp                                  )
-    COMBO(  commdot,    27 28,  &macro_is_unread                     )
-    // COMBO(  dotslsh,    28 29,  &kp                                  )
+    // COMBO(  nm,         25 26,         &kp                                 )
+    // COMBO(  mcomma,     26 27,         &kp                                 )
+    COMBO(  commdot,    27 28,         &macro_is_unread                    )
+    // COMBO(  dotslsh,    28 29,         &kp                                 )
 
     /// vertical, adjacent
 
-    COMBO(  qa,         0 10,   &kp EXCL                             )
-    COMBO(  ws,         1 11,   &kp AT                               )
-    COMBO(  ed,         2 12,   &kp HASH                             )
-    COMBO(  rf,         3 13,   &kp DOLLAR                           )
-    COMBO(  tg,         4 14,   &kp PERCENT                          )
+    COMBO(  qa,         0 10,          &kp EXCL                            )
+    COMBO(  ws,         1 11,          &kp AT                              )
+    COMBO(  ed,         2 12,          &kp HASH                            )
+    COMBO(  rf,         3 13,          &kp DOLLAR                          )
+    COMBO(  tg,         4 14,          &kp PERCENT                         )
 
-    COMBO(  yh,         5 15,   &kp CARET                            )
-    COMBO(  uj,         6 16,   &kp AMPS                             )
-    COMBO(  ik,         7 17,   &kp STAR                             )
-    COMBO(  ol,         8 18,   &kp GRAVE                            )
-    COMBO(  pscln,      9 19,   &kp EQUAL                            )
+    COMBO(  yh,         5 15,          &kp CARET                           )
+    COMBO(  uj,         6 16,          &kp AMPS                            )
+    COMBO(  ik,         7 17,          &kp STAR                            )
+    COMBO(  ol,         8 18,          &kp GRAVE                           )
+    COMBO(  pscln,      9 19,          &kp EQUAL                           )
 
-    COMBO(  az,         10 20,   &kp BSLH                            )
-    COMBO(  sx,         11 21,   &kp LT                              )
-    COMBO(  dc,         12 22,   &kp LBRC                            )
-    COMBO(  fv,         13 23,   &kp LBKT                            )
-    COMBO(  gb,         14 24,   &kp LPAR                            )
+    COMBO(  az,         10 20,         &kp BSLH                            )
+    COMBO(  sx,         11 21,         &kp LT                              )
+    COMBO(  dc,         12 22,         &kp LBRC                            )
+    COMBO(  fv,         13 23,         &kp LBKT                            )
+    COMBO(  gb,         14 24,         &kp LPAR                            )
 
-    COMBO(  hn,         15 25,   &kp RPAR                            )
-    COMBO(  jm,         16 26,   &kp RBKT                            )
-    COMBO(  kcomm,      17 27,   &kp RBRC                            )
-    COMBO(  ldot,       18 28,   &kp GT                              )
-    COMBO(  sclnslsh,   19 29,   &kp EXCL                            )
+    COMBO(  hn,         15 25,         &kp RPAR                            )
+    COMBO(  jm,         16 26,         &kp RBKT                            )
+    COMBO(  kcomm,      17 27,         &kp RBRC                            )
+    COMBO(  ldot,       18 28,         &kp GT                              )
+    COMBO(  sclnslsh,   19 29,         &kp PIPE                            )
 
     /// diagonal, adjacent
 
-    COMBO(  aw,         10 1,    &kp LS(A)                           )
-    COMBO(  rg,         3 14,    &kp EQUAL                           )
-    COMBO(  hu,         15 6,    &kp LS(EQUAL)                       )
-    COMBO(  ji,         16 7,    &kp LS(I)                           )
-    COMBO(  dv,         12 23,   &kp RETURN                          )
-    COMBO(  mk,         15 26,   &kp RETURN                          )
-    COMBO(  oscln,      8 19,    &kp DOUBLE_QUOTES                   )
-
-    /// special
-    COMBO(  jl,         16 18,   &to ALPHA                           )
-    COMBO(  sf,         11 13,   &to ALPHA                           )
-    COMBO(  sfjl,       11 13 16 18,   &bt BT_CLR                    )
-    COMBO(  jkl,        16 17 18,&kp K_MUTE                          )
-    COMBO(  xv,         21 23,   &kp SPACE                           )
-    COMBO(  mdot,       26 28,   &kp SPACE                           )
+    // COMBO(  aw,         10 1,          &kp                                 )
+    COMBO(  rg,         3 14,          &kp EQUAL                           )
+    COMBO(  hu,         15 6,          &kp PLUS                            )
+    // COMBO(  ji,         16 7,          &kp                                 )
+    COMBO(  dv,         12 23,         &kp RETURN                          )
+    COMBO(  mk,         17 26,         &kp RETURN                          )
+    // COMBO(  oscln,      8 19,          &kp                                 )
 
     /// one-handed one-shots, mirrored on both sides
 
-    COMBO(  l2_q,       0 L2,   &kp LG(LC(Q))                        )
-    COMBO(  l2_w,       1 L2,   &sl NUMBERS                          )
-    COMBO(  l2_e,       2 L2,   &sl CODING                           )
-    COMBO(  l2_r,       3 L2,   &sl CONTROLS                         )
-    COMBO(  l2_t,       4 L2,   &caps_word                           )
+    COMBO(  l1_q,       0 L1,          &kp Y_LOCK_SCREEN                   )
+    COMBO(  l1_w,       1 L1,          &sl CONTROLS                        )
+    COMBO(  l1_e,       2 L1,          &sl CODING                          )
+    COMBO(  l1_r,       3 L1,          &sl NUMBERS                         )
+    COMBO(  l1_t,       4 L1,          &caps_word                          )
 
-    COMBO(  l2_a,       10 L2,  &sk LCTRL                            )
-    COMBO(  l2_s,       11 L2,  &sk LALT                             )
-    COMBO(  l2_d,       12 L2,  &sk LGUI                             )
-    COMBO(  l2_f,       13 L2,  &sk LSHIFT                           )
-    COMBO(  l2_g,       14 L2,  &sk LC(LA(LG(LSHIFT)))               )
+    COMBO(  l1_a,       10 L1,         &sk LCTRL                           )
+    COMBO(  l1_s,       11 L1,         &sk LALT                            )
+    COMBO(  l1_d,       12 L1,         &sk LGUI                            )
+    COMBO(  l1_f,       13 L1,         &sk LSHIFT                          )
+    COMBO(  l1_g,       14 L1,         &sk LHYPER                          )
 
-    COMBO(  l2_z,       20 L2,  &kp CAPS                             )
-    COMBO(  l2_x,       21 L2,  &tog NUMBERS                         )
-    COMBO(  l2_c,       22 L2,  &tog CODING                          )
-    COMBO(  l2_v,       23 L2,  &tog CONTROLS                        )
-    COMBO(  l2_b,       24 L2,  &sk LC(LA(LSHIFT))                   )
+    COMBO(  l1_z,       20 L1,         &kp CAPS                            )
+    COMBO(  l1_x,       21 L1,         &tog CONTROLS                       )
+    COMBO(  l1_c,       22 L1,         &tog CODING                         )
+    COMBO(  l1_v,       23 L1,         &tog NUMBERS                        )
+    COMBO(  l1_b,       24 L1,         &sk LMEH                            )
 
-    COMBO(  r2_y,       5 L2,   &caps_word                           )
-    COMBO(  r2_u,       6 L2,   &sl CONTROLS                         )
-    COMBO(  r2_i,       7 L2,   &sl CODING                           )
-    COMBO(  r2_o,       8 L2,   &sl NUMBERS                          )
-    COMBO(  r2_p,       9 L2,   &to ALPHA                            ) // back to default layer
+    COMBO(  r1_y,       5 R1,          &caps_word                          )
+    COMBO(  r1_u,       6 R1,          &sl NUMBERS                         )
+    COMBO(  r1_i,       7 R1,          &sl CODING                          )
+    COMBO(  r1_o,       8 R1,          &sl CONTROLS                        )
+    COMBO(  r1_p,       9 R1,          &to QWERTY                          )
 
-    COMBO(  r2_h,       15 L2,  &sk RC(RA(RG(RSHIFT)))               ) // hyper
-    COMBO(  r2_j,       16 L2,  &sk RSHIFT                           )
-    COMBO(  r2_k,       17 L2,  &sk RGUI                             )
-    COMBO(  r2_l,       18 L2,  &sk RALT                             )
-    COMBO(  r2_scln,    19 L2,  &sk RCTRL                            )
+    COMBO(  r1_h,       15 R1,         &sk LHYPER                          )
+    COMBO(  r1_j,       16 R1,         &sk RSHIFT                          )
+    COMBO(  r1_k,       17 R1,         &sk RGUI                            )
+    COMBO(  r1_l,       18 R1,         &sk RALT                            )
+    COMBO(  r1_scln,    19 R1,         &sk RCTRL                           )
 
-    COMBO(  r2_n,       25 L2,  &sk LC(LA(LSHIFT))                   )
-    COMBO(  r2_m,       26 L2,  &tog CONTROLS                        )
-    COMBO(  r2_comm,    27 L2,  &tog CODING                          )
-    COMBO(  r2_dot,     28 L2,  &tog NUMBERS                         )
-    COMBO(  r2_slsh,    29 L2,  &kp CAPS                             )
+    COMBO(  r1_n,       25 R1,         &sk LMEH                            )
+    COMBO(  r1_m,       26 R1,         &tog NUMBERS                        )
+    COMBO(  r1_comm,    27 R1,         &tog CODING                         )
+    COMBO(  r1_dot,     28 R1,         &tog CONTROLS                       )
+    COMBO(  r1_slsh,    29 R1,         &kp CAPS                            )
 
     /// two-handed symmetric combos
 
-    // COMBO(  qp,         0 9,    &kp                                  )
-    // COMBO(  wo,         1 8,    &kp                                  )
-    // COMBO(  ei,         2 7,    &kp                                  )
-    // COMBO(  ro,         3 6,    &kp                                  )
-    // COMBO(  ty,         4 5,    &kp                                  )
+    // COMBO(  qp,         0 9,           &kp                                 )
+    // COMBO(  wo,         1 8,           &kp                                 )
+    // COMBO(  ei,         2 7,           &kp                                 )
+    // COMBO(  ro,         3 6,           &kp                                 )
+    // COMBO(  ty,         4 5,           &kp                                 )
 
-    COMBO(  ascln,      10 19,  &sk LCTRL                            )
-    COMBO(  sl,         11 18,  &sk LALT                             )
-    COMBO(  dk,         12 17,  &sk LGUI                             )
-    COMBO(  fj,         13 16,  &sk LSHIFT                           )
-    COMBO(  gh,         14 15,  &sk LC(LA(LG(LSHIFT)))               ) // hyper
+    COMBO(  ascln,      10 19,         &sk LCTRL                           )
+    COMBO(  sl,         11 18,         &sk LALT                            )
+    COMBO(  dk,         12 17,         &sk LGUI                            )
+    COMBO(  fj,         13 16,         &sk LSHIFT                          )
+    COMBO(  gh,         14 15,         &sk LHYPER                          )
 
-    COMBO(  zslsh,      20 29,  &kp LG(Z)                            )
-    COMBO(  xdot,       21 28,  &kp LG(X)                            )
-    COMBO(  ccomm,      22 27,  &kp LG(C)                            )
-    COMBO(  vm,         23 26,  &kp LG(V)                            )
-    COMBO(  bn,         24 25,  &sk LC(LA(LSHIFT))                   ) // meh
+    COMBO(  zslsh,      20 29,         &kp Y_UNDO                          )
+    COMBO(  xdot,       21 28,         &kp Y_CUT                           )
+    COMBO(  ccomm,      22 27,         &kp Y_COPY                          )
+    COMBO(  vm,         23 26,         &kp Y_PASTE                         )
+    COMBO(  bn,         24 25,         &sk LMEH                            )
 
-    COMBO(  LT1RT1,     L1 R1,  &kp CAPS                             )
-    COMBO(  LT2RT2,     L2 R2,  &caps_word                           )
-    COMBO(  LT3RT3,     L3 R3,  &tog CONTROLS                        )
+    COMBO(  LT1RT1,     L1 R1,         &kp CAPS                            )
+    COMBO(  LT2RT2,     L2 R2,         &caps_word                          )
+    COMBO(  LT3RT3,     L3 R3,         &sl CONTROLS                        )
 
     /// more modifier combos
-    COMBO(  l2_as,      L2 10 11,     &kp LC(LALT)                   )
-    COMBO(  l2_ad,      L2 10 12,     &kp LC(LGUI)                   )
-    COMBO(  l2_af,      L2 10 13,     &kp LC(LSHIFT)                 )
-    COMBO(  l2_sd,      L2 11 12,     &kp LA(LGUI)                   )
-    COMBO(  l2_sf,      L2 11 13,     &kp LA(LSHIFT)                 )
-    COMBO(  l2_df,      L2 12 13,     &kp LG(LSHIFT)                 )
-    COMBO(  l2_asd,     L2 10 11 12,  &kp LC(LA(LGUI))               )
-    COMBO(  l2_asf,     L2 10 11 13,  &kp LC(LA(LSHIFT))             )
-    COMBO(  l2_adf,     L2 10 12 13,  &kp LC(LG(LSHIFT))             )
-    COMBO(  l2_sdf,     L2 11 12 13,  &kp LA(LG(LSHIFT))             )
 
-    COMBO(  r2_cl,      R2 19 18,     &kp LC(LALT)                   )
-    COMBO(  r2_ck,      R2 19 17,     &kp LC(LGUI)                   )
-    COMBO(  r2_cj,      R2 19 16,     &kp LC(LSHIFT)                 )
-    COMBO(  r2_lk,      R2 18 17,     &kp LA(LGUI)                   )
-    COMBO(  r2_lj,      R2 18 16,     &kp LA(LSHIFT)                 )
-    COMBO(  r2_kj,      R2 17 16,     &kp LG(LSHIFT)                 )
-    COMBO(  r2_clk,     R2 19 18 17,  &kp LC(LA(LGUI))               )
-    COMBO(  r2_clj,     R2 19 18 16,  &kp LC(LA(LSHIFT))             )
-    COMBO(  r2_ckj,     R2 19 17 16,  &kp LC(LG(LSHIFT))             )
-    COMBO(  r2_lkj,     R2 18 17 16,  &kp LA(LG(LSHIFT))             )
+    COMBO(  l1_as,      L1 10 11,      &sk LC(LALT)                        )
+    COMBO(  l1_ad,      L1 10 12,      &sk LC(LGUI)                        )
+    COMBO(  l1_af,      L1 10 13,      &sk LC(LSHIFT)                      )
+    COMBO(  l1_sd,      L1 11 12,      &sk LA(LGUI)                        )
+    COMBO(  l1_sf,      L1 11 13,      &sk LA(LSHIFT)                      )
+    COMBO(  l1_df,      L1 12 13,      &sk LG(LSHIFT)                      )
+    COMBO(  l1_asd,     L1 10 11 12,   &sk LC(LA(LGUI))                    )
+    COMBO(  l1_asf,     L1 10 11 13,   &sk LC(LA(LSHIFT))                  )
+    COMBO(  l1_adf,     L1 10 12 13,   &sk LC(LG(LSHIFT))                  )
+    COMBO(  l1_sdf,     L1 11 12 13,   &sk LA(LG(LSHIFT))                  )
 
-    /// applications
+    COMBO(  r1_cl,      R1 19 18,      &sk LC(LALT)                        )
+    COMBO(  r1_ck,      R1 19 17,      &sk LC(LGUI)                        )
+    COMBO(  r1_cj,      R1 19 16,      &sk LC(LSHIFT)                      )
+    COMBO(  r1_lk,      R1 18 17,      &sk LA(LGUI)                        )
+    COMBO(  r1_lj,      R1 18 16,      &sk LA(LSHIFT)                      )
+    COMBO(  r1_kj,      R1 17 16,      &sk LG(LSHIFT)                      )
+    COMBO(  r1_clk,     R1 19 18 17,   &sk LC(LA(LGUI))                    )
+    COMBO(  r1_clj,     R1 19 18 16,   &sk LC(LA(LSHIFT))                  )
+    COMBO(  r1_ckj,     R1 19 17 16,   &sk LC(LG(LSHIFT))                  )
+    COMBO(  r1_lkj,     R1 18 17 16,   &sk LA(LG(LSHIFT))                  )
 
-    COMBO(  semi_k,     19 17,        &kp K_OKTA                     )
-    COMBO(  semi_j,     19 16,        &kp K_ONE_PASSWORD_SHOW        )
-    COMBO(  semi_h,     19 15,        &kp K_ONE_PASSWORD_AUTOFILL    )
-    COMBO(  semi_g,     19 14,        &kp K_KEYCAST_TOGGLE           )
-    COMBO(  semi_f,     19 13,        &kp K_PRESENTIFY_ANNOTATE      )
+    /// visual studio code
+
+    COMBO(  comm_w,     27 1,          &sk Y_VSCODE_CLOSE_ALL              )
+    COMBO(  comm_e,     27 2,          &sk Y_VSCODE_EDITOR                 )
+    COMBO(  comm_t,     27 4,          &sk Y_VSCODE_TERMINAL               )
+    COMBO(  comm_a,     27 10,         &sk Y_VSCODE_SOURCE_CONTROL         )
+    COMBO(  comm_s,     27 11,         &sk Y_VSCODE_SAVE_ALL               )
+    COMBO(  comm_d,     27 12,         &sk Y_VSCODE_TODO_TREE              )
+    COMBO(  comm_f,     27 13,         &sk Y_VSCODE_SEARCH                 )
+    COMBO(  comm_g,     27 14,         &sk Y_VSCODE_GIT_GRAPH              )
+
+    /// shortcuts
+
+    COMBO(  semi_w,     19 1,          &kp Y_MENUBAR                       )
+    COMBO(  semi_e,     19 2,          &kp Y_DOCK                          )
+    COMBO(  semi_d,     19 12,         &kp Y_SCREEN_CAPTURE_FULL           )
+    COMBO(  semi_f,     19 13,         &kp Y_SCREEN_CAPTURE_AREA           )
+    COMBO(  semi_h,     19 15,         &kp Y_ONE_PASSWORD_AUTOFILL         )
+    COMBO(  semi_j,     19 16,         &kp Y_ONE_PASSWORD_SHOW             )
+    COMBO(  semi_k,     19 17,         &kp Y_OKTA                          )
+    COMBO(  semi_n,     19 13,         &kp Y_PRESENTIFY_ANNOTATE           )
+    COMBO(  semi_m,     19 14,         &kp Y_KEYCAST_TOGGLE                )
+    COMBO(  semi_comm,  19 15,         &kp Y_LOCK_SCREEN                   )
+
+    /// special
+    COMBO(  jl,         16 18,         &to QWERTY                          )
+    COMBO(  sf,         11 13,         &to QWERTY                          )
+    COMBO(  xv,         21 23,         &kp SPACE                           )
+    COMBO(  mdot,       26 28,         &kp SPACE                           )
+    COMBO(  jkl,        16 17 18,      &kp K_MUTE                          )
+    COMBO(  sfjl,       1 3 6 8,       &bt BT_CLR                          )
+    COMBO(  blocked,    11 13 16 18,   &to BLOCKED                         )
   };
 
   macros {
@@ -275,8 +308,8 @@
   keymap {
     compatible = "zmk,keymap";
 
-    default_layer {
-      label = "alpha";
+    qwerty {
+      label = "qwerty";
       /*
         Q              W              E              R              T                   Y              U              I              O              P
         A              S              D              F              G                   H              J              K              L              ;
@@ -302,7 +335,7 @@
       bindings = <
         &kp F1         &kp F2         &kp F3         &kp F4         &kp F5              &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
         &kp N1         &kp N2         &kp N3         &kp N4         &kp N5              &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
-        &kp K_YEN      &kp K_EURO     &kp MINUS      &kp EQUAL      &kp STAR            &kp K_POUND    &kp DOLLAR     &kp COMMA      &kp DOT        &kp FSLH
+        &kp Y_YEN      &kp Y_EURO     &kp MINUS      &kp EQUAL      &kp STAR            &kp Y_POUND    &kp DOLLAR     &kp COMMA      &kp DOT        &kp FSLH
                                       &trans         &trans         &trans              &trans         &trans         &trans
       >;
     };
@@ -336,6 +369,16 @@
         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &kp C_VOL_DN        &kp F4         &kp F5         &kp F6         &kp F11        &kp F14
         &none          &none          &none          &none          &kp K_MUTE          &kp F1         &kp F2         &kp F3         &kp F12        &kp F15
                                       &trans         &trans         &trans              &trans         &trans         &trans
+      >;
+    };
+
+    blocked {
+      label = "blocked";
+      bindings = <
+        &none          &none          &none          &none          &none               &none          &none          &none          &none          &none
+        &none          &none          &none          &none          &none               &none          &none          &none          &none          &none
+        &none          &none          &none          &none          &none               &none          &none          &none          &none          &none
+                                      &none          &none          &none               &none          &none          &none
       >;
     };
   };
