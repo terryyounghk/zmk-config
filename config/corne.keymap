@@ -271,28 +271,28 @@
     /// two-handed symmetric combos
 
     /*
-    COMBO(  lu1ru1,         LU1 RU1,            &kp                                  )
-    COMBO(  lu2ru2,         LU2 RU2,            &kp                                  )
-    COMBO(  lu3ru3,         LU3 RU3,            &kp                                  )
-    COMBO(  lu4ru5,         LU4 RU5,            &kp                                  )
     COMBO(  lu5ru5,         LU5 RU5,            &kp                                  )
+    COMBO(  lu4ru5,         LU4 RU5,            &kp                                  )
+    COMBO(  lu3ru3,         LU3 RU3,            &kp                                  )
+    COMBO(  lu2ru2,         LU2 RU2,            &kp                                  )
+    COMBO(  lu1ru1,         LU1 RU1,            &kp                                  )
     */
 
-    COMBO(  lh1rh1,         LH1 RH1,            &sk LCTRL                            )
-    COMBO(  lh2rh2,         LH2 RH2,            &sk LALT                             )
+    COMBO(  lh5rh5,         LH5 RH5,            &sk LCTRL                            )
+    COMBO(  lh4rh4,         LH4 RH4,            &sk LALT                             )
     COMBO(  lh3rh3,         LH3 RH3,            &sk LGUI                             )
-    COMBO(  lh4rh4,         LH4 RH4,            &sk LSHIFT                           )
-    COMBO(  lh5rh5,         LH5 RH5,            &sk LHYPER                           )
+    COMBO(  lh2rh2,         LH2 RH2,            &sk LSHIFT                           )
+    COMBO(  lh1rh1,         LH1 RH1,            &sk LHYPER                           )
 
-    COMBO(  ll1rl1,         LL1 RL1,            &kp Y_UNDO                           )
-    COMBO(  ll2rl2,         LL2 RL2,            &kp Y_CUT                            )
+    COMBO(  ll5rl5,         LL5 RL5,            &kp Y_UNDO                           )
+    COMBO(  ll4rl4,         LL4 RL4,            &kp Y_CUT                            )
     COMBO(  ll3rl3,         LL3 RL3,            &kp Y_COPY                           )
-    COMBO(  ll4rl4,         LL4 RL4,            &kp Y_PASTE                          )
-    COMBO(  ll5rl5,         LL5 RL5,            &sk LMEH                             )
+    COMBO(  ll2rl2,         LL2 RL2,            &kp Y_PASTE                          )
+    COMBO(  ll1rl1,         LL1 RL1,            &sk LMEH                             )
 
-    COMBO(  lt1rt1,         LT1 RT1,            &kp CAPS                             )
-    COMBO(  lt2rt2,         LT2 RT2,            &caps_word                           )
     COMBO(  lt3rt3,         LT3 RT3,            &sl CONTROLS                         )
+    COMBO(  lt2rt2,         LT2 RT2,            &caps_word                           )
+    COMBO(  lt1rt1,         LT1 RT1,            &kp CAPS                             )
 
     /// one-handed combos mods, mirrored
 
