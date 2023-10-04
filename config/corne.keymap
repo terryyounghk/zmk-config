@@ -198,22 +198,36 @@
     bindings = <BINDINGS>; \
   };
 
+// behaviors
+#define MT(layer)                       &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
+
 &sl {
-    release-after-ms = <2000>;
+  release-after-ms = <1500>;
 };
 
 &sk {
-    release-after-ms = <2000>;
-    quick-release;
+  release-after-ms = <1500>;
+  quick-release;
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE BACKSPACE DELETE MINUS DOT>;
+  continue-list = <UNDERSCORE BACKSPACE DELETE MINUS DOT>;
 };
 
 / {
   chosen {
     zmk,matrix_transform = &five_column_transform;
+  };
+
+  behaviors {
+    mo_tog: behavior_mo_tog {
+      compatible = "zmk,behavior-hold-tap";
+      label = "mo_tog";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <200>;
+      bindings = <&mo>, <&tog>;
+    };
   };
 
   combos {
@@ -399,7 +413,7 @@
     COMBO(  rh5lh2,         RH5 LH2,            &kp Y_SCREEN_CAPTURE_AREA            )
     COMBO(  rh5rh1,         RH5 RH1,            &kp Y_ONE_PASSWORD_AUTOFILL          )
     COMBO(  rh5rh2,         RH5 RH2,            &kp Y_ONE_PASSWORD_SHOW              )
-    COMBO(  rh5rh4,         RH5 RH4,            &kp Y_OKTA                           )
+    COMBO(  rh5rh4,         RH5 RH3,            &kp Y_OKTA                           )
     COMBO(  rh5rl1,         RH5 RL1,            &kp Y_PRESENTIFY_ANNOTATE            )
     COMBO(  rh5rl2,         RH5 RL2,            &kp Y_KEYCAST_TOGGLE                 )
     COMBO(  rh5rl3,         RH5 RL3,            &kp Y_LOCK_SCREEN                    )
@@ -431,7 +445,7 @@
       /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
            &kp Z          &kp X          &kp C          &kp V          &kp B                &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH
       /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
-                                         &sl NUMBERS    &sk LSHFT      &kp TAB              &kp RETURN     &kp SPACE      &sl CODING
+                                         MT(NUMBERS)    &sk LSHFT      &kp TAB              &kp RETURN     &kp SPACE       MT(CODING)
       /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
       >;
     };
