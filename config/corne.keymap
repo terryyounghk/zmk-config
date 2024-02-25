@@ -7,437 +7,15 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
-// layers
-#define QWERTY   0
-#define NUMBERS  1
-#define CODING   2
-#define CONTROLS 3
-#define BLOCKED  4
+#include "keys.h"
+#include "helper.keymap"
+#include "macros.dtsi"
+#include "combos.dtsi"
+#include "mouse.dtsi"
 
-/*
-  Key Positions
-    Side:               L: Left                R: Right
-    Columns:       5   4   3   2   1        1   2   3   4   5
-                ╭─────────────────────╮  ╭─────────────────────╮
-    U: Upper    │  0   1   2   3   4  │  │   5   6   7   8   9 │
-    H: Home     │ 10  11  12  13  14  │  │  15  16  17  18  19 │
-    L: Lower    │ 20  21  22  23  24  │  │  25  26  27  28  29 │
-    T: Thumb    ╰───────╮ 30  31  32  │  │  33  34  35 ╭───────╯
-                        ╰─────────────╯  ╰─────────────╯
-
-  Notation
-    Side:               L: Left                R: Right
-    Columns:       5   4   3   2   1        1   2   3   4   5
-                ╭─────────────────────╮  ╭─────────────────────╮
-    U: Upper    │ LU5 LU4 LU3 LU2 LU1 │  │ RU1 RU2 RU3 RU4 RU5 │
-    H: Home     │ LH5 LH4 LH3 LH2 LH1 │  │ RH1 RH2 RH3 RH4 RH5 │
-    L: Lower    │ LL5 LL4 LL3 LL2 LL1 │  │ RL1 RL2 RL3 RL4 RL5 │
-    T: Thumb    ╰───────╮ LT3 LT2 LT1 │  │ RT1 RT2 RT3 ╭───────╯
-                        ╰─────────────╯  ╰─────────────╯
-*/
-
-// key positions
-#define LU5 0
-#define LU4 1
-#define LU3 2
-#define LU2 3
-#define LU1 4
-#define RU1 5
-#define RU2 6
-#define RU3 7
-#define RU4 8
-#define RU5 9
-
-#define LH5 10
-#define LH4 11
-#define LH3 12
-#define LH2 13
-#define LH1 14
-#define RH1 15
-#define RH2 16
-#define RH3 17
-#define RH4 18
-#define RH5 19
-
-#define LL5 20
-#define LL4 21
-#define LL3 22
-#define LL2 23
-#define LL1 24
-#define RL1 25
-#define RL2 26
-#define RL3 27
-#define RL4 28
-#define RL5 29
-
-#define LT3 30
-#define LT2 31
-#define LT1 32
-#define RT1 33
-#define RT2 34
-#define RT3 35
-/*
-  Key Positions
-    Side:               L: Left                R: Right
-    Columns:       5   4   3   2   1        1   2   3   4   5
-                ╭─────────────────────╮  ╭─────────────────────╮
-    U: Upper    │  0   1   2   3   4  │  │   5   6   7   8   9 │
-    H: Home     │ 10  11  12  13  14  │  │  15  16  17  18  19 │
-    L: Lower    │ 20  21  22  23  24  │  │  25  26  27  28  29 │
-    T: Thumb    ╰───────╮ 30  31  32  │  │  33  34  35 ╭───────╯
-                        ╰─────────────╯  ╰─────────────╯
-
-  Notation
-    Side:               L: Left                R: Right
-    Columns:       5   4   3   2   1        1   2   3   4   5
-                ╭─────────────────────╮  ╭─────────────────────╮
-    U: Upper    │ LU5 LU4 LU3 LU2 LU1 │  │ RU1 RU2 RU3 RU4 RU5 │
-    H: Home     │ LH5 LH4 LH3 LH2 LH1 │  │ RH1 RH2 RH3 RH4 RH5 │
-    L: Lower    │ LL5 LL4 LL3 LL2 LL1 │  │ RL1 RL2 RL3 RL4 RL5 │
-    T: Thumb    ╰───────╮ LT3 LT2 LT1 │  │ RT1 RT2 RT3 ╭───────╯
-                        ╰─────────────╯  ╰─────────────╯
-*/
-
-// key positions
-#define LU5 0
-#define LU4 1
-#define LU3 2
-#define LU2 3
-#define LU1 4
-#define RU1 5
-#define RU2 6
-#define RU3 7
-#define RU4 8
-#define RU5 9
-
-#define LH5 10
-#define LH4 11
-#define LH3 12
-#define LH2 13
-#define LH1 14
-#define RH1 15
-#define RH2 16
-#define RH3 17
-#define RH4 18
-#define RH5 19
-
-#define LL5 20
-#define LL4 21
-#define LL3 22
-#define LL2 23
-#define LL1 24
-#define RL1 25
-#define RL2 26
-#define RL3 27
-#define RL4 28
-#define RL5 29
-
-#define LT3 30
-#define LT2 31
-#define LT1 32
-#define RT1 33
-#define RT2 34
-#define RT3 35
-
-// special characters
-#define Y_EURO    LA(LS(N2))
-#define Y_POUND   LA(N3)
-#define Y_YEN     LA(Y)
-
-// modifier aliases
-#define HYPER(K)  LC(LA(LG(LS(K))))
-#define LHYPER    LC(LA(LG(LSHIFT)))
-#define LMEH      LC(LA(LSHIFT))
-#define MEH(K)    LC(LA(LS(K)))
-
-// common/mac/app/shortcuts
-#define Y_CLOSE                         LG(W)
-#define Y_COPY                          LG(C)
-#define Y_CUT                           LG(X)
-#define Y_KEYCAST_TOGGLE                HYPER(SEMI)
-#define Y_LOCK_SCREEN                   LG(LC(Q))
-#define Y_OKTA                          LA(LS(O))
-#define Y_ONE_PASSWORD_AUTOFILL         HYPER(X)
-#define Y_ONE_PASSWORD_BROWSER          LA(LS(X))
-#define Y_ONE_PASSWORD_SHOW             MEH(X)
-#define Y_PASTE                         LG(V)
-#define Y_PRESENTIFY_ANNOTATE           MEH(A)
-#define Y_QUIT                          LG(Q)
-#define Y_UNDO                          LG(Z)
-#define Y_VSCODE_TODO_TREE              HYPER(D)
-#define Y_VSCODE_EDITOR                 HYPER(E)
-#define Y_VSCODE_TERMINAL               HYPER(T)
-#define Y_VSCODE_GIT_GRAPH              HYPER(G)
-#define Y_VSCODE_SOURCE_CONTROL         LG(LS(A))
-#define Y_VSCODE_SEARCH                 LG(LS(F))
-#define Y_VSCODE_SAVE_ALL               HYPER(S)
-#define Y_VSCODE_CLOSE_ALL              HYPER(W)
-#define Y_MENUBAR                       LC(F2)
-#define Y_DOCK                          LC(F3)
-#define Y_SCREEN_CAPTURE_FULL           LG(LS(N3))
-#define Y_SCREEN_CAPTURE_AREA           LG(LS(N4))
-
-// combo helper
-#define COMBO(NAME, KEYPOS, BINDINGS) \
-  combo_##NAME { \
-    timeout-ms = <30>; \
-    slow-release; \
-    key-positions = <KEYPOS>; \
-    bindings = <BINDINGS>; \
-  };
-
-// macro helper
-#define MACRO(NAME, BINDINGS) \
-  macro_##NAME: macro_##NAME { \
-    compatible = "zmk,behavior-macro"; \
-    label = "##NAME"; \
-    #binding-cells = <0>; \
-    wait-ms = <40>; \
-    tap-ms = <40>; \
-    bindings = <BINDINGS>; \
-  };
-
-// behaviors
-#define MT(layer)                       &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
-
-&sl {
-  release-after-ms = <1500>;
-};
-
-&sk {
-  release-after-ms = <1500>;
-  quick-release;
-};
-
-&caps_word {
-  continue-list = <UNDERSCORE BACKSPACE DELETE MINUS DOT>;
-};
-
-/ {
-  chosen {
-    zmk,matrix_transform = &five_column_transform;
-  };
-
-  behaviors {
-    mo_tog: behavior_mo_tog {
-      compatible = "zmk,behavior-hold-tap";
-      label = "mo_tog";
-      #binding-cells = <2>;
-      flavor = "hold-preferred";
-      tapping-term-ms = <200>;
-      bindings = <&mo>, <&tog>;
-    };
-  };
-
-  combos {
-    compatible = "zmk,combos";
-
-    /// horizontally adjacent combos
-
-    /*
-    COMBO(  lu5lu4,         LU5 LU4,            &kp                                  )
-    COMBO(  lu4lu3,         LU4 LU3,            &kp                                  )
-    COMBO(  lu3lu2,         LU3 LU2,            &kp                                  )
-    */
-    COMBO(  lu2lu1,         LU2 LU1,            &kp EQUAL                            )
-
-    COMBO(  ru1ru2,         RU1 RU2,            &kp MINUS                            )
-    /*
-    COMBO(  ru2ru3,         RU2 RU3,            &kp                                  )
-    COMBO(  ru3ru4,         RU3 RU4,            &kp                                  )
-    COMBO(  ru4ru5,         RU4 RU5,            &kp                                  )
-
-    COMBO(  lh5lh4,         LH5 LH4,            &kp                                  )
-    */
-    COMBO(  lh4lh3,         LH4 LH3,            &kp BACKSPACE                        )
-    COMBO(  lh3lh2,         LH3 LH2,            &kp ESCAPE                           )
-    COMBO(  lh2lh1,         LH2 LH1,            &kp DELETE                           )
-
-    COMBO(  rh1rh2,         RH1 RH2,            &kp BACKSPACE                        )
-    COMBO(  rh2rh3,         RH2 RH3,            &kp ESCAPE                           )
-    COMBO(  rh3rh4,         RH3 RH4,            &kp DELETE                           )
-    COMBO(  rh4rh5,         RH4 RH5,            &kp APOSTROPHE                       )
-
-    COMBO(  ll5ll4,         LL5 LL4,            &kp Y_UNDO                           )
-    COMBO(  ll4ll3,         LL4 LL3,            &kp Y_CUT                            )
-    COMBO(  ll3ll2,         LL3 LL2,            &kp Y_COPY                           )
-    COMBO(  ll2ll1,         LL2 LL1,            &kp Y_PASTE                          )
-
-    /*
-    COMBO(  rl1rl2,         RL1 RL2,            &kp                                  )
-    COMBO(  rl2rl3,         RL2 RL3,            &kp                                  )
-    */
-    COMBO(  rl3rl4,         RL3 RL4,            &macro_is_unread                     )
-    /*
-    COMBO(  rl4rl5,         RL4 RL5,            &kp                                  )
-    */
-
-    /// vertically adjacent combos
-
-    COMBO(  lu5lh5,         LU5 LH5,            &kp EXCL                             )
-    COMBO(  lu4lh4,         LU4 LH4,            &kp AT                               )
-    COMBO(  lu3lh3,         LU3 LH3,            &kp HASH                             )
-    COMBO(  lu2lh2,         LU2 LH2,            &kp DOLLAR                           )
-    COMBO(  lu1lh1,         LU1 LH1,            &kp PERCENT                          )
-
-    COMBO(  ru1rh1,         RU1 RH1,            &kp CARET                            )
-    COMBO(  ru2rh2,         RU2 RH2,            &kp AMPS                             )
-    COMBO(  ru3rh3,         RU3 RH3,            &kp STAR                             )
-    COMBO(  ru4rh4,         RU4 RH4,            &kp GRAVE                            )
-    COMBO(  ru5rh5,         RU5 RH5,            &kp EQUAL                            )
-
-    COMBO(  lh5ll5,         LH5 LL5,            &kp BSLH                             )
-    COMBO(  lh4ll4,         LH4 LL4,            &kp LT                               )
-    COMBO(  lh3ll3,         LH3 LL3,            &kp LBRC                             )
-    COMBO(  lh2ll2,         LH2 LL2,            &kp LBKT                             )
-    COMBO(  lh1ll1,         LH1 LL1,            &kp LPAR                             )
-
-    COMBO(  rh1rl1,         RH1 RL1,            &kp RPAR                             )
-    COMBO(  rh2rl2,         RH2 RL2,            &kp RBKT                             )
-    COMBO(  rh3rl3,         RH3 RL3,            &kp RBRC                             )
-    COMBO(  rh4rl4,         RH4 RL4,            &kp GT                               )
-    COMBO(  rh5rl5,         RH5 RL5,            &kp PIPE                             )
-
-    /// diagonal combos
-
-    COMBO(  lu2lh1,         LU2 LH1,            &kp EQUAL                            )
-    COMBO(  ru2rh1,         RU2 RH1,            &kp PLUS                             )
-    COMBO(  lh3ll2,         LH3 LL2,            &kp RETURN                           )
-    COMBO(  rh3rl2,         RH3 RL2,            &kp RETURN                           )
-
-    /// one-handed one-shots, mirrored on both sides
-
-    COMBO(  lt1lu5,         LT1 LU5,            &kp Y_LOCK_SCREEN                    )
-    COMBO(  lt1lu4,         LT1 LU4,            &sl CONTROLS                         )
-    COMBO(  lt1lu3,         LT1 LU3,            &sl CODING                           )
-    COMBO(  lt1lu2,         LT1 LU2,            &sl NUMBERS                          )
-    COMBO(  lt1lu1,         LT1 LU1,            &caps_word                           )
-
-    COMBO(  lt1lh5,         LT1 LH5,            &sk LCTRL                            )
-    COMBO(  lt1lh4,         LT1 LH4,            &sk LALT                             )
-    COMBO(  lt1lh3,         LT1 LH3,            &sk LGUI                             )
-    COMBO(  lt1lh2,         LT1 LH2,            &sk LSHIFT                           )
-    COMBO(  lt1lh1,         LT1 LH1,            &sk LHYPER                           )
-
-    COMBO(  lt1ll5,         LT1 LL5,            &kp CAPS                             )
-    COMBO(  lt1ll4,         LT1 LL4,            &tog CONTROLS                        )
-    COMBO(  lt1ll3,         LT1 LL3,            &tog CODING                          )
-    COMBO(  lt1ll2,         LT1 LL2,            &tog NUMBERS                         )
-    COMBO(  lt1ll1,         LT1 LL1,            &sk LMEH                             )
-
-    COMBO(  rt1ru1,         RT1 RU1,            &caps_word                           )
-    COMBO(  rt1ru2,         RT1 RU2,            &sl NUMBERS                          )
-    COMBO(  rt1ru3,         RT1 RU3,            &sl CODING                           )
-    COMBO(  rt1ru4,         RT1 RU4,            &sl CONTROLS                         )
-    COMBO(  rt1ru5,         RT1 RU5,            &to QWERTY                           )
-
-    COMBO(  rt1rh1,         RT1 RH1,            &sk LHYPER                           )
-    COMBO(  rt1rh2,         RT1 RH2,            &sk RSHIFT                           )
-    COMBO(  rt1rh3,         RT1 RH3,            &sk RGUI                             )
-    COMBO(  rt1rh4,         RT1 RH4,            &sk RALT                             )
-    COMBO(  rt1rh5,         RT1 RH5,            &sk RCTRL                            )
-
-    COMBO(  rt1rl1,         RT1 RL1,            &sk LMEH                             )
-    COMBO(  rt1rl2,         RT1 RL2,            &tog NUMBERS                         )
-    COMBO(  rt1rl3,         RT1 RL3,            &tog CODING                          )
-    COMBO(  rt1rl4,         RT1 RL4,            &tog CONTROLS                        )
-    COMBO(  rt1rl5,         RT1 RL5,            &kp CAPS                             )
-
-    /// two-handed symmetric combos
-
-    /*
-    COMBO(  lu5ru5,         LU5 RU5,            &kp                                  )
-    COMBO(  lu4ru5,         LU4 RU5,            &kp                                  )
-    COMBO(  lu3ru3,         LU3 RU3,            &kp                                  )
-    COMBO(  lu2ru2,         LU2 RU2,            &kp                                  )
-    COMBO(  lu1ru1,         LU1 RU1,            &kp                                  )
-    */
-
-    COMBO(  lh5rh5,         LH5 RH5,            &sk LCTRL                            )
-    COMBO(  lh4rh4,         LH4 RH4,            &sk LALT                             )
-    COMBO(  lh3rh3,         LH3 RH3,            &sk LGUI                             )
-    COMBO(  lh2rh2,         LH2 RH2,            &sk LSHIFT                           )
-    COMBO(  lh1rh1,         LH1 RH1,            &sk LHYPER                           )
-
-    COMBO(  ll5rl5,         LL5 RL5,            &kp Y_UNDO                           )
-    COMBO(  ll4rl4,         LL4 RL4,            &kp Y_CUT                            )
-    COMBO(  ll3rl3,         LL3 RL3,            &kp Y_COPY                           )
-    COMBO(  ll2rl2,         LL2 RL2,            &kp Y_PASTE                          )
-    COMBO(  ll1rl1,         LL1 RL1,            &sk LMEH                             )
-
-    COMBO(  lt3rt3,         LT3 RT3,            &sl CONTROLS                         )
-    COMBO(  lt2rt2,         LT2 RT2,            &caps_word                           )
-    COMBO(  lt1rt1,         LT1 RT1,            &kp CAPS                             )
-
-    /// one-handed combos mods, mirrored
-
-    COMBO(  lt1lh5lh4,      LT1 LH5 LH4,        &sk LC(LALT)                         )
-    COMBO(  lt1lh5lh3,      LT1 LH5 LH3,        &sk LC(LGUI)                         )
-    COMBO(  lt1lh5lh2,      LT1 LH5 LH2,        &sk LC(LSHIFT)                       )
-    COMBO(  lt1lh4lh3,      LT1 LH4 LH3,        &sk LA(LGUI)                         )
-    COMBO(  lt1lh4lh2,      LT1 LH4 LH2,        &sk LA(LSHIFT)                       )
-    COMBO(  lt1lh3lh2,      LT1 LH3 LH2,        &sk LG(LSHIFT)                       )
-    COMBO(  lt1lh5lh4lh3,   LT1 LH5 LH4 LH3,    &sk LC(LA(LGUI))                     )
-    COMBO(  lt1lh5lh4lh2,   LT1 LH5 LH4 LH2,    &sk LC(LA(LSHIFT))                   )
-    COMBO(  lt1lh5lh3lh2,   LT1 LH5 LH3 LH2,    &sk LC(LG(LSHIFT))                   )
-    COMBO(  lt1lh4lh3lh2,   LT1 LH4 LH3 LH2,    &sk LA(LG(LSHIFT))                   )
-
-    COMBO(  rt1rh5rh4,      RT1 RH5 RH4,        &sk LC(LALT)                         )
-    COMBO(  rt1rh5rh3,      RT1 RH5 RH3,        &sk LC(LGUI)                         )
-    COMBO(  rt1rh5rh2,      RT1 RH5 RH2,        &sk LC(LSHIFT)                       )
-    COMBO(  rt1rh4rh3,      RT1 RH4 RH3,        &sk LA(LGUI)                         )
-    COMBO(  rt1rh4rh2,      RT1 RH4 RH2,        &sk LA(LSHIFT)                       )
-    COMBO(  rt1rh3rh2,      RT1 RH3 RH2,        &sk LG(LSHIFT)                       )
-    COMBO(  rt1rh5rh4rh3,   RT1 RH5 RH4 RH3,    &sk LC(LA(LGUI))                     )
-    COMBO(  rt1rh5rh4rh2,   RT1 RH5 RH4 RH2,    &sk LC(LA(LSHIFT))                   )
-    COMBO(  rt1rh5rh3rh2,   RT1 RH5 RH3 RH2,    &sk LC(LG(LSHIFT))                   )
-    COMBO(  rt1rh4rh3rh2,   RT1 RH4 RH3 RH2,    &sk LA(LG(LSHIFT))                   )
-
-    /// visual studio code
-
-    COMBO(  rl3lu4,         RL3 LU4,            &sk Y_VSCODE_CLOSE_ALL               )
-    COMBO(  rl3lu3,         RL3 LU3,            &sk Y_VSCODE_EDITOR                  )
-    COMBO(  rl3lu1,         RL3 LU1,            &sk Y_VSCODE_TERMINAL                )
-    COMBO(  rl3lh5,         RL3 LH5,            &sk Y_VSCODE_SOURCE_CONTROL          )
-    COMBO(  rl3lh4,         RL3 LH4,            &sk Y_VSCODE_SAVE_ALL                )
-    COMBO(  rl3lh3,         RL3 LH3,            &sk Y_VSCODE_TODO_TREE               )
-    COMBO(  rl3lh2,         RL3 LH2,            &sk Y_VSCODE_SEARCH                  )
-    COMBO(  rl3lh1,         RL3 LH1,            &sk Y_VSCODE_GIT_GRAPH               )
-
-    /// shortcuts
-
-    COMBO(  rh5lu4,         RH5 LU4,            &kp Y_MENUBAR                        )
-    COMBO(  rh5lu3,         RH5 LU3,            &kp Y_DOCK                           )
-    COMBO(  rh5lh3,         RH5 LH3,            &kp Y_SCREEN_CAPTURE_FULL            )
-    COMBO(  rh5lh2,         RH5 LH2,            &kp Y_SCREEN_CAPTURE_AREA            )
-    COMBO(  rh5rh1,         RH5 RH1,            &kp Y_ONE_PASSWORD_AUTOFILL          )
-    COMBO(  rh5rh2,         RH5 RH2,            &kp Y_ONE_PASSWORD_SHOW              )
-    COMBO(  rh5rh4,         RH5 RH3,            &kp Y_OKTA                           )
-    COMBO(  rh5rl1,         RH5 RL1,            &kp Y_PRESENTIFY_ANNOTATE            )
-    COMBO(  rh5rl2,         RH5 RL2,            &kp Y_KEYCAST_TOGGLE                 )
-    COMBO(  rh5rl3,         RH5 RL3,            &kp Y_LOCK_SCREEN                    )
-
-    /// special
-    COMBO(  rh4rh2,         RH4 RH2,            &to QWERTY                           )
-    COMBO(  lh4lh2,         LH4 LH2,            &to QWERTY                           )
-    COMBO(  rl4rl2,         RL4 RL2,            &kp SPACE                            )
-    COMBO(  ll4ll2,         LL4 LL2,            &kp SPACE                            )
-    COMBO(  rh4rh3rh2,      RH4 RH3 RH2,        &kp K_MUTE                           )
-    COMBO(  lu4lu2ru4ru2,   LU4 LU2 RU4 RU2,    &bt BT_CLR                           )
-    COMBO(  lh4lh2rh4rh2,   LH4 LH2 RH4 RH2,    &to BLOCKED                          )
-  };
-
-  macros {
-    MACRO(  is_unread,          &macro_tap &kp I &kp S &kp COLON &kp U &kp N &kp R &kp E &kp A &kp D)
-  };
-
-  keymap {
-    compatible = "zmk,keymap";
-
-    qwerty {
-      label = "qwerty";
-      bindings = <
+CUSTOM_LAYER(qwerty, "QWERTY",
       /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
            &kp Q          &kp W          &kp E          &kp R          &kp T                &kp Y          &kp U          &kp I          &kp O          &kp P
       /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
@@ -445,14 +23,11 @@
       /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
            &kp Z          &kp X          &kp C          &kp V          &kp B                &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH
       /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
-                                         MT(NUMBERS)    &sk LSHFT      &kp TAB              &kp RETURN     &kp SPACE       MT(CODING)
+                                         MT(NUMBERS)    &sk LSHIFT     &krtab               &kp RETURN     &kp SPACE      &kp TAB
       /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
-      >;
-    };
+)
 
-    numbers {
-      label = "numbers";
-      bindings = <
+CUSTOM_LAYER(numbers, "Numbers",
       /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
            &kp F1         &kp F2         &kp F3         &kp F4         &kp F5               &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
       /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
@@ -462,12 +37,9 @@
       /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
                                          &trans         &trans         &trans               &trans         &trans         &trans
       /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
-      >;
-    };
+)
 
-    coding {
-      label = "coding";
-      bindings = <
+CUSTOM_LAYER(coding, "Coding",
       /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
            &kp CARET      &kp AT         &kp LPAR       &kp RPAR       &kp DOLLAR           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        &kp PIPE
       /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
@@ -477,27 +49,21 @@
       /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
                                          &trans         &trans         &trans               &trans         &trans         &trans
       /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
-      >;
-    };
+)
 
-    controls {
-      label = "controls";
-      bindings = <
+CUSTOM_LAYER(controls, "Controls",
       /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
-           &kp CAPS       &kp C_PREV     &kp C_PP       &kp C_NEXT     &kp C_VOL_UP         &kp F7         &kp F8         &kp F9         &kp F10        &kp F13
+           &kp CAPS       &kp C_PREV     &kp C_PP       &kp C_NEXT     &kp C_VOL_UP         &trans         &mkp MB4       &mmv MV_U      &mkp MB5       &trans
       /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
-           &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &kp C_VOL_DN         &kp F4         &kp F5         &kp F6         &kp F11        &kp F14
+           &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &kp C_VOL_DN         &msc MW_D      &mmv MV_L      &mmv MV_D      &mmv MV_R      &kp F15
       /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
-           &none          &none          &none          &none          &kp K_MUTE           &kp F1         &kp F2         &kp F3         &kp F12        &kp F15
+           &none          &none          &none          &none          &kp K_MUTE           &msc MW_U      &kp F11        &kp F12        &kp F13        &kp F14
       /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
-                                         &trans         &trans         &trans               &trans         &trans         &trans
+                                         &trans         &trans         &trans               &mkp LCLK      &mkp RCLK      &mkp MCLK
       /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
-      >;
-    };
+)
 
-    blocked {
-      label = "blocked";
-      bindings = <
+CUSTOM_LAYER(afk, "AFK",
       /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
            &none          &none          &none          &none          &none                &none          &none          &none          &none          &none
       /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
@@ -507,7 +73,4 @@
       /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
                                          &none          &none          &none                &none          &none          &none
       /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
-      >;
-    };
-  };
-};
+)

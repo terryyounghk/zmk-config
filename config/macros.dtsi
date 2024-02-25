@@ -1,0 +1,42 @@
+// special macro to cancel any toggled-mods and return to layer 1
+CUSTOM_MACRO(  m_release_mods,     &to QWERTY &macro_release &kp LCTRL &kp LALT &kp LSHIFT &kp LGUI)
+
+// Gmail filter phrases
+CUSTOM_MACRO(  m_is_unread,        &kp I &kp S &kp COLON &kp U &kp N &kp R &kp E &kp A &kp D)
+
+// Vimium-C commands
+CUSTOM_MACRO(  m_vc_reload_r,      &kp N9 &kp N9 &macro_press &kp LALT &macro_tap &kp R &macro_release &m_release_mods)
+CUSTOM_MACRO(  m_vc_reload_l,      &kp MINUS &m_vc_reload_r)
+
+// wrap double-quotes
+CUSTOM_MACRO(  m_quote_word,       &kp DQT &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp DQT)
+CUSTOM_MACRO(  m_quote_end,        &kp DQT &macro_press &kp LGUI &macro_tap &kp RIGHT &macro_release &kp DQT)
+CUSTOM_MACRO(  m_quote_line,       &macro_press &kp LGUI &macro_tap &kp LEFT &macro_release &kp DQT &macro_press &kp LGUI &macro_tap &kp RIGHT &macro_release &kp DQT)
+
+// contractions
+CUSTOM_MACRO(  m_upper_i,          &macro_press &kp LSHIFT &macro_tap &kp I &macro_release &kp LSHIFT &macro_tap)
+CUSTOM_MACRO(  m_apos_ll,          &kp APOSTROPHE &kp L &kp L)
+CUSTOM_MACRO(  m_apos_re,          &kp APOSTROPHE &kp R &kp E)
+CUSTOM_MACRO(  m_apos_ve,          &kp APOSTROPHE &kp V &kp E)
+CUSTOM_MACRO(  m_apos_nt,          &kp N &kp APOSTROPHE &kp T)
+CUSTOM_MACRO(  m_apos_d,           &kp APOSTROPHE &kp D)
+CUSTOM_MACRO(  m_apos_s,           &kp APOSTROPHE &kp S)
+CUSTOM_MACRO(  m_apos_t,           &kp APOSTROPHE &kp T)
+
+// words with contractions
+CUSTOM_MACRO(  m_i_m,              &m_upper_i &kp APOSTROPHE &kp M)
+CUSTOM_MACRO(  m_i_d,              &m_upper_i &kp APOSTROPHE &kp D)
+CUSTOM_MACRO(  m_i_ll,             &m_upper_i &m_apos_ll)
+CUSTOM_MACRO(  m_we_ll,            &kp W &kp E &m_apos_ll)
+CUSTOM_MACRO(  m_he_ll,            &kp H &kp E &m_apos_ll)
+CUSTOM_MACRO(  m_it_ll,            &kp I &kp T &m_apos_ll)
+CUSTOM_MACRO(  m_she_ll,           &kp S &kp H &kp E &m_apos_ll)
+CUSTOM_MACRO(  m_you_ll,           &kp Y &kp O &kp U &m_apos_ll)
+CUSTOM_MACRO(  m_they_ll,          &kp T &kp H &kp E &kp Y &m_apos_ll)
+CUSTOM_MACRO(  m_we_re,            &kp W &kp E &m_apos_re)
+CUSTOM_MACRO(  m_you_re,           &kp Y &kp O &kp U &m_apos_re)
+CUSTOM_MACRO(  m_they_re,          &kp T &kp H &kp E &kp Y &m_apos_re)
+CUSTOM_MACRO(  m_i_ve,             &kp I &m_apos_ve)
+CUSTOM_MACRO(  m_you_ve,           &kp Y &kp O &kp U &m_apos_ve)
+CUSTOM_MACRO(  m_we_ve,            &kp W &kp E &m_apos_ve)
+CUSTOM_MACRO(  m_they_ve,          &kp T &kp H &kp E &kp Y &m_apos_ve)
