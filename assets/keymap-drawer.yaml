@@ -54,19 +54,24 @@ layers:
     - [null, null, null, null, null, null, null, null, null, null]
     - [{type: ghost}, null, null, null, null, {type: ghost}]
   Combo-Contractions-and-Punctuation:
-    - [null, "(", ")", "'re", "'t", null, null, null, null, null]
-    - [null, "'s", "'d", "…", "!", "°", "—", $$mdi:block-helper$$, "'ll", $$mdi:block-helper$$]
-    - [null, "=", $$mdi:block-helper$$, "'ve", "?", "n't", "'", {type: "held", t: ","}, "\"", "÷"]
-    - [{type: ghost}, null, null, null, null, {type: ghost}]
-  Combo-VisualStudioCode:
-    - [null, "Close All", Editor, null, "Term.", null, null, null, null, null]
-    - ["Src Ctrl", "Save All", "Todo Tree", Search, "Git Graph", null, null, null, $$mdi:block-helper$$, null]
-    - [null, $$mdi:block-helper$$, null, null, null, null, null, $$mdi:block-helper$$, {type: held, t: "."}, null]
+    - [null, "…", "'ve", "'re", "'t", null, null, "I'm", "—", "°"]
+    - [null, "'s", "'d", "?", "!", null, $$mdi:block-helper$$, $$mdi:keyboard-return$$, "'ll", $$mdi:block-helper$$]
+    - [null, "(", ")", $$mdi:block-helper$$, ":", $$mdi:block-helper$$, {type: "held", t: "m"}, $$mdi:block-helper$$, $$mdi:block-helper$$, "÷"]
     - [{type: ghost}, null, null, null, null, {type: ghost}]
   Combo-Shortcuts:
-    - [{t: $$mdi:qrcode-scan$$, h: "Read QR"}, "Focus Menu", "Focus Dock", "Stage Mgr", "Toggle DND", {t: $$mdi:knob$$, h: "HazeOver"}, {t: $$mdi:line-scan$$, h: "TextSniper"}, null, {t: $$mdi:cat$$, h: "Shortcat"}, $$mdi:block-helper$$]
+    - [{t: $$mdi:qrcode-scan$$, h: "Read QR"}, "Focus Menu", "Focus Dock", "Stage Mgr", "Toggle DND", {t: $$mdi:knob$$, h: "HazeOver"}, {t: $$mdi:line-scan$$, h: "TextSniper"}, {t: $$mdi:apps$$, h: "Mission Ctl"}, {t: $$mdi:cat$$, h: "Shortcat"}, $$mdi:block-helper$$]
     - [$$mdi:block-helper$$, "Bartender Search", {t: $$mdi:monitor-screenshot$$, h: "Full"}, {t: $$mdi:monitor-screenshot$$, h: "Area"}, {t: $$mdi:monitor-screenshot$$, h: "History"}, {t: $$mdi:onepassword$$, h: "AutoFill"}, {t: $$mdi:onepassword$$, h: "Show"}, {t: $$mdi:security$$, h: "Okta"}, $$mdi:block-helper$$, {type: held, t: ";"}]
-    - [null, null, {t: $$mdi:monitor-screenshot$$, h: "All-in-One"}, {t: $$mdi:monitor-screenshot$$, h: "Window"}, {t: $$mdi:monitor-screenshot$$, h: "Close All"}, {t: $$mdi:presentation$$, h: "Annotate"}, {t: $$mdi:alphabetical-variant$$, h: "KeyCastr"}, {t: $$mdi:logout$$, h: "Lock Scr"}, null, $$mdi:block-helper$$]
+    - [{t: $$mdi:application-outline$$, h: "App Win"}, {t: $$mdi:monitor-screenshot$$, h: "Close All"}, {t: $$mdi:monitor-screenshot$$, h: "All-in-One"}, {t: $$mdi:monitor-screenshot$$, h: "Window"}, {t: $$mdi:monitor-screenshot$$, h: "Toggle"}, {t: $$mdi:presentation$$, h: "Annotate"}, {t: $$mdi:alphabetical-variant$$, h: "KeyCastr"}, {t: $$mdi:logout$$, h: "Lock Scr"}, null, $$mdi:block-helper$$]
+    - [{type: ghost}, null, null, null, null, {type: ghost}]
+  Combo-VisualStudioCode:
+    - [null, "Close All", "Editor", "Preview Markdown", "Term.", null, null, null, null, null]
+    - ["Src Ctrl", "Save All", "Todo Tree", Search, "Git Graph", "Comment Line", "Surround With", "Surround Comment", $$mdi:block-helper$$, null]
+    - ["Activity Bar", $$mdi:block-helper$$, "Dictation Start", "Dictation Stop", "GitLens Blame", null, $$mdi:block-helper$$, $$mdi:block-helper$$, {type: held, t: "."}, null]
+    - [{type: ghost}, null, null, null, null, {type: ghost}]
+  Combo-VsCode-Navigation-or-Adjustment:
+    - [null, {t: "Terminal Grp", h: "W+E+RHS"}, {t: "Terminal Size", h: "E+R+RHS"}, {t: "EdSize Tog", h: "R+T+RHS"}, null, null, null, null, null, null]
+    - [null, {t: "Editor Grp", h: "S+D+RHS"}, {t: "Editor Move", h: "D+F+RHS"}, {t: "Editor Size", h: "F+G+RHS"}, null, {type: combo-any, t: "Left / Prev"}, {type: combo-any, t: "Down / Reset"}, {type: combo-any, t: "Up / Max"}, {type: combo-any, t: "Right / Next"}, null]
+    - [{t: "Zoom", h: "Z+RHS"}, {t: "Split", h: "X+RHS"}, {t: "Changes", h: "C+V+RHS"}, {t: "Inc/Dec Number", h: "V+B+RHS"}, {t: "Problems", h: "B+RHS"}, null, null, null, null, null]
     - [{type: ghost}, null, null, null, null, {type: ghost}]
   Combo-Chrome-Extensions:
     - ["Gen QRCode", "TGE MoveWin", null, "Dark Activate", "TGE Activate", null, "TGE X-Ungrp", "TGE GrpUngrp", "TGE X-Other", "Paranoid"]
@@ -127,17 +132,18 @@ combos:
   - {p: [32, 33], k: "Caps Lock", a: mid, l: ["Combo-Symmetric"]}
   - {p: [31, 34], k: "Caps Word", a: bottom, offset: 0.3, l: ["Combo-Symmetric"]}
   - {p: [30, 35], k: $$mdi:web$$, a: top, offset: 0.3, l: ["Combo-Symmetric"]}
-  - {p: [11, 13], k: "&to DEF", a: mid, l: ["Combo-Symmetric"]}
-  - {p: [16, 18], k: "&to DEF", a: mid, l: ["Combo-Symmetric"]}
-  - {p: [21, 23], k: $$mdi:menu$$, a: mid, l: ["Combo-Symmetric"]}
-  - {p: [26, 28], k: $$mdi:menu$$, a: mid, l: ["Combo-Symmetric"]}
+  - {p: [11, 13], k: "&tog NUM", a: mid, l: ["Combo-Symmetric"]}
+  - {p: [16, 18], k: "&tog NUM", a: mid, l: ["Combo-Symmetric"]}
+  - {p: [21, 23], k: "&to DEF", a: mid, l: ["Combo-Symmetric"]}
+  - {p: [26, 28], k: "&to DEF", a: mid, l: ["Combo-Symmetric"]}
   - {p: [1, 3, 6, 8], k: "BT Clr", a: top, offset: 0.5, l: ["Combo-Symmetric"]}
   - {p: [11, 13, 16, 18], k: $$mdi:lock-outline$$, a: top, offset: 0.5, l: ["Combo-Symmetric"]}
 
 draw_config:
+  footer_text: Created with keymap-drawer v0.17.0
   glyph_tap_size: 22
   combo_w: 34.0
-  svg_style: |
+  svg_extra_style: |
     /* inherit to force styles through use tags */
     svg path {
         fill: inherit;
@@ -183,14 +189,20 @@ draw_config:
         stroke: #e3af05;
     }
 
+    /* color accent for combos the must include one of the keys with this same color */
+    rect.combo-any {
+        fill: #81c77d;
+        stroke: #094206;
+    }
+
+    .combo-special, .combo-any, .held {
+        fill: #000;
+    }
+
     /* color accent for ghost (optional) keys */
     rect.ghost, rect.combo.ghost {
         stroke-dasharray: 4, 4;
         stroke-width: 2;
-    }
-
-    .combo-special, .held {
-        fill: #000;
     }
 
     text {

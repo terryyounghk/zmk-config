@@ -3,6 +3,7 @@ CUSTOM_MACRO(  m_release_mods,     &to QWERTY &macro_release &kp LCTRL &kp LALT 
 
 // Gmail filter phrases
 CUSTOM_MACRO(  m_is_unread,        &kp I &kp S &kp COLON &kp U &kp N &kp R &kp E &kp A &kp D)
+CUSTOM_MACRO(  m_in_inbox,         &kp I &kp N &kp COLON &kp I &kp N &kp B &kp O &kp X)
 
 // Vimium-C commands
 CUSTOM_MACRO(  m_vc_reload_r,      &kp N9 &kp N9 &macro_press &kp LALT &macro_tap &kp R &macro_release &m_release_mods)

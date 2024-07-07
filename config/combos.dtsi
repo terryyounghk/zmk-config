@@ -1,10 +1,29 @@
-/// AFK
+/// High-priority combos
 CUSTOM_COMBO_PANIC(  lh4lh2rh4rh2,   LH4 LH2 RH4 RH2,    &tog AFK                       )
 CUSTOM_COMBO_PANIC(  lh5lh2rh3,      LH5 LH2 RH3,        &tog AFK                       )
 
-/// horizontally adjacent combos
+/// ---------------------------------------------------------------------------
+/// special combos
 
-/*
+CUSTOM_COMBO(  lh4lh2,         LH4 LH2,            &tog NUMBERS                         )
+CUSTOM_COMBO(  rh4rh2,         RH4 RH2,            &tog NUMBERS                         )
+
+CUSTOM_COMBO(  ll4ll2,         LL4 LL2,            &m_release_mods                      )
+CUSTOM_COMBO(  rl4rl2,         RL4 RL2,            &m_release_mods                      )
+
+CUSTOM_COMBO(  lh4lh3lh2,      LH4 LH3 LH2,        &kp K_MUTE                           )
+CUSTOM_COMBO(  rh4rh3rh2,      RH4 RH3 RH2,        &kp K_MUTE                           )
+
+CUSTOM_COMBO(  lu4lu2ru4ru2,   LU4 LU2 RU4 RU2,    &bt BT_CLR                           )
+
+CUSTOM_COMBO(  rh2ru4,         RH2 RU4,            &kp MINUS                            )
+CUSTOM_COMBO(  ru2rh4,         RU2 RH4,            &kp MINUS                            )
+CUSTOM_COMBO(  lh2lu4,         LH2 LU4,            &kp EQUAL                            )
+CUSTOM_COMBO(  lu2lh4,         LU2 LH4,            &kp EQUAL                            )
+
+/// ---------------------------------------------------------------------------
+/// horizontally adjacent combos
+/**
 CUSTOM_COMBO(  lu5lu4,         LU5 LU4,            &kp                                  )
 CUSTOM_COMBO(  lu4lu3,         LU4 LU3,            &kp                                  )
 CUSTOM_COMBO(  lu3lu2,         LU3 LU2,            &kp                                  )
@@ -12,7 +31,7 @@ CUSTOM_COMBO(  lu3lu2,         LU3 LU2,            &kp                          
 CUSTOM_COMBO(  lu2lu1,         LU2 LU1,            &kp PLUS                             )
 
 CUSTOM_COMBO(  ru1ru2,         RU1 RU2,            &kp MINUS                            )
-/*
+/**
 CUSTOM_COMBO(  ru2ru3,         RU2 RU3,            &kp                                  )
 CUSTOM_COMBO(  ru3ru4,         RU3 RU4,            &kp                                  )
 CUSTOM_COMBO(  ru4ru5,         RU4 RU5,            &kp                                  )
@@ -36,11 +55,11 @@ CUSTOM_COMBO(  ll2ll1,         LL2 LL1,            &kp Y_PASTE                  
 CUSTOM_COMBO(  rl1rl2,         RL1 RL2,            &kp LA(BACKSPACE)                    )
 CUSTOM_COMBO(  rl2rl3,         RL2 RL3,            &kp APOSTROPHE                       )
 CUSTOM_COMBO(  rl3rl4,         RL3 RL4,            &kp DQT                              )
-/*
+/**
 CUSTOM_COMBO(  rl4rl5,         RL4 RL5,            &kp                                  )
 */
 
-
+/// ---------------------------------------------------------------------------
 /// vertically adjacent ZMK_combos
 
 CUSTOM_COMBO(  lu5lh5,         LU5 LH5,            &kp EXCL                             )
@@ -68,19 +87,21 @@ CUSTOM_COMBO(  rh3rl3,         RH3 RL3,            &kp RBKT                     
 CUSTOM_COMBO(  rh4rl4,         RH4 RL4,            &kp GT                               )
 CUSTOM_COMBO(  rh5rl5,         RH5 RL5,            &kp PIPE                             )
 
-/// diagonal combos: left handed
+/// ---------------------------------------------------------------------------
+/// diagonal combos
 
+/// diagonal combos: left handed
 CUSTOM_COMBO(  lu2lh1,         LU2 LH1,            &kp EQUAL                            )
 CUSTOM_COMBO(  lh2ll1,         LH2 LL1,            &kp SPACE                            )
 CUSTOM_COMBO(  lu3lh2,         LU3 LH2,            &kp TAB                              )
 CUSTOM_COMBO(  lh3ll2,         LH3 LL2,            &kp RETURN                           )
 
 /// diagonal combos: right handed
-
 CUSTOM_COMBO(  ru2rh1,         RU2 RH1,            &kp UNDERSCORE                       )
 CUSTOM_COMBO(  rh2rl1,         RH2 RL1,            &kp BACKSLASH                        )
 CUSTOM_COMBO(  rh3rl2,         RH3 RL2,            &kp RETURN                           )
 
+/// ---------------------------------------------------------------------------
 /// one-handed one-shots, mirrored on both sides
 
 CUSTOM_COMBO(  lt1lu5,         LT1 LU5,            &kp Y_LOCK_SCREEN                    )
@@ -119,10 +140,11 @@ CUSTOM_COMBO(  rt1rl3,         RT1 RL3,            &tog CODING                  
 CUSTOM_COMBO(  rt1rl4,         RT1 RL4,            &tog CONTROLS                        )
 CUSTOM_COMBO(  rt1rl5,         RT1 RL5,            &kp CAPS                             )
 
+/// ---------------------------------------------------------------------------
 /// two-handed symmetric combos
 
 CUSTOM_COMBO(  lu5u5,          LU5 RU5,            &kp EXCL                             )
-/*
+/**
 CUSTOM_COMBO(  lu4ru5,         LU4 RU5,            &kp                                  )
 CUSTOM_COMBO(  lu3ru3,         LU3 RU3,            &kp                                  )
 CUSTOM_COMBO(  lu2ru2,         LU2 RU2,            &kp                                  )
@@ -141,15 +163,20 @@ CUSTOM_COMBO(  ll3rl3,         LL3 RL3,            &kp Y_COPY                   
 CUSTOM_COMBO(  ll2rl2,         LL2 RL2,            &kp Y_PASTE                          )
 CUSTOM_COMBO(  ll1rl1,         LL1 RL1,            &sk LMEH                             )
 
+/**
 CUSTOM_COMBO(  lt3rt3,         LT3 RT3,            &kp GLOBE                            )
+*/
 CUSTOM_COMBO(  lt2rt2,         LT2 RT2,            &caps_word                           )
 CUSTOM_COMBO(  lt1rt1,         LT1 RT1,            &kp CAPS                             )
 
 /// two-handed: chrome extension combos
-
-// CUSTOM_COMBO(  lt1ru1,         LT1 RU1,            &kp                                  )
+/**
+CUSTOM_COMBO(  lt1ru1,         LT1 RU1,            &kp                                  )
+*/
 CUSTOM_COMBO(  lt1ru2,         LT1 RU2,            &kp Y_CHROME_TGE_CLOSE_UNGROUPED     )
-// CUSTOM_COMBO(  lt1ru3,         LT1 RU3,            &kp                                  )
+/**
+CUSTOM_COMBO(  lt1ru3,         LT1 RU3,            &kp                                  )
+*/
 CUSTOM_COMBO(  lt1ru4,         LT1 RU4,            &kp Y_CHROME_TGE_CLOSE_OTHERS        )
 CUSTOM_COMBO(  lt1ru5,         LT1 RU5,            &kp Y_CHROME_DP_PARANOID             )
 
@@ -157,13 +184,17 @@ CUSTOM_COMBO(  lt1rh1,         LT1 RH1,            &kp Y_CHROME_TGE_MOVE_GRP_TO_
 CUSTOM_COMBO(  lt1rh2,         LT1 RH2,            &kp Y_CHROME_TGE_CLOSE_TO_LEFT       )
 CUSTOM_COMBO(  lt1rh3,         LT1 RH3,            &kp Y_CHROME_TGE_CLOSE_TO_RIGHT      )
 CUSTOM_COMBO(  lt1rh4,         LT1 RH4,            &kp Y_CHROME_TGE_MOVE_GRP_TO_RIGHT   )
-// CUSTOM_COMBO(  lt1rh5,         LT1 RH5,            &kp                                  )
+/**
+CUSTOM_COMBO(  lt1rh5,         LT1 RH5,            &kp                                  )
+*/
 
 CUSTOM_COMBO(  lt1rl1,         LT1 RL1,            &kp Y_CHROME_TN_TOGGLE               )
 CUSTOM_COMBO(  lt1rl2,         LT1 RL2,            &m_vc_reload_l                       )
 CUSTOM_COMBO(  lt1rl3,         LT1 RL3,            &m_vc_reload_r                       )
-// CUSTOM_COMBO(  lt1rl4,         LT1 RL4,            &kp                                  )
-// CUSTOM_COMBO(  lt1rl5,         LT1 RL5,            &kp                                  )
+/**
+CUSTOM_COMBO(  lt1rl4,         LT1 RL4,            &kp                                  )
+CUSTOM_COMBO(  lt1rl5,         LT1 RL5,            &kp                                  )
+*/
 
 CUSTOM_COMBO(  rt1lu5,         RT1 LU5,            &kp Y_CHROME_QR_GENERATE             )
 CUSTOM_COMBO(  rt1lu4,         RT1 LU4,            &kp Y_CHROME_TGE_MOVE_GRP_TO_WIN     )
@@ -177,12 +208,17 @@ CUSTOM_COMBO(  rt1lh3,         RT1 LH3,            &kp Y_CHROME_DR_TOGGLE       
 CUSTOM_COMBO(  rt1lh2,         RT1 LH2,            &kp Y_CHROME_TGE_GO_GROUP_FIRST      )
 CUSTOM_COMBO(  rt1lh1,         RT1 LH1,            &kp Y_CHROME_TGE_GO_GROUP_LAST       )
 
-// CUSTOM_COMBO(  rt1ll5,         RT1 LL5,            &kp                                  )
+/**
+CUSTOM_COMBO(  rt1ll5,         RT1 LL5,            &kp                                  )
+*/
 CUSTOM_COMBO(  rt1ll4,         RT1 LL4,            &kp Y_CHROME_TGE_CLOSE_GROUP         )
 CUSTOM_COMBO(  rt1ll3,         RT1 LL3,            &kp Y_CHROME_TGE_TOGGLE_CURR_GROUP   )
-CUSTOM_COMBO(  rt1ll2,         RT1 LL2,            &kp Y_CHROME_VC_ACTIVATE             )
-// CUSTOM_COMBO(  rt1ll1,         RT1 LL1,            &kp                                  )
+CUSTOM_COMBO(  rt1ll2,         RT1 LL2,            &kp Y_CHROME_VIMIUMC_ACTIVATE        )
+/**
+CUSTOM_COMBO(  rt1ll1,         RT1 LL1,            &kp                                  )
+*/
 
+/// ---------------------------------------------------------------------------
 /// one-handed combos mods (sticky), mirrored
 
 CUSTOM_COMBO(  lt1lh5lh4,      LT1 LH5 LH4,        &sk LC(LALT)                         )
@@ -207,6 +243,7 @@ CUSTOM_COMBO(  rt1rh5rh4rh2,   RT1 RH5 RH4 RH2,    &sk LC(LA(LSHIFT))           
 CUSTOM_COMBO(  rt1rh5rh3rh2,   RT1 RH5 RH3 RH2,    &sk LC(LG(LSHIFT))                   )
 CUSTOM_COMBO(  rt1rh4rh3rh2,   RT1 RH4 RH3 RH2,    &sk LA(LG(LSHIFT))                   )
 
+/// ---------------------------------------------------------------------------
 /// one-handed combos mods (toggle), mirrored
 
 CUSTOM_COMBO(  lt2lh5,         LT2 LH5,            &kt LCTRL                            )
@@ -243,87 +280,47 @@ CUSTOM_COMBO(  rt2rh5rh4rh2,   RT2 RH5 RH4 RH2,    &kt LC(LA(LSHIFT))           
 CUSTOM_COMBO(  rt2rh5rh3rh2,   RT2 RH5 RH3 RH2,    &kt LC(LG(LSHIFT))                   )
 CUSTOM_COMBO(  rt2rh4rh3rh2,   RT2 RH4 RH3 RH2,    &kt LA(LG(LSHIFT))                   )
 
-/// visual studio code
-
-CUSTOM_COMBO(  rl4lu4,         RL4 LU4,            &kp Y_VSCODE_CLOSE_ALL               )
-CUSTOM_COMBO(  rl4lu3,         RL4 LU3,            &kp Y_VSCODE_EDITOR                  )
-CUSTOM_COMBO(  rl4lu1,         RL4 LU1,            &kp Y_VSCODE_TERMINAL                )
-CUSTOM_COMBO(  rl4lh5,         RL4 LH5,            &kp Y_VSCODE_SOURCE_CONTROL          )
-CUSTOM_COMBO(  rl4lh4,         RL4 LH4,            &kp Y_VSCODE_SAVE_ALL                )
-CUSTOM_COMBO(  rl4lh3,         RL4 LH3,            &kp Y_VSCODE_TODO_TREE               )
-CUSTOM_COMBO(  rl4lh2,         RL4 LH2,            &kp Y_VSCODE_SEARCH                  )
-CUSTOM_COMBO(  rl4lh1,         RL4 LH1,            &kp Y_VSCODE_GIT_GRAPH               )
-
-/// shortcuts
-
-CUSTOM_COMBO(  rh5lu5,         RH5 LU5,            &kp Y_TEXTSNIPER_READ_QRCODE         )
-CUSTOM_COMBO(  rh5lu4,         RH5 LU4,            &kp Y_MENUBAR                        )
-CUSTOM_COMBO(  rh5lu3,         RH5 LU3,            &kp Y_DOCK                           )
-CUSTOM_COMBO(  rh5lu2,         RH5 LU2,            &kp Y_TOGGLE_STAGE_MANAGER           )
-CUSTOM_COMBO(  rh5lu1,         RH5 LU1,            &kp Y_TOGGLE_DND                     )
-
-// CUSTOM_COMBO(  rh5lh5,         RH5 LH5,            &kp                                  )
-CUSTOM_COMBO(  rh5lh4,         RH5 LH4,            &kp Y_BARTENDER_SEARCH               )
-CUSTOM_COMBO(  rh5lh3,         RH5 LH3,            &kp Y_SCREEN_CAPTURE_FULL            )
-CUSTOM_COMBO(  rh5lh2,         RH5 LH2,            &kp Y_SCREEN_CAPTURE_AREA            )
-CUSTOM_COMBO(  rh5lh1,         RH5 LH1,            &kp Y_CLEANSHOT_HISTORY              )
-// CUSTOM_COMBO(  rh5ll5,         RH5 LL5,            &kp                                  )
-// CUSTOM_COMBO(  rh5ll4,         RH5 LL4,            &kp                                  )
-CUSTOM_COMBO(  rh5ll3,         RH5 LL3,            &kp Y_CLEANSHOT_ALL_IN_ONE           )
-CUSTOM_COMBO(  rh5ll2,         RH5 LL2,            &kp Y_CLEANSHOT_WINDOW               )
-CUSTOM_COMBO(  rh5ll1,         RH5 LL1,            &kp Y_CLEANSHOT_OVERLAYS_CLOSE       )
-CUSTOM_COMBO(  rh5ll1,         RH5 LL1,            &kp Y_CLEANSHOT_OVERLAYS_TOGGLE      )
-
-CUSTOM_COMBO(  rh5ru1,         RH5 RU1,            &kp Y_HAZEOVER_TOGGLE                )
-// CUSTOM_COMBO(  rh5ru2,         RH5 RU2,            &kp                                  )
-// CUSTOM_COMBO(  rh5ru3,         RH5 RU3,            &kp                                  )
-CUSTOM_COMBO(  rh5ru4,         RH5 RU4,            &kp Y_SHORTCAT                       )
-CUSTOM_COMBO(  rh5rh1,         RH5 RH1,            &kp Y_ONE_PASSWORD_AUTOFILL          )
-CUSTOM_COMBO(  rh5rh2,         RH5 RH2,            &kp Y_ONE_PASSWORD_QUICK             )
-CUSTOM_COMBO(  rh5rh3,         RH5 RH3,            &kp Y_OKTA                           )
-CUSTOM_COMBO(  rh5rl1,         RH5 RL1,            &kp Y_PRESENTIFY_ANNOTATE            )
-CUSTOM_COMBO(  rh5rl2,         RH5 RL2,            &kp Y_KEYCAST_TOGGLE                 )
-CUSTOM_COMBO(  rh5rl3,         RH5 RL3,            &kp Y_LOCK_SCREEN                    )
-
-/// special
-CUSTOM_COMBO(  rh4rh2,         RH4 RH2,            &m_release_mods                      )
-CUSTOM_COMBO(  lh4lh2,         LH4 LH2,            &m_release_mods                      )
-CUSTOM_COMBO(  rl4rl2,         RL4 RL2,            &kp K_CMENU                          )
-CUSTOM_COMBO(  ll4ll2,         LL4 LL2,            &kp K_CMENU                          )
-CUSTOM_COMBO(  rh4rh3rh2,      RH4 RH3 RH2,        &kp K_MUTE                           )
-CUSTOM_COMBO(  lu4lu2ru4ru2,   LU4 LU2 RU4 RU2,    &bt BT_CLR                           )
-CUSTOM_COMBO(  rl4rl3rl2,      RL4 RL3 RL2,        &m_is_unread                         )
-
+/// ---------------------------------------------------------------------------
 // Contractions and punctuations
-// CUSTOM_COMBO(  rl3lu5,         RL3 LU5,            &kp                                  )
-CUSTOM_COMBO(  rl3lu4,         RL3 LU4,            &kp LPAR                             )
-CUSTOM_COMBO(  rl3lu3,         RL3 LU3,            &kp RPAR                             )
-CUSTOM_COMBO(  rl3lu2,         RL3 LU2,            &m_apos_re                           )
-CUSTOM_COMBO(  rl3lu1,         RL3 LU1,            &m_apos_t                            )
+/**
+CUSTOM_COMBO(  rl2lu5,         RL2 LU5,            &kp                                  )
+*/
+CUSTOM_COMBO(  rl2lu4,         RL2 LU4,            &kp Y_ELLIPSIS                       )
+CUSTOM_COMBO(  rl2lu3,         RL2 LU3,            &m_apos_ve                           )
+CUSTOM_COMBO(  rl2lu2,         RL2 LU2,            &m_apos_re                           )
+CUSTOM_COMBO(  rl2lu1,         RL2 LU1,            &m_apos_t                            )
 
-// CUSTOM_COMBO(  rl3lh5,         RL3 LH5,            &kp                                  )
-CUSTOM_COMBO(  rl3lh4,         RL3 LH4,            &m_apos_s                            )
-CUSTOM_COMBO(  rl3lh3,         RL3 LH3,            &m_apos_d                            )
-CUSTOM_COMBO(  rl3lh2,         RL3 LH2,            &kp Y_ELLIPSIS                       )
-CUSTOM_COMBO(  rl3lh1,         RL3 LH1,            &kp EXCL                             )
+/**
+CUSTOM_COMBO(  rl2lh5,         RL2 LH5,            &kp                                  )
+*/
+CUSTOM_COMBO(  rl2lh4,         RL2 LH4,            &m_apos_s                            )
+CUSTOM_COMBO(  rl2lh3,         RL2 LH3,            &m_apos_d                            )
+CUSTOM_COMBO(  rl2lh2,         RL2 LH2,            &kp QUESTION                         )
+CUSTOM_COMBO(  rl2lh1,         RL2 LH1,            &kp EXCL                             )
 
+/**
+CUSTOM_COMBO(  rl2ll5,         RL2 LL5,            &kp                                  )
+*/
+CUSTOM_COMBO(  rl2ll4,         RL2 LL4,            &kp LPAR                             )
+CUSTOM_COMBO(  rl2ll3,         RL2 LL3,            &kp RPAR                             )
+/**
+CUSTOM_COMBO(  rl2ll2,         RL2 LL2,            XXXXXXXXXX                           )
+*/
+CUSTOM_COMBO(  rl2ll1,         RL2 LL1,            &kp COLON                            )
 
-// CUSTOM_COMBO(  rl3ll5,         RL3 LL5,            &kp                                  )
-CUSTOM_COMBO(  rl3ll4,         RL3 LL4,            &kp EQUAL                            )
-// CUSTOM_COMBO(  rl3ll3,         RL3 LL3,            XXXXXXXXXX                           )
-CUSTOM_COMBO(  rl3ll2,         RL3 LL2,            &m_apos_ve                           )
-CUSTOM_COMBO(  rl3ll1,         RL3 LL1,            &kp QUESTION                         )
+/**
+CUSTOM_COMBO(  rl2rh1,         RL2 RH1,            &kp                                  )
+CUSTOM_COMBO(  rl2rh2,         RL2 RH2,            XXXXXXXXXX                           )
+CUSTOM_COMBO(  rl2rh3,         RL2 RH3,            XXXXXXXXXX                           )
+*/
+CUSTOM_COMBO(  rl2rh4,         RL2 RH4,            &m_apos_ll                           )
+/**
+CUSTOM_COMBO(  rl2rh5,         RL2 RH5,            XXXXXXXXXX                           )
+*/
 
-CUSTOM_COMBO(  rl3rh1,         RL3 RH1,            &kp Y_DEGREE                         )
-CUSTOM_COMBO(  rl3rh2,         RL3 RH2,            &kp Y_EMDASH                         )
-// CUSTOM_COMBO(  rl3rh3,         RL3 RH3,            XXXXXXXXXX                           )
-CUSTOM_COMBO(  rl3rh4,         RL3 RH4,            &m_apos_ll                           )
-// CUSTOM_COMBO(  rl3rh5,         RL3 RH5,            XXXXXXXXXX                           )
-
-CUSTOM_COMBO(  rl3rl1,         RL3 RL1,            &m_apos_nt                           )
-CUSTOM_COMBO(  rl3rl5,         RL3 RL5,            &kp Y_DIVIDE                         )
-
-CUSTOM_COMBO(  rl1lu1,         RL1 LU1,            &m_apos_nt                           )
+CUSTOM_COMBO(  rl2rl1,         RL2 RL5,            &m_apos_nt                           )
+CUSTOM_COMBO(  rl2ru4,         RL2 RU4,            &kp Y_EMDASH                         )
+CUSTOM_COMBO(  rl2ru5,         RL2 RU5,            &kp Y_DEGREE                         )
 
 // I~
 CUSTOM_COMBO(  ru3rh2,         RU3 RH2,            &m_upper_i                           )
@@ -355,4 +352,147 @@ CUSTOM_COMBO(  ru1ll2,         RU1 LL2,            &m_you_ve                    
 CUSTOM_COMBO(  lu4ll2,         LU4 LL2,            &m_we_ve                             )
 CUSTOM_COMBO(  rh1ll2,         RH1 LL2,            &m_they_ve                           )
 
-// Excluded: ~'s ~n't
+/// ---------------------------------------------------------------------------
+/// visual studio code
+/**
+    TODO: VS Code Speech ...
+*/
+
+/**
+CUSTOM_COMBO(  rl4lu4,         RL4 LU5,            &kp XXXXXXXXXX                       )
+*/
+CUSTOM_COMBO(  rl4lu4,         RL4 LU4,            &kp Y_VSCODE_CLOSE_ALL               )
+CUSTOM_COMBO(  rl4lu3,         RL4 LU3,            &kp Y_VSCODE_ACTIVE_EDITOR           )
+CUSTOM_COMBO(  rl4lu4,         RL4 LU4,            &kp Y_VSCODE_MARKDOWN_PREVIEW_SIDE   )
+CUSTOM_COMBO(  rl4lu1,         RL4 LU1,            &kp Y_VSCODE_GOTO_TERMINAL           )
+
+CUSTOM_COMBO(  rl4lh5,         RL4 LH5,            &kp Y_VSCODE_SOURCE_CONTROL          )
+CUSTOM_COMBO(  rl4lh4,         RL4 LH4,            &kp Y_VSCODE_SAVE_ALL                )
+CUSTOM_COMBO(  rl4lh3,         RL4 LH3,            &kp Y_VSCODE_TODO_TREE               )
+CUSTOM_COMBO(  rl4lh2,         RL4 LH2,            &kp Y_VSCODE_SEARCH                  )
+CUSTOM_COMBO(  rl4lh1,         RL4 LH1,            &kp Y_VSCODE_GIT_GRAPH               )
+
+CUSTOM_COMBO(  rl4ll5,         RL4 LL5,            &kp Y_VSCODE_ACTIVITY_BAR_TOGGLE     )
+/**
+CUSTOM_COMBO(  rl4ll4,         RL4 LL4,            &kp trans                            ) // testing if this reverts to individual keys
+*/
+CUSTOM_COMBO(  rl4ll3,         RL4 LL3,            &kp Y_VSCODE_DICTATION_START         )
+CUSTOM_COMBO(  rl4ll2,         RL4 LL2,            &kp Y_VSCODE_DICTATION_STOP          )
+CUSTOM_COMBO(  rl4ll1,         RL4 LL1,            &kp Y_VSCODE_GITLENS_TOGGLE_BLAME    )
+
+CUSTOM_COMBO(  rl4rh1,         RL4 RH1,            &kp Y_VSCODE_COMMENT_LINE            )
+CUSTOM_COMBO(  rl4rh2,         RL4 RH2,            &kp Y_VSCODE_SURROUND_WITH           )
+CUSTOM_COMBO(  rl4rh3,         RL4 RH3,            &kp Y_VSCODE_SURROUND_WITH_COMMENT   )
+
+/// ---------------------------------------------------------------------------
+/// visual studio code - navigation / adjustments
+///
+/// Right hand side HJKL (vim-like nav) + any key or combo on left hand side
+
+CUSTOM_COMBO(  rh1lu4lu3,      RH1 LU4 LU3,        &kp Y_VSCODE_PREV_TERMINAL           )
+/**
+CUSTOM_COMBO(  rh2lu4lu3,      RH2 LU4 LU3,        &kp Y_VSCODE_XXXXX                   )
+CUSTOM_COMBO(  rh3lu4lu3,      RH3 LU4 LU3,        &kp Y_VSCODE_XXXXX                   )
+*/
+CUSTOM_COMBO(  rh4lu4lu3,      RH4 LU4 LU3,        &kp Y_VSCODE_NEXT_TERMINAL           )
+
+CUSTOM_COMBO(  rh1lu3lu2,      RH1 LU3 LU2,        &kp Y_VSCODE_DEC_TERMINAL_WIDTH      )
+CUSTOM_COMBO(  rh2lu3lu2,      RH2 LU3 LU2,        &kp Y_VSCODE_DEC_TERMINAL_HEIGHT     )
+CUSTOM_COMBO(  rh3lu3lu2,      RH3 LU3 LU2,        &kp Y_VSCODE_INC_TERMINAL_HEIGHT     )
+CUSTOM_COMBO(  rh4lu3lu2,      RH4 LU3 LU2,        &kp Y_VSCODE_INC_TERMINAL_WIDTH      )
+
+/**
+CUSTOM_COMBO(  rh1lu2lu1,      RH1 LU2 LU1,        &kp Y_VSCODE_XXXXX                   )
+*/
+CUSTOM_COMBO(  rh2lu2lu1,      RH2 LU2 LU1,        &kp Y_VSCODE_EDITOR_SIZES_RESET      )
+CUSTOM_COMBO(  rh3lu2lu1,      RH3 LU2 LU1,        &kp Y_VSCODE_EDITOR_SIZES_TOGGLE     )
+/**
+CUSTOM_COMBO(  rh4lu2lu1,      RH4 LU2 LU1,        &kp Y_VSCODE_XXXXX                   )
+*/
+
+CUSTOM_COMBO(  rh1lh4lh3,      RH1 LH4 LH3,        &kp Y_VSCODE_PREV_EDITOR_GROUP       )
+CUSTOM_COMBO(  rh2lh4lh3,      RH2 LH4 LH3,        &kp Y_VSCODE_TOGGLE_PANEL            )
+CUSTOM_COMBO(  rh3lh4lh3,      RH3 LH4 LH3,        &kp Y_VSCODE_ACTIVE_EDITOR           )
+CUSTOM_COMBO(  rh4lh4lh3,      RH4 LH4 LH3,        &kp Y_VSCODE_NEXT_EDITOR_GROUP       )
+
+CUSTOM_COMBO(  rh1lh3lh2,      RH1 LH3 LH2,        &kp Y_VSCODE_MOVE_EDITOR_LEFT        )
+CUSTOM_COMBO(  rh2lh3lh2,      RH2 LH3 LH2,        &kp Y_VSCODE_MOVE_INTO_PREV_GROUP    )
+CUSTOM_COMBO(  rh3lh3lh2,      RH3 LH3 LH2,        &kp Y_VSCODE_MOVE_INTO_NEXT_GROUP    )
+CUSTOM_COMBO(  rh4lh3lh2,      RH4 LH3 LH2,        &kp Y_VSCODE_MOVE_EDITOR_RIGHT       )
+
+CUSTOM_COMBO(  rh1lh2lh1,      RH1 LH2 LH1,        &kp Y_VSCODE_DEC_EDITOR_WIDTH        )
+CUSTOM_COMBO(  rh2lh2lh1,      RH2 LH2 LH1,        &kp Y_VSCODE_DEC_EDITOR_HEIGHT       )
+CUSTOM_COMBO(  rh3lh2lh1,      RH3 LH2 LH1,        &kp Y_VSCODE_INC_EDITOR_HEIGHT       )
+CUSTOM_COMBO(  rh4lh2lh1,      RH4 LH2 LH1,        &kp Y_VSCODE_INC_EDITOR_WIDTH        )
+
+CUSTOM_COMBO(  rh1ll5,         RH1 LL5,            &kp Y_VSCODE_ZOOM_OUT                )
+CUSTOM_COMBO(  rh2ll5,         RH2 LL5,            &kp Y_VSCODE_ZOOM_RESET              )
+CUSTOM_COMBO(  rh3ll5,         RH3 LL5,            &kp Y_VSCODE_ZOOM_RESET              )
+CUSTOM_COMBO(  rh4ll5,         RH4 LL5,            &kp Y_VSCODE_ZOOM_IN                 )
+
+CUSTOM_COMBO(  rh1ll4,         RH1 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_LEFT       )
+CUSTOM_COMBO(  rh2ll4,         RH2 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_DOWN       )
+CUSTOM_COMBO(  rh3ll4,         RH3 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_UP         )
+CUSTOM_COMBO(  rh4ll4,         RH4 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_RIGHT      )
+
+/**
+CUSTOM_COMBO(  rh1ll4ll3,      RH1 LL4 LL3,        &kp Y_VSCODE_XXXXX                   )
+CUSTOM_COMBO(  rh2ll4ll3,      RH2 LL4 LL3,        &kp Y_VSCODE_XXXXX                   )
+CUSTOM_COMBO(  rh3ll4ll3,      RH3 LL4 LL3,        &kp Y_VSCODE_XXXXX                   )
+CUSTOM_COMBO(  rh4ll4ll3,      RH4 LL4 LL3,        &kp Y_VSCODE_XXXXX                   )
+*/
+
+CUSTOM_COMBO(  rh1ll3ll2,      RH1 LL3 LL2,        &kp Y_VSCODE_PREV_CHANGE             )
+CUSTOM_COMBO(  rh2ll3ll2,      RH2 LL3 LL2,        &kp Y_VSCODE_PREV_CHANGE_SHOW        )
+CUSTOM_COMBO(  rh3ll3ll2,      RH3 LL3 LL2,        &kp Y_VSCODE_NEXT_CHANGE_SHOW        )
+CUSTOM_COMBO(  rh4ll3ll2,      RH4 LL3 LL2,        &kp Y_VSCODE_NEXT_CHANGE             )
+
+CUSTOM_COMBO(  rh1ll2ll1,      RH1 LL2 LL1,        &kp Y_VSCODE_DECREMENT_BY_10         )
+CUSTOM_COMBO(  rh2ll2ll1,      RH2 LL2 LL1,        &kp Y_VSCODE_DECREMENT_BY_1          )
+CUSTOM_COMBO(  rh3ll2ll1,      RH3 LL2 LL1,        &kp Y_VSCODE_INCREMENT_BY_1          )
+CUSTOM_COMBO(  rh4ll2ll1,      RH4 LL2 LL1,        &kp Y_VSCODE_INCREMENT_BY_10         )
+
+CUSTOM_COMBO(  rh1ll1,         RH1 LL1,            &kp Y_VSCODE_PREV_PROBLEM            )
+CUSTOM_COMBO(  rh2ll1,         RH2 LL1,            &kp Y_VSCODE_VIEW_PROBLEMS           )
+CUSTOM_COMBO(  rh3ll1,         RH3 LL1,            &kp Y_VSCODE_VIEW_PROBLEMS           )
+CUSTOM_COMBO(  rh4ll1,         RH4 LL1,            &kp Y_VSCODE_NEXT_PROBLEM            )
+
+/// ---------------------------------------------------------------------------
+/// other app shortcuts
+
+CUSTOM_COMBO(  rh5lu5,         RH5 LU5,            &kp Y_TEXTSNIPER_READ_QRCODE         )
+CUSTOM_COMBO(  rh5lu4,         RH5 LU4,            &kp Y_MENUBAR                        )
+CUSTOM_COMBO(  rh5lu3,         RH5 LU3,            &kp Y_DOCK                           )
+CUSTOM_COMBO(  rh5lu2,         RH5 LU2,            &kp Y_TOGGLE_STAGE_MANAGER           )
+CUSTOM_COMBO(  rh5lu1,         RH5 LU1,            &kp Y_TOGGLE_DND                     )
+
+/**
+/// ---------------------------------------------------------------------------
+CUSTOM_COMBO(  rh5lh5,         RH5 LH5,            &kp XXXXXXXXXX                       )
+*/
+CUSTOM_COMBO(  rh5lh4,         RH5 LH4,            &kp Y_BARTENDER_SEARCH               )
+CUSTOM_COMBO(  rh5lh3,         RH5 LH3,            &kp Y_SCREEN_CAPTURE_FULL            )
+CUSTOM_COMBO(  rh5lh2,         RH5 LH2,            &kp Y_SCREEN_CAPTURE_AREA            )
+CUSTOM_COMBO(  rh5lh1,         RH5 LH1,            &kp Y_CLEANSHOT_HISTORY              )
+CUSTOM_COMBO(  rh5ll5,         RH5 LL5,            &kp Y_APPLICATION_WINDOWS            )
+CUSTOM_COMBO(  rh5ll4,         RH5 LL4,            &kp Y_CLEANSHOT_OVERLAYS_CLOSE       )
+CUSTOM_COMBO(  rh5ll3,         RH5 LL3,            &kp Y_CLEANSHOT_ALL_IN_ONE           )
+CUSTOM_COMBO(  rh5ll2,         RH5 LL2,            &kp Y_CLEANSHOT_WINDOW               )
+CUSTOM_COMBO(  rh5ll1,         RH5 LL1,            &kp Y_CLEANSHOT_OVERLAYS_TOGGLE      )
+
+CUSTOM_COMBO(  rh5ru1,         RH5 RU1,            &kp Y_HAZEOVER_TOGGLE                )
+CUSTOM_COMBO(  rh5ru2,         RH5 RU2,            &kp Y_TEXTSNIPER_CAPTURE_TEXT        )
+CUSTOM_COMBO(  rh5ru3,         RH5 RU3,            &kp Y_MISSION_CONTROL                )
+CUSTOM_COMBO(  rh5ru4,         RH5 RU4,            &kp Y_SHORTCAT                       )
+CUSTOM_COMBO(  rh5rh1,         RH5 RH1,            &kp Y_ONE_PASSWORD_AUTOFILL          )
+CUSTOM_COMBO(  rh5rh2,         RH5 RH2,            &kp Y_ONE_PASSWORD_QUICK             )
+CUSTOM_COMBO(  rh5rh3,         RH5 RH3,            &kp Y_OKTA                           )
+CUSTOM_COMBO(  rh5rl1,         RH5 RL1,            &kp Y_PRESENTIFY_ANNOTATE            )
+CUSTOM_COMBO(  rh5rl2,         RH5 RL2,            &kp Y_KEYCAST_TOGGLE                 )
+CUSTOM_COMBO(  rh5rl3,         RH5 RL3,            &kp Y_LOCK_SCREEN                    )
+
+
+/// special macros
+
+CUSTOM_COMBO(  rl4rl3rl2,      RL4 RL3 RL2,        &m_is_unread                         )
+CUSTOM_COMBO(  rl4rl3rl1,      RL4 RL3 RL1,        &m_in_inbox                          )
