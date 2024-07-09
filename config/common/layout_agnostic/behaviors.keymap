@@ -1,11 +1,3 @@
-
-// layers
-#define QWERTY   0
-#define NUMBERS  1
-#define CODING   2
-#define CONTROLS 3
-#define AFK      4
-
 #define CUSTOM_HELPER_STRINGIFY(x) #x
 
 #define CUSTOM_LAYER(layer, display_name, layer_bindings) \
@@ -57,12 +49,6 @@
       bindings = <macro_bindings>; \
     }; \
   }; \
-};
-
-/ {
-  chosen {
-    zmk,matrix_transform = &five_column_transform;
-  };
 };
 
 // sticky keys behaviors
