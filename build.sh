@@ -58,13 +58,13 @@ if [ "$TYPE" = "split" ]; then
 
     echo Building split board: $KEEB
     echo Target dir: $TARGET_DIR
-    echo Board left: ${BOARD}_lefg
+    echo Board left: ${BOARD}_left
     echo Board right: ${BOARD}_right
 
     mkdir -p $TARGET_DIR
     set -x
-    west build -p -b "$BOARD" -d build/left  -- -DZMK_CONFIG="$DZMK_CONFIG_PATH" && \
-    west build -p -b "$BOARD" -d build/right -- -DZMK_CONFIG="$DZMK_CONFIG_PATH" && \
+    west build -p -b "${BOARD}_left" -d build/left  -- -DZMK_CONFIG="$DZMK_CONFIG_PATH" && \
+    west build -p -b "${BOARD}_right" -d build/right -- -DZMK_CONFIG="$DZMK_CONFIG_PATH" && \
     \cp build/left/zephyr/zmk.uf2 "$TARGET_DIR/${KEEB}_left.${BUILD_TIME}.uf2" && \
     \cp build/right/zephyr/zmk.uf2 "$TARGET_DIR/${KEEB}_right.${BUILD_TIME}.uf2"
   fi
