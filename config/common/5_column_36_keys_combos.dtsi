@@ -65,17 +65,17 @@ CUSTOM_COMBO(  rl4rl5,         RL4 RL5,            &kp                          
 /// ---------------------------------------------------------------------------
 /// vertically adjacent ZMK_combos
 
-CUSTOM_COMBO(  lu5lh5,         LU5 LH5,            &kp EXCL                             )
-CUSTOM_COMBO(  lu4lh4,         LU4 LH4,            &kp AT                               )
-CUSTOM_COMBO(  lu3lh3,         LU3 LH3,            &kp HASH                             )
-CUSTOM_COMBO(  lu2lh2,         LU2 LH2,            &kp DOLLAR                           )
-CUSTOM_COMBO(  lu1lh1,         LU1 LH1,            &kp PERCENT                          )
+CUSTOM_COMBO(  lu5lh5,         LU5 LH5,            &kp F1                               )
+CUSTOM_COMBO(  lu4lh4,         LU4 LH4,            &kp F2                               )
+CUSTOM_COMBO(  lu3lh3,         LU3 LH3,            &kp F3                               )
+CUSTOM_COMBO(  lu2lh2,         LU2 LH2,            &kp F4                               )
+CUSTOM_COMBO(  lu1lh1,         LU1 LH1,            &kp F5                               )
 
-CUSTOM_COMBO(  ru1rh1,         RU1 RH1,            &kp CARET                            )
-CUSTOM_COMBO(  ru2rh2,         RU2 RH2,            &kp AMPS                             )
-CUSTOM_COMBO(  ru3rh3,         RU3 RH3,            &kp STAR                             )
-CUSTOM_COMBO(  ru4rh4,         RU4 RH4,            &kp GRAVE                            )
-CUSTOM_COMBO(  ru5rh5,         RU5 RH5,            &kp EQUAL                            )
+CUSTOM_COMBO(  ru1rh1,         RU1 RH1,            &kp F6                               )
+CUSTOM_COMBO(  ru2rh2,         RU2 RH2,            &kp F7                               )
+CUSTOM_COMBO(  ru3rh3,         RU3 RH3,            &kp F8                               )
+CUSTOM_COMBO(  ru4rh4,         RU4 RH4,            &kp F9                               )
+CUSTOM_COMBO(  ru5rh5,         RU5 RH5,            &kp F10                              )
 
 // LBRC {} LBKT [] LPAR ()
 CUSTOM_COMBO(  lh5ll5,         LH5 LL5,            &kp BSLH                             )
