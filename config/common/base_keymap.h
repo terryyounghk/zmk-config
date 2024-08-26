@@ -42,9 +42,9 @@
                                                                                                            &kp PLUS       &kp MINUS      &kp COMMA      &kp DOT        &kp FSLH
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define NUMBERS_TL \
-                                                        &trans         &trans         &trans
+                                                        MT(NUMBERS)    &sk LSHIFT     &krtab
 #define NUMBERS_TR \
-                                                                                                           &trans         &trans         &trans
+                                                                                                           &kp RETURN     &kp SPACE      &kp TAB
                     /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
 
 
@@ -53,22 +53,22 @@
 #define CODING_UL \
                           &kp CARET      &kp AT         &kp LPAR       &kp RPAR       &kp DOLLAR
 #define CODING_UR \
-                                                                                                           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        &kp PIPE
+                                                                                                           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        &kp GRAVE
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define CODING_HL \
-                          &kp APOS       &kp GRAVE      &kp LBKT       &kp RBKT       &kp STAR
+                          &kp PIPE       &kp HASH       &kp LBKT       &kp RBKT       &kp TILDE
 #define CODING_HR \
-                                                                                                           &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp BSLH
+                                                                                                           &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp COLON
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define CODING_LL \
-                          &kp EXCL       &kp HASH       &kp LBRC       &kp RBRC       &kp TILDE
+                          &kp EXCL       &kp BSLH       &kp LBRC       &kp RBRC       &kp FSLH
 #define CODING_LR \
-                                                                                                           &kp PERCENT    &kp AMPS       &kp COMMA      &kp DOT        &kp FSLH
+                                                                                                           &kp PERCENT    &kp AMPS       &kp COMMA      &kp DOT        &kp STAR
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define CODING_TL \
-                                                        &trans         &trans         &trans
+                                                        MT(NUMBERS)    &sk LSHIFT     &krtab
 #define CODING_TR \
-                                                                                                           &trans         &trans         &trans
+                                                                                                           &kp RETURN     &kp SPACE      &kp TAB
                     /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
 
 
@@ -90,7 +90,7 @@
                                                                                                            &msc MW_U      &kp F11        &kp F12        &kp F13        &kp F14
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define CONTROLS_TL \
-                                                        &trans         &trans         &trans
+                                                        MT(NUMBERS)    &sk LSHIFT     &krtab
 #define CONTROLS_TR \
                                                                                                            &mkp LCLK      &mkp RCLK      &mkp MCLK
                     /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
