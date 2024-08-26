@@ -32,69 +32,69 @@ BUILD_TIME=$(date +%Y%m%d%H%M%S)
 
 cd $ZMK_APP_DIRECTORY
 
-if [ "$TYPE" = "split" ]; then
-  if [ ! -z "$SHIELD" ]; then
-    KEEB=$(echo $SHIELD | tr ' ' '\n' | head -1 | xargs -n1)
-    TARGET_DIR="$CURRENT_DIR/firmware/$KEEB"
-    SHIELD_OTHERS=$(echo $SHIELD | cut -d' ' -f2-)
+if [ "${TYPE}" = "split" ]; then
+  if [ ! -z "${SHIELD}" ]; then
+    KEEB=$(echo ${SHIELD} | tr ' ' '\n' | head -1 | xargs -n1)
+    TARGET_DIR="${CURRENT_DIR}/firmware/${KEEB}"
+    SHIELD_OTHERS=$(echo ${SHIELD} | cut -d' ' -f2-)
     SHIELD_LEFT="${KEEB}_left ${SHIELD_OTHERS}"
     SHIELD_RIGHT="${KEEB}_right ${SHIELD_OTHERS}"
 
-    echo Building split board+shield: $KEEB
-    echo Target dir: $TARGET_DIR
-    echo Board: $BOARD
-    echo Shield left: $SHIELD_LEFT
-    echo Shield right: $SHIELD_RIGHT
+    echo Building split board+shield: ${KEEB}
+    echo Target dir: ${TARGET_DIR}
+    echo Board: ${BOARD}
+    echo Shield left: ${SHIELD_LEFT}
+    echo Shield right: ${SHIELD_RIGHT}
 
-    mkdir -p $TARGET_DIR
+    mkdir -p ${TARGET_DIR}
     set -x
-    west build -p -b "$BOARD" -d build/left  -- -DZMK_CONFIG="${DZMK_CONFIG_PATH}" -DSHIELD="${SHIELD_LEFT}" && \
-    west build -p -b "$BOARD" -d build/right -- -DZMK_CONFIG="${DZMK_CONFIG_PATH}" -DSHIELD="${SHIELD_RIGHT}" && \
-    \cp build/left/zephyr/zmk.uf2 "$TARGET_DIR/${KEEB}_left.${BUILD_TIME}.uf2" && \
-    \cp build/right/zephyr/zmk.uf2 "$TARGET_DIR/${KEEB}_right.${BUILD_TIME}.uf2"
+    west build -p -b "${BOARD}" -d build/left  -- -DZMK_CONFIG="${DZMK_CONFIG_PATH}" -DSHIELD="${SHIELD_LEFT}" && \
+    west build -p -b "${BOARD}" -d build/right -- -DZMK_CONFIG="${DZMK_CONFIG_PATH}" -DSHIELD="${SHIELD_RIGHT}" && \
+    \cp build/left/zephyr/zmk.uf2 "${TARGET_DIR}/${KEEB}_left.${BUILD_TIME}.uf2" && \
+    \cp build/right/zephyr/zmk.uf2 "${TARGET_DIR}/${KEEB}_right.${BUILD_TIME}.uf2"
   else
-    KEEB=$(echo $BOARD | tr ' ' '\n' | tail -1 | xargs -n1)
-    TARGET_DIR="$CURRENT_DIR/firmware/$KEEB"
+    KEEB=$(echo ${BOARD} | tr ' ' '\n' | tail -1 | xargs -n1)
+    TARGET_DIR="${CURRENT_DIR}/firmware/${KEEB}"
 
-    echo Building split board: $KEEB
-    echo Target dir: $TARGET_DIR
+    echo Building split board: ${KEEB}
+    echo Target dir: ${TARGET_DIR}
     echo Board left: ${BOARD}_left
     echo Board right: ${BOARD}_right
 
-    mkdir -p $TARGET_DIR
+    mkdir -p ${TARGET_DIR}
     set -x
-    west build -p -b "${BOARD}_left" -d build/left  -- -DZMK_CONFIG="$DZMK_CONFIG_PATH" && \
-    west build -p -b "${BOARD}_right" -d build/right -- -DZMK_CONFIG="$DZMK_CONFIG_PATH" && \
-    \cp build/left/zephyr/zmk.uf2 "$TARGET_DIR/${KEEB}_left.${BUILD_TIME}.uf2" && \
-    \cp build/right/zephyr/zmk.uf2 "$TARGET_DIR/${KEEB}_right.${BUILD_TIME}.uf2"
+    west build -p -b "${BOARD}_left" -d build/left  -- -DZMK_CONFIG="${DZMK_CONFIG_PATH}" && \
+    west build -p -b "${BOARD}_right" -d build/right -- -DZMK_CONFIG="${DZMK_CONFIG_PATH}" && \
+    \cp build/left/zephyr/zmk.uf2 "${TARGET_DIR}/${KEEB}_left.${BUILD_TIME}.uf2" && \
+    \cp build/right/zephyr/zmk.uf2 "${TARGET_DIR}/${KEEB}_right.${BUILD_TIME}.uf2"
   fi
-elif [ "$TYPE" = "standard" ]; then
-  if [ ! -z "$SHIELD" ]; then
-    KEEB=$SHIELD
-    TARGET_DIR="$CURRENT_DIR/firmware/$KEEB"
+elif [ "${TYPE}" = "standard" ]; then
+  if [ ! -z "${SHIELD}" ]; then
+    KEEB=${SHIELD}
+    TARGET_DIR="${CURRENT_DIR}/firmware/${KEEB}"
 
-    echo Building standard board+shield: $KEEB
-    echo Target dir: $TARGET_DIR
-    echo Board: $BOARD
-    echo Shield: $SHIELD
+    echo Building standard board+shield: ${KEEB}
+    echo Target dir: ${TARGET_DIR}
+    echo Board: ${BOARD}
+    echo Shield: ${SHIELD}
 
-    mkdir -p $TARGET_DIR
+    mkdir -p ${TARGET_DIR}
     set -x
-    west build -p -b "$BOARD" -d build/standard -- -DZMK_CONFIG="$DZMK_CONFIG_PATH" -DSHIELD="${SHIELD}" && \
-    \cp build/standard/zephyr/zmk.uf2 "$TARGET_DIR/${KEEB}.${BUILD_TIME}.uf2"
+    west build -p -b "${BOARD}" -d build/standard -- -DZMK_CONFIG="${DZMK_CONFIG_PATH}" -DSHIELD="${SHIELD}" && \
+    \cp build/standard/zephyr/zmk.uf2 "${TARGET_DIR}/${KEEB}.${BUILD_TIME}.uf2"
   else
-    KEEB=$BOARD
-    TARGET_DIR="$CURRENT_DIR/firmware/$KEEB"
+    KEEB=${BOARD}
+    TARGET_DIR="${CURRENT_DIR}/firmware/${KEEB}"
 
-    echo Building standard board: $KEEB
-    echo Target dir: $TARGET_DIR
-    echo Board: $BOARD
+    echo Building standard board: ${KEEB}
+    echo Target dir: ${TARGET_DIR}
+    echo Board: ${BOARD}
 
-    mkdir -p $TARGET_DIR
+    mkdir -p ${TARGET_DIR}
     set -x
-    west build -p -b "$BOARD" -d build/standard -- -DZMK_CONFIG="$DZMK_CONFIG_PATH" && \
-    \cp build/standard/zephyr/zmk.uf2 "$TARGET_DIR/${KEEB}.${BUILD_TIME}.uf2"
+    west build -p -b "${BOARD}" -d build/standard -- -DZMK_CONFIG="${DZMK_CONFIG_PATH}" && \
+    \cp build/standard/zephyr/zmk.uf2 "${TARGET_DIR}/${KEEB}.${BUILD_TIME}.uf2"
   fi
 fi
 
-cd $CURRENT_DIR
+cd ${CURRENT_DIR}
