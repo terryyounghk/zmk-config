@@ -1,0 +1,16 @@
+/// ---------------------------------------------------------------------------
+/// Combo: special combos
+
+CUSTOM_COMBO(  lh4lh2,         LH4 LH2,            &tog NUMBERS                         )
+CUSTOM_COMBO(  rh4rh2,         RH4 RH2,            &tog NUMBERS                         )
+
+CUSTOM_COMBO(  ll4ll2,         LL4 LL2,            &m_release_mods                      )
+CUSTOM_COMBO(  rl4rl2,         RL4 RL2,            &m_release_mods                      )
+
+CUSTOM_COMBO(  lu4lu2ru4ru2,   LU4 LU2 RU4 RU2,    &bt BT_CLR                           )
+
+CUSTOM_COMBO(  rh2ru4,         RH2 RU4,            &kp MINUS                            )
+CUSTOM_COMBO(  ru2rh4,         RU2 RH4,            &kp MINUS                            )
+CUSTOM_COMBO(  lh2lu4,         LH2 LU4,            &kp EQUAL                            )
+CUSTOM_COMBO(  lu2lh4,         LU2 LH4,            &kp EQUAL                            )
+

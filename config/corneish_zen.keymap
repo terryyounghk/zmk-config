@@ -10,12 +10,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
-
-
-#include "common/layout_agnostic/mouse.dtsi"
 #include "common/base_keymap.h"
-#include "common/6_column_42_keys.h"
-#include "common/6_column_42_keys_combos.dtsi"
+#include "common/keys.h"
+#include "common/mouse.dtsi"
+#include "common/behaviors.dtsi"
+#include "common/macros.dtsi"
+#include "common/tap_dances.dtsi"
+
+#include "common/layouts/6_column_42_keys.h"
+#include "common/layouts/6_column_42_keys_combos.dtsi"
 
 #define UG(code)                 &rgb_ug code
 #define UG_WHITE                 &rgb_ug RGB_COLOR_HSB(0,0,100)
@@ -43,6 +46,13 @@ CUSTOM_LAYER(numbers, "Numbers",
                     NUMBERS_TL        NUMBERS_TR
 )
 
+CUSTOM_LAYER(symbols, "Symbols",
+  &kp UNDER         SYMBOLS_UL        SYMBOLS_UR          &kp BSPC
+  &kp PLUS          SYMBOLS_HL        SYMBOLS_HR          &kp APOS
+  &kp LPAR          SYMBOLS_LL        SYMBOLS_LR          &kp RPAR
+                    SYMBOLS_TL        SYMBOLS_TR
+)
+
 CUSTOM_LAYER(coding, "Coding",
   &kp Y_DIVIDE      CODING_UL         CODING_UR           &kp Y_DEGREE
   &kp LBRC          CODING_HL         CODING_HR           &kp RBRC
@@ -57,10 +67,16 @@ CUSTOM_LAYER(controls, "Controls",
                     CONTROLS_TL       CONTROLS_TR
 )
 
+CUSTOM_LAYER(funcs, "Funcs",
+  &none             FUNCS_UL          FUNCS_UR            &none
+  &none             FUNCS_HL          FUNCS_HR            &none
+  &none             FUNCS_LL          FUNCS_LR            &none
+                    FUNCS_TL          FUNCS_TR
+)
+
 CUSTOM_LAYER(afk, "AFK",
   &none             AFK_UL            AFK_UR              &none
   &none             AFK_HL            AFK_HR              &none
   &none             AFK_LL            AFK_LR              &none
                     AFK_TL            AFK_TR
 )
-

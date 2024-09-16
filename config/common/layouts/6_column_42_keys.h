@@ -66,5 +66,3 @@
 #define RT1 39
 #define RT2 40
 #define RT3 41
-
-#include "layout_agnostic/keys.h"

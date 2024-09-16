@@ -1,0 +1,38 @@
+/// ---------------------------------------------------------------------------
+/// Combo: T1 + ? /// one-handed one-shots, mirrored
+
+CUSTOM_COMBO(  lt1lu5,         LT1 LU5,            &sl SYMBOLS                          )
+CUSTOM_COMBO(  lt1lu4,         LT1 LU4,            &sl CONTROLS                         )
+CUSTOM_COMBO(  lt1lu3,         LT1 LU3,            &sl CODING                           )
+CUSTOM_COMBO(  lt1lu2,         LT1 LU2,            &sl NUMBERS                          )
+CUSTOM_COMBO(  lt1lu1,         LT1 LU1,            &kp Y_LOCK_SCREEN                    )
+
+CUSTOM_COMBO(  lt1lh5,         LT1 LH5,            &sk LCTRL                            )
+CUSTOM_COMBO(  lt1lh4,         LT1 LH4,            &sk LALT                             )
+CUSTOM_COMBO(  lt1lh3,         LT1 LH3,            &sk LGUI                             )
+CUSTOM_COMBO(  lt1lh2,         LT1 LH2,            &sk LSHIFT                           )
+CUSTOM_COMBO(  lt1lh1,         LT1 LH1,            &sk LHYPER                           )
+
+CUSTOM_COMBO(  lt1ll5,         LT1 LL5,            &tog SYMBOLS                         )
+CUSTOM_COMBO(  lt1ll4,         LT1 LL4,            &tog CONTROLS                        )
+CUSTOM_COMBO(  lt1ll3,         LT1 LL3,            &tog CODING                          )
+CUSTOM_COMBO(  lt1ll2,         LT1 LL2,            &tog NUMBERS                         )
+CUSTOM_COMBO(  lt1ll1,         LT1 LL1,            &sk LMEH                             )
+
+CUSTOM_COMBO(  rt1ru1,         RT1 RU1,            &to FUNCS                            )
+CUSTOM_COMBO(  rt1ru2,         RT1 RU2,            &sl NUMBERS                          )
+CUSTOM_COMBO(  rt1ru3,         RT1 RU3,            &sl CODING                           )
+CUSTOM_COMBO(  rt1ru4,         RT1 RU4,            &sl CONTROLS                         )
+CUSTOM_COMBO(  rt1ru5,         RT1 RU5,            &sl SYMBOLS                          )
+
+CUSTOM_COMBO(  rt1rh1,         RT1 RH1,            &sk LHYPER                           )
+CUSTOM_COMBO(  rt1rh2,         RT1 RH2,            &sk RSHIFT                           )
+CUSTOM_COMBO(  rt1rh3,         RT1 RH3,            &sk RGUI                             )
+CUSTOM_COMBO(  rt1rh4,         RT1 RH4,            &sk RALT                             )
+CUSTOM_COMBO(  rt1rh5,         RT1 RH5,            &sk RCTRL                            )
+
+CUSTOM_COMBO(  rt1rl1,         RT1 RL1,            &sk LMEH                             )
+CUSTOM_COMBO(  rt1rl2,         RT1 RL2,            &tog NUMBERS                         )
+CUSTOM_COMBO(  rt1rl3,         RT1 RL3,            &tog CODING                          )
+CUSTOM_COMBO(  rt1rl4,         RT1 RL4,            &tog CONTROLS                        )
+CUSTOM_COMBO(  rt1rl5,         RT1 RL5,            &tog SYMBOLS                         )

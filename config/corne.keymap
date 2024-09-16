@@ -9,10 +9,15 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#include "common/layout_agnostic/mouse.dtsi"
 #include "common/base_keymap.h"
-#include "common/5_column_36_keys.h"
-#include "common/5_column_36_keys_combos.dtsi"
+#include "common/keys.h"
+#include "common/mouse.dtsi"
+#include "common/behaviors.dtsi"
+#include "common/macros.dtsi"
+#include "common/tap_dances.dtsi"
+
+#include "common/layouts/5_column_36_keys.h"
+#include "common/layouts/5_column_36_keys_combos.dtsi"
 
 / {
   chosen {
@@ -34,6 +39,13 @@ CUSTOM_LAYER(numbers, "Numbers",
   NUMBERS_TL        NUMBERS_TR
 )
 
+CUSTOM_LAYER(symbols, "Symbols",
+  SYMBOLS_UL        SYMBOLS_UR
+  SYMBOLS_HL        SYMBOLS_HR
+  SYMBOLS_LL        SYMBOLS_LR
+  SYMBOLS_TL        SYMBOLS_TR
+)
+
 CUSTOM_LAYER(coding, "Coding",
   CODING_UL         CODING_UR
   CODING_HL         CODING_HR
@@ -41,11 +53,18 @@ CUSTOM_LAYER(coding, "Coding",
   CODING_TL         CODING_TR
 )
 
-CUSTOM_LAYER(controls, "controls",
+CUSTOM_LAYER(controls, "Controls",
   CONTROLS_UL       CONTROLS_UR
   CONTROLS_HL       CONTROLS_HR
   CONTROLS_LL       CONTROLS_LR
   CONTROLS_TL       CONTROLS_TR
+)
+
+CUSTOM_LAYER(funcs, "Funcs",
+  FUNCS_UL          FUNCS_UR
+  FUNCS_HL          FUNCS_HR
+  FUNCS_LL          FUNCS_LR
+  FUNCS_TL          FUNCS_TR
 )
 
 CUSTOM_LAYER(afk, "AFK",
@@ -54,4 +73,3 @@ CUSTOM_LAYER(afk, "AFK",
   AFK_LL            AFK_LR
   AFK_TL            AFK_TR
 )
-

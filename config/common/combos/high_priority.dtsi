@@ -1,0 +1,5 @@
+/// High-priority combos
+CUSTOM_COMBO_PANIC(  lh4lh2rh4rh2,   LH4 LH2 RH4 RH2,    &tog AFK                       )
+CUSTOM_COMBO_PANIC(  lh5lh2rh3,      LH5 LH2 RH3,        &tog AFK                       )
+CUSTOM_COMBO_PANIC(  lh5lu3ru1,      LH5 LU3 RU2,        &bt BT_CLR                     )
+

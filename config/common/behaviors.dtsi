@@ -1,0 +1,132 @@
+#define CUSTOM_HELPER_STRINGIFY(x) #x
+
+#define CUSTOM_LAYER(layer, display_name, layer_bindings) \
+/ { \
+  keymap { \
+    compatible = "zmk,keymap"; \
+    layer { \
+      label = display_name; \
+      bindings = <layer_bindings>; \
+    }; \
+  }; \
+};
+
+#define CUSTOM_COMBO(name, keypos, combo_bindings) \
+/ { \
+  combos { \
+    compatible = "zmk,combos"; \
+    combo_##name { \
+      timeout-ms = <30>; \
+      slow-release; \
+      key-positions = <keypos>; \
+      bindings = <combo_bindings>; \
+      layers = <LAYERS>; \
+    }; \
+  }; \
+};
+
+#define CUSTOM_COMBO_PANIC(name, keypos, combo_bindings) \
+/ { \
+  combos { \
+    compatible = "zmk,combos"; \
+    combo_##name { \
+      timeout-ms = <30>; \
+      slow-release; \
+      key-positions = <keypos>; \
+      bindings = <combo_bindings>; \
+    }; \
+  }; \
+};
+
+#define CUSTOM_MACRO(name, macro_bindings) \
+/ { \
+  macros { \
+    name: name { \
+      compatible = "zmk,behavior-macro"; \
+      #binding-cells = <0>; \
+      wait-ms = <40>; \
+      tap-ms = <40>; \
+      bindings = <macro_bindings>; \
+    }; \
+  }; \
+};
+
+#define TD(name, ttm, ...) \
+/ { \
+  behaviors { \
+    td_##name: tap_dance_##name { \
+      compatible = "zmk,behavior-tap-dance"; \
+      #binding-cells = <0>; \
+      tapping-term-ms = <ttm>; \
+      bindings = __VA_ARGS__; \
+    }; \
+  }; \
+};
+
+#define HT(name, ttm, hold, tap) \
+/ { \
+  behaviors { \
+    ht_##name: hold_tap_##name { \
+      compatible = "zmk,behavior-hold-tap"; \
+      #binding-cells = <2>; \
+      flavor = "tap-preferred"; \
+      tapping-term-ms = <ttm>; \
+      require-prior-idle-ms = <110>; \
+      bindings = hold, tap; \
+    }; \
+  }; \
+};
+
+// hold for momentary layer, tap to toggle a different layer
+#define MT(mo, tog) &ht_mo_tog mo tog
+
+// hold for momentary layer, tap to toggle the same layer
+#define MT1(layer)  &ht_mo_tog layer layer
+
+// hold for momentary layer, tap to go to a different layer
+#define MTO(mo, to) &ht_mo_to mo to
+
+// ------------------------------------------------------------
+
+// sticky layer
+&sl {
+  release-after-ms = <1500>;
+};
+
+// sticky key
+&sk {
+  release-after-ms = <1500>;
+  quick-release;
+};
+
+// layer tap
+&lt {
+  tapping-term-ms = <200>;
+};
+
+// caps
+&caps_word {
+  continue-list = <UNDERSCORE BACKSPACE DELETE MINUS DOT>;
+};
+
+/ {
+  behaviors {
+    // mod-morphs
+    krtab: key_repeat_tab {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&key_repeat>, <&kp TAB>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
+      keep-mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
+    };
+  };
+};
+
+// hold for a momentary layer, tap to switch to a layer
+HT(mo_to, 200, <&mo>, <&to>)
+
+// hold for a momentary layer, tap to toggle a layer
+HT(mo_tog, 200, <&mo>, <&tog>)
+
+// hold for a momentary layer, tap to key press
+HT(mo_kp, 180, <&mo>, <&kp>)

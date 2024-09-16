@@ -1,0 +1,22 @@
+// Macros shared among different types of combos
+
+/// Special: special macro to cancel any toggled-mods and return to layer 1
+CUSTOM_MACRO(  m_release_mods,                     &to QWERTY &macro_release &kp LCTRL &kp LALT &kp LSHIFT &kp LGUI)
+
+/// Terminal: tmux
+CUSTOM_MACRO(  m_tmux_open_bottom_panel,           &kp Y_TP &kp Z &kp Y_TP &kp J)
+CUSTOM_MACRO(  m_tmux_close_bottom_panel,          &kp Y_TP &kp K &kp Y_TP &kp Z)
+CUSTOM_MACRO(  m_tmux_copy_mode,                   &kp Y_TP &kp LBKT)
+
+CUSTOM_MACRO(  m_mac_win_menu,                     &kp Y_SHOW_HELP_MENU &kp LEFT)
+
+/// Browser: Gmail
+CUSTOM_MACRO(  m_is_unread,                        &kp I &kp S &kp COLON &kp U &kp N &kp R &kp E &kp A &kp D)
+CUSTOM_MACRO(  m_in_inbox,                         &kp I &kp N &kp COLON &kp I &kp N &kp B &kp O &kp X)
+
+/// Browser: Surfingkeys
+CUSTOM_MACRO(  m_sk_go_first_tab,                  &kp G &kp N0)
+CUSTOM_MACRO(  m_sk_go_last_tab,                   &kp G &kp DOLLAR)
+CUSTOM_MACRO(  m_sk_x_all_left,                    &kp G &kp X &kp N0)
+CUSTOM_MACRO(  m_sk_x_all_right,                   &kp G &kp X &kp DOLLAR)
+CUSTOM_MACRO(  m_sk_x_all_except,                  &kp G &kp X &kp X)

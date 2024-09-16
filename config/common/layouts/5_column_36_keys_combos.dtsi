@@ -1,0 +1,15 @@
+// special combos
+#include "../combos/high_priority.dtsi"
+#include "../combos/modifiers.dtsi"
+#include "../combos/special.dtsi"
+
+// positional combos
+#include "../combos/adjacent.dtsi"
+#include "../combos/thumbs.dtsi"
+#include "../combos/symmetric.dtsi"
+
+// contextual combos
+#include "../combos/browser.dtsi"
+#include "../combos/capturing.dtsi"
+#include "../combos/apps.dtsi"
+#include "../combos/dev_vscode.dtsi"

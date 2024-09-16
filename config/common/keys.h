@@ -1,14 +1,9 @@
 // This file contains keys or shortcut definitions that are independent from the keyboard layout
 
-// layer indices - used in layer switching in keymap
-#define QWERTY   0
-#define NUMBERS  1
-#define CODING   2
-#define CONTROLS 3
-#define AFK      4
+/// ---------------------------------------------------------------------------
+// tmux / terminal
+#define Y_TP                            LC(SPACE) // tmux prefix
 
-// behaviors
-#define MT(layer)                       &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 
 /// ---------------------------------------------------------------------------
 // special characters (macos)
@@ -30,14 +25,14 @@
 
 /// ---------------------------------------------------------------------------
 // macos shortcuts
-#define Y_APPLICATION_WINDOWS           LC(DOWN)
+#define Y_SPOTLIGHT                     LG(SPACE)
+#define Y_APPLICATION_WINDOWS           LC(LA(DOWN)) // system default: LC(DOWN)
 #define Y_CLOSE                         LG(W)
 #define Y_COPY                          LG(C)
 #define Y_CUT                           LG(X)
 #define Y_DOCK                          LC(F3)
 #define Y_LOCK_SCREEN                   LG(LC(Q))
-#define Y_MENUBAR                       LC(F2)
-#define Y_MISSION_CONTROL               LC(UP)
+#define Y_MISSION_CONTROL               LC(LA(UP)) // system default: LC(UP)
 #define Y_PASTE                         LG(V)
 #define Y_QUIT                          LG(Q)
 #define Y_SCREEN_CAPTURE_AREA           LG(LS(N4)) // Either use OS default, or CleanShot
@@ -46,28 +41,51 @@
 #define Y_TOGGLE_STAGE_MANAGER          HYPER(M) // Set in Preferences > Keyboard > Mission Control
 #define Y_UNDO                          LG(Z)
 
+// an annoying issue in MacOS where ^F2 to "Move Focus to Menu Bar" only works occassionally
+// https://apple.stackexchange.com/questions/12723/control-f2-move-focus-to-menu-bar-only-works-occasionally
+// this is still reserved in case Apple fix this, but I am not holding my breath
+#define Y_MENUBAR                       LC(F2)
+
+// Alternatively, using the "Show Help menu" shortcut fits closer to my use-case,
+// with the extra benefit that you can start typing to access menu items
+// However, the default <M-S-/> also does not always work for me, so this requires
+// that you change the shortcut to something else.
+#define Y_SHOW_HELP_MENU                MEH(FSLH) // system default: LG(LS(FSLH))
+#define Y_MI_NAME_WINDOW                MEH(W) // custom: App Shortcut > All Applications > "Name Window..."
+
 /// ---------------------------------------------------------------------------
 // mac app shortcuts
 #define Y_BARTENDER_SEARCH              LC(LA(ESCAPE))
-#define Y_CLEANSHOT_ALL_IN_ONE          LC(LA(LS(N5)))
-#define Y_CLEANSHOT_OVERLAYS_CLOSE      HYPER(Y)
-#define Y_CLEANSHOT_OVERLAYS_TOGGLE     MEH(Y)
-#define Y_CLEANSHOT_HISTORY             HYPER(R)
-#define Y_CLEANSHOT_PIN                 HYPER(P)
-#define Y_CLEANSHOT_WINDOW              LG(LS(N5))
-#define Y_GDRIVE_SEARCH                 LG(LA(G))
+#define Y_GOOGLE_DRIVE_SEARCH           LG(LA(G))
 #define Y_HAZEOVER_TOGGLE               MEH(Z)
 #define Y_HAZEOVER_INCREASE             LC(LA(Z))
 #define Y_HAZEOVER_DECREASE             LC(LS(Z))
 #define Y_KEYCAST_TOGGLE                HYPER(SEMI)
 #define Y_ONE_PASSWORD_AUTOFILL         LG(BACKSLASH)
 #define Y_ONE_PASSWORD_LOCK             LG(LS(L))
-#define Y_ONE_PASSWORD_QUICK            LG(LS(SPACE))
+#define Y_ONE_PASSWORD_QUICK_ACCESS     LG(LS(SPACE))
 #define Y_ONE_PASSWORD_SHOW             MEH(P)
 #define Y_SHORTCAT                      HYPER(SPACE)
+#define Y_PRESENTIFY_ANNOTATE           MEH(A)
+
+/// ---------------------------------------------------------------------------
+// Capturing Shortcuts (CleanShot, TextSniper, ...)
+#define Y_CLEANSHOT_ALL_IN_ONE          LC(LA(LS(N5))) // custom: General > All in One
+#define Y_CLEANSHOT_HISTORY             HYPER(R) // custom: General > Open Capture History
+#define Y_CLEANSHOT_CAPTURE_AREA        LG(LS(N4)) // Screenshots > Capture Area
+#define Y_CLEANSHOT_CAPTURE_FULLSCREEN  LG(LS(N3)) // custom: Screenshots > Capture Fullscreen
+#define Y_CLEANSHOT_CAPTURE_WINDOW      LG(LS(N5)) // custom: Screenshots > Capture Window
+#define Y_CLEANSHOT_CAPTURE_SCROLLING   LG(LS(N6)) // custom: Scrolling Capture > Scrolling Capture
+
+#define Y_CLEANSHOT_OVERLAYS_CLOSE      MEH(Y) // custom: Quick Access Overlay > Close All Overlays
+#define Y_CLEANSHOT_OVERLAYS_TOGGLE     HYPER(Y) // custom: Quick Access Overlay > Hide/Show Overlays
+
 #define Y_TEXTSNIPER_CAPTURE_TEXT       LG(LS(N2))
 #define Y_TEXTSNIPER_READ_QRCODE        LG(LS(N1))
-#define Y_PRESENTIFY_ANNOTATE           MEH(A)
+
+/// ---------------------------------------------------------------------------
+// tmux shortcuts
+#define Y_TMUX_LEADER                   LC(B)
 
 /// ---------------------------------------------------------------------------
 // vscode shortcuts
@@ -203,9 +221,6 @@
 #define Y_CHROME_TGE_CLOSE_UNGROUPED    LA(LS(U))
 #define Y_CHROME_TGE_SAVE_GROUP         LA(LS(S))
 #define Y_CHROME_TGE_GROUP_UNGROUPED    LA(LS(I))
-
-// https://chromewebstore.google.com/detail/vimium-c-all-by-keyboard/hfjbmagddngcpeloejdejnfgbamkjaeg
-#define Y_CHROME_VIMIUMC_ACTIVATE       LC(LG(DOT))
 
 // https://chromewebstore.google.com/detail/decreased-productivity/nlbpiflhmdcklcbihngeffpmoklbiooj
 #define Y_CHROME_DP_PARANOID            LC(LA(P))
