@@ -17,7 +17,7 @@
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
- wakeup-source;
+        wakeup-source;
         diode-direction = "col2row";
         row-gpios
             = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -37,22 +37,21 @@
     };
 
     //leds {
-     //   compatible = "gpio-leds";
-     //   blue_led: led_0 {
-     //       gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-     //   };
-   // };
+    //   compatible = "gpio-leds";
+    //   blue_led: led_0 {
+    //       gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+    //   };
+    // };
 
     ext-power {
         compatible = "zmk,ext-power-generic";
         label = "EXT_POWER";
         control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-         init-delay-ms = <50>;
+        init-delay-ms = <50>;
     };
 
      vbatt: vbatt {
         compatible = "zmk,battery-nrf-vddh";
-  //      init-delay-ms = <50>;
     };
 
 };

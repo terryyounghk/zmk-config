@@ -154,9 +154,9 @@
                                                                                                            &to SYMBOLS    &to NUMBERS    &to CODING     &to CONTROLS   &to QWERTY
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define FUNCS_LL \
-                          &none          &none          &none          &none          &none
+                          &bootloader    &sys_reset     &none          &kp F12        &kp F11
 #define FUNCS_LR \
-                                                                                                           &none          &none          &none          &none          &none
+                                                                                                           &kp F11        &kp F12        &none          &sys_reset     &bootloader
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define FUNCS_TL \
                                                         Y_LT3          Y_LT2          Y_LT1

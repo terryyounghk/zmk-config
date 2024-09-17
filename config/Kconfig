@@ -8,3 +8,9 @@ config BOARD_CORNEISH_ZEN_LEFT
 
 config BOARD_CORNEISH_ZEN_RIGHT
     bool
+
+config BOARD_CORNE42_CUSTOM_LEFT
+    bool
+
+config BOARD_CORNE42_CUSTOM_RIGHT
+    bool

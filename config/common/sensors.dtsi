@@ -1,0 +1,20 @@
+// sensor-rotate: RGB brightness
+SR(rgb, &rgb_ug RGB_BRI, &rgb_ug RGB_BRD)
+
+// sensor-rotate: AFK, does nothing
+SR(afk, &none, &none)
+
+// sensor-rotate: Scroll
+SR(scroll, &msc SCRL_DOWN, &msc SCRL_UP)
+
+// sensor-rotate: volume
+SR(vol, &kp C_VOLUME_UP, &kp C_VOLUME_DOWN)
+
+// sensor-rotate: zoom
+SR(zoom, &kp LG(PLUS), &kp LG(MINUS))
+
+// sensor-rotate: tmux increment/decrement
+SR(number, &kp LC(A), &kp LC(X))
+
+// sensor-rotate: mac brightness
+SR(screen, &kp F15, &kp F14)
