@@ -20,8 +20,8 @@
                           39: rotary encoder click       6: ↑
                                                         19: ↓
                                                         32: ←
-                                                        42: →
-                                                        47: right encoder click
+                                                        43: →
+                                                        47: joystick click
 
   Notation
     Side:                  L: Left            L/R Encoders           R: Right

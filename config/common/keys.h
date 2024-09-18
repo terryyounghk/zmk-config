@@ -3,6 +3,8 @@
 /// ---------------------------------------------------------------------------
 // tmux / terminal
 #define Y_TP                            LC(SPACE) // tmux prefix
+#define Y_NC                            COLON // nvim command
+#define Y_NL                            SPACE // nvim leader key
 
 
 /// ---------------------------------------------------------------------------
@@ -85,7 +87,7 @@
 
 /// ---------------------------------------------------------------------------
 // tmux shortcuts
-#define Y_TMUX_LEADER                   LC(B)
+#define Y_TMUX_LEADER                   LC(SPACE)
 
 /// ---------------------------------------------------------------------------
 // vscode shortcuts

@@ -12,4 +12,5 @@
 #include "../combos/browser.dtsi"
 #include "../combos/capturing.dtsi"
 #include "../combos/apps.dtsi"
-#include "../combos/dev_vscode.dtsi"
+#include "../combos/terminal.dtsi"
+#include "../combos/vscode.dtsi"

@@ -115,6 +115,7 @@
 // sticky layer
 &sl {
   release-after-ms = <1500>;
+  quick-release;
 };
 
 // sticky key
@@ -154,3 +155,7 @@ HT(mo_tog, 200, <&mo>, <&tog>)
 
 // hold for a momentary layer, tap to key press
 HT(mo_kp, 180, <&mo>, <&kp>)
+
+// hold for a momentary layer, tap to set sticky key
+HT(mo_sk, 180, <&mo>, <&sk>)
+

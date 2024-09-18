@@ -32,65 +32,73 @@
   };
 };
 
+/*
+   -----------------------------------------------------------------------
+   |             |                |                   |                  |
+   |   ROTARY    |      LHS       |     JOYSTICK      |       RHS        |
+   |             |                |                   |                  |
+   -----------------------------------------------------------------------
+ */
+
 CUSTOM_LAYER2(qwerty, "Qwerty",
-  &kp ESC           QWERTY_UL         &mmv MOVE_UP        QWERTY_UR           &kp BSPC
-  &sk LGUI          QWERTY_HL         &mmv MOVE_DOWN      QWERTY_HR           &kp APOS
-  &sk LCTRL         QWERTY_LL         &mmv MOVE_LEFT      QWERTY_LR           &sk LALT
-  &kp C_MUTE        QWERTY_TL         &mmv MOVE_RIGHT     QWERTY_TR
+                    QWERTY_6_UL       &mmv MOVE_UP        QWERTY_6_UR
+                    QWERTY_6_HL       &mmv MOVE_DOWN      QWERTY_6_HR
+                    QWERTY_6_LL       &mmv MOVE_LEFT      QWERTY_6_LR
+    &kp C_MUTE      QWERTY_TL         &mmv MOVE_RIGHT     QWERTY_TR
                                       &mkp LCLK
   , &encoder_vol
 )
 
 CUSTOM_LAYER2(numbers, "Numbers",
-  &kp UNDER         NUMBERS_UL        &mmv MOVE_UP        NUMBERS_UR          &kp F11
-  &kp PLUS          NUMBERS_HL        &mmv MOVE_DOWN      NUMBERS_HR          &kp F12
-  &kp LPAR          NUMBERS_LL        &mmv MOVE_LEFT      NUMBERS_LR          &kp RPAR
-  &none             NUMBERS_TL        &mmv MOVE_RIGHT     NUMBERS_TR
+                    NUMBERS_6_UL      &mmv MOVE_UP        NUMBERS_6_UR
+                    NUMBERS_6_HL      &mmv MOVE_DOWN      NUMBERS_6_HR
+                    NUMBERS_6_LL      &mmv MOVE_LEFT      NUMBERS_6_LR
+    &none           NUMBERS_TL        &mmv MOVE_RIGHT     NUMBERS_TR
                                       &mkp LCLK
   , &encoder_number
 )
 
 CUSTOM_LAYER2(symbols, "Symbols",
-  &kp UNDER         SYMBOLS_UL        &mmv MOVE_UP        SYMBOLS_UR          &kp BSPC
-  &kp PLUS          SYMBOLS_HL        &mmv MOVE_DOWN      SYMBOLS_HR          &kp APOS
-  &kp LPAR          SYMBOLS_LL        &mmv MOVE_LEFT      SYMBOLS_LR          &kp RPAR
-  &none             SYMBOLS_TL        &mmv MOVE_RIGHT     SYMBOLS_TR
+                    SYMBOLS_6_UL      &mmv MOVE_UP        SYMBOLS_6_UR
+                    SYMBOLS_6_HL      &mmv MOVE_DOWN      SYMBOLS_6_HR
+                    SYMBOLS_6_LL      &mmv MOVE_LEFT      SYMBOLS_6_LR
+    &none           SYMBOLS_TL        &mmv MOVE_RIGHT     SYMBOLS_TR
                                       &mkp LCLK
   , &encoder_zoom
 )
 
 CUSTOM_LAYER2(coding, "Coding",
-  &kp Y_DIVIDE      CODING_UL         &mmv MOVE_UP        CODING_UR           &kp Y_DEGREE
-  &kp LBRC          CODING_HL         &mmv MOVE_DOWN      CODING_HR           &kp RBRC
-  &kp LT            CODING_LL         &mmv MOVE_LEFT      CODING_LR           &kp GT
-  &none   SPECIAL_CONTROLS_TL         &mmv MOVE_RIGHT     SPECIAL_CONTROLS_TR
+                    CODING_6_UL       &mmv MOVE_UP        CODING_6_UR
+                    CODING_6_HL       &mmv MOVE_DOWN      CODING_6_HR
+                    CODING_6_LL       &mmv MOVE_LEFT      CODING_6_LR
+    &none           CODING_TL         &mmv MOVE_RIGHT     CODING_TR
                                       &mkp LCLK
   , &encoder_scroll
 )
 
 CUSTOM_LAYER2(controls, "Controls",
-  UG(RGB_HUI)       CONTROLS_UL       &mmv MOVE_UP        CONTROLS_UR         UG(RGB_SAI)
-  UG(RGB_HUD)       CONTROLS_HL       &mmv MOVE_DOWN      CONTROLS_HR         UG(RGB_SAD)
-  UG(RGB_BRD)       CONTROLS_LL       &mmv MOVE_LEFT      CONTROLS_LR         &bt BT_CLR
-  &none             CONTROLS_TL       &mmv MOVE_RIGHT     CONTROLS_TR
+                    CONTROLS_6_UL     &mmv MOVE_UP        CONTROLS_6_UR
+                    CONTROLS_6_HL     &mmv MOVE_DOWN      CONTROLS_6_HR
+                    CONTROLS_6_LL     &mmv MOVE_LEFT      CONTROLS_6_LR
+    &none   SPECIAL_CONTROLS_TL       &mmv MOVE_RIGHT     SPECIAL_CONTROLS_TR
                                       &mkp LCLK
   , &encoder_scroll
 )
 
 CUSTOM_LAYER2(funcs, "Funcs",
-  &none             FUNCS_UL          &mmv MOVE_UP        FUNCS_UR            &none
-  &none             FUNCS_HL          &mmv MOVE_DOWN      FUNCS_HR            &none
-  &none             FUNCS_LL          &mmv MOVE_LEFT      FUNCS_LR            &none
-  &none             FUNCS_TL          &mmv MOVE_RIGHT     FUNCS_TR
+                    FUNCS_6_UL        &mmv MOVE_UP        FUNCS_6_UR
+                    FUNCS_6_HL        &mmv MOVE_DOWN      FUNCS_6_HR
+                    FUNCS_6_LL        &mmv MOVE_LEFT      FUNCS_6_LR
+    &none           FUNCS_TL          &mmv MOVE_RIGHT     FUNCS_TR
                                       &mkp LCLK
   , &encoder_screen
 )
 
 CUSTOM_LAYER2(afk, "AFK",
-  &none             AFK_UL            &none               AFK_UR              &none
-  &none             AFK_HL            &none               AFK_HR              &none
-  &none             AFK_LL            &none               AFK_LR              &none
-  &none             AFK_TL            &none               AFK_TR
+                    AFK_6_UL          &none               AFK_6_UR
+                    AFK_6_HL          &none               AFK_6_HR
+                    AFK_6_LL          &none               AFK_6_LR
+    &none           AFK_TL            &none               AFK_TR
                                       &none
   , &encoder_afk
 )

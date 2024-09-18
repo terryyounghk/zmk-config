@@ -1,11 +1,18 @@
-// tmux: copy mode
-// tap:       SEMI
-// tap x 2:   tmux copy mode
-// hold:      mo CONTROLS
-TD(semi, 180, <&ht_mo_kp CONTROLS SEMI>, <&m_tmux_copy_mode>)
+TD(lctrl,   200,  <&sk LCTRL>,
+                  <&kt LCTRL>)
 
-// tap:       Shift (sticky key)
-// tap x 2:   Caps Word
-// tap x 3:   Caps Lock
-// hold:      Shift
-TD(lshift, 500, <&sk LSHIFT>, <&caps_word>, <&kp CAPS>)
+TD(lalt,    200,  <&sk LALT>,
+                  <&kt LALT>)
+
+TD(lgui,    200,  <&sk LGUI>,
+                  <&kt LGUI>)
+
+TD(lshift,  500,  <&sk LSHIFT>,
+                  <&caps_word>,
+                  <&kp CAPS>)
+
+TD(semi,    200,  <&ht_mo_kp CONTROLS SEMI>,
+                  <&m_tmux_copy_mode>)
+
+TD(apos,    200,  <&ht_mo_kp CODING APOSTROPHE>,
+                  <&kp GRAVE>)
