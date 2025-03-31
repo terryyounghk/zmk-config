@@ -32,7 +32,7 @@
       slow-release; \
       key-positions = <keypos>; \
       bindings = <combo_bindings>; \
-      layers = <LAYERS>; \
+      layers = <CUSTOM_COMBO_LAYERS>; \
     }; \
   }; \
 };
@@ -158,4 +158,3 @@ HT(mo_kp, 180, <&mo>, <&kp>)
 
 // hold for a momentary layer, tap to set sticky key
 HT(mo_sk, 180, <&mo>, <&sk>)
-

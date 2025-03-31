@@ -61,6 +61,13 @@ CUSTOM_LAYER(controls, "Controls",
   CONTROLS_TL       CONTROLS_TR
 )
 
+CUSTOM_LAYER(switch, "Switch",
+  SWITCH_UL         SWITCH_UR
+  SWITCH_HL         SWITCH_HR
+  SWITCH_LL         SWITCH_LR
+  SWITCH_TL         SWITCH_TR
+)
+
 CUSTOM_LAYER(funcs, "Funcs",
   FUNCS_UL          FUNCS_UR
   FUNCS_HL          FUNCS_HR

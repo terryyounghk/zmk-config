@@ -62,6 +62,14 @@ In this layer, all keys and combos are disabled except for combo AFK.
 
 This is useful travelling on the go too, preventing accidental switch-on and mis-firing of any keys.
 
+### Gaming Layer
+
+There's a layer called "Switch".
+
+It is specifically to be used with the "[IINE Keyboard and mouse converter](https://www.iine.top/index.php?m=content&c=index&a=show&catid=205&id=181)" for Switch/Oled/Xbox/PS4.
+
+Although this converter has little to no documentation and cannot customize Switch Controller key mappings on the fly, it's a non-issue to me since I can map the keys on a dedicated keyboard layer, and the converter costs less compared to most similar accessories I have come across.
+
 # Keyboards
 
 I use my layout on these keyboards

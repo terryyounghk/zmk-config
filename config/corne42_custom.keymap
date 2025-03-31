@@ -85,6 +85,15 @@ CUSTOM_LAYER2(controls, "Controls",
   , &encoder_scroll
 )
 
+CUSTOM_LAYER2(switch, "Switch",
+                    SWITCH_6_UL       &mmv MOVE_UP        SWITCH_6_UR
+                    SWITCH_6_HL       &mmv MOVE_DOWN      SWITCH_6_HR
+                    SWITCH_6_LL       &mmv MOVE_LEFT      SWITCH_6_LR
+    &none           SWITCH_TL         &mmv MOVE_RIGHT     SWITCH_TR
+                                      &mkp LCLK
+  , &encoder_scroll
+)
+
 CUSTOM_LAYER2(funcs, "Funcs",
                     FUNCS_6_UL        &mmv MOVE_UP        FUNCS_6_UR
                     FUNCS_6_HL        &mmv MOVE_DOWN      FUNCS_6_HR

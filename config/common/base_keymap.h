@@ -4,10 +4,15 @@
 #define SYMBOLS  2
 #define CODING   3
 #define CONTROLS 4
-#define FUNCS    5
-#define AFK      6
+#define SWITCH   5
+#define FUNCS    6
+#define AFK      7
 
-#define LAYERS   0 1 2 3 4 5 6
+// reserved
+#define LAYERS                0 1 2 3 4 5 6 7
+
+// do not include the Switch keymap layer for combos
+#define CUSTOM_COMBO_LAYERS   0 1 2 3 4 6 7
 
 // This is my 5-column keymap, defined with left and right hand sides separately
 // as different keyboards may have additional keys either on the left or right side on each split keyboard side
@@ -155,7 +160,7 @@
                                                                                                            &msc MW_D      &mmv MV_L      &mmv MV_D      &mmv MV_R      &kp F15
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define CONTROLS_LL \
-                          &non           &mkp RCLK      &mkp MCLK      &mkp LCLK      &kp K_MUTE
+                          &none          &mkp RCLK      &mkp MCLK      &mkp LCLK      &kp K_MUTE
 #define CONTROLS_LR \
                                                                                                            &msc MW_U      &kp F11        &kp F12        &kp F13        &kp F14
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
@@ -173,6 +178,110 @@
 #define CONTROLS_6_LR                       CONTROLS_LR       &bootloader
 
 
+/**
+ * This is very specific to the "IINE Keyboard and Mouse Adapter for Switch"
+ * Product link: https://www.iine.top/index.php?m=content&c=index&a=show&catid=205&id=181
+ *
+ * There is very little to no documentation, and this accessory does not allow custom mapping.
+ * So the comment below is a mapping of the adapter itself for reference,
+ * then my own actual mapping in this keyboard only corresponds to the IINE accessory's existing mapping.
+ * Disclaimer: I only own a Switch, to the Xbox/PS4 mapping may be inaccurate.
+ *
+ * LJ = Left Joystick
+ * RJ = Right Joystick
+ * DP = D-Pad
+ *
+ *                      Switch              Xbox One            PS4
+ * Mouse controls:
+ * ================================================================================
+ * Right Button         ZL                  LT                  L2
+ * Left Button          ZR                  RT                  R2
+ * Middle Button        R3                  R3                  R3
+ * Move Up              RJ Up               RJ Up               RJ Up
+ * Move Left            RJ Left             RJ Left             RJ Left
+ * Move Down            RJ Down             RJ Down             RJ Down
+ * Move Right           RJ Right            RJ Right            RJ Right
+ *
+ * Keyboard controls:
+ * ================================================================================
+ * Q                    L1                  L1                  L1
+ * E                    R1                  R1                  R1
+ * F1                   DP Up               DP Up               DP Up
+ * 1                    DP Left             DP Left             DP Left
+ * 2                    DP Down             DP Down             DP Down
+ * 3                    DP Right            DP Right            DP Right
+ * R                    Y                   Y                   ∆
+ * F                    X                   X                   ☐
+ * C                    B                   B                   ◯
+ * Space                A                   A                   X
+ * W                    LJ Up               LJ Up               LJ Up
+ * A                    LJ Left             LJ Left             LJ Left
+ * S                    LJ Down             LJ Down             LJ Down
+ * D                    LJ Right            LJ Right            LJ Right
+ * Left Shift           L3                  L3                  L3
+ * Tab                  -                   View                Option
+ * Esc                  Home                Home                PS
+ * -                    Capture             Share               Share
+ * Caps Lock            +                   Menu                /
+ */
+
+#define NS_REGISTER &kp LC(N2) // Used for IINE Adapter to register as Switch Controller
+#define NS_L1       &kp Q
+#define NS_R1       &kp E
+#define NS_ZL       &mkp RCLK
+#define NS_ZR       &mkp LCLK
+#define NS_L3       &kp LSHIFT
+#define NS_R3       &mkp MCLK
+#define NS_LJ_U     &kp W
+#define NS_LJ_L     &kp A
+#define NS_LJ_D     &kp S
+#define NS_LJ_R     &kp D
+#define NS_RJ_U     &mmv MV_U
+#define NS_RJ_L     &mmv MV_L
+#define NS_RJ_D     &mmv MV_D
+#define NS_RJ_R     &mmv MV_R
+#define NS_DP_U     &kp F1
+#define NS_DP_L     &kp N1
+#define NS_DP_D     &kp N2
+#define NS_DP_R     &kp N3
+#define NS_A        &kp SPACE
+#define NS_B        &kp C
+#define NS_X        &kp F
+#define NS_Y        &kp R
+#define NS_MINUS    &kp TAB
+#define NS_PLUS     &kp CAPS
+#define NS_HOME     &kp ESC
+#define NS_CAPTURE  &kp TILDE
+
+                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
+#define SWITCH_UL \
+                          NS_HOME        NS_ZL          NS_LJ_U        NS_L1          NS_MINUS
+#define SWITCH_UR \
+                                                                                                           NS_PLUS        NS_R1          NS_RJ_U        NS_ZR          NS_CAPTURE
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define SWITCH_HL \
+                          NS_Y           NS_LJ_L        NS_LJ_D        NS_LJ_R        NS_X
+#define SWITCH_HR \
+                                                                                                           NS_X           NS_RJ_L        NS_RJ_D        NS_RJ_R        NS_X
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define SWITCH_LL \
+                          NS_R3          NS_L3          NS_DP_D        NS_DP_U        NS_Y
+#define SWITCH_LR \
+                                                                                                           NS_Y           NS_DP_L        NS_DP_R        NS_L3          NS_R3
+                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
+#define SWITCH_TL \
+                                                        Y_LT3          &out OUT_USB   &out OUT_BLE
+#define SWITCH_TR \
+                                                                                                           NS_B           NS_A           NS_REGISTER
+                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
+
+#define SWITCH_6_UL           &none            SWITCH_UL
+#define SWITCH_6_UR                            SWITCH_UR             &none
+#define SWITCH_6_HL           &none            SWITCH_HL
+#define SWITCH_6_HR                            SWITCH_HR             &none
+#define SWITCH_6_LL           &none            SWITCH_LL
+#define SWITCH_6_LR                            SWITCH_LR             &none
+
 
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
 #define FUNCS_UL \
@@ -181,14 +290,14 @@
                                                                                                            &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define FUNCS_HL \
-                          &to QWERTY     &to CONTROLS   &to CODING     &to NUMBERS    &to SYMBOLS
+                          &to CODING     &to SYMBOLS    &to NUMBERS    &to QWERTY     &to CONTROLS
 #define FUNCS_HR \
-                                                                                                           &to SYMBOLS    &to NUMBERS    &to CODING     &to CONTROLS   &to QWERTY
+                                                                                                           &to CONTROLS   &to QWERTY     &to NUMBERS    &to SYMBOLS    &to CODING
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define FUNCS_LL \
-                          &bootloader    &sys_reset     &none          &kp F12        &kp F11
+                          &bootloader    &sys_reset     &to SWITCH     &kp F12        &kp F11
 #define FUNCS_LR \
-                                                                                                           &kp F11        &kp F12        &none          &sys_reset     &bootloader
+                                                                                                           &kp F11        &kp F12        &kp SWITCH     &sys_reset     &bootloader
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define FUNCS_TL \
                                                         Y_LT3          Y_LT2          Y_LT1
