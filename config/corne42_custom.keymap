@@ -23,7 +23,7 @@
 #define UG(code)                     &rgb_ug code
 #define UG_WHITE                     &rgb_ug RGB_COLOR_HSB(0,0,100)
 
-#define SPECIAL_CONTROLS_TL          UG(RGB_SPD)         UG(RGB_SPI)         &trans
+#define SPECIAL_CONTROLS_TL          &trans              UG(RGB_SPD)         UG(RGB_SPI)
 #define SPECIAL_CONTROLS_TR          &mkp LCLK           &mkp RCLK           &mkp MCLK
 
 / {
@@ -91,7 +91,7 @@ CUSTOM_LAYER2(switch, "Switch",
                     SWITCH_6_LL       &mmv MOVE_LEFT      SWITCH_6_LR
     &none           SWITCH_TL         &mmv MOVE_RIGHT     SWITCH_TR
                                       &mkp LCLK
-  , &encoder_scroll
+  , &encoder_vol
 )
 
 CUSTOM_LAYER2(funcs, "Funcs",

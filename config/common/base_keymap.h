@@ -262,17 +262,17 @@
 #define SWITCH_HL \
                           NS_Y           NS_LJ_L        NS_LJ_D        NS_LJ_R        NS_X
 #define SWITCH_HR \
-                                                                                                           NS_X           NS_RJ_L        NS_RJ_D        NS_RJ_R        NS_X
+                                                                                                           NS_X           NS_RJ_L        NS_RJ_D        NS_RJ_R        NS_Y
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define SWITCH_LL \
-                          NS_R3          NS_L3          NS_DP_D        NS_DP_U        NS_Y
+                          NS_L3          NS_R3          NS_DP_D        NS_DP_U        NS_Y
 #define SWITCH_LR \
-                                                                                                           NS_Y           NS_DP_L        NS_DP_R        NS_L3          NS_R3
+                                                                                                           NS_DP_L        NS_DP_D        NS_DP_U        NS_DP_R        NS_R3
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define SWITCH_TL \
                                                         Y_LT3          &out OUT_USB   &out OUT_BLE
 #define SWITCH_TR \
-                                                                                                           NS_B           NS_A           NS_REGISTER
+                                                                                                           NS_A           NS_B           NS_REGISTER
                     /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
 
 #define SWITCH_6_UL           &none            SWITCH_UL
