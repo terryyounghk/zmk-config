@@ -21,9 +21,8 @@
 #include "common/layouts/6_column_42_keys_combos.dtsi"
 
 #define UG(code)                     &rgb_ug code
-#define UG_WHITE                     &rgb_ug RGB_COLOR_HSB(0,0,100)
 
-#define SPECIAL_CONTROLS_TL          &trans              UG(RGB_SPD)         UG(RGB_SPI)
+#define SPECIAL_CONTROLS_TL          &trans              UG(RGB_OFF)         UG(RGB_ON)
 #define SPECIAL_CONTROLS_TR          &mkp LCLK           &mkp RCLK           &mkp MCLK
 
 / {
