@@ -1,9 +1,14 @@
+/*
+#include <behaviors/mouse_keys.dtsi>
+*/
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
+
 #include "common/base_keymap.h"
 #include "common/keys.h"
 #include "common/mouse.dtsi"
@@ -11,16 +16,10 @@
 #include "common/macros.dtsi"
 #include "common/tap_dances.dtsi"
 
-#include "common/layouts/6_column_42_keys.h"
+#include "common/layouts/6_column_42_keys_custom.h"
 #include "common/layouts/6_column_42_keys_combos.dtsi"
 
-#define UG(code)                 &rgb_ug code
-
-/ {
-  chosen {
-    zmk,matrix_transform = &default_transform;
-  };
-};
+#define UG(code)                     &rgb_ug code
 
 #define SPECIAL_CONTROLS_TL          &trans              UG(RGB_OFF)         UG(RGB_ON)
 #define SPECIAL_CONTROLS_TR          &mkp LCLK           &mkp RCLK           &mkp MCLK

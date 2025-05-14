@@ -40,6 +40,13 @@ CUSTOM_LAYER(numbers, "Numbers",
   NUMBERS_TL        NUMBERS_TR
 )
 
+CUSTOM_LAYER(numpad, "Numpad",
+  NUMPAD_6_UL       NUMPAD_6_UR
+  NUMPAD_6_HL       NUMPAD_6_HR
+  NUMPAD_6_LL       NUMPAD_6_LR
+  NUMPAD_TL         NUMPAD_TR
+)
+
 CUSTOM_LAYER(symbols, "Symbols",
   SYMBOLS_UL        SYMBOLS_UR
   SYMBOLS_HL        SYMBOLS_HR

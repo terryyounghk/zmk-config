@@ -1,21 +1,22 @@
 // layer indices - used in layer switching in keymap
 #define QWERTY   0
 #define NUMBERS  1
-#define SYMBOLS  2
-#define CODING   3
-#define CONTROLS 4
-#define SWITCH   5
-#define FUNCS    6
-#define AFK      7
-#define MOUSE    8
-#define SCROLL   9
-#define SNIPE    10
+#define NUMPAD   2
+#define SYMBOLS  3
+#define CODING   4
+#define CONTROLS 5
+#define SWITCH   6
+#define FUNCS    7
+#define AFK      8
+#define MOUSE    9
+#define SCROLL   10
+#define SNIPE    11
 
 // reserved
-#define LAYERS                0 1 2 3 4 5 6 7 8 9 10
+#define LAYERS                0 1 2 3 4 5 6 7 8 9 10 11
 
 // do not include the Switch keymap layer for combos
-#define CUSTOM_COMBO_LAYERS   0 1 2 3 4 6 7 8 9 10
+#define CUSTOM_COMBO_LAYERS   0 1 2 3 4 5 7 8 9 10 11
 
 // This is my 5-column keymap, defined with left and right hand sides separately
 // as different keyboards may have additional keys either on the left or right side on each split keyboard side
@@ -87,6 +88,37 @@
 #define NUMBERS_6_HR                        NUMBERS_HR        &td_lctrl
 #define NUMBERS_6_LL      &td_lgui          NUMBERS_LL
 #define NUMBERS_6_LR                        NUMBERS_LR        &td_lalt
+
+
+
+                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
+#define NUMPAD_UL \
+                          &kp F1         &kp F2         &kp F3         &kp F4         &kp F5
+#define NUMPAD_UR \
+                                                                                                           &kp PLUS       &kp N7         &kp N8         &kp N9         &kp EQUAL
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define NUMPAD_HL \
+                          &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
+#define NUMPAD_HR \
+                                                                                                           &kp MINUS      &kp N4         &kp N5         &kp N6         &kp DOT
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define NUMPAD_LL \
+                          &kp F11        &kp F12        &kp F13        &kp F14        &kp F15
+#define NUMPAD_LR \
+                                                                                                           &kp N0         &kp N1         &kp N2         &kp N3         &kp FSLH
+                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
+#define NUMPAD_TL \
+                                                        Y_LT3          Y_LT2          Y_LT1
+#define NUMPAD_TR \
+                                                                                                           Y_RT1          Y_RT2          Y_RT3
+                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
+
+#define NUMPAD_6_UL      &kp UNDER         NUMPAD_UL
+#define NUMPAD_6_UR                        NUMPAD_UR        &td_apos
+#define NUMPAD_6_HL      &td_lctrl         NUMPAD_HL
+#define NUMPAD_6_HR                        NUMPAD_HR        &td_lctrl
+#define NUMPAD_6_LL      &td_lgui          NUMPAD_LL
+#define NUMPAD_6_LR                        NUMPAD_LR        &td_lalt
 
 
 
@@ -293,14 +325,14 @@
                                                                                                            &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define FUNCS_HL \
-                          &to CODING     &to SYMBOLS    &to NUMBERS    &to QWERTY     &to CONTROLS
+                          &to CODING     &to SYMBOLS    &to NUMPAD     &to QWERTY     &to CONTROLS
 #define FUNCS_HR \
                                                                                                            &to CONTROLS   &to QWERTY     &to NUMBERS    &to SYMBOLS    &to CODING
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define FUNCS_LL \
-                          &bootloader    &sys_reset     &to SWITCH     &kp F12        &kp F11
+                          &bootloader    &sys_reset     &to SWITCH     &kp MOUSE      &kp SCROLL
 #define FUNCS_LR \
-                                                                                                           &kp F11        &kp F12        &kp SWITCH     &sys_reset     &bootloader
+                                                                                                           &kp F11        &kp F12        &kp SNIPE      &sys_reset     &bootloader
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define FUNCS_TL \
                                                         Y_LT3          Y_LT2          Y_LT1

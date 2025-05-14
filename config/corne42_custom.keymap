@@ -57,6 +57,15 @@ CUSTOM_LAYER2(numbers, "Numbers",
   , &encoder_number
 )
 
+CUSTOM_LAYER2(numpad, "Numpad",
+                    NUMPAD_6_UL       &mmv MOVE_UP        NUMPAD_6_UR
+                    NUMPAD_6_HL       &mmv MOVE_DOWN      NUMPAD_6_HR
+                    NUMPAD_6_LL       &mmv MOVE_LEFT      NUMPAD_6_LR
+    &none           NUMPAD_TL         &mmv MOVE_RIGHT     NUMPAD_TR
+                                      &mkp LCLK
+  , &encoder_number
+)
+
 CUSTOM_LAYER2(symbols, "Symbols",
                     SYMBOLS_6_UL      &mmv MOVE_UP        SYMBOLS_6_UR
                     SYMBOLS_6_HL      &mmv MOVE_DOWN      SYMBOLS_6_HR
