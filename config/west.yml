@@ -4,11 +4,23 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: inorichi
+      url-base: https://github.com/inorichi
   projects:
     - name: zmk
       remote: urob
       revision: main
       import: app/west.yml
+#   - name: zmk
+#     remote: zmkfirmware
+#     revision: feat/pointers-move-scroll
+#     import: app/west.yml
+    - name: zmk-pmw3610-driver
+      remote: inorichi
+      revision: main
+#   - name: zmk-helpers
+#     remote: urob
+#     revision: main
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
       revision: main

@@ -15,9 +15,11 @@ ZMK_APP_DIR="${ZMK_DIR}/app"
 build_zmk_firmware "${BUILD_TIME}" "${CURRENT_DIR}" "${DZMK_CONFIG}" "${ZMK_APP_DIR}" "${KEYBOARD}" \
   "eyelash_corne_left" \
   "-DSHIELD=nice_view_adapter nice_view" \
+  "" \
   "left"
 
 build_zmk_firmware "${BUILD_TIME}" "${CURRENT_DIR}" "${DZMK_CONFIG}" "${ZMK_APP_DIR}" "${KEYBOARD}" \
   "eyelash_corne_right" \
   "-DSHIELD=nice_view_adapter nice_view" \
+  "" \
   "right"

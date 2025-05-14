@@ -14,9 +14,11 @@ ZMK_APP_DIR="${ZMK_DIR}/app"
 build_zmk_firmware "${BUILD_TIME}" "${CURRENT_DIR}" "${DZMK_CONFIG}" "${ZMK_APP_DIR}" "${KEYBOARD}" \
   "corneish_zen_v2_left" \
   "" \
+  "" \
   "left"
 
 build_zmk_firmware "${BUILD_TIME}" "${CURRENT_DIR}" "${DZMK_CONFIG}" "${ZMK_APP_DIR}" "${KEYBOARD}" \
   "corneish_zen_v2_right" \
+  "" \
   "" \
   "right"

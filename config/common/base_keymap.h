@@ -7,12 +7,15 @@
 #define SWITCH   5
 #define FUNCS    6
 #define AFK      7
+#define MOUSE    8
+#define SCROLL   9
+#define SNIPE    10
 
 // reserved
-#define LAYERS                0 1 2 3 4 5 6 7
+#define LAYERS                0 1 2 3 4 5 6 7 8 9 10
 
 // do not include the Switch keymap layer for combos
-#define CUSTOM_COMBO_LAYERS   0 1 2 3 4 6 7
+#define CUSTOM_COMBO_LAYERS   0 1 2 3 4 6 7 8 9 10
 
 // This is my 5-column keymap, defined with left and right hand sides separately
 // as different keyboards may have additional keys either on the left or right side on each split keyboard side
@@ -341,3 +344,92 @@
 #define AFK_6_HR                            AFK_HR             &none
 #define AFK_6_LL           &none            AFK_LL
 #define AFK_6_LR                            AFK_LR             &none
+
+
+                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
+#define MOUSE_UL \
+                          &none          &mkp MB4       &none          &mkp MB5       &none
+#define MOUSE_UR \
+                                                                                                           &none          &mkp MB4       &none          &mkp MB5       &none
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define MOUSE_HL \
+                          &none          &mkp RCLK      &mkp MCLK      &mkp LCLK      &none
+#define MOUSE_HR \
+                                                                                                           &none          &mkp LCLK      &mkp MCLK      &mkp RCLK      &none
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define MOUSE_LL \
+                          &none          &none          &none          &none          &none
+#define MOUSE_LR \
+                                                                                                           &none          &none          &none          &none          &none
+                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
+#define MOUSE_TL \
+                                                        Y_LT3          Y_LT2          Y_LT1
+#define MOUSE_TR \
+                                                                                                           Y_RT1          Y_RT2          Y_RT3
+                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
+
+#define MOUSE_6_UL        &none            MOUSE_UL
+#define MOUSE_6_UR                         MOUSE_UR          &none
+#define MOUSE_6_HL        &none            MOUSE_HL
+#define MOUSE_6_HR                         MOUSE_HR          &none
+#define MOUSE_6_LL        &none            MOUSE_LL
+#define MOUSE_6_LR                         MOUSE_LR          &none
+
+
+                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
+#define SCROLL_UL \
+                          &trans         &trans         &trans         &trans         &trans
+#define SCROLL_UR \
+                                                                                                           &trans         &trans         &trans         &trans         &trans
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define SCROLL_HL \
+                          &trans         &trans         &trans         &trans         &trans
+#define SCROLL_HR \
+                                                                                                           &trans         &trans         &trans         &trans         &trans
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define SCROLL_LL \
+                          &trans         &trans         &trans         &trans         &trans
+#define SCROLL_LR \
+                                                                                                           &trans         &trans         &trans         &trans         &trans
+                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
+#define SCROLL_TL \
+                                                        &trans         &trans         &trans
+#define SCROLL_TR \
+                                                                                                           &trans         &trans         &trans
+                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
+
+#define SCROLL_6_UL       &none            SCROLL_UL
+#define SCROLL_6_UR                        SCROLL_UR         &none
+#define SCROLL_6_HL       &none            SCROLL_HL
+#define SCROLL_6_HR                        SCROLL_HR         &none
+#define SCROLL_6_LL       &none            SCROLL_LL
+#define SCROLL_6_LR                        SCROLL_LR         &none
+
+                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
+#define SNIPE_UL \
+                          &trans         &trans         &trans         &trans         &trans
+#define SNIPE_UR \
+                                                                                                           &trans         &trans         &trans         &trans         &trans
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define SNIPE_HL \
+                          &trans         &trans         &trans         &trans         &trans
+#define SNIPE_HR \
+                                                                                                           &trans         &trans         &trans         &trans         &trans
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define SNIPE_LL \
+                          &trans         &trans         &trans         &trans         &trans
+#define SNIPE_LR \
+                                                                                                           &trans         &trans         &trans         &trans         &trans
+                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
+#define SNIPE_TL \
+                                                        &trans         &trans         &trans
+#define SNIPE_TR \
+                                                                                                           &trans         &trans         &trans
+                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
+
+#define SNIPE_6_UL        &none            SNIPE_UL
+#define SNIPE_6_UR                         SNIPE_UR          &none
+#define SNIPE_6_HL        &none            SNIPE_HL
+#define SNIPE_6_HR                         SNIPE_HR          &none
+#define SNIPE_6_LL        &none            SNIPE_LL
+#define SNIPE_6_LR                         SNIPE_LR          &none

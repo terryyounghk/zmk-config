@@ -23,7 +23,8 @@ build_zmk_firmware () {
   KEYBOARD="${5}"
   BOARD="${6}"
   DSHIELD="${7}"
-  BUILD_SIDE="${8}"
+  DEXTRA_MODULES="${8}"
+  BUILD_SIDE="${9}"
 
   TARGET_DIR="${CURRENT_DIR}/firmware/${KEYBOARD}"
 
@@ -31,7 +32,7 @@ build_zmk_firmware () {
 
   cd "${ZMK_APP_DIR}" || exit 1
 
-  west build -p -b "${BOARD}" -d "build/${BUILD_SIDE}" -- "-DZMK_CONFIG=${DZMK_CONFIG}" "${DSHIELD}" && \
+  west build -p -b "${BOARD}" -d "build/${BUILD_SIDE}" -- "-DZMK_CONFIG=${DZMK_CONFIG}" "${DSHIELD}" "${DEXTRA_MODULES}" && \
     \cp "build/${BUILD_SIDE}/zephyr/zmk.uf2" "${TARGET_DIR}/${KEYBOARD}_${BUILD_SIDE}.${BUILD_TIME}.uf2"
 
   cd "${CURRENT_DIR}" || exit 2
