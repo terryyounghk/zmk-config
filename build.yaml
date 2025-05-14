@@ -15,28 +15,35 @@
 include:
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
+    artifact-name: corne36_left
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
-  - board: nice_nano_v2
-    shield: settings_reset
+    artifact-name: corne36_right
+
+  - board: corne42_custom
+    shield: corne_left nice_view_adapter nice_view
+    artifact-name: corne42_left
+  - board: corne42_custom
+    shield: corne_right nice_view_adapter nice_view
+    artifact-name: corne42_right
+
   - board: corneish_zen_v2_left
+    artifact-name: corneish_zen_left
   - board: corneish_zen_v2_right
+    artifact-name: corneish_zen_left
+
   - board: eyelash_corne_left
     shield: nice_view
-    #snippet: zmk-usb-logging    # Uncomment to log over USB.
+    artifact-name: eyelash_corne_left
   - board: eyelash_corne_right
     shield: nice_view
-    #snippet: zmk-usb-logging
-  #- board: eyelash_corne_left
-  #  shield: nice_view
-  #  snippet: studio-rpc-usb-uart
-  #  cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-  #  artifact-name: eyelash_corne_studio_left
-  - board: eyelash_corne_left
-    shield: settings_reset
-    #snippet: zmk-usb-logging
+    artifact-name: eyelash_corne_left
+    #  snippet: studio-rpc-usb-uart
+    #  cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+
   - board: nice_nano_v2
     shield: keyball44_left
+    artifact-name: keyball44_left
   - board: nice_nano_v2
     shield: keyball44_right
-    snippet: studio-rpc-usb-uart
+    artifact-name: keyball44_right
