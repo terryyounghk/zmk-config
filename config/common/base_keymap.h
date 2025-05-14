@@ -173,7 +173,7 @@
 #define CONTROLS_6_UL     &sys_reset        CONTROLS_UL
 #define CONTROLS_6_UR                       CONTROLS_UR       &sys_reset
 #define CONTROLS_6_HL     &rgb_ug RGB_TOG   CONTROLS_HL
-#define CONTROLS_6_HR                       CONTROLS_HR       &rgb_ug RGB_TOG
+#define CONTROLS_6_HR                       CONTROLS_HR       &rgb_ug RGB_EFF
 #define CONTROLS_6_LL     &bootloader       CONTROLS_LL
 #define CONTROLS_6_LR                       CONTROLS_LR       &bootloader
 
@@ -305,12 +305,12 @@
                                                                                                            Y_RT1          Y_RT2          Y_RT3
                     /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
 
-#define FUNCS_6_UL        &none             FUNCS_UL
-#define FUNCS_6_UR                          FUNCS_UR          &none
-#define FUNCS_6_HL        &none             FUNCS_HL
-#define FUNCS_6_HR                          FUNCS_HR          &none
-#define FUNCS_6_LL        &none             FUNCS_LL
-#define FUNCS_6_LR                          FUNCS_LR          &none
+#define FUNCS_6_UL        &rgb_ug RGB_BRI   FUNCS_UL
+#define FUNCS_6_UR                          FUNCS_UR          &rgb_ug RGB_SPI
+#define FUNCS_6_HL        &rgb_ug RGB_TOG   FUNCS_HL
+#define FUNCS_6_HR                          FUNCS_HR          &rgb_ug RGB_EFF
+#define FUNCS_6_LL        &rgb_ug RGB_BRD   FUNCS_LL
+#define FUNCS_6_LR                          FUNCS_LR          &rgb_ug RGB_SPI
 
 
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
