@@ -6,11 +6,11 @@
 #define CODING   4
 #define CONTROLS 5
 #define SWITCH   6
-#define FUNCS    7
-#define AFK      8
-#define MOUSE    9
-#define SCROLL   10
-#define SNIPE    11
+#define MOUSE    7
+#define SCROLL   8
+#define SNIPE    9
+#define FUNCS    10
+#define AFK      11
 
 // reserved
 #define LAYERS                0 1 2 3 4 5 6 7 8 9 10 11
@@ -330,9 +330,9 @@
                                                                                                            &to CONTROLS   &to QWERTY     &to NUMBERS    &to SYMBOLS    &to CODING
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define FUNCS_LL \
-                          &bootloader    &sys_reset     &to SWITCH     &kp MOUSE      &kp SCROLL
+                          &bootloader    &sys_reset     &to SWITCH     &to MOUSE      &to SCROLL
 #define FUNCS_LR \
-                                                                                                           &kp F11        &kp F12        &kp SNIPE      &sys_reset     &bootloader
+                                                                                                           &kp F11        &kp F12        &to SNIPE      &sys_reset     &bootloader
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define FUNCS_TL \
                                                         Y_LT3          Y_LT2          Y_LT1

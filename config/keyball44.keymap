@@ -66,12 +66,6 @@
 #define SWITCH_KEYBALL44_TL     Y_LT5 Y_LT4 Y_LT3 &out OUT_USB &out OUT_BLE
 #define SWITCH_KEYBALL44_TR     SWITCH_TR
 
-#define FUNCS_KEYBALL44_TL      DEFAULT_KEYBALL44_TL
-#define FUNCS_KEYBALL44_TR      DEFAULT_KEYBALL44_TR
-
-#define AFK_KEYBALL44_TL        &none &none &none &none &none
-#define AFK_KEYBALL44_TR        &none &none &none
-
 #define MOUSE_KEYBALL44_TL      DEFAULT_KEYBALL44_TL
 #define MOUSE_KEYBALL44_TR      DEFAULT_KEYBALL44_TR
 
@@ -80,6 +74,12 @@
 
 #define SNIPE_KEYBALL44_TL      DEFAULT_KEYBALL44_TL
 #define SNIPE_KEYBALL44_TR      DEFAULT_KEYBALL44_TR
+
+#define FUNCS_KEYBALL44_TL      DEFAULT_KEYBALL44_TL
+#define FUNCS_KEYBALL44_TR      DEFAULT_KEYBALL44_TR
+
+#define AFK_KEYBALL44_TL        &none &none &none &none &none
+#define AFK_KEYBALL44_TR        &none &none &none
 
 CUSTOM_LAYER(qwerty, "Qwerty",
               QWERTY_6_UL       QWERTY_6_UR
@@ -131,20 +131,6 @@ CUSTOM_LAYER(switch, "Switch",
       SWITCH_KEYBALL44_TL       SWITCH_KEYBALL44_TR
 )
 
-CUSTOM_LAYER(funcs, "Funcs",
-              FUNCS_6_UL        FUNCS_6_UR
-              FUNCS_6_HL        FUNCS_6_HR
-              FUNCS_6_LL        FUNCS_6_LR
-      FUNCS_KEYBALL44_TL        FUNCS_KEYBALL44_TR
-)
-
-CUSTOM_LAYER(afk, "AFK",
-              AFK_6_UL          AFK_6_UR
-              AFK_6_HL          AFK_6_HR
-              AFK_6_LL          AFK_6_LR
-      AFK_KEYBALL44_TL          AFK_KEYBALL44_TR
-)
-
 CUSTOM_LAYER(mouse, "Mouse",
               MOUSE_6_UL        MOUSE_6_UR
               MOUSE_6_HL        MOUSE_6_HR
@@ -164,4 +150,18 @@ CUSTOM_LAYER(snipe, "Snipe",
               SNIPE_6_HL        SNIPE_6_HR
               SNIPE_6_LL        SNIPE_6_LR
       SNIPE_KEYBALL44_TL        SNIPE_KEYBALL44_TR
+)
+
+CUSTOM_LAYER(funcs, "Funcs",
+              FUNCS_6_UL        FUNCS_6_UR
+              FUNCS_6_HL        FUNCS_6_HR
+              FUNCS_6_LL        FUNCS_6_LR
+      FUNCS_KEYBALL44_TL        FUNCS_KEYBALL44_TR
+)
+
+CUSTOM_LAYER(afk, "AFK",
+              AFK_6_UL          AFK_6_UR
+              AFK_6_HL          AFK_6_HR
+              AFK_6_LL          AFK_6_LR
+      AFK_KEYBALL44_TL          AFK_KEYBALL44_TR
 )

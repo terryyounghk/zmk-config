@@ -74,6 +74,27 @@ CUSTOM_LAYER(switch, "Switch",
               SWITCH_TL         SWITCH_TR
 )
 
+CUSTOM_LAYER(mouse, "Mouse",
+              MOUSE_6_UL       MOUSE_6_UR
+              MOUSE_6_HL       MOUSE_6_HR
+              MOUSE_6_LL       MOUSE_6_LR
+              MOUSE_TL         MOUSE_TR
+)
+
+CUSTOM_LAYER(scroll, "Scroll",
+              SCROLL_6_UL       SCROLL_6_UR
+              SCROLL_6_HL       SCROLL_6_HR
+              SCROLL_6_LL       SCROLL_6_LR
+              SCROLL_TL         SCROLL_TR
+)
+
+CUSTOM_LAYER(snipe, "Snipe",
+              SNIPE_6_UL       SNIPE_6_UR
+              SNIPE_6_HL       SNIPE_6_HR
+              SNIPE_6_LL       SNIPE_6_LR
+              SNIPE_TL         SNIPE_TR
+)
+
 CUSTOM_LAYER(funcs, "Funcs",
               FUNCS_6_UL        FUNCS_6_UR
               FUNCS_6_HL        FUNCS_6_HR

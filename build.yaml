@@ -20,30 +20,30 @@ include:
     shield: corne_right nice_view_adapter nice_view
     artifact-name: corne36_right
 
-  - board: corne42_custom
-    shield: corne_left nice_view_adapter nice_view
+  - board: corne42_custom_left
+    shield: nice_view_adapter nice_view
     artifact-name: corne42_left
-  - board: corne42_custom
-    shield: corne_right nice_view_adapter nice_view
+  - board: corne42_custom_right
+    shield: nice_view_adapter nice_view
     artifact-name: corne42_right
 
   - board: corneish_zen_v2_left
     artifact-name: corneish_zen_left
   - board: corneish_zen_v2_right
-    artifact-name: corneish_zen_left
+    artifact-name: corneish_zen_right
 
   - board: eyelash_corne_left
-    shield: nice_view
+    shield: nice_view_adapter nice_view
     artifact-name: eyelash_corne_left
   - board: eyelash_corne_right
-    shield: nice_view
-    artifact-name: eyelash_corne_left
+    shield: nice_view_adapter nice_view
+    artifact-name: eyelash_corne_right
     #  snippet: studio-rpc-usb-uart
     #  cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
 
   - board: nice_nano_v2
-    shield: keyball44_left
+    shield: keyball44_left nice_view_adapter nice_view
     artifact-name: keyball44_left
   - board: nice_nano_v2
-    shield: keyball44_right
+    shield: keyball44_right nice_view_adapter nice_view
     artifact-name: keyball44_right

@@ -102,6 +102,33 @@ CUSTOM_LAYER2(switch, "Switch",
   , &encoder_vol
 )
 
+CUSTOM_LAYER2(mouse, "Mouse",
+                    MOUSE_6_UL        &mmv MOVE_UP        MOUSE_6_UR
+                    MOUSE_6_HL        &mmv MOVE_DOWN      MOUSE_6_HR
+                    MOUSE_6_LL        &mmv MOVE_LEFT      MOUSE_6_LR
+    &none           MOUSE_TL          &mmv MOVE_RIGHT     MOUSE_TR
+                                      &mkp LCLK
+  , &encoder_vol
+)
+
+CUSTOM_LAYER2(scroll, "Scroll",
+                    SCROLL_6_UL       &mmv MOVE_UP        SCROLL_6_UR
+                    SCROLL_6_HL       &mmv MOVE_DOWN      SCROLL_6_HR
+                    SCROLL_6_LL       &mmv MOVE_LEFT      SCROLL_6_LR
+    &none           SCROLL_TL         &mmv MOVE_RIGHT     SCROLL_TR
+                                      &mkp LCLK
+  , &encoder_vol
+)
+
+CUSTOM_LAYER2(snipe, "Snipe",
+                    SNIPE_6_UL       &mmv MOVE_UP        SNIPE_6_UR
+                    SNIPE_6_HL       &mmv MOVE_DOWN      SNIPE_6_HR
+                    SNIPE_6_LL       &mmv MOVE_LEFT      SNIPE_6_LR
+    &none           SWITCH_TL         &mmv MOVE_RIGHT     SWITCH_TR
+                                      &mkp LCLK
+  , &encoder_vol
+)
+
 CUSTOM_LAYER2(funcs, "Funcs",
                     FUNCS_6_UL        &mmv MOVE_UP        FUNCS_6_UR
                     FUNCS_6_HL        &mmv MOVE_DOWN      FUNCS_6_HR
