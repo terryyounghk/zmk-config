@@ -43,7 +43,7 @@
 #define FUNCS_6_LR                          FUNCS_LR          &bootloader
 
 #define DEFAULT_KEYBALL44_TL    Y_LT5 Y_LT4 Y_LT3 Y_LT2 Y_LT1
-#define DEFAULT_KEYBALL44_TR    Y_RT1 Y_RT2 &ht_mo_sk SNIPE TAB
+#define DEFAULT_KEYBALL44_TR    Y_RT1 Y_RT2 &ht_mo_kp SNIPE TAB
 
 #define QWERTY_KEYBALL44_TL     DEFAULT_KEYBALL44_TL
 #define QWERTY_KEYBALL44_TR     DEFAULT_KEYBALL44_TR
