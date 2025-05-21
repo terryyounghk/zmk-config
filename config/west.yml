@@ -4,8 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: inorichi
-      url-base: https://github.com/inorichi
+    - name: terryyounghk
+      url-base: https://github.com/terryyounghk
   projects:
     - name: zmk
       remote: urob
@@ -16,7 +16,7 @@ manifest:
 #     revision: feat/pointers-move-scroll
 #     import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: inorichi
+      remote: terryyounghk
       revision: main
 #   - name: zmk-helpers
 #     remote: urob
