@@ -10,6 +10,9 @@ CUSTOM_COMBO(  ru4ru3rh1,      RU4 RU3 RH1,        &sys_reset                   
 CUSTOM_COMBO(  lh4lh2,         LH4 LH2,            &tog NUMBERS                         )
 CUSTOM_COMBO(  rh4rh2,         RH4 RH2,            &tog NUMBERS                         )
 
+CUSTOM_COMBO(  lh3lh1,         LH3 LH1,            &kp Y_APPLICATION_WINDOWS            )
+CUSTOM_COMBO(  rh3rh1,         RH3 RH1,            &kp Y_NEXT_WINDOW                    )
+
 CUSTOM_COMBO(  ll4ll2,         LL4 LL2,            &m_release_mods                      )
 CUSTOM_COMBO(  rl4rl2,         RL4 RL2,            &m_release_mods                      )
 

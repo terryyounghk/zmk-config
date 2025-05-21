@@ -29,6 +29,7 @@
 // macos shortcuts
 #define Y_SPOTLIGHT                     LG(SPACE)
 #define Y_APPLICATION_WINDOWS           LC(LA(DOWN)) // system default: LC(DOWN)
+#define Y_NEXT_WINDOW                   LG(GRAVE)
 #define Y_CLOSE                         LG(W)
 #define Y_COPY                          LG(C)
 #define Y_CUT                           LG(X)
