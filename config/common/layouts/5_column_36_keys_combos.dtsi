@@ -1,6 +1,5 @@
 // special combos
 #include "../combos/high_priority.dtsi"
-#include "../combos/modifiers.dtsi"
 #include "../combos/special.dtsi"
 
 // positional combos

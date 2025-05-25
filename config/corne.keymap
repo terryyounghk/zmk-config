@@ -41,9 +41,9 @@ CUSTOM_LAYER(numbers, "Numbers",
 )
 
 CUSTOM_LAYER(numpad, "Numpad",
-  NUMPAD_6_UL       NUMPAD_6_UR
-  NUMPAD_6_HL       NUMPAD_6_HR
-  NUMPAD_6_LL       NUMPAD_6_LR
+  NUMPAD_UL         NUMPAD_UR
+  NUMPAD_HL         NUMPAD_HR
+  NUMPAD_LL         NUMPAD_LR
   NUMPAD_TL         NUMPAD_TR
 )
 

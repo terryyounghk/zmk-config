@@ -21,14 +21,15 @@
 // This is my 5-column keymap, defined with left and right hand sides separately
 // as different keyboards may have additional keys either on the left or right side on each split keyboard side
 
-#define Y_LT3        &ht_mo_tog NUMBERS FUNCS
+#define Y_LT3        &ht_mo_tog NUMPAD FUNCS
 #define Y_LT2        &td_lshift
 #define Y_LT1        &krtab
 #define Y_RT1        &ht_mo_kp CODING RETURN
 #define Y_RT2        &ht_mo_kp SYMBOLS SPACE
 #define Y_RT3        &ht_mo_kp FUNCS TAB
-#define Y_GUI        &ht_mo_sk FUNCS LGUI
-#define Y_SEMI       &ht_mo_kp CONTROLS SEMI
+#define Y_SEMI       &td_semi
+#define Y_FSLH       &ht_mo_kp SNIPE FSLH
+#define Y_COMMA      &td_comma
 
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
 #define QWERTY_UL \
@@ -44,7 +45,7 @@
 #define QWERTY_LL \
                           &kp Z          &kp X          &kp C          &kp V          &kp B
 #define QWERTY_LR \
-                                                                                                           &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH
+                                                                                                           &kp N          &kp M          &td_comma      &kp DOT        Y_FSLH
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define QWERTY_TL \
                                                         Y_LT3          Y_LT2          Y_LT1
@@ -56,7 +57,7 @@
 #define QWERTY_6_UR                         QWERTY_UR         &td_apos
 #define QWERTY_6_HL       &td_lctrl         QWERTY_HL
 #define QWERTY_6_HR                         QWERTY_HR         &td_lctrl
-#define QWERTY_6_LL       Y_GUI             QWERTY_LL
+#define QWERTY_6_LL       &td_lgui          QWERTY_LL
 #define QWERTY_6_LR                         QWERTY_LR         &td_lalt
 
 
@@ -95,22 +96,22 @@
 #define NUMPAD_UL \
                           &kp F1         &kp F2         &kp F3         &kp F4         &kp F5
 #define NUMPAD_UR \
-                                                                                                           &kp PLUS       &kp N7         &kp N8         &kp N9         &kp EQUAL
+                                                                                                           &td_star       &kp N7         &kp N8         &kp N9         &td_plus
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define NUMPAD_HL \
                           &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
 #define NUMPAD_HR \
-                                                                                                           &kp MINUS      &kp N4         &kp N5         &kp N6         &kp DOT
+                                                                                                           &kp SPACE      &kp N4         &kp N5         &kp N6         &td_minus
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define NUMPAD_LL \
                           &kp F11        &kp F12        &kp F13        &kp F14        &kp F15
 #define NUMPAD_LR \
-                                                                                                           &kp N0         &kp N1         &kp N2         &kp N3         &kp FSLH
+                                                                                                           &td_comma      &kp N1         &kp N2         &kp N3         &td_dot
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define NUMPAD_TL \
                                                         Y_LT3          Y_LT2          Y_LT1
 #define NUMPAD_TR \
-                                                                                                           Y_RT1          Y_RT2          Y_RT3
+                                                                                                           &kp N0         Y_RT2          Y_RT3
                     /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
 
 #define NUMPAD_6_UL      &kp UNDER         NUMPAD_UL
@@ -320,9 +321,9 @@
 
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
 #define FUNCS_UL \
-                          &kp F1         &kp F2         &kp F3         &kp F4         &kp F5
+                          &sl CODING     &sl SYMBOLS    &sl NUMPAD     &sl NUMBERS    &to SNIPE
 #define FUNCS_UR \
-                                                                                                           &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
+                                                                                                           &to SNIPE      &sl NUMPAD     &sl NUMBERS    &sl SYMBOLS    &sl CODING
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define FUNCS_HL \
                           &to CODING     &to SYMBOLS    &to NUMPAD     &to QWERTY     &to CONTROLS

@@ -1,10 +1,10 @@
-TD(lctrl,   200,  <&sk LCTRL>,
+TD(lctrl,   200,  <&ht_mo_sk MOUSE LCTRL>,
                   <&kt LCTRL>)
 
-TD(lalt,    200,  <&sk LALT>,
+TD(lalt,    200,  <&ht_mo_sk SNIPE LALT>,
                   <&kt LALT>)
 
-TD(lgui,    200,  <&sk LGUI>,
+TD(lgui,    200,  <&ht_mo_sk FUNCS LGUI>,
                   <&kt LGUI>)
 
 TD(lshift,  500,  <&sk LSHIFT>,
@@ -12,7 +12,23 @@ TD(lshift,  500,  <&sk LSHIFT>,
                   <&kp CAPS>)
 
 TD(semi,    200,  <&ht_mo_kp CONTROLS SEMI>,
+                  <&ht_mo_tog SNIPE SCROLL>,
                   <&m_tmux_copy_mode>)
 
 TD(apos,    200,  <&ht_mo_kp CODING APOSTROPHE>,
                   <&kp GRAVE>)
+
+TD(comma,   200,  <&kp COMMA>,
+                  <&kp EXCL>)
+
+TD(minus,   200,  <&kp MINUS>,
+                  <&kp UNDER>)
+
+TD(plus,    200,  <&kp PLUS>,
+                  <&kp EQUAL>)
+
+TD(dot,     200,  <&kp DOT>,
+                  <&kp COLON>)
+
+TD(star,    200,  <&kp STAR>,
+                  <&kp FSLH>)
