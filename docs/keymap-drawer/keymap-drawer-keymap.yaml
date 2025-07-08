@@ -1,0 +1,1063 @@
+layout:
+  zmk_keyboard: corne
+  layout_name: foostan_corne_5col_layout
+layers:
+  Layer Qwerty:
+    - [
+        # "_",
+        Q, W, E, R, T, Y, U, I, O, P
+        # "'",
+      ]
+    - [
+        # $$mdi:apple-keyboard-control$$,
+        A, S, D, F, G, H, J, K, L, ";"
+        # $$mdi:apple-keyboard-control$$,
+      ]
+    - [
+        # $$mdi:apple-keyboard-command$$,
+        Z, X, C, V, B, N, M, ",", ".", "/"
+        # $$mdi:apple-keyboard-option$$,
+      ]
+    - {t: "numbers", h: "numpad", type: ghost}
+    - $$mdi:apple-keyboard-shift$$
+    - {t: "repeat", h: "tab"}
+    - {t: $$mdi:keyboard-return$$, h: "code"}
+    - {t: $$mdi:keyboard-space$$, h: "sym"}
+    - {t: $$mdi:keyboard-tab$$, h: "numbers", type: ghost}
+
+  Layer Numbers:
+    - [
+        # "_",
+        "!", "@", "#", "$", "%", "^", "&", "*", "`", "="
+        # "'",
+      ]
+    - [
+        # $$mdi:apple-keyboard-control$$,
+      {type: hilite, t: "1" },
+      {type: hilite, t: "2" },
+      {type: hilite, t: "3" },
+      {type: hilite, t: "4" },
+      {type: hilite, t: "5" },
+      {type: hilite, t: "6" },
+      {type: hilite, t: "7" },
+      {type: hilite, t: "8" },
+      {type: hilite, t: "9" },
+      {type: hilite, t: "0" },
+        # $$mdi:apple-keyboard-control$$,
+      ]
+    - [
+        # $$mdi:apple-keyboard-command$$,
+        "¥", "€", "£", "_", ":", "+", "-", ",", ".", "/"
+        # $$mdi:apple-keyboard-option$$,
+      ]
+    - {t: "numbers", h: "numpad", type: ghost}
+    - $$mdi:apple-keyboard-shift$$
+    - {t: "repeat", h: "tab"}
+    - {t: $$mdi:keyboard-return$$, h: "code"}
+    - {t: $$mdi:keyboard-space$$, h: "sym"}
+    - {t: $$mdi:keyboard-tab$$, h: "numbers", type: ghost}
+
+  Layer Numpad:
+    - [
+        # "_",
+        "F1", "F2", "F3", "F4", "F5",
+        {t: "/", right: "#"},
+        {type: hilite, t: "7" },
+        {type: hilite, t: "8" },
+        {type: hilite, t: "9" },
+        {t: "+", right: "="}
+        # "'",
+      ]
+    - [
+        # $$mdi:apple-keyboard-control$$,
+        "F6", "F7", "F8", "F9", "F10",
+        {t: "*", right: "$"},
+        {type: hilite, t: "4" },
+        {type: hilite, t: "5" },
+        {type: hilite, t: "6" },
+        {t: "-", right: "_"}
+        # $$mdi:apple-keyboard-control$$,
+      ]
+    - [
+        # $$mdi:apple-keyboard-command$$,
+        "F11", "F12", "F13", "F14", "F15",
+        {t: ",", right: "!"},
+        {type: hilite, t: "1" },
+        {type: hilite, t: "2" },
+        {type: hilite, t: "3" },
+        {t: ".", right: ":"}
+        # $$mdi:apple-keyboard-option$$,
+      ]
+    - {t: "numbers", h: "numpad", type: ghost}
+    - $$mdi:apple-keyboard-shift$$
+    - {t: "repeat", h: "tab"}
+    - {t: $$mdi:keyboard-return$$, h: "code"}
+    - {t: 0, h: "sym"}
+    - {t: $$mdi:keyboard-tab$$, h: "numbers", type: ghost}
+
+  Layer Symbols:
+    - [
+        # "_",
+        "<", ";", "(", "[", "{", "}", "]", ")", "~", ">"
+        # "'",
+      ]
+    - [
+        # $$mdi:apple-keyboard-control$$,
+        {type: hilite, t: "!" },
+        {type: hilite, t: "@" },
+        {type: hilite, t: "#" },
+        {type: hilite, t: "$" },
+        {type: hilite, t: "%" },
+        {type: hilite, t: "^" },
+        {type: hilite, t: "&" },
+        {type: hilite, t: "*" },
+        {type: hilite, t: "`" },
+        {type: hilite, t: "=" },
+        # $$mdi:apple-keyboard-control$$,
+      ]
+    - [
+        # $$mdi:apple-keyboard-command$$,
+        "\\", ":", "_", "-", "+", "'", "|", ",", ".", "/"
+        # $$mdi:apple-keyboard-option$$,
+      ]
+    - {t: "numbers", h: "numpad", type: ghost}
+    - $$mdi:apple-keyboard-shift$$
+    - {t: "repeat", h: "tab"}
+    - {t: $$mdi:keyboard-return$$, h: "code"}
+    - {t: $$mdi:keyboard-space$$, h: "sym"}
+    - {t: $$mdi:keyboard-tab$$, h: "numbers", type: ghost}
+
+  Layer Coding:
+    - [
+        {t: "[^]"},
+        {t: "<="},
+        {t: "<>"},
+        {t: "${}"},
+        {t: "-> "},
+        {t: "+= "},
+        {t: ""},
+        {t: "/*"},
+        {t: ">="},
+        {t: "://"},
+      ]
+    - [
+        {t: "async ()=>{"},
+        {t: "()=>{"},
+        {t: "=>{"},
+        {t: "()=>"},
+        {t: "=> "},
+        {t: "++ "},
+        {t: "&& "},
+        {t: "=== "},
+        {t: "\\'"},
+        {t: "\\\""},
+      ]
+    - [
+        {t: ""},
+        {t: "[x]"},
+        {t: "```"},
+        {t: "<!--"},
+        {t: "-->"},
+        {t: "-- "},
+        {t: "|| "},
+        {t: "!== "},
+        {t: "\\\\"},
+        {t: "\\/"},
+      ]
+    - [
+        {type: ghost},
+        null,
+        {type: held, t: "Combo", s: "&sl"},
+        null,
+        {type: held, t: "Combo", s: "&sl"},
+        {type: ghost}
+      ]
+
+  Layer Nav:
+    - [
+        "Release Mods",
+        "END",
+        "Page Up",
+        "Page Down",
+        "Home",
+        "Home",
+        "Page Down",
+        "Page Up",
+        "END",
+        "Release Mods",
+      ]
+    - [
+        {t: "Meh", s: "&kt"},
+        {type: hilite, t: $$mdi:arrow-right-bold-outline$$},
+        {type: hilite, t: $$mdi:arrow-up-bold-outline$$},
+        {type: hilite, t: $$mdi:arrow-down-bold-outline$$},
+        {type: hilite, t: $$mdi:arrow-left-bold-outline$$},
+        {type: hilite, t: $$mdi:arrow-left-bold-outline$$},
+        {type: hilite, t: $$mdi:arrow-down-bold-outline$$},
+        {type: hilite, t: $$mdi:arrow-up-bold-outline$$},
+        {type: hilite, t: $$mdi:arrow-right-bold-outline$$},
+        {t: "Meh", s: "&kt"},
+      ]
+    - [
+        {t: $$mdi:apple-keyboard-control$$, s: "&kt"},
+        {t: $$mdi:apple-keyboard-option$$, s: "&kt"},
+        {t: $$mdi:apple-keyboard-command$$, s: "&kt"},
+        {t: $$mdi:apple-keyboard-shift$$, s: "&kt"},
+        {t: "Hyper", s: "&kt"},
+        {t: "Hyper", s: "&kt"},
+        {t: $$mdi:apple-keyboard-shift$$, s: "&kt"},
+        {t: $$mdi:apple-keyboard-command$$, s: "&kt"},
+        {t: $$mdi:apple-keyboard-option$$, s: "&kt"},
+        {t: $$mdi:apple-keyboard-control$$, s: "&kt"},
+      ]
+    - {t: "numbers", h: "numpad", type: ghost}
+    - $$mdi:apple-keyboard-shift$$
+    - {t: "repeat", h: "tab"}
+    - {t: $$mdi:keyboard-return$$, h: "code"}
+    - {t: $$mdi:keyboard-space$$, h: "sym"}
+    - {t: $$mdi:keyboard-tab$$, h: "numbers", type: ghost}
+
+  Layer Controls:
+    - [
+        # {t: $$mdi:restart$$, s: "Reset"},
+        $$mdi:apple-keyboard-caps$$,
+        $$mdi:skip-previous$$,
+        $$mdi:play-pause$$,
+        $$mdi:skip-next$$,
+        $$mdi:volume-plus$$,
+        {t: $$mdi:bluetooth$$, s: "OUT_BLE"},
+        {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 4"},
+        {type: hilite, t: $$mdi:arrow-up-circle-outline$$ },
+        {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 5"},
+        {t: $$mdi:usb$$, s: "OUT_USB"},
+        # {t: $$mdi:restart$$, s: "Reset"},
+      ]
+    - [
+        # {t: $$mdi:led-on$$, s: "RGB"},
+        {t: "$$mdi:bluetooth$$", s: "BT1"},
+        {t: "$$mdi:bluetooth$$", s: "BT2"},
+        {t: "$$mdi:bluetooth$$", s: "BT3"},
+        {t: "$$mdi:bluetooth$$", s: "BT4"},
+        $$mdi:volume-minus$$,
+        {t: $$mdi:chevron-triple-down$$, s: "Scrl Dn"},
+        {type: hilite, t: $$mdi:arrow-left-circle-outline$$ },
+        {type: hilite, t: $$mdi:arrow-down-circle-outline$$ },
+        {type: hilite, t: $$mdi:arrow-right-circle-outline$$ },
+        F15
+        # {t: $$mdi:led-on$$, s: "RGB FX"},
+      ]
+    - [
+        # {t: $$mdi:chip$$, s: "Boot"},
+        $$mdi:block-helper$$,
+        {t: $$mdi:mouse-left-click$$, s: "L Click"},
+        {t: $$mdi:mouse-scroll-wheel$$, s: "M Click"},
+        {t: $$mdi:mouse-right-click$$, s: "R Click"},
+        $$mdi:volume-mute$$,
+        {t: $$mdi:chevron-triple-up$$, s: "Scrl Up"},
+        F11,
+        F12,
+        F13,
+        F14
+        # {t: $$mdi:chip$$, s: "Boot"},
+      ]
+    - {t: "numbers", h: "numpad", type: ghost}
+    - $$mdi:apple-keyboard-shift$$
+    - {t: "repeat", h: "tab"}
+    - {type: hilite, t: $$mdi:mouse-left-click$$, s: "L Click"}
+    - {type: hilite, t: $$mdi:mouse-right-click$$, s: "R Click"}
+    - {t: $$mdi:mouse-scroll-wheel$$, s: "M Click", type: ghost}
+
+  Layer Switch:
+    - [
+        # $$mdi:block-helper$$,
+        $$mdi:home-circle$$,
+        "ZL",
+        {type: hilite, t: $$mdi:arrow-up-bold-circle$$ },
+        $$mdi:alpha-l-box-outline$$,
+        $$mdi:minus-thick$$,
+        $$mdi:plus-thick$$,
+        $$mdi:alpha-r-box-outline$$,
+        {type: hilite, t: $$mdi:chevron-up-circle$$ },
+        "ZR",
+        $$mdi:square-circle-outline$$
+        # $$mdi:block-helper$$,
+      ]
+    - [
+        # $$mdi:block-helper$$,
+        {type: green, t: $$mdi:alpha-y-circle$$ },
+        {type: hilite, t: $$mdi:arrow-left-bold-circle$$ },
+        {type: hilite, t: $$mdi:arrow-down-bold-circle$$ },
+        {type: hilite, t: $$mdi:arrow-right-bold-circle$$ },
+        {type: blue, t: $$mdi:alpha-x-circle$$ },
+        {type: blue, t: $$mdi:alpha-x-circle$$ },
+        {type: hilite, t: $$mdi:chevron-left-circle$$ },
+        {type: hilite, t: $$mdi:chevron-down-circle$$ },
+        {type: hilite, t: $$mdi:chevron-right-circle$$ },
+        {type: green, t: $$mdi:alpha-y-circle$$ },
+        # $$mdi:block-helper$$,
+      ]
+    - [
+        # $$mdi:block-helper$$,
+        $$mdi:alpha-l-circle-outline$$,
+        $$mdi:alpha-r-circle-outline$$,
+        $$mdi:gamepad-down$$,
+        $$mdi:gamepad-up$$,
+        {type: green, t: $$mdi:alpha-y-circle$$ },
+        $$mdi:gamepad-left$$,
+        $$mdi:gamepad-down$$,
+        $$mdi:gamepad-up$$,
+        $$mdi:gamepad-right$$,
+        $$mdi:alpha-r-circle-outline$$,
+        # $$mdi:block-helper$$,
+      ]
+    - {t: "numbers", h: "numpad", type: ghost}
+    - $$mdi:usb$$
+    - $$mdi:bluetooth$$
+    - {type: red, t: $$mdi:alpha-a-circle$$ }
+    - {type: yellow, t: $$mdi:alpha-b-circle$$ }
+    - {t: $$mdi:nintendo-switch$$, s: "register"}
+
+  Layer Mouse (Keyball auto-mouse layer):
+    - [
+        # null,
+        null, {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 4"}, null, {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 5"}, null,
+        null, {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 5"}, null, {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 4"}, null
+        # null,
+      ]
+    - [
+        # null,
+        null, {t: $$mdi:mouse-left-click$$, s: "R Click"}, {t: $$mdi:mouse-left-click$$, s: "M Click"}, {t: $$mdi:mouse-left-click$$, s: "L Click"}, null,
+        null, {t: $$mdi:mouse-left-click$$, s: "L Click"}, {t: $$mdi:mouse-left-click$$, s: "M Click"}, {t: $$mdi:mouse-left-click$$, s: "R Click"}, null
+        # null,
+      ]
+    - [null, null, null, null, null, null, null, null, null, null]
+    - {t: "numbers", h: "numpad", type: ghost}
+    - $$mdi:apple-keyboard-shift$$
+    - {t: "repeat", h: "tab"}
+    - {t: $$mdi:keyboard-return$$, h: "code"}
+    - {t: $$mdi:keyboard-space$$, h: "sym"}
+    - {t: $$mdi:keyboard-tab$$, h: "numbers", type: ghost}
+
+  Layer AFK:
+    - [
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$
+      ]
+    - [
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$
+      ]
+    - [
+        {type: combo-special, t: $$mdi:block-helper$$},
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        {type: combo-special, t: $$mdi:block-helper$$},
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        {type: combo-special, t: $$mdi:block-helper$$},
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        {type: combo-special, t: $$mdi:block-helper$$},
+      ]
+    - [
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$
+      ]
+
+  Positional Combos - Adjacent:
+    - [null, null, null, null, null, null, null, null, null, null]
+    - [null, null, null, null, null, null, null, null, null, null]
+    - [null, null, null, null, null, null, null, null, null, null]
+    - [{type: ghost}, null, null, null, null, {type: ghost}]
+
+  Combo Layers, One-handed:
+    - [
+        {type: lhs, t: "Controls" },
+        {type: lhs, t: "Numpad" },
+        {type: lhs, t: "Numbers" },
+        {type: lhs, t: "Symbols" },
+        {type: lhs, t: "Switch" },
+        {type: rhs, t: "Switch" },
+        {type: rhs, t: "Symbols" },
+        {type: rhs, t: "Numbers" },
+        {type: rhs, t: "Numpad" },
+        {type: rhs, t: "Controls" },
+      ]
+    - [
+        null,
+        null,
+        null,
+        null,
+        {type: lhs, t: "Nav" },
+        {type: rhs, t: "Nav" },
+        null,
+        null,
+        null,
+        null
+      ]
+    - [null, null, null, null, null, null, null, null, null, null]
+    - [
+        {type: ghost},
+        {type: lhs-main, t: "&tog"},
+        {type: lhs-main, t: "&sl"},
+        {type: rhs-main, t: "&sl"},
+        {type: rhs-main, t: "&tog"},
+        {type: ghost}
+      ]
+
+  Combo Mods, One-handed:
+    - [null, null, null, null, null, null, null, null, null, null]
+    - [
+        {type: lhs, t: $$mdi:apple-keyboard-control$$ },
+        {type: lhs, t: $$mdi:apple-keyboard-option$$ },
+        {type: lhs, t: $$mdi:apple-keyboard-command$$ },
+        {type: lhs, t: $$mdi:apple-keyboard-shift$$ },
+        null,
+        null,
+        {type: rhs, t: $$mdi:apple-keyboard-shift$$ },
+        {type: rhs, t: $$mdi:apple-keyboard-command$$ },
+        {type: rhs, t: $$mdi:apple-keyboard-option$$ },
+        {type: rhs, t: $$mdi:apple-keyboard-control$$ }
+      ]
+    - [
+        {type: lhs, t: "A+S+G" },
+        {type: lhs, t: "C+S+G" },
+        {type: lhs, t: Meh },
+        {type: lhs, t: "C+A+G" },
+        {type: lhs, t: Hyper },
+        {type: rhs, t: Hyper },
+        {type: rhs, t: "C+A+G" },
+        {type: rhs, t: Meh },
+        {type: rhs, t: "C+S+G" },
+        {type: rhs, t: "A+S+G" },
+      ]
+    - [
+        {type: ghost},
+        {type: lhs-main, t: "&kt"},
+        {type: lhs-main, t: "&sk"},
+        {type: rhs-main, t: "&sk"},
+        {type: rhs-main, t: "&kt"},
+        {type: ghost}
+      ]
+
+  Positional Combos - Symmetric:
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        $$mdi:apple-keyboard-control$$,
+        $$mdi:apple-keyboard-option$$,
+        $$mdi:apple-keyboard-command$$,
+        $$mdi:apple-keyboard-shift$$,
+        Meh,
+        Meh,
+        $$mdi:apple-keyboard-shift$$,
+        $$mdi:apple-keyboard-command$$,
+        $$mdi:apple-keyboard-option$$,
+        $$mdi:apple-keyboard-control$$
+      ]
+    - [
+        $$mdi:undo$$,
+        $$mdi:content-cut$$,
+        $$mdi:content-copy$$,
+        $$mdi:content-paste$$,
+        Hyper,
+        Hyper,
+        $$mdi:content-paste$$,
+        $$mdi:content-copy$$,
+        $$mdi:content-cut$$,
+        $$mdi:undo$$
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+
+  Contextual Combos - Panic:
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+
+  Contextual Combos - System:
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+
+  Contextual Combos - Keyboard:
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+  Contextual Combos - Tmux:
+    - [
+        {type: rhs, t: "Detach"},
+        {type: rhs, t: "Kill Win"},
+        {type: rhs, t: "Move Win"},
+        {type: rhs, t: "Rename Win"},
+        {type: rhs, t: "Rotate Win"},
+        {type: lhs, t: "Move Win Left"},
+        {type: lhs, t: "Win 7"},
+        {type: lhs, t: "Win 8"},
+        {type: lhs, t: "Win 9"},
+        {type: lhs, t: "Move Win Right"},
+      ]
+    - [
+        {type: rhs, t: "Layout"},
+        {type: rhs, t: "Reload Config"},
+        {type: rhs, t: "Command"},
+        {type: rhs, t: "Fingers Jump"},
+        {type: rhs, t: "Even Pane"},
+        {type: lhs, t: "Win Prev"},
+        {type: lhs, t: "Win 4"},
+        {type: lhs, t: "Win 5"},
+        {type: lhs, t: "Win 6"},
+        {type: lhs, t: "Win Next"},
+      ]
+    - [
+        {type: rhs, t: "Zoom"},
+        {type: rhs, t: "Zoom Prev"},
+        {type: rhs, t: "Copy Mode"},
+        {type: rhs, t: "Fzf"},
+        {type: rhs, t: "Resize Pane"},
+        {type: lhs, t: "Pane Next"},
+        {type: lhs, t: "Win 1"},
+        {type: lhs, t: "Win 2"},
+        {type: lhs, t: "Win 3"},
+        {type: lhs, t: "URLs"},
+      ]
+    - [
+        {type: ghost},
+        {type: lhs-main, t: ""},
+        null,
+        null,
+        {type: rhs-main, t: ""},
+        {type: ghost}
+      ]
+
+  Contextual Combos - NeoVim:
+    - [
+        {type: rhs, t: "Save & Quit", h: "<L>qq"},
+        {type: rhs, t: "Edit Macro", h: "<L>Mb"},
+        {type: rhs, t: "Prev Tab", h: "<L>Tab["},
+        {type: rhs, t: "Next Tab", h: "<L>Tab]"},
+        {type: rhs, t: "Toggle Term", h: "<C-/>"},
+        {type: lhs, t: "Symbols", h: "<L>sS"},
+        {type: lhs, t: "Redo", h: "<C-r>"},
+        {type: lhs, t: "Quickfix", h: "<L>xQ"},
+        {type: lhs, t: "Overseer", h: "<L>ot"},
+        {type: lhs, t: "Calc Result", h: '"=p'},
+      ]
+    - [
+        {type: rhs, t: "Copilot Chat", h: "<L>aa"},
+        {type: rhs, t: "Save", h: "<C-s>"},
+        {type: rhs, t: "Dadbod UI", h: "<L>D"},
+        {type: rhs, t: "FzfLua", h: "<L>sE"},
+        {type: rhs, t: "Buffer Lines", h: "<L>giB"},
+        {type: lhs, t: "Increment", h: "<C-a>"},
+        {type: lhs, t: "Scroll Down", h: "<C-d>"},
+        {type: lhs, t: "Scroll Up", h: "<C-u>"},
+        {type: lhs, t: "Kulala", h: "<L>jo"},
+        {type: lhs, t: "Toggle Outline", h: "<L>cs"},
+      ]
+    - [
+        {type: rhs, t: "Undo Tree", h: "<L>su"},
+        {type: rhs, t: "Trouble", h: "<L>xx"},
+        {type: rhs, t: "Cheat Sheet", h: "<L>tC"},
+        {type: rhs, t: "Paste Yank", h: '"0p'},
+        {type: rhs, t: "Fzf Buffers", h: "<L>fb"},
+        {type: lhs, t: "Decrement", h: "<C-x>"},
+        {type: lhs, t: "Todo List", h: "<L>xt"},
+        {type: lhs, t: "Toggle Comment", h: "<M-/>"},
+        {type: lhs, t: "Last Change", h: "`."},
+        {type: lhs, t: "Annotate", h: "<L>cn"},
+      ]
+    - [
+        {type: ghost},
+        null,
+        {type: lhs-main, t: ""},
+        {type: rhs-main, t: ""},
+        null,
+        {type: ghost}
+      ]
+
+  Contextual Combos - Applications:
+    - [
+        $$mdi:block-helper$$,
+        {t: $$mdi:security$$, h: "Okta"},
+        {t: $$mdi:dock-top$$, h: "Menu"},
+        {t: $$mdi:dock-bottom$$, h: "Dock"},
+        {t: $$mdi:apps-box$$, h: "Launchpad"},
+        {t: $$mdi:onepassword$$, h: "AutoFill"},
+        {t: $$mdi:onepassword$$, h: "Show"},
+        {t: $$mdi:alphabetical-variant$$, h: "KeyCastr"},
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$
+      ]
+    - [
+        {t: $$mdi:glass-wine$$, h: "Bartender"},
+        {t: $$mdi:card-search-outline$$, h: "Raycast"},
+        {t: $$mdi:cat$$, h: "Shortcat"},
+        {t: $$mdi:shield-search$$, h: "1Password"},
+        {t: $$mdi:google-drive$$, h: "GDrive"},
+        {t: $$mdi:apps$$, h: "Mission"},
+        {t: $$mdi:window-restore$$, h: "App Win"},
+        {t: $$mdi:knob$$, h: "HazeOver"},
+        $$mdi:block-helper$$,
+        {type: held, t: ";"},
+      ]
+    - [
+        # {t: $$mdi:close-box-outline$$, h: "Force Quit"},
+        $$mdi:block-helper$$,
+        {t: $$mdi:volume-high$$, h: "Sound..."},
+        {t: $$mdi:monitor$$, h: "Display..."},
+        {t: $$mdi:format-font$$, h: "Char..."},
+        $$mdi:block-helper$$,
+        {t: $$mdi:presentation$$, h: "Annotate"},
+        {t: $$mdi:microphone-off$$, h: "Mute Mic"},
+        null,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+
+  Contextual Combos - Screen Capturing:
+    - [
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        {t: $$mdi:monitor-screenshot$$, h: "Restore"},
+        {t: $$mdi:monitor-screenshot$$, h: "Annotate"},
+        {t: $$mdi:monitor-screenshot$$, h: "Cap+Ann"},
+        {t: $$mdi:monitor-screenshot$$, h: "Pin Tog"},
+        {t: $$mdi:monitor-screenshot$$, h: "Pin Last"}
+      ]
+    - [
+        $$mdi:block-helper$$,
+        {type: held, t: "s"},
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        {t: $$mdi:monitor-screenshot$$, h: "Area"},
+        {t: $$mdi:monitor-screenshot$$, h: "Full"},
+        {t: $$mdi:monitor-screenshot$$, h: "Window"},
+        {t: $$mdi:monitor-screenshot$$, h: "Scrolling"},
+        {t: $$mdi:monitor-screenshot$$, h: "All-in-One"}
+      ]
+    - [
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        {type: held, t: "c"},
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        {t: $$mdi:monitor-screenshot$$, h: "History"},
+        {t: $$mdi:monitor-screenshot$$, h: "Close All"},
+        {t: $$mdi:monitor-screenshot$$, h: "Toggle"},
+        {t: $$mdi:qrcode-scan$$, h: "OCR"},
+        {t: $$mdi:monitor-screenshot$$, h: "Record"},
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+
+  Contextual Combos - Browser:
+    - [
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        {t: $$mdi:gmail$$, h: "Unread"},
+        {t: $$mdi:gmail$$, h: "Inbox"},
+        {t: $$mdi:image-multiple-outline$$, h: "Download"},
+        {t: $$mdi:image-off-outline$$, h: "Paranoid"}
+      ]
+    - [
+        $$mdi:block-helper$$,
+        {t: $$mdi:google-chrome$$, h: "Back"},
+        {t: $$mdi:google-chrome$$, h: "Forward"},
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        {t: $$mdi:google-chrome$$, h: "First Tab"},
+        {t: $$mdi:google-chrome$$, h: "Prev Tab"},
+        {t: $$mdi:google-chrome$$, h: "Next Tab"},
+        {t: $$mdi:google-chrome$$, h: "Last Tab"},
+        $$mdi:block-helper$$,
+      ]
+    - [
+        {t: $$mdi:google-chrome$$, h: "[x] Left"},
+        {t: $$mdi:google-chrome$$, h: "[x] Others"},
+        {t: $$mdi:google-chrome$$, h: "[x] Right"},
+        $$mdi:block-helper$$,
+        {type: held, t: "b"},
+        $$mdi:block-helper$$,
+        {t: $$mdi:application-variable-outline$$, h: "Name Win"},
+        {t: $$mdi:compare$$, h: "Dark"},
+        {t: $$mdi:google-translate$$, h: "Translate"},
+        {t: $$mdi:qrcode$$, h: "Gen QR"}
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+
+  Contextual Combos - VsCode:
+    - [
+        $$mdi:block-helper$$,
+        "Close All",
+        "Editor",
+        "Preview Markdown",
+        "Term.",
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+      ]
+    - [
+        "Src Ctrl",
+        "Save All",
+        "Todo Tree",
+        "Search",
+        "Git Graph",
+        "Comment Line",
+        "Surround With",
+        "Surround Comment",
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+      ]
+    - [
+        "Activity Bar",
+        $$mdi:block-helper$$,
+        "Dictation Start",
+        "Dictation Stop",
+        "GitLens Blame",
+        null,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        {type: held, t: "."},
+        $$mdi:block-helper$$,
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+
+  Contextual Combos - VsCode Movement:
+    - [
+        $$mdi:block-helper$$,
+        {t: "Terminal Grp", h: "W+E+RHS"},
+        {t: "Terminal Size", h: "E+R+RHS"},
+        {t: "EdSize Tog", h: "R+T+RHS"},
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+      ]
+    - [
+        $$mdi:block-helper$$,
+        {t: "Editor Grp", h: "S+D+RHS"},
+        {t: "Editor Move", h: "D+F+RHS"},
+        {t: "Editor Size", h: "F+G+RHS"},
+        $$mdi:block-helper$$,
+        {type: combo-any, t: "Left / Prev"},
+        {type: combo-any, t: "Down / Reset"},
+        {type: combo-any, t: "Up / Max"},
+        {type: combo-any, t: "Right / Next"},
+        $$mdi:block-helper$$,
+      ]
+    - [
+        {t: "Zoom", h: "Z+RHS"},
+        {t: "Split", h: "X+RHS"},
+        {t: "Changes", h: "C+V+RHS"},
+        {t: "Inc/Dec Number", h: "V+B+RHS"},
+        {t: "Problems", h: "B+RHS"},
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+
+combos:
+  # horizontally adjacent
+  - {l: ["Positional Combos - Adjacent"], p: [3, 4], k: $$mdi:plus-thick$$}
+  - {l: ["Positional Combos - Adjacent"], p: [5, 6], k: $$mdi:minus-thick$$}
+  - {l: ["Positional Combos - Adjacent"], p: [11, 12], k: $$mdi:backspace-outline$$}
+  - {l: ["Positional Combos - Adjacent"], p: [12, 13], k: $$mdi:keyboard-esc$$}
+  - {l: ["Positional Combos - Adjacent"], p: [13, 14], k: $$mdi:backspace-reverse-outline$$}
+  - {l: ["Positional Combos - Adjacent"], p: [15, 16], k: $$mdi:backspace-outline$$}
+  - {l: ["Positional Combos - Adjacent"], p: [16, 17], k: $$mdi:keyboard-esc$$}
+  - {l: ["Positional Combos - Adjacent"], p: [17, 18], k: $$mdi:backspace-reverse-outline$$}
+  # - {l: ["Positional Combos - Adjacent"], p: [18, 19], k: "`"}
+  - {l: ["Positional Combos - Adjacent"], p: [20, 21], k: $$mdi:undo$$}
+  - {l: ["Positional Combos - Adjacent"], p: [21, 22], k: $$mdi:content-cut$$}
+  - {l: ["Positional Combos - Adjacent"], p: [22, 23], k: $$mdi:content-copy$$}
+  - {l: ["Positional Combos - Adjacent"], p: [23, 24], k: $$mdi:content-paste$$}
+  - {l: ["Positional Combos - Adjacent"], p: [25, 26], k: $$mdi:backspace$$}
+  - {l: ["Positional Combos - Adjacent"], p: [26, 27], k: "'"}
+  - {l: ["Positional Combos - Adjacent"], p: [27, 28], k: "\""}
+  - {l: ["Positional Combos - Adjacent"], p: [28, 29], k: "`"}
+
+  - {l: ["Positional Combos - Adjacent"], p: [0, 10] , k: "\\"}
+  - {l: ["Positional Combos - Adjacent"], p: [1, 11] , k: $$mdi:less-than$$}
+  - {l: ["Positional Combos - Adjacent"], p: [2, 12] , k: "("}
+  - {l: ["Positional Combos - Adjacent"], p: [3, 13] , k: "["}
+  - {l: ["Positional Combos - Adjacent"], p: [4, 14] , k: "{"}
+  - {l: ["Positional Combos - Adjacent"], p: [5, 15] , k: "}"}
+  - {l: ["Positional Combos - Adjacent"], p: [6, 16] , k: "]"}
+  - {l: ["Positional Combos - Adjacent"], p: [7, 17] , k: ")"}
+  - {l: ["Positional Combos - Adjacent"], p: [8, 18] , k: $$mdi:greater-than$$}
+  - {l: ["Positional Combos - Adjacent"], p: [9, 19] , k: "|"}
+
+  - {l: ["Positional Combos - Adjacent"], p: [10, 20], k: F1}
+  - {l: ["Positional Combos - Adjacent"], p: [11, 21], k: F2}
+  - {l: ["Positional Combos - Adjacent"], p: [12, 22], k: F3}
+  - {l: ["Positional Combos - Adjacent"], p: [13, 23], k: F4}
+  - {l: ["Positional Combos - Adjacent"], p: [14, 24], k: F5}
+  - {l: ["Positional Combos - Adjacent"], p: [15, 25], k: F6}
+  - {l: ["Positional Combos - Adjacent"], p: [16, 26], k: F7}
+  - {l: ["Positional Combos - Adjacent"], p: [17, 27], k: F8}
+  - {l: ["Positional Combos - Adjacent"], p: [18, 28], k: F9}
+  - {l: ["Positional Combos - Adjacent"], p: [19, 29], k: F10}
+
+  - {l: ["Positional Combos - Symmetric"], p: [10, 19], k: $$mdi:apple-keyboard-control$$, a: top, offset: 2.1}
+  - {l: ["Positional Combos - Symmetric"], p: [11, 18], k: $$mdi:apple-keyboard-option$$, a: top, offset: 1.3}
+  - {l: ["Positional Combos - Symmetric"], p: [12, 17], k: $$mdi:apple-keyboard-command$$, a: top, offset: 0.6}
+  - {l: ["Positional Combos - Symmetric"], p: [13, 16], k: $$mdi:apple-keyboard-shift$$, a: top, offset: 0.2}
+  - {l: ["Positional Combos - Symmetric"], p: [14, 15], k: Meh, a: mid, offset: 0.6}
+  - {l: ["Positional Combos - Symmetric"], p: [20, 29], k: $$mdi:undo$$, a: bottom, offset: 1.6}
+  - {l: ["Positional Combos - Symmetric"], p: [21, 28], k: $$mdi:content-cut$$, a: bottom, offset: 1.3}
+  - {l: ["Positional Combos - Symmetric"], p: [22, 27], k: $$mdi:content-copy$$, a: bottom, offset: 0.9}
+  - {l: ["Positional Combos - Symmetric"], p: [23, 26], k: $$mdi:content-paste$$, a: bottom, offset: 0.2}
+  - {l: ["Positional Combos - Symmetric"], p: [24, 25], k: Hyper, a: mid, offset: 0.6}
+
+  - {l: ["Combo Layers, One-handed"], p: [0, 1], k: "Snipe", a: bottom, offset: 0.3}
+  - {l: ["Combo Layers, One-handed"], p: [1, 2], k: "Scroll", a: top, offset: 0.3}
+  - {l: ["Combo Layers, One-handed"], p: [2, 3], k: "Mouse", a: bottom, offset: 0.3}
+
+  - {l: ["Combo Layers, One-handed"], p: [6, 7], k: "Mouse", a: bottom, offset: 0.3}
+  - {l: ["Combo Layers, One-handed"], p: [7, 8], k: "Scroll", a: top, offset: 0.3}
+  - {l: ["Combo Layers, One-handed"], p: [8, 9], k: "Snipe", a: bottom, offset: 0.3}
+
+  # - {l: ["Special Combos 1"], p: [11, 13], k: "&tog NUM", a: mid}
+  # - {l: ["Special Combos 1"], p: [16, 18], k: "&tog NUM", a: mid}
+  # - {l: ["Special Combos 1"], p: [21, 23], k: "&to 1", a: mid}
+  # - {l: ["Special Combos 1"], p: [26, 28], k: "&to 1", a: mid}
+
+  - {l: ["Contextual Combos - System"], p: [1, 2, 3], k: "Force", a: top, offset: 0.3}
+  - {l: ["Contextual Combos - System"], p: [6, 7, 8], k: "Force", a: top, offset: 0.3}
+
+  - {l: ["Contextual Combos - System"], p: [11, 12, 13], k: "Mute", a: top, offset: 0.3}
+  - {l: ["Contextual Combos - System"], p: [16, 17, 18], k: "Mute", a: top, offset: 0.3}
+
+  - {l: ["Contextual Combos - System"], p: [21, 22, 23], k: "Lock", a: top, offset: 0.3}
+  - {l: ["Contextual Combos - System"], p: [26, 27, 28], k: "Lock", a: top, offset: 0.3}
+
+  - {l: ["Contextual Combos - Panic"], p: [20, 23, 26, 29], k: "AFK", a: bottom}
+  - {l: ["Contextual Combos - Panic"], p: [11, 14], k: "Cmd-Tab", a: top, offset: 0.7}
+  - {l: ["Contextual Combos - Panic"], p: [11, 13], k: "Panic", a: mid}
+  - {l: ["Contextual Combos - Panic"], p: [12, 14], k: "Cmd-`", a: bottom}
+
+  - {l: ["Contextual Combos - Panic"], p: [15, 17], k: "Cmd-`", a: bottom}
+  - {l: ["Contextual Combos - Panic"], p: [16, 18], k: "Panic", a: mid}
+  - {l: ["Contextual Combos - Panic"], p: [15, 18], k: "Cmd-Tab", a: top, offset: 0.7}
+
+  - {l: ["Contextual Combos - Keyboard"], p: [1, 2, 4], k: "Boot", a: top, offset: 0.3, slide: -0.1}
+  - {l: ["Contextual Combos - Keyboard"], p: [5, 7, 8], k: "Boot", a: top, offset: 0.3, slide: -0.1}
+
+  - {l: ["Contextual Combos - Keyboard"], p: [11, 12, 14], k: "Reset", a: top, offset: 0.3, slide: -0.1}
+  - {l: ["Contextual Combos - Keyboard"], p: [15, 17, 18], k: "Reset", a: top, offset: 0.3, slide: -0.1}
+
+  - {l: ["Contextual Combos - Keyboard"], p: [21, 22, 24], k: "BT Clr", a: top, offset: 0.3, slide: -0.1}
+  - {l: ["Contextual Combos - Keyboard"], p: [25, 27, 28], k: "BT Clr", a: top, offset: 0.3, slide: -0.1}
+
+  - {l: ["Contextual Combos - Keyboard"], p: [32, 33], k: "Caps Lock", a: mid}
+  - {l: ["Contextual Combos - Keyboard"], p: [31, 34], k: "Caps Word", a: bottom, offset: 0.3}

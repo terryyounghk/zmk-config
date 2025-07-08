@@ -1,127 +1,155 @@
 /// ---------------------------------------------------------------------------
-/// Combo: T1 + ? /// one-handed, two-fingered one-shots (layers/mods), mirrored
+/// Thumb combos
 
-CUSTOM_COMBO(  lt1lu5,         LT1 LU5,            &sl SYMBOLS                          )
-CUSTOM_COMBO(  lt1lu4,         LT1 LU4,            &sl CONTROLS                         )
-CUSTOM_COMBO(  lt1lu3,         LT1 LU3,            &sl CODING                           )
-CUSTOM_COMBO(  lt1lu2,         LT1 LU2,            &sl NUMBERS                          )
-CUSTOM_COMBO(  lt1lu1,         LT1 LU1,            &sl NUMPAD                           )
-
-CUSTOM_COMBO(  lt1lh5,         LT1 LH5,            &sk LCTRL                            )
-CUSTOM_COMBO(  lt1lh4,         LT1 LH4,            &sk LALT                             )
-CUSTOM_COMBO(  lt1lh3,         LT1 LH3,            &sk LGUI                             )
-CUSTOM_COMBO(  lt1lh2,         LT1 LH2,            &sk LSHIFT                           )
-CUSTOM_COMBO(  lt1lh1,         LT1 LH1,            &sl FUNCS                            )
-
-CUSTOM_COMBO(  lt1ll5,         LT1 LL5,            &sk LA(LG(LSHIFT))                   )
-CUSTOM_COMBO(  lt1ll4,         LT1 LL4,            &sk LC(LG(LSHIFT))                   )
-CUSTOM_COMBO(  lt1ll3,         LT1 LL3,            &sk LMEH                             )
-CUSTOM_COMBO(  lt1ll2,         LT1 LL2,            &sk LC(LA(LGUI))                     )
-CUSTOM_COMBO(  lt1ll1,         LT1 LL1,            &sk LHYPER                           )
-
-CUSTOM_COMBO(  rt1ru1,         RT1 RU1,            &sl NUMPAD                           )
-CUSTOM_COMBO(  rt1ru2,         RT1 RU2,            &sl NUMBERS                          )
-CUSTOM_COMBO(  rt1ru3,         RT1 RU3,            &sl CODING                           )
-CUSTOM_COMBO(  rt1ru4,         RT1 RU4,            &sl CONTROLS                         )
-CUSTOM_COMBO(  rt1ru5,         RT1 RU5,            &sl SYMBOLS                          )
-
-CUSTOM_COMBO(  rt1rh1,         RT1 RH1,            &sl FUNCS                            )
-CUSTOM_COMBO(  rt1rh2,         RT1 RH2,            &sk RSHIFT                           )
-CUSTOM_COMBO(  rt1rh3,         RT1 RH3,            &sk RGUI                             )
-CUSTOM_COMBO(  rt1rh4,         RT1 RH4,            &sk RALT                             )
-CUSTOM_COMBO(  rt1rh5,         RT1 RH5,            &sk RCTRL                            )
-
-CUSTOM_COMBO(  rt1rl1,         RT1 RL1,            &sk LHYPER                           )
-CUSTOM_COMBO(  rt1rl2,         RT1 RL2,            &sk LC(LA(LGUI))                     )
-CUSTOM_COMBO(  rt1rl3,         RT1 RL3,            &sk LMEH                             )
-CUSTOM_COMBO(  rt1rl4,         RT1 RL4,            &sk LC(LG(LSHIFT))                   )
-CUSTOM_COMBO(  rt1rl5,         RT1 RL5,            &sk LA(LG(LSHIFT))                   )
+ADD_COMBO(1, LT1 LT2,               &sl NUMPAD,                    LAYERS_NORMAL)
+ADD_COMBO(1, RT1 RT2,               &sl NUMBERS,                   LAYERS_NORMAL)
 
 /// ---------------------------------------------------------------------------
-/// Combo: T1 + ? ... /// one-handed, multi-fingered one-shots (mods), mirrored
+/// Combo: one-handed, two-fingered one-shots (layers/mods), mirrored
 
-CUSTOM_COMBO(  lt1lh5lh4,      LT1 LH5 LH4,        &sk LC(LALT)                         )
-CUSTOM_COMBO(  lt1lh5lh3,      LT1 LH5 LH3,        &sk LC(LGUI)                         )
-CUSTOM_COMBO(  lt1lh5lh2,      LT1 LH5 LH2,        &sk LC(LSHIFT)                       )
-CUSTOM_COMBO(  lt1lh4lh3,      LT1 LH4 LH3,        &sk LA(LGUI)                         )
-CUSTOM_COMBO(  lt1lh4lh2,      LT1 LH4 LH2,        &sk LA(LSHIFT)                       )
-CUSTOM_COMBO(  lt1lh3lh2,      LT1 LH3 LH2,        &sk LG(LSHIFT)                       )
-CUSTOM_COMBO(  lt1lh5lh4lh3,   LT1 LH5 LH4 LH3,    &sk LC(LA(LGUI))                     )
-CUSTOM_COMBO(  lt1lh5lh4lh2,   LT1 LH5 LH4 LH2,    &sk LMEH                             )
-CUSTOM_COMBO(  lt1lh5lh3lh2,   LT1 LH5 LH3 LH2,    &sk LC(LG(LSHIFT))                   )
-CUSTOM_COMBO(  lt1lh4lh3lh2,   LT1 LH4 LH3 LH2,    &sk LA(LG(LSHIFT))                   )
+ADD_COMBO(1, BK_SLL LU5,            &sl CONTROLS,                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLL LU4,            &sl NUMPAD,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLL LU3,            &sl NUMBERS,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLL LU2,            &sl SYMBOLS,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLL LU1,            &sl SWITCH,                    LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rt1rh5rh4,      RT1 RH5 RH4,        &sk LC(LALT)                         )
-CUSTOM_COMBO(  rt1rh5rh3,      RT1 RH5 RH3,        &sk LC(LGUI)                         )
-CUSTOM_COMBO(  rt1rh5rh2,      RT1 RH5 RH2,        &sk LC(LSHIFT)                       )
-CUSTOM_COMBO(  rt1rh4rh3,      RT1 RH4 RH3,        &sk LA(LGUI)                         )
-CUSTOM_COMBO(  rt1rh3rh2,      RT1 RH3 RH2,        &sk LG(LSHIFT)                       )
-CUSTOM_COMBO(  rt1rh4rh2,      RT1 RH4 RH2,        &sk LA(LSHIFT)                       )
-CUSTOM_COMBO(  rt1rh5rh4rh3,   RT1 RH5 RH4 RH3,    &sk LC(LA(LGUI))                     )
-CUSTOM_COMBO(  rt1rh5rh4rh2,   RT1 RH5 RH4 RH2,    &sk LMEH                             )
-CUSTOM_COMBO(  rt1rh5rh3rh2,   RT1 RH5 RH3 RH2,    &sk LC(LG(LSHIFT))                   )
-CUSTOM_COMBO(  rt1rh4rh3rh2,   RT1 RH4 RH3 RH2,    &sk LA(LG(LSHIFT))                   )
+ADD_COMBO(1, BK_SKL LH5,            &sk LCTRL,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH4,            &sk LALT,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH3,            &sk LGUI,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH2,            &sk LSHIFT,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLL LH1,            &sl NAV,                       LAYERS_NORMAL)
 
-/// ---------------------------------------------------------------------------
-/// Combo: T2 + ? /// one-handed, two-fingered toggles (layers/modes), mirrored
+ADD_COMBO(1, BK_SKL LL5,            &sk LA(LG(LSHIFT)),            LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LL4,            &sk LC(LG(LSHIFT)),            LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LL3,            &sk LMEH,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LL2,            &sk LC(LA(LGUI)),              LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LL1,            &sk LHYPER,                    LAYERS_NORMAL)
 
-CUSTOM_COMBO(  lt2lu5,         LT2 LU5,            &tog SYMBOLS                         )
-CUSTOM_COMBO(  lt2lu4,         LT2 LU4,            &tog CONTROLS                        )
-CUSTOM_COMBO(  lt2lu3,         LT2 LU3,            &tog CODING                          )
-CUSTOM_COMBO(  lt2lu2,         LT2 LU2,            &tog NUMBERS                         )
-CUSTOM_COMBO(  lt2lu1,         LT2 LU1,            &tog NUMPAD                          )
+ADD_COMBO(1, BK_SLR RU1,            &sl SWITCH,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLR RU2,            &sl SYMBOLS,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLR RU3,            &sl NUMBERS,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLR RU4,            &sl NUMPAD,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLR RU5,            &sl CONTROLS,                  LAYERS_NORMAL)
 
-CUSTOM_COMBO(  lt2lh5,         LT2 LH5,            &kt LCTRL                            )
-CUSTOM_COMBO(  lt2lh4,         LT2 LH4,            &kt LALT                             )
-CUSTOM_COMBO(  lt2lh3,         LT2 LH3,            &kt LGUI                             )
-CUSTOM_COMBO(  lt2lh2,         LT2 LH2,            &kt LSHIFT                           )
-CUSTOM_COMBO(  lt2lh1,         LT2 LH1,            &tog FUNCS                           )
+ADD_COMBO(1, BK_SLR RH1,            &sl NAV,                       LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH2,            &sk RSHIFT,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH3,            &sk RGUI,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH4,            &sk RALT,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH5,            &sk RCTRL,                     LAYERS_NORMAL)
 
-CUSTOM_COMBO(  lt2ll5,         LT2 LL5,            &kt LA(LG(LSHIFT))                   )
-CUSTOM_COMBO(  lt2ll4,         LT2 LL4,            &kt LC(LG(LSHIFT))                   )
-CUSTOM_COMBO(  lt2ll3,         LT2 LL3,            &kt LMEH                             )
-CUSTOM_COMBO(  lt2ll2,         LT2 LL2,            &kt LC(LA(LGUI))                     )
-CUSTOM_COMBO(  lt2ll1,         LT2 LL1,            &kt LHYPER                           )
-
-CUSTOM_COMBO(  rt2ru1,         RT2 RU1,            &tog NUMPAD                          )
-CUSTOM_COMBO(  rt2ru2,         RT2 RU2,            &tog NUMBERS                         )
-CUSTOM_COMBO(  rt2ru3,         RT2 RU3,            &tog CODING                          )
-CUSTOM_COMBO(  rt2ru4,         RT2 RU4,            &tog CONTROLS                        )
-CUSTOM_COMBO(  rt2ru5,         RT2 RU5,            &tog SYMBOLS                         )
-
-CUSTOM_COMBO(  rt2rh1,         RT2 RH1,            &tog FUNCS                           )
-CUSTOM_COMBO(  rt2rh2,         RT2 RH2,            &kt RSHIFT                           )
-CUSTOM_COMBO(  rt2rh3,         RT2 RH3,            &kt RGUI                             )
-CUSTOM_COMBO(  rt2rh4,         RT2 RH4,            &kt RALT                             )
-CUSTOM_COMBO(  rt2rh5,         RT2 RH5,            &kt RCTRL                            )
-
-CUSTOM_COMBO(  rt2rl1,         RT2 RL1,            &kt LHYPER                           )
-CUSTOM_COMBO(  rt2rl2,         RT2 RL2,            &kt LC(LA(LGUI))                     )
-CUSTOM_COMBO(  rt2rl3,         RT2 RL3,            &kt LMEH                             )
-CUSTOM_COMBO(  rt2rl4,         RT2 RL4,            &kt LC(LG(LSHIFT))                   )
-CUSTOM_COMBO(  rt2rl5,         RT2 RL5,            &kt LA(LG(LSHIFT))                   )
+ADD_COMBO(1, BK_SKR RL1,            &sk LHYPER,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RL2,            &sk LC(LA(LGUI)),              LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RL3,            &sk LMEH,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RL4,            &sk LC(LG(LSHIFT)),            LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RL5,            &sk LA(LG(LSHIFT)),            LAYERS_NORMAL)
 
 /// ---------------------------------------------------------------------------
-/// Combo: T2 + ? ... /// one-handed, multi-fingered toggles (mods), mirrored
+/// Combo: one-handed, three-fingered one-shots (layers/mods), mirrored
 
-CUSTOM_COMBO(  lt2lh5lh4,      LT2 LH5 LH4,        &kt LC(LALT)                         )
-CUSTOM_COMBO(  lt2lh5lh3,      LT2 LH5 LH3,        &kt LC(LGUI)                         )
-CUSTOM_COMBO(  lt2lh5lh2,      LT2 LH5 LH2,        &kt LC(LSHIFT)                       )
-CUSTOM_COMBO(  lt2lh4lh3,      LT2 LH4 LH3,        &kt LA(LGUI)                         )
-CUSTOM_COMBO(  lt2lh4lh2,      LT2 LH4 LH2,        &kt LA(LSHIFT)                       )
-CUSTOM_COMBO(  lt2lh3lh2,      LT2 LH3 LH2,        &kt LG(LSHIFT)                       )
-CUSTOM_COMBO(  lt2lh5lh4lh3,   LT2 LH5 LH4 LH3,    &kt LC(LA(LGUI))                     )
-CUSTOM_COMBO(  lt2lh5lh4lh2,   LT2 LH5 LH4 LH2,    &kt LMEH                             )
-CUSTOM_COMBO(  lt2lh5lh3lh2,   LT2 LH5 LH3 LH2,    &kt LC(LG(LSHIFT))                   )
-CUSTOM_COMBO(  lt2lh4lh3lh2,   LT2 LH4 LH3 LH2,    &kt LA(LG(LSHIFT))                   )
+ADD_COMBO(1, BK_SLL LU5 LU4,        &sl SNIPE,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLL LU4 LU3,        &sl SCROLL,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLL LU3 LU2,        &sl MOUSE,                     LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rt2rh5rh4,      RT2 RH5 RH4,        &kt LC(LALT)                         )
-CUSTOM_COMBO(  rt2rh5rh3,      RT2 RH5 RH3,        &kt LC(LGUI)                         )
-CUSTOM_COMBO(  rt2rh5rh2,      RT2 RH5 RH2,        &kt LC(LSHIFT)                       )
-CUSTOM_COMBO(  rt2rh4rh3,      RT2 RH4 RH3,        &kt LA(LGUI)                         )
-CUSTOM_COMBO(  rt2rh4rh2,      RT2 RH4 RH2,        &kt LA(LSHIFT)                       )
-CUSTOM_COMBO(  rt2rh3rh2,      RT2 RH3 RH2,        &kt LG(LSHIFT)                       )
-CUSTOM_COMBO(  rt2rh5rh4rh3,   RT2 RH5 RH4 RH3,    &kt LC(LA(LGUI))                     )
-CUSTOM_COMBO(  rt2rh5rh4rh2,   RT2 RH5 RH4 RH2,    &kt LMEH                             )
-CUSTOM_COMBO(  rt2rh5rh3rh2,   RT2 RH5 RH3 RH2,    &kt LC(LG(LSHIFT))                   )
-CUSTOM_COMBO(  rt2rh4rh3rh2,   RT2 RH4 RH3 RH2,    &kt LA(LG(LSHIFT))                   )
+ADD_COMBO(1, BK_SLR LU3 LU2,        &sl MOUSE,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLR LU4 LU3,        &sl SCROLL,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLR LU5 LU4,        &sl SNIPE,                     LAYERS_NORMAL)
+
+/// ---------------------------------------------------------------------------
+/// Combo: one-handed, multi-fingered one-shots (mods), mirrored
+
+ADD_COMBO(1, BK_SKL LH5 LH4,        &sk LC(LALT),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH5 LH3,        &sk LC(LGUI),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH5 LH2,        &sk LC(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH4 LH3,        &sk LA(LGUI),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH4 LH2,        &sk LA(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH3 LH2,        &sk LG(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH5 LH4 LH3,    &sk LC(LA(LGUI)),              LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH5 LH4 LH2,    &sk LMEH,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH5 LH3 LH2,    &sk LC(LG(LSHIFT)),            LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKL LH4 LH3 LH2,    &sk LA(LG(LSHIFT)),            LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_SKR RH5 RH4,        &sk LC(LALT),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH5 RH3,        &sk LC(LGUI),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH5 RH2,        &sk LC(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH4 RH3,        &sk LA(LGUI),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH3 RH2,        &sk LG(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH4 RH2,        &sk LA(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH5 RH4 RH3,    &sk LC(LA(LGUI)),              LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH5 RH4 RH2,    &sk LMEH,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH5 RH3 RH2,    &sk LC(LG(LSHIFT)),            LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH4 RH3 RH2,    &sk LA(LG(LSHIFT)),            LAYERS_NORMAL)
+
+/// ---------------------------------------------------------------------------
+/// Combo: one-handed, two-fingered toggles (layers/modes), mirrored
+
+ADD_COMBO(1, BK_TGL LU5,            &tog CONTROLS,                 LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGL LU4,            &tog NUMPAD,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGL LU3,            &tog NUMBERS,                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGL LU2,            &tog SYMBOLS,                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGL LU1,            &tog SWITCH,                   LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_KTL LH5,            &kt LCTRL,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH4,            &kt LALT,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH3,            &kt LGUI,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH2,            &kt LSHIFT,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGL LH1,            &tog NAV,                      LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_KTL LL5,            &kt LA(LG(LSHIFT)),            LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LL4,            &kt LC(LG(LSHIFT)),            LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LL3,            &kt LMEH,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LL2,            &kt LC(LA(LGUI)),              LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LL1,            &kt LHYPER,                    LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_TGR RU1,            &tog SWITCH,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGR RU2,            &tog SYMBOLS,                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGR RU3,            &tog NUMBERS,                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGR RU4,            &tog NUMPAD,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGR RU5,            &tog CONTROLS,                 LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_TGR RH1,            &tog NAV,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH2,            &kt RSHIFT,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH3,            &kt RGUI,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH4,            &kt RALT,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH5,            &kt RCTRL,                     LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_KTR RL1,            &kt LHYPER,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RL2,            &kt LC(LA(LGUI)),              LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RL3,            &kt LMEH,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RL4,            &kt LC(LG(LSHIFT)),            LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RL5,            &kt LA(LG(LSHIFT)),            LAYERS_NORMAL)
+
+/// ---------------------------------------------------------------------------
+/// Combo: one-handed, three-fingered toggles (layers/mods), mirrored
+
+ADD_COMBO(1, BK_TGL LU5 LU4,        &tog SNIPE,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGL LU4 LU3,        &tog SCROLL,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGL LU3 LU2,        &tog MOUSE,                    LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_TGR LU3 LU2,        &tog MOUSE,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGR LU4 LU3,        &tog SCROLL,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGR LU5 LU4,        &tog SNIPE,                    LAYERS_NORMAL)
+
+/// ---------------------------------------------------------------------------
+/// Combo: one-handed, multi-fingered toggles (mods), mirrored
+
+ADD_COMBO(1, BK_KTL LH5 LH4,        &kt LC(LALT),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH5 LH3,        &kt LC(LGUI),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH5 LH2,        &kt LC(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH4 LH3,        &kt LA(LGUI),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH4 LH2,        &kt LA(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH3 LH2,        &kt LG(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH5 LH4 LH3,    &kt LC(LA(LGUI)),              LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH5 LH4 LH2,    &kt LMEH,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH5 LH3 LH2,    &kt LC(LG(LSHIFT)),            LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTL LH4 LH3 LH2,    &kt LA(LG(LSHIFT)),            LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_KTR RH5 RH4,        &kt LC(LALT),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH5 RH3,        &kt LC(LGUI),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH5 RH2,        &kt LC(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH4 RH3,        &kt LA(LGUI),                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH4 RH2,        &kt LA(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH3 RH2,        &kt LG(LSHIFT),                LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH5 RH4 RH3,    &kt LC(LA(LGUI)),              LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH5 RH4 RH2,    &kt LMEH,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH5 RH3 RH2,    &kt LC(LG(LSHIFT)),            LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH4 RH3 RH2,    &kt LA(LG(LSHIFT)),            LAYERS_NORMAL)

@@ -1,5 +1,4 @@
-// special combos
-#include "../combos/high_priority.dtsi"
+// special combos - high priority
 #include "../combos/special.dtsi"
 
 // positional combos
@@ -11,5 +10,5 @@
 #include "../combos/browser.dtsi"
 #include "../combos/capturing.dtsi"
 #include "../combos/apps.dtsi"
-#include "../combos/terminal.dtsi"
+#include "../combos/coding.dtsi"
 #include "../combos/vscode.dtsi"

@@ -1,80 +1,75 @@
 /// ---------------------------------------------------------------------------
 /// horizontally adjacent combos
-/**
-CUSTOM_COMBO(  lu5lu4,         LU5 LU4,            &kp                                  )
-CUSTOM_COMBO(  lu4lu3,         LU4 LU3,            &kp                                  )
-CUSTOM_COMBO(  lu3lu2,         LU3 LU2,            &kp                                  )
-*/
-CUSTOM_COMBO(  lu2lu1,         LU2 LU1,            &kp PLUS                             )
 
-CUSTOM_COMBO(  ru1ru2,         RU1 RU2,            &kp MINUS                            )
-/**
-CUSTOM_COMBO(  ru2ru3,         RU2 RU3,            &kp                                  )
-CUSTOM_COMBO(  ru3ru4,         RU3 RU4,            &kp                                  )
-CUSTOM_COMBO(  ru4ru5,         RU4 RU5,            &kp                                  )
+ADD_COMBO(0, LU5 LU4,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(0, LU4 LU3,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(0, LU3 LU2,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(1, LU2 LU1,            &kp PLUS,                      LAYERS_NORMAL)
 
-CUSTOM_COMBO(  lh5lh4,         LH5 LH4,            &kp                                  )
-*/
-CUSTOM_COMBO(  lh4lh3,         LH4 LH3,            &kp BACKSPACE                        )
-CUSTOM_COMBO(  lh3lh2,         LH3 LH2,            &kp ESCAPE                           )
-CUSTOM_COMBO(  lh2lh1,         LH2 LH1,            &kp DELETE                           )
+ADD_COMBO(1, RU1 RU2,            &kp MINUS,                     LAYERS_NORMAL)
+ADD_COMBO(0, RU2 RU3,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(0, RU3 RU4,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(0, RU4 RU5,            XXXXXXXXXX,                    LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1rh2,         RH1 RH2,            &kp BACKSPACE                        )
-CUSTOM_COMBO(  rh2rh3,         RH2 RH3,            &kp ESCAPE                           )
-CUSTOM_COMBO(  rh3rh4,         RH3 RH4,            &kp DELETE                           )
-CUSTOM_COMBO(  rh4rh5,         RH4 RH5,            &kp APOSTROPHE                       )
+ADD_COMBO(0, LH5 LH4,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(1, LH4 LH3,            &kp BACKSPACE,                 LAYERS_NORMAL)
+ADD_COMBO(1, LH3 LH2,            &kp ESCAPE,                    LAYERS_NORMAL)
+ADD_COMBO(1, LH2 LH1,            &kp DELETE,                    LAYERS_NORMAL)
 
-CUSTOM_COMBO(  ll5ll4,         LL5 LL4,            &kp Y_UNDO                           )
-CUSTOM_COMBO(  ll4ll3,         LL4 LL3,            &kp Y_CUT                            )
-CUSTOM_COMBO(  ll3ll2,         LL3 LL2,            &kp Y_COPY                           )
-CUSTOM_COMBO(  ll2ll1,         LL2 LL1,            &kp Y_PASTE                          )
+ADD_COMBO(1, RH1 RH2,            &kp BACKSPACE,                 LAYERS_NORMAL)
+ADD_COMBO(1, RH2 RH3,            &kp ESCAPE,                    LAYERS_NORMAL)
+ADD_COMBO(1, RH3 RH4,            &kp DELETE,                    LAYERS_NORMAL)
+ADD_COMBO(0, RH4 RH5,            XXXXXXXXXX,                    LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rl1rl2,         RL1 RL2,            &kp LA(BACKSPACE)                    )
-CUSTOM_COMBO(  rl2rl3,         RL2 RL3,            &kp APOSTROPHE                       )
-CUSTOM_COMBO(  rl3rl4,         RL3 RL4,            &kp DQT                              )
-/**
-CUSTOM_COMBO(  rl4rl5,         RL4 RL5,            &kp                                  )
-*/
+ADD_COMBO(1, LL5 LL4,            &kp Y_UNDO,                    LAYERS_NORMAL)
+ADD_COMBO(1, LL4 LL3,            &kp Y_CUT,                     LAYERS_NORMAL)
+ADD_COMBO(1, LL3 LL2,            &kp Y_COPY,                    LAYERS_NORMAL)
+ADD_COMBO(1, LL2 LL1,            &kp Y_PASTE,                   LAYERS_NORMAL)
+
+ADD_COMBO(1, RL1 RL2,            &kp LA(BACKSPACE),             LAYERS_NORMAL)
+ADD_COMBO(1, RL2 RL3,            &kp APOSTROPHE,                LAYERS_NORMAL)
+ADD_COMBO(1, RL3 RL4,            &kp DQT,                       LAYERS_NORMAL)
+ADD_COMBO(1, RL4 RL5,            &kp GRAVE,                     LAYERS_NORMAL)
 
 /// ---------------------------------------------------------------------------
 /// vertically adjacent ZMK_combos
 
-CUSTOM_COMBO(  lu5lh5,         LU5 LH5,            &kp F1                               )
-CUSTOM_COMBO(  lu4lh4,         LU4 LH4,            &kp F2                               )
-CUSTOM_COMBO(  lu3lh3,         LU3 LH3,            &kp F3                               )
-CUSTOM_COMBO(  lu2lh2,         LU2 LH2,            &kp F4                               )
-CUSTOM_COMBO(  lu1lh1,         LU1 LH1,            &kp F5                               )
+// LPAR () LBKT [] LBRC {}
+ADD_COMBO(1, LU5 LH5,            &kp BSLH,                      LAYERS_NORMAL)
+ADD_COMBO(1, LU4 LH4,            &kp LT,                        LAYERS_NORMAL)
+ADD_COMBO(1, LU3 LH3,            &kp LPAR,                      LAYERS_NORMAL)
+ADD_COMBO(1, LU2 LH2,            &kp LBKT,                      LAYERS_NORMAL)
+ADD_COMBO(1, LU1 LH1,            &kp LBRC,                      LAYERS_NORMAL)
 
-CUSTOM_COMBO(  ru1rh1,         RU1 RH1,            &kp F6                               )
-CUSTOM_COMBO(  ru2rh2,         RU2 RH2,            &kp F7                               )
-CUSTOM_COMBO(  ru3rh3,         RU3 RH3,            &kp F8                               )
-CUSTOM_COMBO(  ru4rh4,         RU4 RH4,            &kp F9                               )
-CUSTOM_COMBO(  ru5rh5,         RU5 RH5,            &kp F10                              )
+ADD_COMBO(1, RU1 RH1,            &kp RBRC,                      LAYERS_NORMAL)
+ADD_COMBO(1, RU2 RH2,            &kp RBKT,                      LAYERS_NORMAL)
+ADD_COMBO(1, RU3 RH3,            &kp RPAR,                      LAYERS_NORMAL)
+ADD_COMBO(1, RU4 RH4,            &kp GT,                        LAYERS_NORMAL)
+ADD_COMBO(1, RU5 RH5,            &kp PIPE,                      LAYERS_NORMAL)
 
-// LBRC {} LBKT [] LPAR ()
-CUSTOM_COMBO(  lh5ll5,         LH5 LL5,            &kp BSLH                             )
-CUSTOM_COMBO(  lh4ll4,         LH4 LL4,            &kp LT                               )
-CUSTOM_COMBO(  lh3ll3,         LH3 LL3,            &kp LBKT                             )
-CUSTOM_COMBO(  lh2ll2,         LH2 LL2,            &kp LPAR                             )
-CUSTOM_COMBO(  lh1ll1,         LH1 LL1,            &kp LBRC                             )
+ADD_COMBO(1, LH5 LL5,            &kp F1,                        LAYERS_NORMAL)
+ADD_COMBO(1, LH4 LL4,            &kp F2,                        LAYERS_NORMAL)
+ADD_COMBO(1, LH3 LL3,            &kp F3,                        LAYERS_NORMAL)
+ADD_COMBO(1, LH2 LL2,            &kp F4,                        LAYERS_NORMAL)
+ADD_COMBO(1, LH1 LL1,            &kp F5,                        LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1rl1,         RH1 RL1,            &kp RBRC                             )
-CUSTOM_COMBO(  rh2rl2,         RH2 RL2,            &kp RPAR                             )
-CUSTOM_COMBO(  rh3rl3,         RH3 RL3,            &kp RBKT                             )
-CUSTOM_COMBO(  rh4rl4,         RH4 RL4,            &kp GT                               )
-CUSTOM_COMBO(  rh5rl5,         RH5 RL5,            &kp PIPE                             )
+ADD_COMBO(1, RH1 RL1,            &kp F6,                        LAYERS_NORMAL)
+ADD_COMBO(1, RH2 RL2,            &kp F7,                        LAYERS_NORMAL)
+ADD_COMBO(1, RH3 RL3,            &kp F8,                        LAYERS_NORMAL)
+ADD_COMBO(1, RH4 RL4,            &kp F9,                        LAYERS_NORMAL)
+ADD_COMBO(1, RH5 RL5,            &kp F10,                       LAYERS_NORMAL)
 
 /// ---------------------------------------------------------------------------
 /// diagonal combos
 
 /// diagonal combos: left handed
-CUSTOM_COMBO(  lu2lh1,         LU2 LH1,            &kp EQUAL                            )
-CUSTOM_COMBO(  lh2ll1,         LH2 LL1,            &kp SPACE                            )
-CUSTOM_COMBO(  lu3lh2,         LU3 LH2,            &kp TAB                              )
-CUSTOM_COMBO(  lh3ll2,         LH3 LL2,            &kp RETURN                           )
+ADD_COMBO(1, LU2 LH1,            &kp EQUAL,                     LAYERS_NORMAL)
+ADD_COMBO(1, LH2 LL1,            &kp SPACE,                     LAYERS_NORMAL)
+ADD_COMBO(1, LU3 LH2,            &kp TAB,                       LAYERS_NORMAL)
+ADD_COMBO(1, LH3 LL2,            &kp RETURN,                    LAYERS_NORMAL)
 
 /// diagonal combos: right handed
-CUSTOM_COMBO(  ru2rh1,         RU2 RH1,            &kp UNDERSCORE                       )
-CUSTOM_COMBO(  rh2rl1,         RH2 RL1,            &kp BACKSLASH                        )
-CUSTOM_COMBO(  rh3rl2,         RH3 RL2,            &kp RETURN                           )
-
+ADD_COMBO(1, RU2 RH1,            &kp UNDERSCORE,                LAYERS_NORMAL)
+ADD_COMBO(1, RH2 RL1,            &kp BACKSLASH,                 LAYERS_NORMAL)
+ADD_COMBO(1, RU3 RH2,            &kp LS(TAB),                   LAYERS_NORMAL)
+ADD_COMBO(1, RH3 RL2,            &kp RETURN,                    LAYERS_NORMAL)

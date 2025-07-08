@@ -1,0 +1,53 @@
+layout:
+  zmk_keyboard: corne
+  layout_name: foostan_corne_6col_layout
+layers:
+  notation:
+    - [
+        {t: "LU6", type: ghost},
+        {t: "LU5"},
+        {t: "LU4"},
+        {t: "LU3"},
+        {t: "LU2"},
+        {t: "LU1"},
+        {t: "RU1"},
+        {t: "RU2"},
+        {t: "RU3"},
+        {t: "RU4"},
+        {t: "RU5"},
+        {t: "RU6", type: ghost},
+      ]
+    - [
+        {t: "LH6", type: ghost},
+        {t: "LH5"},
+        {t: "LH4"},
+        {t: "LH3"},
+        {t: "LH2"},
+        {t: "LH1"},
+        {t: "RH1"},
+        {t: "RH2"},
+        {t: "RH3"},
+        {t: "RH4"},
+        {t: "RH5"},
+        {t: "RH6", type: ghost},
+      ]
+    - [
+        {t: "LL6", type: ghost},
+        {t: "LL5"},
+        {t: "LL4"},
+        {t: "LL3"},
+        {t: "LL2"},
+        {t: "LL1"},
+        {t: "RL1"},
+        {t: "RL2"},
+        {t: "RL3"},
+        {t: "RL4"},
+        {t: "RL5"},
+        {t: "RL6", type: ghost},
+      ]
+    - {t: "LT3", type: ghost}
+    - {t: "LT2"}
+    - {t: "LT1"}
+    - {t: "RT1"}
+    - {t: "RT2"}
+    - {t: "RT3", type: ghost}

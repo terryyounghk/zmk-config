@@ -1,78 +1,24 @@
 /// ---------------------------------------------------------------------------
 /// Combo: symmetric combos, two-handed
 
-CUSTOM_COMBO(  lu5u5,          LU5 RU5,            &kp EXCL                             )
-/**
-CUSTOM_COMBO(  lu4ru5,         LU4 RU5,            &kp                                  )
-CUSTOM_COMBO(  lu3ru3,         LU3 RU3,            &kp                                  )
-CUSTOM_COMBO(  lu2ru2,         LU2 RU2,            &kp                                  )
-CUSTOM_COMBO(  lu1ru1,         LU1 RU1,            &kp                                  )
-*/
+ADD_COMBO(1, LU5 RU5,            &kp EXCL,                      LAYERS_NORMAL)
+ADD_COMBO(0, LU4 RU5,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(0, LU3 RU3,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(0, LU2 RU2,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(0, LU1 RU1,            XXXXXXXXXX,                    LAYERS_NORMAL)
 
-CUSTOM_COMBO(  lh5rh5,         LH5 RH5,            &sk LCTRL                            )
-CUSTOM_COMBO(  lh4rh4,         LH4 RH4,            &sk LALT                             )
-CUSTOM_COMBO(  lh3rh3,         LH3 RH3,            &sk LGUI                             )
-CUSTOM_COMBO(  lh2rh2,         LH2 RH2,            &sk LSHIFT                           )
-CUSTOM_COMBO(  lh1rh1,         LH1 RH1,            &sk LHYPER                           )
+ADD_COMBO(1, LH5 RH5,            &sk LCTRL,                     LAYERS_NORMAL)
+ADD_COMBO(1, LH4 RH4,            &sk LALT,                      LAYERS_NORMAL)
+ADD_COMBO(1, LH3 RH3,            &sk LGUI,                      LAYERS_NORMAL)
+ADD_COMBO(1, LH2 RH2,            &sk LSHIFT,                    LAYERS_NORMAL)
+ADD_COMBO(1, LH1 RH1,            &sk LHYPER,                    LAYERS_NORMAL)
 
-CUSTOM_COMBO(  ll5rl5,         LL5 RL5,            &kp Y_UNDO                           )
-CUSTOM_COMBO(  ll4rl4,         LL4 RL4,            &kp Y_CUT                            )
-CUSTOM_COMBO(  ll3rl3,         LL3 RL3,            &kp Y_COPY                           )
-CUSTOM_COMBO(  ll2rl2,         LL2 RL2,            &kp Y_PASTE                          )
-CUSTOM_COMBO(  ll1rl1,         LL1 RL1,            &sk LMEH                             )
+ADD_COMBO(1, LL5 RL5,            &kp Y_UNDO,                    LAYERS_NORMAL)
+ADD_COMBO(1, LL4 RL4,            &kp Y_CUT,                     LAYERS_NORMAL)
+ADD_COMBO(1, LL3 RL3,            &kp Y_COPY,                    LAYERS_NORMAL)
+ADD_COMBO(1, LL2 RL2,            &kp Y_PASTE,                   LAYERS_NORMAL)
+ADD_COMBO(1, LL1 RL1,            &sk LMEH,                      LAYERS_NORMAL)
 
-/**
-CUSTOM_COMBO(  lt3rt3,         LT3 RT3,            &kp GLOBE                            )
-*/
-CUSTOM_COMBO(  lt2rt2,         LT2 RT2,            &caps_word                           )
-CUSTOM_COMBO(  lt1rt1,         LT1 RT1,            &kp CAPS                             )
-
-/// two-handed: chrome extension combos
-/**
-CUSTOM_COMBO(  lt1ru1,         LT1 RU1,            &kp                                  )
-*/
-CUSTOM_COMBO(  lt1ru2,         LT1 RU2,            &kp Y_CHROME_TGE_CLOSE_UNGROUPED     )
-/**
-CUSTOM_COMBO(  lt1ru3,         LT1 RU3,            &kp                                  )
-*/
-CUSTOM_COMBO(  lt1ru4,         LT1 RU4,            &kp Y_CHROME_TGE_CLOSE_OTHERS        )
-CUSTOM_COMBO(  lt1ru5,         LT1 RU5,            &kp Y_CHROME_DP_PARANOID             )
-
-CUSTOM_COMBO(  lt1rh1,         LT1 RH1,            &kp Y_CHROME_TGE_MOVE_GRP_TO_LEFT    )
-CUSTOM_COMBO(  lt1rh2,         LT1 RH2,            &kp Y_CHROME_TGE_CLOSE_TO_LEFT       )
-CUSTOM_COMBO(  lt1rh3,         LT1 RH3,            &kp Y_CHROME_TGE_CLOSE_TO_RIGHT      )
-CUSTOM_COMBO(  lt1rh4,         LT1 RH4,            &kp Y_CHROME_TGE_MOVE_GRP_TO_RIGHT   )
-/**
-CUSTOM_COMBO(  lt1rh5,         LT1 RH5,            &kp                                  )
-*/
-
-CUSTOM_COMBO(  lt1rl1,         LT1 RL1,            &kp Y_CHROME_TN_TOGGLE               )
-/**
-CUSTOM_COMBO(  lt1rl2,         LT1 RL2,            &m_vc_reload_l                       )
-CUSTOM_COMBO(  lt1rl3,         LT1 RL3,            &m_vc_reload_r                       )
-CUSTOM_COMBO(  lt1rl4,         LT1 RL4,            &kp                                  )
-CUSTOM_COMBO(  lt1rl5,         LT1 RL5,            &kp                                  )
-*/
-
-CUSTOM_COMBO(  rt1lu5,         RT1 LU5,            &kp Y_CHROME_QR_GENERATE             )
-CUSTOM_COMBO(  rt1lu4,         RT1 LU4,            &kp Y_CHROME_TGE_MOVE_GRP_TO_WIN     )
-CUSTOM_COMBO(  rt1lu3,         RT1 LU3,            &kp Y_CHROME_TGE_GROUP_UNGROUPED     )
-CUSTOM_COMBO(  rt1lu2,         RT1 LU2,            &kp Y_CHROME_DR_ACTIVATE             )
-CUSTOM_COMBO(  rt1lu1,         RT1 LU1,            &kp Y_CHROME_TGE_ACTIVATE            )
-
-CUSTOM_COMBO(  rt1lh5,         RT1 LH5,            &kp Y_CHROME_TGE_TOGGLE_ALL_GROUPS   )
-CUSTOM_COMBO(  rt1lh4,         RT1 LH4,            &kp Y_CHROME_TGE_SAVE_GROUP          )
-CUSTOM_COMBO(  rt1lh3,         RT1 LH3,            &kp Y_CHROME_DR_TOGGLE               )
-CUSTOM_COMBO(  rt1lh2,         RT1 LH2,            &kp Y_CHROME_TGE_GO_GROUP_FIRST      )
-CUSTOM_COMBO(  rt1lh1,         RT1 LH1,            &kp Y_CHROME_TGE_GO_GROUP_LAST       )
-
-/**
-CUSTOM_COMBO(  rt1ll5,         RT1 LL5,            &kp                                  )
-*/
-CUSTOM_COMBO(  rt1ll4,         RT1 LL4,            &kp Y_CHROME_TGE_CLOSE_GROUP         )
-CUSTOM_COMBO(  rt1ll3,         RT1 LL3,            &kp Y_CHROME_TGE_TOGGLE_CURR_GROUP   )
-/**
-CUSTOM_COMBO(  rt1ll2,         RT1 LL2,            &kp                                  )
-CUSTOM_COMBO(  rt1ll1,         RT1 LL1,            &kp                                  )
-*/
-
+ADD_COMBO(0, LT3 RT3,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(1, LT2 RT2,            &caps_word,                    LAYERS_NORMAL)
+ADD_COMBO(1, LT1 RT1,            &kp CAPS,                      LAYERS_NORMAL)

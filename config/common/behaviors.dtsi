@@ -1,51 +1,50 @@
-#define CUSTOM_HELPER_STRINGIFY(x) #x
-
-#define CUSTOM_LAYER(layer, display_name, layer_bindings) \
+// For layers without sensor bindings
+#define CUSTOM_LAYER(layer_name, layer_bindings) \
 / { \
   keymap { \
     compatible = "zmk,keymap"; \
-    layer { \
-      display-name = display_name; \
+    layer_##layer_name { \
+      display-name = #layer_name; \
       bindings = <layer_bindings>; \
     }; \
   }; \
 };
 
-#define CUSTOM_LAYER2(layer, display_name, layer_bindings, sensor_bindings) \
+// For layers with sensor bindings
+#define CUSTOM_LAYER_WITH_SENSOR(layer_name, layer_bindings, sensor_bindings) \
 / { \
   keymap { \
     compatible = "zmk,keymap"; \
-    layer { \
-      display-name = display_name; \
+    layer_##layer_name { \
+      display-name = #layer_name; \
       bindings = <layer_bindings>; \
       sensor-bindings = <sensor_bindings>; \
     }; \
   }; \
 };
 
-#define CUSTOM_COMBO(name, keypos, combo_bindings) \
-/ { \
-  combos { \
-    compatible = "zmk,combos"; \
-    combo_##name { \
-      timeout-ms = <30>; \
-      slow-release; \
-      key-positions = <keypos>; \
-      bindings = <combo_bindings>; \
-      layers = <CUSTOM_COMBO_LAYERS>; \
-    }; \
-  }; \
-};
+// Combo macros: entry
+#define ADD_COMBO(enabled, keypos, combo_bindings, layer_tokens) \
+    _ADD_COMBO(enabled, keypos, combo_bindings, layer_tokens, __COUNTER__)
 
-#define CUSTOM_COMBO_PANIC(name, keypos, combo_bindings) \
+// Combo macros: helpers
+#define _ADD_COMBO(enabled, keypos, combo_bindings, layer_tokens, name) \
+    _ADD_COMBO_ENABLED_##enabled(name, keypos, combo_bindings, layer_tokens)
+#define _ADD_COMBO_ENABLED_1(name, keypos, combo_bindings, layer_tokens) \
+    CUSTOM_COMBO(name, keypos, combo_bindings, layer_tokens)
+#define _ADD_COMBO_ENABLED_0(...)
+
+// Combo macros: dtsi
+#define CUSTOM_COMBO(name, keypos, combo_bindings, layer_tokens) \
 / { \
   combos { \
     compatible = "zmk,combos"; \
-    combo_##name { \
+    cb##name { \
       timeout-ms = <30>; \
       slow-release; \
       key-positions = <keypos>; \
       bindings = <combo_bindings>; \
+      layers = <layer_tokens>; \
     }; \
   }; \
 };
@@ -101,6 +100,23 @@
   }; \
 };
 
+#define MOD_LANY        MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL
+#define MOD_RANY        MOD_RGUI|MOD_RSFT|MOD_RALT|MOD_RCTL
+#define MOD_ANY         MOD_LANY|MOD_RANY
+
+#define MM(name, ON_TAP, ON_MOD) \
+/ { \
+  behaviors { \
+    mm_##name: mm_##name { \
+      compatible = "zmk,behavior-mod-morph"; \
+      #binding-cells = <0>; \
+      bindings = ON_TAP, ON_MOD; \
+      mods = <(MOD_ANY)>; \
+      keep-mods = <(MOD_ANY)>; \
+    }; \
+  }; \
+};
+
 // hold for momentary layer, tap to toggle a different layer
 #define MT(mo, tog) &ht_mo_tog mo tog
 
@@ -109,6 +125,22 @@
 
 // hold for momentary layer, tap to go to a different layer
 #define MTO(mo, to) &ht_mo_to mo to
+
+// ------------------------------------------------------------
+
+// TODO: implement kt_off after updating zmk
+/*
+/ {
+    behaviors {
+        kt_off: key_toggle_off_only {
+            compatible = "zmk,behavior-key-toggle";
+            #binding-cells = <1>;
+            display-name = "Key Toggle Off";
+            toggle-mode = "off";
+        };
+    };
+};
+*/
 
 // ------------------------------------------------------------
 
@@ -134,27 +166,31 @@
   continue-list = <UNDERSCORE BACKSPACE DELETE MINUS DOT>;
 };
 
-/ {
-  behaviors {
-    // mod-morphs
-    krtab: key_repeat_tab {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&key_repeat>, <&kp TAB>;
-      mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
-      keep-mods = <(MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)>;
-    };
-  };
-};
-
 // hold for a momentary layer, tap to switch to a layer
 HT(mo_to, 200, <&mo>, <&to>)
 
 // hold for a momentary layer, tap to toggle a layer
 HT(mo_tog, 200, <&mo>, <&tog>)
 
+// hold for a momentary layer, tap to toggle a layer
+HT(mo_sl, 200, <&mo>, <&sl>)
+
 // hold for a momentary layer, tap to key press
 HT(mo_kp, 180, <&mo>, <&kp>)
 
 // hold for a momentary layer, tap to set sticky key
 HT(mo_sk, 180, <&mo>, <&sk>)
+
+// For LT1: Mod-Morph
+// Tap:       &key_repeat
+// Mod-Morph: Mod + &kp TAB
+MM(repeat, <&key_repeat>, <&kp TAB>)
+
+/*
+ * Reserved: not really good, makes it hard to do Cmd+Enter with right hand only.
+// For RT1: Hold-Tap and Mod-Morph
+// Tap:       &kp RETURN
+// Hold:      &mo CODING
+// Mod-Morph: Mod + &kp TAB
+MM(enter, <&ht_mo_kp NA; RETURN>, <&kp TAB>)
+*/

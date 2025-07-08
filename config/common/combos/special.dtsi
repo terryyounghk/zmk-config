@@ -1,24 +1,44 @@
 /// ---------------------------------------------------------------------------
-/// Combo: special combos
+/// Combo: Panic (available in all layers, including AFK, Switch, etc)
 
-CUSTOM_COMBO(  lu4lu3lh2,      LU4 LU3 LH2,        &bootloader                          )
-CUSTOM_COMBO(  ru4ru3rh2,      RU4 RU3 RH2,        &bootloader                          )
+ADD_COMBO(1, LL5 LL2 RL5 RL2,    &tog AFK,                      LAYERS_ALL)
 
-CUSTOM_COMBO(  lu4lu3lh1,      LU4 LU3 LH1,        &sys_reset                           )
-CUSTOM_COMBO(  ru4ru3rh1,      RU4 RU3 RH1,        &sys_reset                           )
+ADD_COMBO(1, RH4 RH2,            &m_reset_layers,               LAYERS_ALL)
+ADD_COMBO(1, LH4 LH2,            &m_reset_layers,               LAYERS_ALL)
 
-CUSTOM_COMBO(  lh4lh2,         LH4 LH2,            &tog NUMBERS                         )
-CUSTOM_COMBO(  rh4rh2,         RH4 RH2,            &tog NUMBERS                         )
+ADD_COMBO(1, LH3 LH1,            &kp Y_NEXT_WINDOW,             LAYERS_ALL)
+ADD_COMBO(1, RH3 RH1,            &kp Y_NEXT_WINDOW,             LAYERS_ALL)
 
-CUSTOM_COMBO(  lh3lh1,         LH3 LH1,            &kp Y_APPLICATION_WINDOWS            )
-CUSTOM_COMBO(  rh3rh1,         RH3 RH1,            &kp Y_NEXT_WINDOW                    )
+ADD_COMBO(1, LH4 LH1,            &kp Y_NEXT_APPLICATION,        LAYERS_ALL)
+ADD_COMBO(1, RH4 RH1,            &kp Y_NEXT_APPLICATION,        LAYERS_ALL)
 
-CUSTOM_COMBO(  ll4ll2,         LL4 LL2,            &m_release_mods                      )
-CUSTOM_COMBO(  rl4rl2,         RL4 RL2,            &m_release_mods                      )
+/// ---------------------------------------------------------------------------
+/// Combo: System
 
-CUSTOM_COMBO(  lu4lu2ru4ru2,   LU4 LU2 RU4 RU2,    &bt BT_CLR                           )
+ADD_COMBO(1, LU4 LU3 LU2,        &kp Y_FORCE_QUIT,              LAYERS_NORMAL)
+ADD_COMBO(1, LH4 LH3 LH2,        &kp K_MUTE,                    LAYERS_NORMAL)
+ADD_COMBO(1, LL4 LL3 LL2,        &kp Y_LOCK_SCREEN,             LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh2ru4,         RH2 RU4,            &kp MINUS                            )
-CUSTOM_COMBO(  ru2rh4,         RU2 RH4,            &kp MINUS                            )
-CUSTOM_COMBO(  lh2lu4,         LH2 LU4,            &kp EQUAL                            )
-CUSTOM_COMBO(  lu2lh4,         LU2 LH4,            &kp EQUAL                            )
+ADD_COMBO(1, RU4 RU3 RU2,        &kp Y_FORCE_QUIT,              LAYERS_NORMAL)
+ADD_COMBO(1, RH4 RH3 RH2,        &kp K_MUTE,                    LAYERS_NORMAL)
+ADD_COMBO(1, RL4 RL3 RL2,        &kp Y_LOCK_SCREEN,             LAYERS_NORMAL)
+
+/// ---------------------------------------------------------------------------
+/// Combo: Keyboard
+
+ADD_COMBO(1, RU4 RU3 RU1,        &bootloader,                   LAYERS_NORMAL)
+ADD_COMBO(1, RH4 RH3 RH1,        &sys_reset,                    LAYERS_NORMAL)
+ADD_COMBO(1, RL4 RL3 RL1,        &bt BT_CLR,                    LAYERS_NORMAL)
+
+ADD_COMBO(1, LU4 LU3 LU1,        &bootloader,                   LAYERS_NORMAL)
+ADD_COMBO(1, LH4 LH3 LH1,        &sys_reset,                    LAYERS_NORMAL)
+ADD_COMBO(1, LL4 LL3 LL1,        &bt BT_CLR,                    LAYERS_NORMAL)
+
+/// ---------------------------------------------------------------------------
+/// Combo: Misc
+
+ADD_COMBO(1, RU2 RH4,            &kp MINUS,                     LAYERS_NORMAL)
+ADD_COMBO(1, LU2 LH4,            &kp EQUAL,                     LAYERS_NORMAL)
+
+ADD_COMBO(1, RH2 RU4,            &kp MINUS,                     LAYERS_NORMAL)
+ADD_COMBO(1, LH2 LU4,            &kp EQUAL,                     LAYERS_NORMAL)

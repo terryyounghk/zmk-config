@@ -1,0 +1,127 @@
+/// ---------------------------------------------------------------------------
+/// Combo: Sticky Layer: Coding
+
+ADD_COMBO(1, LT1 RT2,                  &sl CODING,                   LAYERS_NORMAL)
+
+/// ---------------------------------------------------------------------------
+/// Combo: Coding: tmux
+
+// tmux: leader
+ADD_COMBO(1, BK_TMUX_LLDR,             TMUX_PFX,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_RLDR,             TMUX_PFX,                     LAYERS_NORMAL)
+
+// tmux: window
+ADD_COMBO(1, BK_TMUX_CBK_L RU1,        &m_tmux_move_window_left,     LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RU2,        &m_tmux_select_window_7,      LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RU3,        &m_tmux_select_window_8,      LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RU4,        &m_tmux_select_window_9,      LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RU5,        &m_tmux_move_window_right,    LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_TMUX_CBK_L RH1,        &m_tmux_select_window_prev,   LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RH2,        &m_tmux_select_window_4,      LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RH3,        &m_tmux_select_window_5,      LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RH4,        &m_tmux_select_window_6,      LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RH5,        &m_tmux_select_window_next,   LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_TMUX_CBK_L RL1,        &m_tmux_pane_next,            LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RL2,        &m_tmux_select_window_1,      LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RL3,        &m_tmux_select_window_2,      LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RL4,        &m_tmux_select_window_3,      LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_L RL5,        &m_tmux_fzf_url,              LAYERS_NORMAL)
+
+// tmux: features
+ADD_COMBO(1, BK_TMUX_CBK_R LU5,        &m_tmux_detach,               LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LU4,        &m_tmux_kill_window,          LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LU3,        &m_tmux_move_window,          LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LU2,        &m_tmux_rename_window,        LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LU1,        &m_tmux_rotate_window,        LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_TMUX_CBK_R LH5,        &m_tmux_window_layout,        LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LH4,        &m_tmux_reload_config,        LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LH3,        &m_tmux_command,              LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LH2,        &m_tmux_fingers_jump,         LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LH1,        &m_tmux_pane_even_size,       LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_TMUX_CBK_R LL5,        &m_tmux_zoom_active_pane,     LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LL4,        &m_tmux_zoom_prev_active,     LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LL3,        &m_tmux_copy_mode,            LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LL2,        &m_tmux_fzf,                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_TMUX_CBK_R LL1,        &m_tmux_resize_pane,          LAYERS_NORMAL)
+
+/// ---------------------------------------------------------------------------
+/// Combo: Coding: neovim
+
+ADD_COMBO(1, BK_NEOVIM_R LU5,          &m_nvim_quit_all,             LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LU4,          &m_nvim_edit_macro,           LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LU3,          &m_nvim_prev_tab,             LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LU2,          &m_nvim_next_tab,             LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LU1,          &kp Y_NVIM_TERMINAL,          LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_NEOVIM_L RU1,          &m_nvim_workspace_symbols,    LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RU2,          &m_nvim_redo,                 LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RU3,          &m_nvim_quickfix_list,        LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RU4,          &m_nvim_overseer,             LAYERS_NORMAL) ADD_COMBO(1, BK_NEOVIM_L RU5,          &m_nvim_insert_calc_results,  LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_NEOVIM_R LH5,          &m_nvim_copilot_chat,         LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LH4,          &kp Y_NVIM_SAVE,              LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LH3,          &m_nvim_dadbod_ui,            LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LH2,          &m_nvim_fzflua,               LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LH1,          &m_nvim_buffer_lines,         LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_NEOVIM_L RH1,          &kp Y_NVIM_INCREMENT,         LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RH2,          &kp Y_NVIM_SCROLL_DOWN,       LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RH3,          &kp Y_NVIM_SCROLL_UP,         LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RH4,          &m_nvim_kulala,               LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RH5,          &m_nvim_toggle_outline,       LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_NEOVIM_R LL5,          &m_nvim_undotree,             LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LL4,          &m_nvim_trouble,              LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LL3,          &m_nvim_cheatsheet,           LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LL2,          &m_nvim_paste_last_yanked,    LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_R LL1,          &m_nvim_fzf_buffers,          LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_NEOVIM_L RL1,          &kp Y_NVIM_DECREMENT,         LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RL2,          &m_nvim_todo_list,            LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RL3,          &kp Y_NVIM_COMMENT,           LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RL4,          &m_nvim_goto_last_changed,    LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RL5,          &m_nvim_annotate,             LAYERS_NORMAL)
+
+/// ---------------------------------------------------------------------------
+/// Combo: Coding: syntax, snippets
+/// NOTE: ALL DISAVLED FOR NOW BUT RESERVED
+
+ADD_COMBO(0, BK_CODING_R LU5,          &m_code_esc_dqt,              LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LU4,          &m_code_lte,                  LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LU3,          &m_code_esc_fslh,             LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LU2,          &m_code_literal,              LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LU1,          &m_code_arrow,                LAYERS_NORMAL)
+
+ADD_COMBO(0, BK_CODING_R LH5,          &m_code_async_fn_open,        LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LH4,          &m_code_fn_call_arrow_open,   LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LH3,          &m_code_fn_arrow_open,        LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LH2,          &m_code_fn_call_arrow,        LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LH1,          &m_code_fn_arrow,             LAYERS_NORMAL)
+
+ADD_COMBO(0, BK_CODING_R LL5,          XXXXXXXXXX,                   LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LL4,          XXXXXXXXXX,                   LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LL3,          &m_code_md_code_open,         LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LL2,          &m_code_html_comment_open,    LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_R LL1,          &m_code_html_comment_close,   LAYERS_NORMAL)
+
+ADD_COMBO(0, BK_CODING_L RU1,          &m_code_increment_assign,     LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RU2,          &m_code_decrement_assign,     LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RU3,          &m_code_comment_ml_open,      LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RU4,          &m_code_gte,                  LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RU5,          XXXXXXXXXX,                   LAYERS_NORMAL)
+
+ADD_COMBO(0, BK_CODING_L RH1,          &m_code_increment,            LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RH2,          &m_code_and,                  LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RH3,          &m_code_equal,                LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RH4,          XXXXXXXXXX,                   LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RH5,          XXXXXXXXXX,                   LAYERS_NORMAL)
+
+ADD_COMBO(0, BK_CODING_L RL1,          &m_code_decrement,            LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RL2,          &m_code_or,                   LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RL3,          &m_code_not_equal,            LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RL4,          XXXXXXXXXX,                   LAYERS_NORMAL)
+ADD_COMBO(0, BK_CODING_L RL5,          XXXXXXXXXX,                   LAYERS_NORMAL)

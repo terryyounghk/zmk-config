@@ -1,35 +1,45 @@
-// layer indices - used in layer switching in keymap
 #define QWERTY   0
 #define NUMBERS  1
 #define NUMPAD   2
 #define SYMBOLS  3
 #define CODING   4
-#define CONTROLS 5
-#define SWITCH   6
-#define MOUSE    7
-#define SCROLL   8
-#define SNIPE    9
-#define FUNCS    10
+#define NAV      5
+#define CONTROLS 6
+#define SWITCH   7
+#define MOUSE    8
+#define SCROLL   9
+#define SNIPE    10
 #define AFK      11
 
-// reserved
-#define LAYERS                0 1 2 3 4 5 6 7 8 9 10 11
+#define LAYERS_ALL \
+        QWERTY   \
+        NUMBERS  \
+        NUMPAD   \
+        SYMBOLS  \
+        CODING   \
+        NAV      \
+        CONTROLS \
+        SWITCH   \
+        MOUSE    \
+        SCROLL   \
+        SNIPE    \
+        AFK
 
-// do not include the Switch keymap layer for combos
-#define CUSTOM_COMBO_LAYERS   0 1 2 3 4 5 7 8 9 10 11
+#define LAYERS_NORMAL   \
+        QWERTY   \
+        NUMBERS  \
+        NUMPAD   \
+        SYMBOLS  \
+        CODING   \
+        NAV      \
+        CONTROLS \
+        MOUSE    \
+        SCROLL   \
+        SNIPE    \
+        AFK
 
 // This is my 5-column keymap, defined with left and right hand sides separately
 // as different keyboards may have additional keys either on the left or right side on each split keyboard side
-
-#define Y_LT3        &ht_mo_tog NUMPAD FUNCS
-#define Y_LT2        &td_lshift
-#define Y_LT1        &krtab
-#define Y_RT1        &ht_mo_kp CODING RETURN
-#define Y_RT2        &ht_mo_kp SYMBOLS SPACE
-#define Y_RT3        &ht_mo_kp FUNCS TAB
-#define Y_SEMI       &td_semi
-#define Y_FSLH       &ht_mo_kp SNIPE FSLH
-#define Y_COMMA      &td_comma
 
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
 #define QWERTY_UL \
@@ -73,7 +83,7 @@
                                                                                                            &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define NUMBERS_LL \
-                          &kp Y_YEN      &kp Y_EURO     &kp Y_POUND    &kp Y_DEGREE   &kp Y_DIVIDE
+                          &kp Y_YEN      &kp Y_EURO     &kp Y_POUND    &kp UNDER      &kp COLON
 #define NUMBERS_LR \
                                                                                                            &kp PLUS       &kp MINUS      &kp COMMA      &kp DOT        &kp FSLH
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
@@ -96,12 +106,12 @@
 #define NUMPAD_UL \
                           &kp F1         &kp F2         &kp F3         &kp F4         &kp F5
 #define NUMPAD_UR \
-                                                                                                           &td_star       &kp N7         &kp N8         &kp N9         &td_plus
+                                                                                                           &td_fslh       &kp N7         &kp N8         &kp N9         &td_plus
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define NUMPAD_HL \
                           &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
 #define NUMPAD_HR \
-                                                                                                           &kp SPACE      &kp N4         &kp N5         &kp N6         &td_minus
+                                                                                                           &td_star       &kp N4         &kp N5         &kp N6         &td_minus
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define NUMPAD_LL \
                           &kp F11        &kp F12        &kp F13        &kp F14        &kp F15
@@ -111,7 +121,7 @@
 #define NUMPAD_TL \
                                                         Y_LT3          Y_LT2          Y_LT1
 #define NUMPAD_TR \
-                                                                                                           &kp N0         Y_RT2          Y_RT3
+                                                                                                           Y_RT1          Y_RT2_NP       Y_RT3
                     /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
 
 #define NUMPAD_6_UL      &kp UNDER         NUMPAD_UL
@@ -137,7 +147,7 @@
 #define SYMBOLS_LL \
                           &kp BSLH       &kp COLON      &kp UNDER      &kp MINUS      &kp PLUS
 #define SYMBOLS_LR \
-                                                                                                           &kp COLON      &kp PIPE       &kp COMMA      &kp DOT        &kp FSLH
+                                                                                                           &kp SQT        &kp PIPE       &kp COMMA      &kp DOT        &kp FSLH
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define SYMBOLS_TL \
                                                         Y_LT3          Y_LT2          Y_LT1
@@ -153,21 +163,22 @@
 #define SYMBOLS_6_LR                        SYMBOLS_LR        &td_lalt
 
 
+
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
 #define CODING_UL \
-                          &kp CARET      &kp AT         &kp LPAR       &kp RPAR       &kp DOLLAR
+                          LU5_CODING     LU4_CODING     LU3_CODING     LU2_CODING     LU1_CODING
 #define CODING_UR \
-                                                                                                           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        &kp GRAVE
+                                                                                                           RU1_CODING     RU2_CODING     RU3_CODING     RU4_CODING     RU5_CODING
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define CODING_HL \
-                          &kp PIPE       &kp HASH       &kp LBKT       &kp RBKT       &kp TILDE
+                          LH5_CODING     LH4_CODING     LH3_CODING     LH2_CODING     LH1_CODING
 #define CODING_HR \
-                                                                                                           &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp COLON
+                                                                                                           RH1_CODING     RH2_CODING     RH3_CODING     RH4_CODING     RH5_CODING
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define CODING_LL \
-                          &kp EXCL       &kp BSLH       &kp LBRC       &kp RBRC       &kp FSLH
+                          LL5_CODING     LL4_CODING     LL3_CODING     LL2_CODING     LL1_CODING
 #define CODING_LR \
-                                                                                                           &kp PERCENT    &kp AMPS       &kp COMMA      &kp DOT        &kp STAR
+                                                                                                           RL1_CODING     RL2_CODING     RL3_CODING     RL4_CODING     RL5_CODING
                     /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
 #define CODING_TL \
                                                         Y_LT3          Y_LT2          Y_LT1
@@ -176,11 +187,41 @@
                     /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
 
 #define CODING_6_UL       &kp UNDER         CODING_UL
-#define CODING_6_UR                         CODING_UR         &td_apos
+#define CODING_6_UR                         CODING_UR        &td_apos
 #define CODING_6_HL       &td_lctrl         CODING_HL
-#define CODING_6_HR                         CODING_HR         &td_lctrl
+#define CODING_6_HR                         CODING_HR        &td_lctrl
 #define CODING_6_LL       &td_lgui          CODING_LL
-#define CODING_6_LR                         CODING_LR         &td_lalt
+#define CODING_6_LR                         CODING_LR        &td_lalt
+
+
+                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
+#define NAV_UL \
+                          Y_RM           &kp END        &kp PG_UP      &kp PG_DN      &kp HOME
+#define NAV_UR \
+                                                                                                          &kp HOME        &kp PG_DN      &kp PG_UP      &kp END        Y_RM
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define NAV_HL \
+                          &kt LMEH       &kp RIGHT      &kp UP         &kp DOWN       &kp LEFT
+#define NAV_HR \
+                                                                                                          &kp LEFT        &kp DOWN       &kp UP         &kp RIGHT      &kt LMEH
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define NAV_LL \
+                          &kt LCTRL      &kt LALT       &kt LGUI       &kt LSHIFT     &kt LHYPER
+#define NAV_LR \
+                                                                                                          &kt LHYPER      &kt LSHIFT     &kt LGUI       &kt LALT       &kt LCTRL
+                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
+#define NAV_TL \
+                                                        Y_LT3          Y_LT2          Y_LT1
+#define NAV_TR \
+                                                                                                           Y_RT1          Y_RT2          Y_RT3
+                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
+
+#define NAV_6_UL          &kp UNDER         NAV_UL
+#define NAV_6_UR                            NAV_UR         &td_apos
+#define NAV_6_HL          &td_lctrl         NAV_HL
+#define NAV_6_HR                            NAV_HR         &td_lctrl
+#define NAV_6_LL          &td_lgui          NAV_LL
+#define NAV_6_LR                            NAV_LR         &td_lalt
 
 
 
@@ -206,88 +247,14 @@
                                                                                                            &mkp LCLK      &mkp RCLK      &mkp MCLK
                     /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
 
-#define CONTROLS_6_UL     &sys_reset        CONTROLS_UL
-#define CONTROLS_6_UR                       CONTROLS_UR       &sys_reset
+#define CONTROLS_6_UL     &rgb_ug RGB_BRI   CONTROLS_UL
+#define CONTROLS_6_UR                       CONTROLS_UR       &rgb_ug RGB_SPI
 #define CONTROLS_6_HL     &rgb_ug RGB_TOG   CONTROLS_HL
 #define CONTROLS_6_HR                       CONTROLS_HR       &rgb_ug RGB_EFF
-#define CONTROLS_6_LL     &bootloader       CONTROLS_LL
-#define CONTROLS_6_LR                       CONTROLS_LR       &bootloader
+#define CONTROLS_6_LL     &rgb_ug RGB_BRD   CONTROLS_LL
+#define CONTROLS_6_LR                       CONTROLS_LR       &rgb_ug RGB_SPD
 
 
-/**
- * This is very specific to the "IINE Keyboard and Mouse Adapter for Switch"
- * Product link: https://www.iine.top/index.php?m=content&c=index&a=show&catid=205&id=181
- *
- * There is very little to no documentation, and this accessory does not allow custom mapping.
- * So the comment below is a mapping of the adapter itself for reference,
- * then my own actual mapping in this keyboard only corresponds to the IINE accessory's existing mapping.
- * Disclaimer: I only own a Switch, to the Xbox/PS4 mapping may be inaccurate.
- *
- * LJ = Left Joystick
- * RJ = Right Joystick
- * DP = D-Pad
- *
- *                      Switch              Xbox One            PS4
- * Mouse controls:
- * ================================================================================
- * Right Button         ZL                  LT                  L2
- * Left Button          ZR                  RT                  R2
- * Middle Button        R3                  R3                  R3
- * Move Up              RJ Up               RJ Up               RJ Up
- * Move Left            RJ Left             RJ Left             RJ Left
- * Move Down            RJ Down             RJ Down             RJ Down
- * Move Right           RJ Right            RJ Right            RJ Right
- *
- * Keyboard controls:
- * ================================================================================
- * Q                    L1                  L1                  L1
- * E                    R1                  R1                  R1
- * F1                   DP Up               DP Up               DP Up
- * 1                    DP Left             DP Left             DP Left
- * 2                    DP Down             DP Down             DP Down
- * 3                    DP Right            DP Right            DP Right
- * R                    Y                   Y                   ∆
- * F                    X                   X                   ☐
- * C                    B                   B                   ◯
- * Space                A                   A                   X
- * W                    LJ Up               LJ Up               LJ Up
- * A                    LJ Left             LJ Left             LJ Left
- * S                    LJ Down             LJ Down             LJ Down
- * D                    LJ Right            LJ Right            LJ Right
- * Left Shift           L3                  L3                  L3
- * Tab                  -                   View                Option
- * Esc                  Home                Home                PS
- * -                    Capture             Share               Share
- * Caps Lock            +                   Menu                /
- */
-
-#define NS_REGISTER &kp LC(N2) // Used for IINE Adapter to register as Switch Controller
-#define NS_L1       &kp Q
-#define NS_R1       &kp E
-#define NS_ZL       &mkp RCLK
-#define NS_ZR       &mkp LCLK
-#define NS_L3       &kp LSHIFT
-#define NS_R3       &mkp MCLK
-#define NS_LJ_U     &kp W
-#define NS_LJ_L     &kp A
-#define NS_LJ_D     &kp S
-#define NS_LJ_R     &kp D
-#define NS_RJ_U     &mmv MV_U
-#define NS_RJ_L     &mmv MV_L
-#define NS_RJ_D     &mmv MV_D
-#define NS_RJ_R     &mmv MV_R
-#define NS_DP_U     &kp F1
-#define NS_DP_L     &kp N1
-#define NS_DP_D     &kp N2
-#define NS_DP_R     &kp N3
-#define NS_A        &kp SPACE
-#define NS_B        &kp C
-#define NS_X        &kp F
-#define NS_Y        &kp R
-#define NS_MINUS    &kp TAB
-#define NS_PLUS     &kp CAPS
-#define NS_HOME     &kp ESC
-#define NS_CAPTURE  &kp TILDE
 
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
 #define SWITCH_UL \
@@ -317,67 +284,6 @@
 #define SWITCH_6_HR                            SWITCH_HR             &none
 #define SWITCH_6_LL           &none            SWITCH_LL
 #define SWITCH_6_LR                            SWITCH_LR             &none
-
-
-                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
-#define FUNCS_UL \
-                          &sl CODING     &sl SYMBOLS    &sl NUMPAD     &sl NUMBERS    &to SNIPE
-#define FUNCS_UR \
-                                                                                                           &to SNIPE      &sl NUMPAD     &sl NUMBERS    &sl SYMBOLS    &sl CODING
-                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
-#define FUNCS_HL \
-                          &to CODING     &to SYMBOLS    &to NUMPAD     &to QWERTY     &to CONTROLS
-#define FUNCS_HR \
-                                                                                                           &to CONTROLS   &to QWERTY     &to NUMBERS    &to SYMBOLS    &to CODING
-                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
-#define FUNCS_LL \
-                          &bootloader    &sys_reset     &to SWITCH     &to MOUSE      &to SCROLL
-#define FUNCS_LR \
-                                                                                                           &kp F11        &kp F12        &to SNIPE      &sys_reset     &bootloader
-                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
-#define FUNCS_TL \
-                                                        Y_LT3          Y_LT2          Y_LT1
-#define FUNCS_TR \
-                                                                                                           Y_RT1          Y_RT2          Y_RT3
-                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
-
-#define FUNCS_6_UL        &rgb_ug RGB_BRI   FUNCS_UL
-#define FUNCS_6_UR                          FUNCS_UR          &rgb_ug RGB_SPI
-#define FUNCS_6_HL        &rgb_ug RGB_TOG   FUNCS_HL
-#define FUNCS_6_HR                          FUNCS_HR          &rgb_ug RGB_EFF
-#define FUNCS_6_LL        &rgb_ug RGB_BRD   FUNCS_LL
-#define FUNCS_6_LR                          FUNCS_LR          &rgb_ug RGB_SPI
-
-
-                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
-#define AFK_UL \
-                          &none          &none          &none          &none          &none
-#define AFK_UR \
-                                                                                                           &none          &none          &none          &none          &none
-                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
-#define AFK_HL \
-                          &none          &none          &none          &none          &none
-#define AFK_HR \
-                                                                                                           &none          &none          &none          &none          &none
-                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
-#define AFK_LL \
-                          &none          &none          &none          &none          &none
-#define AFK_LR \
-                                                                                                           &none          &none          &none          &none          &none
-                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
-#define AFK_TL \
-                                                        &none          &none          &none
-#define AFK_TR \
-                                                                                                           &none          &none          &none
-                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
-
-#define AFK_6_UL           &none            AFK_UL
-#define AFK_6_UR                            AFK_UR             &none
-#define AFK_6_HL           &none            AFK_HL
-#define AFK_6_HR                            AFK_HR             &none
-#define AFK_6_LL           &none            AFK_LL
-#define AFK_6_LR                            AFK_LR             &none
-
 
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
 #define MOUSE_UL \
@@ -466,3 +372,34 @@
 #define SNIPE_6_HR                         SNIPE_HR          &none
 #define SNIPE_6_LL        &none            SNIPE_LL
 #define SNIPE_6_LR                         SNIPE_LR          &none
+
+
+
+                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
+#define AFK_UL \
+                          &none          &none          &none          &none          &none
+#define AFK_UR \
+                                                                                                           &none          &none          &none          &none          &none
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define AFK_HL \
+                          &none          &none          &none          &none          &none
+#define AFK_HR \
+                                                                                                           &none          &none          &none          &none          &none
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define AFK_LL \
+                          &none          &none          &none          &none          &none
+#define AFK_LR \
+                                                                                                           &none          &none          &none          &none          &none
+                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
+#define AFK_TL \
+                                                        &none          &none          &none
+#define AFK_TR \
+                                                                                                           &none          &none          &none
+                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
+
+#define AFK_6_UL           &none            AFK_UL
+#define AFK_6_UR                            AFK_UR             &none
+#define AFK_6_HL           &none            AFK_HL
+#define AFK_6_HR                            AFK_HR             &none
+#define AFK_6_LL           &none            AFK_LL
+#define AFK_6_LR                            AFK_LR             &none

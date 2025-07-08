@@ -1,24 +1,20 @@
 /// ---------------------------------------------------------------------------
-/// Combo: C + S + RHS /// Capturing: Cleanshot, TextSniper, ...
+/// Combo: Capturing: Cleanshot, TextSniper, ...
 
-/**
-CUSTOM_COMBO(  ll3lh4ru1,      LL3 LH4 RU1,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  ll3lh4ru2,      LL3 LH4 RU2,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  ll3lh4ru3,      LL3 LH4 RU3,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  ll3lh4ru4,      LL3 LH4 RU4,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  ll3lh4ru5,      LL3 LH4 RU5,        XXXXXXXXXX                          )
-*/
+ADD_COMBO(1, BK_CAPTURE RU1,        &kp Y_CLEANSHOT_RESTORE_LAST,                LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RU2,        &kp Y_CLEANSHOT_ANNOTATE_LAST,               LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RU3,        &kp Y_CLEANSHOT_CAPTURE_ANNOTATE,            LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RU4,        &kp Y_CLEANSHOT_PIN_TOGGLE,                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RU5,        &kp Y_CLEANSHOT_PIN_LAST,                    LAYERS_NORMAL)
 
-CUSTOM_COMBO(  ll3lh4rh1,      LL3 LH4 RH1,        &kp Y_CLEANSHOT_CAPTURE_AREA        )
-CUSTOM_COMBO(  ll3lh4rh2,      LL3 LH4 RH2,        &kp Y_CLEANSHOT_CAPTURE_FULLSCREEN  )
-CUSTOM_COMBO(  ll3lh4rh3,      LL3 LH4 RH3,        &kp Y_CLEANSHOT_CAPTURE_WINDOW      )
-CUSTOM_COMBO(  ll3lh4rh4,      LL3 LH4 RH4,        &kp Y_CLEANSHOT_CAPTURE_SCROLLING   )
-CUSTOM_COMBO(  ll3lh4rh5,      LL3 LH4 RH5,        &kp Y_CLEANSHOT_ALL_IN_ONE          )
+ADD_COMBO(1, BK_CAPTURE RH1,        &kp Y_CLEANSHOT_CAPTURE_AREA,                LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RH2,        &kp Y_CLEANSHOT_CAPTURE_FULLSCREEN,          LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RH3,        &kp Y_CLEANSHOT_CAPTURE_WINDOW,              LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RH4,        &kp Y_CLEANSHOT_CAPTURE_SCROLLING,           LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RH5,        &kp Y_CLEANSHOT_ALL_IN_ONE,                  LAYERS_NORMAL)
 
-CUSTOM_COMBO(  ll3lh4rl1,      LL3 LH4 RL1,        &kp Y_CLEANSHOT_HISTORY             )
-CUSTOM_COMBO(  ll3lh4rl2,      LL3 LH4 RL2,        &kp Y_CLEANSHOT_OVERLAYS_CLOSE      )
-CUSTOM_COMBO(  ll3lh4rl3,      LL3 LH4 RL3,        &kp Y_TEXTSNIPER_CAPTURE_TEXT       )
-CUSTOM_COMBO(  ll3lh4rl4,      LL3 LH4 RL4,        &kp Y_TEXTSNIPER_READ_QRCODE        )
-/**
-CUSTOM_COMBO(  ll3lh4rl5,      LL3 LH4 RL5,        XXXXXXXXXX                          )
-*/
+ADD_COMBO(1, BK_CAPTURE RL1,        &kp Y_CLEANSHOT_HISTORY,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RL2,        &kp Y_CLEANSHOT_OVERLAYS_CLOSE,              LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RL3,        &kp Y_CLEANSHOT_OVERLAYS_TOGGLE,             LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RL4,        &kp Y_CLEANSHOT_OCR,                         LAYERS_NORMAL)
+ADD_COMBO(1, BK_CAPTURE RL5,        &kp Y_CLEANSHOT_RECORD_SCREEN,               LAYERS_NORMAL)

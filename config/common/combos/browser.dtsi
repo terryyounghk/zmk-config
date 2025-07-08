@@ -1,40 +1,27 @@
 /// ---------------------------------------------------------------------------
-/// Combo: G + ? /// Browser: Gmail: filter phrases
-CUSTOM_COMBO(  rl4rl3rl2,      RL4 RL3 RL2,        &m_is_unread                         )
-CUSTOM_COMBO(  rl4rl3rl1,      RL4 RL3 RL1,        &m_in_inbox                          )
+/// Combo: Browser: Surfingkeys, Gmail, etc
 
-/// ---------------------------------------------------------------------------
-/// Combo: B + ? /// Browser: Surfingkeys: Combos/Macros
-/// some useful keystrokes that's just tedious to type
-/// g0             go to first tab
-/// g$             go to last tab
-/// gx0            close all tabs on left
-/// gx$            close all tabs on right
-/// gxx            close all tabs except current one
-CUSTOM_COMBO(  ll1rh1,         LL1 RH1,            &m_sk_go_first_tab                   )
-CUSTOM_COMBO(  ll1rh2,         LL1 RH2,            &m_sk_x_all_left                     )
-CUSTOM_COMBO(  ll1rh3,         LL1 RH3,            &m_sk_x_all_right                    )
-CUSTOM_COMBO(  ll1rh4,         LL1 RH4,            &m_sk_go_last_tab                    )
-CUSTOM_COMBO(  ll1rh5,         LL1 RH5,            &m_sk_x_all_except                   )
+ADD_COMBO(1, BK_BROWSER LL5,            &m_sk_x_all_left,                       LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER LL4,            &m_sk_x_all_except,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER LL3,            &m_sk_x_all_right,                      LAYERS_NORMAL)
 
-// other useful keystrokes (not implemented as macros/combos here)
-// cf             open multiple links in a new tab/multiple
-// f              open link (shift to cycle overlapped hints)
-// af             open link in active new tab
-// C              open link in non-active new tab
-// ;di            download image
-// w              switch frames
-// yt             duplicate current tab
-// zr             zoom reset
-// zi             zoom in
-// zo             zoom out
-// <<             move current tab to left
-// >>             move current tab to right
-// T              choose opened tab
-// S              go back in history
-// D              go forward in history
-// B              go one tab history back
-// F              go one tab history forward
-// E              go one tab left
-// R              go one tab right
-// ;db            remove bookmark for current page
+ADD_COMBO(1, BK_BROWSER LH3,            &kp LG(RBKT),                           LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER LH4,            &kp LG(LBKT),                           LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_BROWSER RU1,            &kp Y_CHROME_PROFILES,                  LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RU2,            &m_is_unread,                           LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RU3,            &m_in_inbox,                            LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RU4,            &kp Y_CHROME_BULK_IMAGE_DOWNLOADER,     LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RU5,            &kp Y_CHROME_DP_PARANOID,               LAYERS_NORMAL)
+
+ADD_COMBO(1, BK_BROWSER RH1,            &kp LG(N1),                             LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RH2,            &kp LC(LS(TAB)),                        LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RH3,            &kp LC(TAB),                            LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RH4,            &kp LG(N9),                             LAYERS_NORMAL)
+ADD_COMBO(0, BK_BROWSER RH5,            Reserved: Coding,                       LAYERS_NORMAL)
+
+ADD_COMBO(0, BK_BROWSER RL1,            Reserved: Symmetric,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RL2,            &m_mac_win_menu,                        LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RL3,            &kp Y_CHROME_DR_TOGGLE,                 LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RL4,            &kp Y_CHROME_GOOGLE_TRANSLATE,          LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER RL5,            &kp Y_CHROME_QR_GENERATE,               LAYERS_NORMAL)

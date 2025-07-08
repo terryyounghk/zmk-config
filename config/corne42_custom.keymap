@@ -11,6 +11,7 @@
 
 #include "common/base_keymap.h"
 #include "common/keys.h"
+#include "common/combos.h"
 #include "common/mouse.dtsi"
 #include "common/behaviors.dtsi"
 #include "common/sensors.dtsi"
@@ -39,7 +40,7 @@
    -----------------------------------------------------------------------
  */
 
-CUSTOM_LAYER2(qwerty, "Qwerty",
+CUSTOM_LAYER_WITH_SENSOR(Qwerty,
                     QWERTY_6_UL       &mmv MOVE_UP        QWERTY_6_UR
                     QWERTY_6_HL       &mmv MOVE_DOWN      QWERTY_6_HR
                     QWERTY_6_LL       &mmv MOVE_LEFT      QWERTY_6_LR
@@ -48,7 +49,7 @@ CUSTOM_LAYER2(qwerty, "Qwerty",
   , &encoder_vol
 )
 
-CUSTOM_LAYER2(numbers, "Numbers",
+CUSTOM_LAYER_WITH_SENSOR(Numbers,
                     NUMBERS_6_UL      &mmv MOVE_UP        NUMBERS_6_UR
                     NUMBERS_6_HL      &mmv MOVE_DOWN      NUMBERS_6_HR
                     NUMBERS_6_LL      &mmv MOVE_LEFT      NUMBERS_6_LR
@@ -57,7 +58,7 @@ CUSTOM_LAYER2(numbers, "Numbers",
   , &encoder_number
 )
 
-CUSTOM_LAYER2(numpad, "Numpad",
+CUSTOM_LAYER_WITH_SENSOR(Numpad,
                     NUMPAD_6_UL       &mmv MOVE_UP        NUMPAD_6_UR
                     NUMPAD_6_HL       &mmv MOVE_DOWN      NUMPAD_6_HR
                     NUMPAD_6_LL       &mmv MOVE_LEFT      NUMPAD_6_LR
@@ -66,7 +67,7 @@ CUSTOM_LAYER2(numpad, "Numpad",
   , &encoder_number
 )
 
-CUSTOM_LAYER2(symbols, "Symbols",
+CUSTOM_LAYER_WITH_SENSOR(Symbols,
                     SYMBOLS_6_UL      &mmv MOVE_UP        SYMBOLS_6_UR
                     SYMBOLS_6_HL      &mmv MOVE_DOWN      SYMBOLS_6_HR
                     SYMBOLS_6_LL      &mmv MOVE_LEFT      SYMBOLS_6_LR
@@ -75,7 +76,7 @@ CUSTOM_LAYER2(symbols, "Symbols",
   , &encoder_zoom
 )
 
-CUSTOM_LAYER2(coding, "Coding",
+CUSTOM_LAYER_WITH_SENSOR(Coding,
                     CODING_6_UL       &mmv MOVE_UP        CODING_6_UR
                     CODING_6_HL       &mmv MOVE_DOWN      CODING_6_HR
                     CODING_6_LL       &mmv MOVE_LEFT      CODING_6_LR
@@ -84,7 +85,16 @@ CUSTOM_LAYER2(coding, "Coding",
   , &encoder_scroll
 )
 
-CUSTOM_LAYER2(controls, "Controls",
+CUSTOM_LAYER_WITH_SENSOR(Nav,
+                    NAV_6_UL          &mmv MOVE_UP        NAV_6_UR
+                    NAV_6_HL          &mmv MOVE_DOWN      NAV_6_HR
+                    NAV_6_LL          &mmv MOVE_LEFT      NAV_6_LR
+    &none           NAV_TL            &mmv MOVE_RIGHT     NAV_TR
+                                      &mkp LCLK
+  , &encoder_scroll
+)
+
+CUSTOM_LAYER_WITH_SENSOR(Controls,
                     CONTROLS_6_UL     &mmv MOVE_UP        CONTROLS_6_UR
                     CONTROLS_6_HL     &mmv MOVE_DOWN      CONTROLS_6_HR
                     CONTROLS_6_LL     &mmv MOVE_LEFT      CONTROLS_6_LR
@@ -93,7 +103,7 @@ CUSTOM_LAYER2(controls, "Controls",
   , &encoder_scroll
 )
 
-CUSTOM_LAYER2(switch, "Switch",
+CUSTOM_LAYER_WITH_SENSOR(Switch,
                     SWITCH_6_UL       &mmv MOVE_UP        SWITCH_6_UR
                     SWITCH_6_HL       &mmv MOVE_DOWN      SWITCH_6_HR
                     SWITCH_6_LL       &mmv MOVE_LEFT      SWITCH_6_LR
@@ -102,7 +112,7 @@ CUSTOM_LAYER2(switch, "Switch",
   , &encoder_vol
 )
 
-CUSTOM_LAYER2(mouse, "Mouse",
+CUSTOM_LAYER_WITH_SENSOR(Mouse,
                     MOUSE_6_UL        &mmv MOVE_UP        MOUSE_6_UR
                     MOUSE_6_HL        &mmv MOVE_DOWN      MOUSE_6_HR
                     MOUSE_6_LL        &mmv MOVE_LEFT      MOUSE_6_LR
@@ -111,7 +121,7 @@ CUSTOM_LAYER2(mouse, "Mouse",
   , &encoder_vol
 )
 
-CUSTOM_LAYER2(scroll, "Scroll",
+CUSTOM_LAYER_WITH_SENSOR(Scroll,
                     SCROLL_6_UL       &mmv MOVE_UP        SCROLL_6_UR
                     SCROLL_6_HL       &mmv MOVE_DOWN      SCROLL_6_HR
                     SCROLL_6_LL       &mmv MOVE_LEFT      SCROLL_6_LR
@@ -120,25 +130,16 @@ CUSTOM_LAYER2(scroll, "Scroll",
   , &encoder_vol
 )
 
-CUSTOM_LAYER2(snipe, "Snipe",
-                    SNIPE_6_UL       &mmv MOVE_UP        SNIPE_6_UR
-                    SNIPE_6_HL       &mmv MOVE_DOWN      SNIPE_6_HR
-                    SNIPE_6_LL       &mmv MOVE_LEFT      SNIPE_6_LR
+CUSTOM_LAYER_WITH_SENSOR(Snipe,
+                    SNIPE_6_UL        &mmv MOVE_UP        SNIPE_6_UR
+                    SNIPE_6_HL        &mmv MOVE_DOWN      SNIPE_6_HR
+                    SNIPE_6_LL        &mmv MOVE_LEFT      SNIPE_6_LR
     &none           SWITCH_TL         &mmv MOVE_RIGHT     SWITCH_TR
                                       &mkp LCLK
   , &encoder_vol
 )
 
-CUSTOM_LAYER2(funcs, "Funcs",
-                    FUNCS_6_UL        &mmv MOVE_UP        FUNCS_6_UR
-                    FUNCS_6_HL        &mmv MOVE_DOWN      FUNCS_6_HR
-                    FUNCS_6_LL        &mmv MOVE_LEFT      FUNCS_6_LR
-    &none           FUNCS_TL          &mmv MOVE_RIGHT     FUNCS_TR
-                                      &mkp LCLK
-  , &encoder_screen
-)
-
-CUSTOM_LAYER2(afk, "AFK",
+CUSTOM_LAYER_WITH_SENSOR(AFK,
                     AFK_6_UL          &none               AFK_6_UR
                     AFK_6_HL          &none               AFK_6_HR
                     AFK_6_LL          &none               AFK_6_LR

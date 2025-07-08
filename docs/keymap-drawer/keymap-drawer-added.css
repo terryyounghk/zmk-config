@@ -1,0 +1,4 @@
+/* styling for layer labels */
+text.label {
+  display: none;
+}

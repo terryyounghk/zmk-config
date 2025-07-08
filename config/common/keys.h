@@ -1,10 +1,58 @@
 // This file contains keys or shortcut definitions that are independent from the keyboard layout
 
 /// ---------------------------------------------------------------------------
+// used in base_keymap.h
+#define Y_RM                            &m_release_mods
+#define Y_LT3                           &ht_mo_sl NUMPAD NUMBERS
+#define Y_LT2                           &td_lshift
+#define Y_LT1                           &mm_repeat
+#define Y_RT1                           &ht_mo_kp NAV RETURN
+#define Y_RT2                           &ht_mo_kp SYMBOLS SPACE
+#define Y_RT2_NP                        &ht_mo_kp SYMBOLS N0
+#define Y_RT3                           &ht_mo_kp NUMBERS TAB
+#define Y_SEMI                          &td_semi
+#define Y_FSLH                          &ht_mo_kp SNIPE FSLH
+#define Y_COMMA                         &td_comma
+
+/// ---------------------------------------------------------------------------
+// used in base_keymap.h
+#define LU5_CODING                      &m_code_esc_dqt
+#define LU4_CODING                      &m_code_lte
+#define LU3_CODING                      &m_code_esc_fslh
+#define LU2_CODING                      &m_code_literal
+#define LU1_CODING                      &m_code_arrow
+#define LH5_CODING                      &m_code_async_fn_open
+#define LH4_CODING                      &m_code_fn_call_arrow_open
+#define LH3_CODING                      &m_code_fn_arrow_open
+#define LH2_CODING                      &m_code_fn_call_arrow
+#define LH1_CODING                      &m_code_fn_arrow
+#define LL5_CODING                      &none
+#define LL4_CODING                      &none
+#define LL3_CODING                      &m_code_md_code_open
+#define LL2_CODING                      &m_code_html_comment_open
+#define LL1_CODING                      &m_code_html_comment_close
+
+#define RU1_CODING                      &m_code_increment_assign
+#define RU2_CODING                      &m_code_decrement_assign
+#define RU3_CODING                      &m_code_comment_ml_open
+#define RU4_CODING                      &m_code_gte
+#define RU5_CODING                      &none
+#define RH1_CODING                      &m_code_increment
+#define RH2_CODING                      &m_code_and
+#define RH3_CODING                      &m_code_equal
+#define RH4_CODING                      &none
+#define RH5_CODING                      &none
+#define RL1_CODING                      &m_code_decrement
+#define RL2_CODING                      &m_code_or
+#define RL3_CODING                      &m_code_not_equal
+#define RL4_CODING                      &none
+#define RL5_CODING                      &none
+
+/// ---------------------------------------------------------------------------
 // tmux / terminal
-#define Y_TP                            LC(SPACE) // tmux prefix
-#define Y_NC                            COLON // nvim command
-#define Y_NL                            SPACE // nvim leader key
+#define TMUX_PFX                        &kp LC(SPACE) // tmux prefix
+#define NVIM_CMD                        &kp COLON // nvim command
+#define NVIM_LDR                        &kp SPACE // nvim leader key
 
 
 /// ---------------------------------------------------------------------------
@@ -30,12 +78,14 @@
 #define Y_SPOTLIGHT                     LG(SPACE)
 #define Y_APPLICATION_WINDOWS           LC(LA(DOWN)) // system default: LC(DOWN)
 #define Y_NEXT_WINDOW                   LG(GRAVE)
+#define Y_NEXT_APPLICATION              LG(TAB)
 #define Y_CLOSE                         LG(W)
 #define Y_COPY                          LG(C)
 #define Y_CUT                           LG(X)
 #define Y_DOCK                          LC(F3)
 #define Y_LOCK_SCREEN                   LG(LC(Q))
 #define Y_MISSION_CONTROL               LC(LA(UP)) // system default: LC(UP)
+#define Y_LAUNCHPAD                     LG(LA(L)) // system default: none
 #define Y_PASTE                         LG(V)
 #define Y_QUIT                          LG(Q)
 #define Y_SCREEN_CAPTURE_AREA           LG(LS(N4)) // Either use OS default, or CleanShot
@@ -43,6 +93,10 @@
 #define Y_TOGGLE_DND                    LC(LA(Q)) // Set in Preferences > Keyboard > Mission Control
 #define Y_TOGGLE_STAGE_MANAGER          HYPER(M) // Set in Preferences > Keyboard > Mission Control
 #define Y_UNDO                          LG(Z)
+#define Y_FORCE_QUIT                    LG(LA(ESCAPE))
+#define Y_SOUND_SETTINGS                LA(C_VOL_UP)
+#define Y_DISPLAY_SETTINGS              LA(F15)
+#define Y_CHAR_VIEWER                   LC(LG(SPACE))
 
 // an annoying issue in MacOS where ^F2 to "Move Focus to Menu Bar" only works occassionally
 // https://apple.stackexchange.com/questions/12723/control-f2-move-focus-to-menu-bar-only-works-occasionally
@@ -58,6 +112,12 @@
 
 /// ---------------------------------------------------------------------------
 // mac app shortcuts
+
+// some apps use Cmd+[ and Cmd+]
+#define Y_GO_BACK                       LG(LBKT)
+#define Y_GO_FORWARD                    LG(RBKT)
+
+#define Y_RAYCAST                       LG(SPACE)
 #define Y_BARTENDER_SEARCH              LC(LA(ESCAPE))
 #define Y_GOOGLE_DRIVE_SEARCH           LG(LA(G))
 #define Y_HAZEOVER_TOGGLE               MEH(Z)
@@ -70,25 +130,31 @@
 #define Y_ONE_PASSWORD_SHOW             MEH(P)
 #define Y_SHORTCAT                      HYPER(SPACE)
 #define Y_PRESENTIFY_ANNOTATE           MEH(A)
+#define Y_ONE_SWITCH_MUTE_MIC           LC(LS(M))
 
 /// ---------------------------------------------------------------------------
-// Capturing Shortcuts (CleanShot, TextSniper, ...)
+// Capturing Shortcuts (CleanShot)
+#define Y_CLEANSHOT_RESTORE_LAST        MEH(R) // custom: General > Restore Last Capture
 #define Y_CLEANSHOT_ALL_IN_ONE          LC(LA(LS(N5))) // custom: General > All in One
 #define Y_CLEANSHOT_HISTORY             HYPER(R) // custom: General > Open Capture History
 #define Y_CLEANSHOT_CAPTURE_AREA        LG(LS(N4)) // Screenshots > Capture Area
 #define Y_CLEANSHOT_CAPTURE_FULLSCREEN  LG(LS(N3)) // custom: Screenshots > Capture Fullscreen
 #define Y_CLEANSHOT_CAPTURE_WINDOW      LG(LS(N5)) // custom: Screenshots > Capture Window
 #define Y_CLEANSHOT_CAPTURE_SCROLLING   LG(LS(N6)) // custom: Scrolling Capture > Scrolling Capture
+#define Y_CLEANSHOT_CAPTURE_ANNOTATE    LG(LS(N7)) // custom: Scrolling Capture > Capture Area & Annotate
+#define Y_CLEANSHOT_PIN_TOGGLE          LG(LS(N8)) // custom: Pin > Toggle Pins
+#define Y_CLEANSHOT_PIN_LAST            LG(LS(N9)) // custom: Pin > Pin Last Screenshot
+#define Y_CLEANSHOT_ANNOTATE_LAST       LA(LS(L)) // custom: Annotate > Annotate last screenshot
 
 #define Y_CLEANSHOT_OVERLAYS_CLOSE      MEH(Y) // custom: Quick Access Overlay > Close All Overlays
 #define Y_CLEANSHOT_OVERLAYS_TOGGLE     HYPER(Y) // custom: Quick Access Overlay > Hide/Show Overlays
 
-#define Y_TEXTSNIPER_CAPTURE_TEXT       LG(LS(N2))
-#define Y_TEXTSNIPER_READ_QRCODE        LG(LS(N1))
+#define Y_CLEANSHOT_OCR                 LG(LS(N2))
+#define Y_CLEANSHOT_RECORD_SCREEN       LG(LS(N1))
 
 /// ---------------------------------------------------------------------------
-// tmux shortcuts
-#define Y_TMUX_LEADER                   LC(SPACE)
+// iTerm2 shortcuts
+#define Y_ITERM_COPY_MODE               LG(LBKT)
 
 /// ---------------------------------------------------------------------------
 // vscode shortcuts
@@ -193,8 +259,30 @@
 #define Y_VSCODE_MOVE_LINE_DOWN         LA(LS(J))
 
 /// ---------------------------------------------------------------------------
+// tmux shortcuts
+#define Y_TMUX_LEADER                   LC(SPACE)
+
+/// ---------------------------------------------------------------------------
+// nvim shortcuts
+
+#define Y_NVIM_SAVE                     LC(S)
+#define Y_NVIM_SCROLL_DOWN              LC(D)
+#define Y_NVIM_SCROLL_UP                LC(U)
+#define Y_NVIM_TERMINAL                 LC(FSLH)
+#define Y_NVIM_INCREMENT                LC(A)
+#define Y_NVIM_DECREMENT                LC(X)
+#define Y_NVIM_COMMENT                  LA(FSLH)
+
+/// ---------------------------------------------------------------------------
+// browser shortcuts
+
+#define Y_CHROME_PROFILES               LG(LS(M))
+
+/// ---------------------------------------------------------------------------
 // browser extension shortcuts
 
+// https://chromewebstore.google.com/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb
+#define Y_CHROME_GOOGLE_TRANSLATE       LA(R)
 // https://chromewebstore.google.com/detail/okta-browser-plugin/glnpjglilkicbckjpbgcfkogebgllemb
 #define Y_OKTA                          LA(LS(O))
 
@@ -205,25 +293,83 @@
 #define Y_CHROME_DR_ACTIVATE            LC(D)
 #define Y_CHROME_DR_TOGGLE              LA(LS(D))
 
-// https://chromewebstore.google.com/detail/chrome-show-tab-numbers/pflnpcinjbcfefgbejjfanemlgcfjbna
-#define Y_CHROME_TN_TOGGLE              LC(LG(N))
-
-// https://chromewebstore.google.com/detail/tab-groups-extension/nplimhmoanghlebhdiboeellhgmgommi
-#define Y_CHROME_TGE_ACTIVATE           LC(T)
-#define Y_CHROME_TGE_GO_GROUP_FIRST     LA(LS(N1))
-#define Y_CHROME_TGE_GO_GROUP_LAST      LA(LS(N0))
-#define Y_CHROME_TGE_TOGGLE_ALL_GROUPS  LC(LS(T))
-#define Y_CHROME_TGE_TOGGLE_CURR_GROUP  LA(LS(T))
-#define Y_CHROME_TGE_MOVE_GRP_TO_WIN    LA(LS(G))
-#define Y_CHROME_TGE_MOVE_GRP_TO_LEFT   LA(LS(H))
-#define Y_CHROME_TGE_MOVE_GRP_TO_RIGHT  LA(LS(L))
-#define Y_CHROME_TGE_CLOSE_TO_RIGHT     LA(LS(DOT))
-#define Y_CHROME_TGE_CLOSE_TO_LEFT      LA(LS(N))
-#define Y_CHROME_TGE_CLOSE_OTHERS       LA(LS(COMMA))
-#define Y_CHROME_TGE_CLOSE_GROUP        LA(LS(M))
-#define Y_CHROME_TGE_CLOSE_UNGROUPED    LA(LS(U))
-#define Y_CHROME_TGE_SAVE_GROUP         LA(LS(S))
-#define Y_CHROME_TGE_GROUP_UNGROUPED    LA(LS(I))
-
 // https://chromewebstore.google.com/detail/decreased-productivity/nlbpiflhmdcklcbihngeffpmoklbiooj
 #define Y_CHROME_DP_PARANOID            LC(LA(P))
+
+// https://chromewebstore.google.com/detail/bulk-image-downloader/lamfengpphafgjdgacmmnpakdphmjlji
+#define Y_CHROME_BULK_IMAGE_DOWNLOADER  LA(A)
+
+/**
+ * This is very specific to the "IINE Keyboard and Mouse Adapter for Switch"
+ * Product link: https://www.iine.top/index.php?m=content&c=index&a=show&catid=205&id=181
+ *
+ * There is very little to no documentation, and this accessory does not allow custom mapping.
+ * So the comment below is a mapping of the adapter itself for reference,
+ * then my own actual mapping in this keyboard only corresponds to the IINE accessory's existing mapping.
+ * Disclaimer: I only own a Switch, to the Xbox/PS4 mapping may be inaccurate.
+ *
+ * LJ = Left Joystick
+ * RJ = Right Joystick
+ * DP = D-Pad
+ *
+ *                      Switch              Xbox One            PS4
+ * Mouse controls:
+ * ================================================================================
+ * Right Button         ZL                  LT                  L2
+ * Left Button          ZR                  RT                  R2
+ * Middle Button        R3                  R3                  R3
+ * Move Up              RJ Up               RJ Up               RJ Up
+ * Move Left            RJ Left             RJ Left             RJ Left
+ * Move Down            RJ Down             RJ Down             RJ Down
+ * Move Right           RJ Right            RJ Right            RJ Right
+ *
+ * Keyboard controls:
+ * ================================================================================
+ * Q                    L1                  L1                  L1
+ * E                    R1                  R1                  R1
+ * F1                   DP Up               DP Up               DP Up
+ * 1                    DP Left             DP Left             DP Left
+ * 2                    DP Down             DP Down             DP Down
+ * 3                    DP Right            DP Right            DP Right
+ * R                    Y                   Y                   ∆
+ * F                    X                   X                   ☐
+ * C                    B                   B                   ◯
+ * Space                A                   A                   X
+ * W                    LJ Up               LJ Up               LJ Up
+ * A                    LJ Left             LJ Left             LJ Left
+ * S                    LJ Down             LJ Down             LJ Down
+ * D                    LJ Right            LJ Right            LJ Right
+ * Left Shift           L3                  L3                  L3
+ * Tab                  -                   View                Option
+ * Esc                  Home                Home                PS
+ * -                    Capture             Share               Share
+ * Caps Lock            +                   Menu                /
+ */
+
+#define NS_REGISTER &kp LC(N2) // Used for IINE Adapter to register as Switch Controller
+#define NS_L1       &kp Q
+#define NS_R1       &kp E
+#define NS_ZL       &mkp RCLK
+#define NS_ZR       &mkp LCLK
+#define NS_L3       &kp LSHIFT
+#define NS_R3       &mkp MCLK
+#define NS_LJ_U     &kp W
+#define NS_LJ_L     &kp A
+#define NS_LJ_D     &kp S
+#define NS_LJ_R     &kp D
+#define NS_RJ_U     &mmv MV_U
+#define NS_RJ_L     &mmv MV_L
+#define NS_RJ_D     &mmv MV_D
+#define NS_RJ_R     &mmv MV_R
+#define NS_DP_U     &kp F1
+#define NS_DP_L     &kp N1
+#define NS_DP_D     &kp N2
+#define NS_DP_R     &kp N3
+#define NS_A        &kp SPACE
+#define NS_B        &kp C
+#define NS_X        &kp F
+#define NS_Y        &kp R
+#define NS_MINUS    &kp TAB
+#define NS_PLUS     &kp CAPS
+#define NS_HOME     &kp ESC
+#define NS_CAPTURE  &kp TILDE

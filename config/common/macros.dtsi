@@ -1,7 +1,27 @@
 // Macros shared among different types of combos
 
+#define M_WAIT             &macro_wait_time 250
+
 /// Special: special macro to cancel any toggled-mods and return to layer 1
-CUSTOM_MACRO(  m_release_mods,                     &to QWERTY &macro_release &kp LCTRL &kp LALT &kp LSHIFT &kp LGUI)
+
+#define LMODS_KP           &kp LCTRL &kp LALT &kp LSHIFT &kp LGUI
+#define RMODS_KP           &kp RCTRL &kp RALT &kp RSHIFT &kp RGUI
+#define MODS_KP            LMODS_KP RMODS_KP
+#define RELEASE_KP_MODS    &macro_release MODS_KP
+
+CUSTOM_MACRO(  m_release_mods,                     RELEASE_KP_MODS)
+CUSTOM_MACRO(  m_reset_layers,                     &to QWERTY RELEASE_KP_MODS)
+
+/*
+// TODO: implement kt_off after updating zmk
+#define RELEASE_LMODS_KT   &kt_off LCTRL &kt_off LALT &kt_off LSHIFT &kt_off LGUI
+#define RELEASE_RMODS_KT   &kt_off RCTRL &kt_off RALT &kt_off RSHIFT &kt_off RGUI
+#define RELEASE_MODS_KT    RELEASE_LMODS_KT RELEASE_RMODS_KT
+#define RELEASE_MODS
+
+CUSTOM_MACRO(  m_release_mods,                     RELEASE_MODS)
+CUSTOM_MACRO(  m_reset_layers,                     &to QWERTY RELEASE_MODS)
+*/
 
 /// General
 
@@ -10,16 +30,109 @@ CUSTOM_MACRO(  m_mac_win_menu,                     &kp Y_SHOW_HELP_MENU &kp LEFT
 CUSTOM_MACRO(  m_mac_about,                        &kp Y_SHOW_HELP_MENU &kp RIGHT &kp RETURN)
 CUSTOM_MACRO(  m_mac_sys_prefs,                    &kp Y_SHOW_HELP_MENU &kp RIGHT &kp DOWN &kp RETURN)
 
-/// Terminal: tmux
-CUSTOM_MACRO(  m_tmux_open_bottom_panel,           &kp Y_TP &kp Z &kp Y_TP &kp J)
-CUSTOM_MACRO(  m_tmux_close_bottom_panel,          &kp Y_TP &kp K &kp Y_TP &kp Z)
-CUSTOM_MACRO(  m_tmux_copy_mode,                   &kp Y_TP &kp LBKT)
+/// Terminal: tmux (may contain non-default bindings that match my personal dotfiles)
+/*
+// unused
+CUSTOM_MACRO(  m_tmux_kill_pane,                   TMUX_PFX &kp X)
+*/
+CUSTOM_MACRO(  m_tmux_open_bottom_panel,           TMUX_PFX &kp Z TMUX_PFX &kp J)
+CUSTOM_MACRO(  m_tmux_close_bottom_panel,          TMUX_PFX &kp K TMUX_PFX &kp Z)
+CUSTOM_MACRO(  m_tmux_copy_mode,                   TMUX_PFX TMUX_PFX)
+CUSTOM_MACRO(  m_tmux_zoom_active_pane,            TMUX_PFX &kp Z)
+CUSTOM_MACRO(  m_tmux_zoom_prev_active,            TMUX_PFX &kp SEMI TMUX_PFX &kp Z)
+CUSTOM_MACRO(  m_tmux_command,                     TMUX_PFX &kp COLON)
+CUSTOM_MACRO(  m_tmux_reload,                      TMUX_PFX &kp LS(R))
+CUSTOM_MACRO(  m_tmux_select_window_1,             TMUX_PFX &kp N1)
+CUSTOM_MACRO(  m_tmux_select_window_2,             TMUX_PFX &kp N2)
+CUSTOM_MACRO(  m_tmux_select_window_3,             TMUX_PFX &kp N3)
+CUSTOM_MACRO(  m_tmux_select_window_4,             TMUX_PFX &kp N4)
+CUSTOM_MACRO(  m_tmux_select_window_5,             TMUX_PFX &kp N5)
+CUSTOM_MACRO(  m_tmux_select_window_6,             TMUX_PFX &kp N6)
+CUSTOM_MACRO(  m_tmux_select_window_7,             TMUX_PFX &kp N7)
+CUSTOM_MACRO(  m_tmux_select_window_8,             TMUX_PFX &kp N8)
+CUSTOM_MACRO(  m_tmux_select_window_9,             TMUX_PFX &kp N9)
+CUSTOM_MACRO(  m_tmux_select_window_next,          TMUX_PFX &kp N)
+CUSTOM_MACRO(  m_tmux_select_window_prev,          TMUX_PFX &kp P)
+CUSTOM_MACRO(  m_tmux_move_window,                 TMUX_PFX &kp DOT)
+CUSTOM_MACRO(  m_tmux_move_window_left,            TMUX_PFX &kp LT)
+CUSTOM_MACRO(  m_tmux_move_window_right,           TMUX_PFX &kp GT)
+CUSTOM_MACRO(  m_tmux_pane_next,                   TMUX_PFX &kp O)
+CUSTOM_MACRO(  m_tmux_fzf_url,                     TMUX_PFX &kp U)
+CUSTOM_MACRO(  m_tmux_detach,                      TMUX_PFX &kp D)
+CUSTOM_MACRO(  m_tmux_kill_window,                 TMUX_PFX &kp AMPS)
+CUSTOM_MACRO(  m_tmux_rename_window,               TMUX_PFX &kp COMMA)
+CUSTOM_MACRO(  m_tmux_rotate_window,               TMUX_PFX &kp LC(O))
+CUSTOM_MACRO(  m_tmux_window_layout,               TMUX_PFX &kp SPACE &kp W &kp L) // tmux-which-key
+CUSTOM_MACRO(  m_tmux_reload_config,               TMUX_PFX &kp LS(R))
+CUSTOM_MACRO(  m_tmux_command,                     TMUX_PFX &kp COLON)
+CUSTOM_MACRO(  m_tmux_fingers_jump,                TMUX_PFX &kp LS(F)) // tmux-fingers
+CUSTOM_MACRO(  m_tmux_pane_even_size,              TMUX_PFX &kp LA(N1))
+CUSTOM_MACRO(  m_tmux_fzf,                         TMUX_PFX &kp LC(Z))
+CUSTOM_MACRO(  m_tmux_resize_pane,                 TMUX_PFX &kp SPACE &kp P &kp R) // tmux-which-key
 
 /// Terminal: nvim
-CUSTOM_MACRO(  m_nvim_search,                      &kp Y_NC &kp S &kp FSLH)
-CUSTOM_MACRO(  m_nvim_search_all,                  &kp Y_NC &kp PERCENT &kp S &kp FSLH)
-CUSTOM_MACRO(  m_nvim_save_all,                    &kp Y_NC &kp W &kp A &kp L &kp L &kp RETURN)
-CUSTOM_MACRO(  m_nvim_quit_all,                    &kp Y_NL &kp Q &kp Q)
+CUSTOM_MACRO(  m_nvim_search,                      NVIM_CMD &kp S &kp FSLH)
+CUSTOM_MACRO(  m_nvim_search_all,                  NVIM_CMD &kp PERCENT &kp S &kp FSLH)
+CUSTOM_MACRO(  m_nvim_save_all,                    NVIM_CMD &kp W &kp A &kp L &kp L &kp RETURN)
+CUSTOM_MACRO(  m_nvim_quit_all,                    NVIM_LDR &kp Q &kp Q)
+CUSTOM_MACRO(  m_nvim_prev_tab,                    NVIM_LDR &kp TAB &kp LBKT)
+CUSTOM_MACRO(  m_nvim_next_tab,                    NVIM_LDR &kp TAB &kp RBKT)
+CUSTOM_MACRO(  m_nvim_close_tab,                   NVIM_LDR &kp TAB &kp D)
+CUSTOM_MACRO(  m_nvim_paste_last_yanked,           &kp DQT &kp N0 &kp P)
+CUSTOM_MACRO(  m_nvim_jump_to_marks,               &kp SPACE &kp S &kp M)
+CUSTOM_MACRO(  m_nvim_edit_macro,                  NVIM_LDR &kp LS(M) &kp B)
+CUSTOM_MACRO(  m_nvim_insert_calc_results,         &kp DQT &kp EQUAL &kp P)
+CUSTOM_MACRO(  m_nvim_goto_last_changed,           &kp GRAVE &kp DOT) // alternatively, I have mapped Q to @@ in NeoVim
+CUSTOM_MACRO(  m_nvim_prev_hunk,                   &kp LBKT &kp H)
+CUSTOM_MACRO(  m_nvim_next_hunk,                   &kp LBKT &kp H)
+CUSTOM_MACRO(  m_nvim_redo,                        &kp LC(R))
+CUSTOM_MACRO(  m_nvim_workspace_symbols,           NVIM_LDR &kp S &kp LS(S))
+CUSTOM_MACRO(  m_nvim_quickfix_list,               NVIM_LDR &kp X &kp LS(Q))
+CUSTOM_MACRO(  m_nvim_overseer,                    NVIM_LDR &kp O &kp T)
+CUSTOM_MACRO(  m_nvim_copilot_chat,                NVIM_LDR &kp A &kp A)
+CUSTOM_MACRO(  m_nvim_dadbod_ui,                   NVIM_LDR &kp D)
+CUSTOM_MACRO(  m_nvim_fzflua,                      NVIM_LDR &kp S &kp LS(F))
+CUSTOM_MACRO(  m_nvim_buffer_lines,                NVIM_LDR &kp G &kp I &kp LS(B))
+CUSTOM_MACRO(  m_nvim_kulala,                      NVIM_LDR &kp J &kp O)
+CUSTOM_MACRO(  m_nvim_toggle_outline,              NVIM_LDR &kp C &kp S)
+CUSTOM_MACRO(  m_nvim_undotree,                    NVIM_LDR &kp S &kp U)
+CUSTOM_MACRO(  m_nvim_trouble,                     NVIM_LDR &kp X &kp X)
+CUSTOM_MACRO(  m_nvim_cheatsheet,                  NVIM_LDR &kp T &kp LS(C))
+CUSTOM_MACRO(  m_nvim_fzf_buffers,                 NVIM_LDR &kp F &kp B)
+CUSTOM_MACRO(  m_nvim_todo_list,                   NVIM_LDR &kp X &kp T)
+CUSTOM_MACRO(  m_nvim_annotate,                    NVIM_LDR &kp C &kp N)
+
+/// Coding: general / typescript
+#define M_CODE_FN_ARROW                            &kp EQL &kp GT
+#define M_CODE_FN_CALL_ARROW                       &kp LPAR &kp RPAR &kp SPACE M_CODE_FN_ARROW
+#define M_CODE_FN_ARROW_OPEN                       M_CODE_FN_ARROW &kp SPACE &kp LBRC &kp RETURN
+#define M_CODE_FN_CALL_ARROW_OPEN                  M_CODE_FN_CALL_ARROW &kp SPACE &kp LBRC &kp RETURN
+#define M_CODE_ASYNC_FN_OPEN                       &kp A &kp S &kp Y &kp N &kp C &kp SPACE M_CODE_FN_CALL_ARROW_OPEN
+
+CUSTOM_MACRO(  m_code_esc_dqt,                     &kp BSLH &kp DQT)
+CUSTOM_MACRO(  m_code_esc_fslh,                    &kp BSLH &kp FSLH)
+CUSTOM_MACRO(  m_code_lte,                         &kp LT &kp EQUAL)
+CUSTOM_MACRO(  m_code_gte,                         &kp GT &kp EQUAL)
+CUSTOM_MACRO(  m_code_arrow,                       &kp MINUS &kp GT)
+CUSTOM_MACRO(  m_code_literal,                     &kp DOLLAR &kp LBRC &kp RBRC &kp LEFT)
+CUSTOM_MACRO(  m_code_increment_assign,            &kp PLUS &kp EQL)
+CUSTOM_MACRO(  m_code_decrement_assign,            &kp MINUS &kp EQL)
+CUSTOM_MACRO(  m_code_increment,                   &kp PLUS &kp PLUS)
+CUSTOM_MACRO(  m_code_decrement,                   &kp MINUS &kp MINUS)
+CUSTOM_MACRO(  m_code_and,                         &kp AMPS &kp AMPS)
+CUSTOM_MACRO(  m_code_or,                          &kp PIPE &kp PIPE)
+CUSTOM_MACRO(  m_code_equal,                       &kp EQL &kp EQL &kp EQL)
+CUSTOM_MACRO(  m_code_not_equal,                   &kp EXCL &kp EQL &kp EQL)
+CUSTOM_MACRO(  m_code_comment_ml_open,             &kp FSLH &kp STAR)
+CUSTOM_MACRO(  m_code_fn_arrow,                    M_CODE_FN_ARROW)
+CUSTOM_MACRO(  m_code_fn_call_arrow,               M_CODE_FN_CALL_ARROW)
+CUSTOM_MACRO(  m_code_fn_arrow_open,               M_CODE_FN_ARROW_OPEN)
+CUSTOM_MACRO(  m_code_fn_call_arrow_open,          M_CODE_FN_CALL_ARROW_OPEN)
+CUSTOM_MACRO(  m_code_async_fn_open,               M_CODE_ASYNC_FN_OPEN)
+CUSTOM_MACRO(  m_code_html_comment_open,           &kp LT &kp EXCL &kp MINUS &kp MINUS)
+CUSTOM_MACRO(  m_code_html_comment_close,          &kp MINUS &kp MINUS &kp GT)
+CUSTOM_MACRO(  m_code_md_code_open,                &kp GRAVE &kp GRAVE &kp GRAVE)
+
 
 /// Browser: Gmail
 CUSTOM_MACRO(  m_is_unread,                        &kp I &kp S &kp COLON &kp U &kp N &kp R &kp E &kp A &kp D)

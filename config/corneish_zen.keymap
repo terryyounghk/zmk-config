@@ -6,6 +6,7 @@
 #include <dt-bindings/zmk/rgb.h>
 #include "common/base_keymap.h"
 #include "common/keys.h"
+#include "common/combos.h"
 #include "common/mouse.dtsi"
 #include "common/behaviors.dtsi"
 #include "common/macros.dtsi"
@@ -25,84 +26,84 @@
 #define SPECIAL_CONTROLS_TL          &trans              UG(RGB_OFF)         UG(RGB_ON)
 #define SPECIAL_CONTROLS_TR          &mkp LCLK           &mkp RCLK           &mkp MCLK
 
-CUSTOM_LAYER(qwerty, "Qwerty",
+CUSTOM_LAYER(Qwerty,
               QWERTY_6_UL       QWERTY_6_UR
               QWERTY_6_HL       QWERTY_6_HR
               QWERTY_6_LL       QWERTY_6_LR
               QWERTY_TL         QWERTY_TR
 )
 
-CUSTOM_LAYER(numbers, "Numbers",
+CUSTOM_LAYER(Numbers,
               NUMBERS_6_UL      NUMBERS_6_UR
               NUMBERS_6_HL      NUMBERS_6_HR
               NUMBERS_6_LL      NUMBERS_6_LR
               NUMBERS_TL        NUMBERS_TR
 )
 
-CUSTOM_LAYER(numpad, "Numpad",
+CUSTOM_LAYER(Numpad,
               NUMPAD_6_UL       NUMPAD_6_UR
               NUMPAD_6_HL       NUMPAD_6_HR
               NUMPAD_6_LL       NUMPAD_6_LR
               NUMPAD_TL         NUMPAD_TR
 )
 
-CUSTOM_LAYER(symbols, "Symbols",
+CUSTOM_LAYER(Symbols,
               SYMBOLS_6_UL      SYMBOLS_6_UR
               SYMBOLS_6_HL      SYMBOLS_6_HR
               SYMBOLS_6_LL      SYMBOLS_6_LR
               SYMBOLS_TL        SYMBOLS_TR
 )
 
-CUSTOM_LAYER(coding, "Coding",
+CUSTOM_LAYER(Coding,
               CODING_6_UL       CODING_6_UR
               CODING_6_HL       CODING_6_HR
               CODING_6_LL       CODING_6_LR
               CODING_TL         CODING_TR
 )
 
-CUSTOM_LAYER(controls, "Controls",
+CUSTOM_LAYER(Nav,
+              NAV_6_UL          NAV_6_UR
+              NAV_6_HL          NAV_6_HR
+              NAV_6_LL          NAV_6_LR
+              NAV_TL            NAV_TR
+)
+
+CUSTOM_LAYER(Controls,
               CONTROLS_6_UL     CONTROLS_6_UR
               CONTROLS_6_HL     CONTROLS_6_HR
               CONTROLS_6_LL     CONTROLS_6_LR
       SPECIAL_CONTROLS_TL       SPECIAL_CONTROLS_TR
 )
 
-CUSTOM_LAYER(switch, "Switch",
+CUSTOM_LAYER(Switch,
               SWITCH_6_UL       SWITCH_6_UR
               SWITCH_6_HL       SWITCH_6_HR
               SWITCH_6_LL       SWITCH_6_LR
               SWITCH_TL         SWITCH_TR
 )
 
-CUSTOM_LAYER(mouse, "Mouse",
+CUSTOM_LAYER(Mouse,
               MOUSE_6_UL       MOUSE_6_UR
               MOUSE_6_HL       MOUSE_6_HR
               MOUSE_6_LL       MOUSE_6_LR
               MOUSE_TL         MOUSE_TR
 )
 
-CUSTOM_LAYER(scroll, "Scroll",
+CUSTOM_LAYER(Scroll,
               SCROLL_6_UL       SCROLL_6_UR
               SCROLL_6_HL       SCROLL_6_HR
               SCROLL_6_LL       SCROLL_6_LR
               SCROLL_TL         SCROLL_TR
 )
 
-CUSTOM_LAYER(snipe, "Snipe",
+CUSTOM_LAYER(Snipe,
               SNIPE_6_UL       SNIPE_6_UR
               SNIPE_6_HL       SNIPE_6_HR
               SNIPE_6_LL       SNIPE_6_LR
               SNIPE_TL         SNIPE_TR
 )
 
-CUSTOM_LAYER(funcs, "Funcs",
-              FUNCS_6_UL        FUNCS_6_UR
-              FUNCS_6_HL        FUNCS_6_HR
-              FUNCS_6_LL        FUNCS_6_LR
-              FUNCS_TL          FUNCS_TR
-)
-
-CUSTOM_LAYER(afk, "AFK",
+CUSTOM_LAYER(AFK,
               AFK_6_UL          AFK_6_UR
               AFK_6_HL          AFK_6_HR
               AFK_6_LL          AFK_6_LR

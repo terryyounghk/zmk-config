@@ -1,101 +1,89 @@
+/// TODO: revise vscode combo sets (although I rarely use vscode nowadays)
 /// ---------------------------------------------------------------------------
-/// Combo: L + ? /// vscode functions
+/// Combo: vscode functions
 
-/**
-CUSTOM_COMBO(  rl4lu4,         RL4 LU5,            &kp XXXXXXXXXX                       )
-*/
-CUSTOM_COMBO(  rl4lu4,         RL4 LU4,            &kp Y_VSCODE_CLOSE_ALL               )
-CUSTOM_COMBO(  rl4lu3,         RL4 LU3,            &kp Y_VSCODE_ACTIVE_EDITOR           )
-CUSTOM_COMBO(  rl4lu4,         RL4 LU4,            &kp Y_VSCODE_MARKDOWN_PREVIEW_SIDE   )
-CUSTOM_COMBO(  rl4lu1,         RL4 LU1,            &kp Y_VSCODE_GOTO_TERMINAL           )
+ADD_COMBO(0, RL4 LU5,            XXXXXXXXXX,                                   LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LU4,            &kp Y_VSCODE_CLOSE_ALL,                       LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LU3,            &kp Y_VSCODE_ACTIVE_EDITOR,                   LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LU4,            &kp Y_VSCODE_MARKDOWN_PREVIEW_SIDE,           LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LU1,            &kp Y_VSCODE_GOTO_TERMINAL,                   LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rl4lh5,         RL4 LH5,            &kp Y_VSCODE_SOURCE_CONTROL          )
-CUSTOM_COMBO(  rl4lh4,         RL4 LH4,            &kp Y_VSCODE_SAVE_ALL                )
-CUSTOM_COMBO(  rl4lh3,         RL4 LH3,            &kp Y_VSCODE_TODO_TREE               )
-CUSTOM_COMBO(  rl4lh2,         RL4 LH2,            &kp Y_VSCODE_SEARCH                  )
-CUSTOM_COMBO(  rl4lh1,         RL4 LH1,            &kp Y_VSCODE_GIT_GRAPH               )
+ADD_COMBO(1, RL4 LH5,            &kp Y_VSCODE_SOURCE_CONTROL,                  LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LH4,            &kp Y_VSCODE_SAVE_ALL,                        LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LH3,            &kp Y_VSCODE_TODO_TREE,                       LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LH2,            &kp Y_VSCODE_SEARCH,                          LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LH1,            &kp Y_VSCODE_GIT_GRAPH,                       LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rl4ll5,         RL4 LL5,            &kp Y_VSCODE_ACTIVITY_BAR_TOGGLE     )
-/**
-CUSTOM_COMBO(  rl4ll4,         RL4 LL4,            &kp trans                            ) // testing if this reverts to individual keys
-*/
-CUSTOM_COMBO(  rl4ll3,         RL4 LL3,            &kp Y_VSCODE_DICTATION_START         )
-CUSTOM_COMBO(  rl4ll2,         RL4 LL2,            &kp Y_VSCODE_DICTATION_STOP          )
-CUSTOM_COMBO(  rl4ll1,         RL4 LL1,            &kp Y_VSCODE_GITLENS_TOGGLE_BLAME    )
+ADD_COMBO(1, RL4 LL5,            &kp Y_VSCODE_ACTIVITY_BAR_TOGGLE,             LAYERS_NORMAL)
+ADD_COMBO(0, RL4 LL4,            &kp trans,                                    LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LL3,            &kp Y_VSCODE_DICTATION_START,                 LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LL2,            &kp Y_VSCODE_DICTATION_STOP,                  LAYERS_NORMAL)
+ADD_COMBO(1, RL4 LL1,            &kp Y_VSCODE_GITLENS_TOGGLE_BLAME,            LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rl4rh1,         RL4 RH1,            &kp Y_VSCODE_COMMENT_LINE            )
-CUSTOM_COMBO(  rl4rh2,         RL4 RH2,            &kp Y_VSCODE_SURROUND_WITH           )
-CUSTOM_COMBO(  rl4rh3,         RL4 RH3,            &kp Y_VSCODE_SURROUND_WITH_COMMENT   )
+ADD_COMBO(1, RL4 RH1,            &kp Y_VSCODE_COMMENT_LINE,                    LAYERS_NORMAL)
+ADD_COMBO(1, RL4 RH2,            &kp Y_VSCODE_SURROUND_WITH,                   LAYERS_NORMAL)
+ADD_COMBO(1, RL4 RH3,            &kp Y_VSCODE_SURROUND_WITH_COMMENT,           LAYERS_NORMAL)
 
 /// ---------------------------------------------------------------------------
-/// Combo: W + E + H/J/K/L /// vscode navigation / adjustments
+/// Combo: H/J/K/L + ? vscode navigation / adjustments
 ///
 
-CUSTOM_COMBO(  rh1lu4lu3,      RH1 LU4 LU3,        &kp Y_VSCODE_PREV_TERMINAL           )
-/**
-CUSTOM_COMBO(  rh2lu4lu3,      RH2 LU4 LU3,        &kp Y_VSCODE_XXXXX                   )
-CUSTOM_COMBO(  rh3lu4lu3,      RH3 LU4 LU3,        &kp Y_VSCODE_XXXXX                   )
-*/
-CUSTOM_COMBO(  rh4lu4lu3,      RH4 LU4 LU3,        &kp Y_VSCODE_NEXT_TERMINAL           )
+ADD_COMBO(1, RH1 LU4 LU3,        &kp Y_VSCODE_PREV_TERMINAL,                   LAYERS_NORMAL)
+ADD_COMBO(0, RH2 LU4 LU3,        &kp Y_VSCODE_XXXXX,                           LAYERS_NORMAL)
+ADD_COMBO(0, RH3 LU4 LU3,        &kp Y_VSCODE_XXXXX,                           LAYERS_NORMAL)
+ADD_COMBO(1, RH4 LU4 LU3,        &kp Y_VSCODE_NEXT_TERMINAL,                   LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1lu3lu2,      RH1 LU3 LU2,        &kp Y_VSCODE_DEC_TERMINAL_WIDTH      )
-CUSTOM_COMBO(  rh2lu3lu2,      RH2 LU3 LU2,        &kp Y_VSCODE_DEC_TERMINAL_HEIGHT     )
-CUSTOM_COMBO(  rh3lu3lu2,      RH3 LU3 LU2,        &kp Y_VSCODE_INC_TERMINAL_HEIGHT     )
-CUSTOM_COMBO(  rh4lu3lu2,      RH4 LU3 LU2,        &kp Y_VSCODE_INC_TERMINAL_WIDTH      )
+ADD_COMBO(1, RH1 LU3 LU2,        &kp Y_VSCODE_DEC_TERMINAL_WIDTH,              LAYERS_NORMAL)
+ADD_COMBO(1, RH2 LU3 LU2,        &kp Y_VSCODE_DEC_TERMINAL_HEIGHT,             LAYERS_NORMAL)
+ADD_COMBO(1, RH3 LU3 LU2,        &kp Y_VSCODE_INC_TERMINAL_HEIGHT,             LAYERS_NORMAL)
+ADD_COMBO(1, RH4 LU3 LU2,        &kp Y_VSCODE_INC_TERMINAL_WIDTH,              LAYERS_NORMAL)
 
-/**
-CUSTOM_COMBO(  rh1lu2lu1,      RH1 LU2 LU1,        &kp Y_VSCODE_XXXXX                   )
-*/
-CUSTOM_COMBO(  rh2lu2lu1,      RH2 LU2 LU1,        &kp Y_VSCODE_EDITOR_SIZES_RESET      )
-CUSTOM_COMBO(  rh3lu2lu1,      RH3 LU2 LU1,        &kp Y_VSCODE_EDITOR_SIZES_TOGGLE     )
-/**
-CUSTOM_COMBO(  rh4lu2lu1,      RH4 LU2 LU1,        &kp Y_VSCODE_XXXXX                   )
-*/
+ADD_COMBO(0, RH1 LU2 LU1,        &kp Y_VSCODE_XXXXX,                           LAYERS_NORMAL)
+ADD_COMBO(1, RH2 LU2 LU1,        &kp Y_VSCODE_EDITOR_SIZES_RESET,              LAYERS_NORMAL)
+ADD_COMBO(1, RH3 LU2 LU1,        &kp Y_VSCODE_EDITOR_SIZES_TOGGLE,             LAYERS_NORMAL)
+ADD_COMBO(0, RH4 LU2 LU1,        &kp Y_VSCODE_XXXXX,                           LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1lh4lh3,      RH1 LH4 LH3,        &kp Y_VSCODE_PREV_EDITOR_GROUP       )
-CUSTOM_COMBO(  rh2lh4lh3,      RH2 LH4 LH3,        &kp Y_VSCODE_TOGGLE_PANEL            )
-CUSTOM_COMBO(  rh3lh4lh3,      RH3 LH4 LH3,        &kp Y_VSCODE_ACTIVE_EDITOR           )
-CUSTOM_COMBO(  rh4lh4lh3,      RH4 LH4 LH3,        &kp Y_VSCODE_NEXT_EDITOR_GROUP       )
+ADD_COMBO(1, RH1 LH4 LH3,        &kp Y_VSCODE_PREV_EDITOR_GROUP,               LAYERS_NORMAL)
+ADD_COMBO(1, RH2 LH4 LH3,        &kp Y_VSCODE_TOGGLE_PANEL,                    LAYERS_NORMAL)
+ADD_COMBO(1, RH3 LH4 LH3,        &kp Y_VSCODE_ACTIVE_EDITOR,                   LAYERS_NORMAL)
+ADD_COMBO(1, RH4 LH4 LH3,        &kp Y_VSCODE_NEXT_EDITOR_GROUP,               LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1lh3lh2,      RH1 LH3 LH2,        &kp Y_VSCODE_MOVE_EDITOR_LEFT        )
-CUSTOM_COMBO(  rh2lh3lh2,      RH2 LH3 LH2,        &kp Y_VSCODE_MOVE_INTO_PREV_GROUP    )
-CUSTOM_COMBO(  rh3lh3lh2,      RH3 LH3 LH2,        &kp Y_VSCODE_MOVE_INTO_NEXT_GROUP    )
-CUSTOM_COMBO(  rh4lh3lh2,      RH4 LH3 LH2,        &kp Y_VSCODE_MOVE_EDITOR_RIGHT       )
+ADD_COMBO(1, RH1 LH3 LH2,        &kp Y_VSCODE_MOVE_EDITOR_LEFT,                LAYERS_NORMAL)
+ADD_COMBO(1, RH2 LH3 LH2,        &kp Y_VSCODE_MOVE_INTO_PREV_GROUP,            LAYERS_NORMAL)
+ADD_COMBO(1, RH3 LH3 LH2,        &kp Y_VSCODE_MOVE_INTO_NEXT_GROUP,            LAYERS_NORMAL)
+ADD_COMBO(1, RH4 LH3 LH2,        &kp Y_VSCODE_MOVE_EDITOR_RIGHT,               LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1lh2lh1,      RH1 LH2 LH1,        &kp Y_VSCODE_DEC_EDITOR_WIDTH        )
-CUSTOM_COMBO(  rh2lh2lh1,      RH2 LH2 LH1,        &kp Y_VSCODE_DEC_EDITOR_HEIGHT       )
-CUSTOM_COMBO(  rh3lh2lh1,      RH3 LH2 LH1,        &kp Y_VSCODE_INC_EDITOR_HEIGHT       )
-CUSTOM_COMBO(  rh4lh2lh1,      RH4 LH2 LH1,        &kp Y_VSCODE_INC_EDITOR_WIDTH        )
+ADD_COMBO(1, RH1 LH2 LH1,        &kp Y_VSCODE_DEC_EDITOR_WIDTH,                LAYERS_NORMAL)
+ADD_COMBO(1, RH2 LH2 LH1,        &kp Y_VSCODE_DEC_EDITOR_HEIGHT,               LAYERS_NORMAL)
+ADD_COMBO(1, RH3 LH2 LH1,        &kp Y_VSCODE_INC_EDITOR_HEIGHT,               LAYERS_NORMAL)
+ADD_COMBO(1, RH4 LH2 LH1,        &kp Y_VSCODE_INC_EDITOR_WIDTH,                LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1ll5,         RH1 LL5,            &kp Y_VSCODE_ZOOM_OUT                )
-CUSTOM_COMBO(  rh2ll5,         RH2 LL5,            &kp Y_VSCODE_ZOOM_RESET              )
-CUSTOM_COMBO(  rh3ll5,         RH3 LL5,            &kp Y_VSCODE_ZOOM_RESET              )
-CUSTOM_COMBO(  rh4ll5,         RH4 LL5,            &kp Y_VSCODE_ZOOM_IN                 )
+ADD_COMBO(1, RH1 LL5,            &kp Y_VSCODE_ZOOM_OUT,                        LAYERS_NORMAL)
+ADD_COMBO(1, RH2 LL5,            &kp Y_VSCODE_ZOOM_RESET,                      LAYERS_NORMAL)
+ADD_COMBO(1, RH3 LL5,            &kp Y_VSCODE_ZOOM_RESET,                      LAYERS_NORMAL)
+ADD_COMBO(1, RH4 LL5,            &kp Y_VSCODE_ZOOM_IN,                         LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1ll4,         RH1 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_LEFT       )
-CUSTOM_COMBO(  rh2ll4,         RH2 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_DOWN       )
-CUSTOM_COMBO(  rh3ll4,         RH3 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_UP         )
-CUSTOM_COMBO(  rh4ll4,         RH4 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_RIGHT      )
+ADD_COMBO(1, RH1 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_LEFT,               LAYERS_NORMAL)
+ADD_COMBO(1, RH2 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_DOWN,               LAYERS_NORMAL)
+ADD_COMBO(1, RH3 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_UP,                 LAYERS_NORMAL)
+ADD_COMBO(1, RH4 LL4,            &kp Y_VSCODE_SPLIT_EDITOR_RIGHT,              LAYERS_NORMAL)
 
-/**
-CUSTOM_COMBO(  rh1ll4ll3,      RH1 LL4 LL3,        &kp Y_VSCODE_XXXXX                   )
-CUSTOM_COMBO(  rh2ll4ll3,      RH2 LL4 LL3,        &kp Y_VSCODE_XXXXX                   )
-CUSTOM_COMBO(  rh3ll4ll3,      RH3 LL4 LL3,        &kp Y_VSCODE_XXXXX                   )
-CUSTOM_COMBO(  rh4ll4ll3,      RH4 LL4 LL3,        &kp Y_VSCODE_XXXXX                   )
-*/
+ADD_COMBO(0, RH1 LL4 LL3,        &kp Y_VSCODE_XXXXX,                           LAYERS_NORMAL)
+ADD_COMBO(0, RH2 LL4 LL3,        &kp Y_VSCODE_XXXXX,                           LAYERS_NORMAL)
+ADD_COMBO(0, RH3 LL4 LL3,        &kp Y_VSCODE_XXXXX,                           LAYERS_NORMAL)
+ADD_COMBO(0, RH4 LL4 LL3,        &kp Y_VSCODE_XXXXX,                           LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1ll3ll2,      RH1 LL3 LL2,        &kp Y_VSCODE_PREV_CHANGE             )
-CUSTOM_COMBO(  rh2ll3ll2,      RH2 LL3 LL2,        &kp Y_VSCODE_PREV_CHANGE_SHOW        )
-CUSTOM_COMBO(  rh3ll3ll2,      RH3 LL3 LL2,        &kp Y_VSCODE_NEXT_CHANGE_SHOW        )
-CUSTOM_COMBO(  rh4ll3ll2,      RH4 LL3 LL2,        &kp Y_VSCODE_NEXT_CHANGE             )
+ADD_COMBO(1, RH1 LL3 LL2,        &kp Y_VSCODE_PREV_CHANGE,                     LAYERS_NORMAL)
+ADD_COMBO(1, RH2 LL3 LL2,        &kp Y_VSCODE_PREV_CHANGE_SHOW,                LAYERS_NORMAL)
+ADD_COMBO(1, RH3 LL3 LL2,        &kp Y_VSCODE_NEXT_CHANGE_SHOW,                LAYERS_NORMAL)
+ADD_COMBO(1, RH4 LL3 LL2,        &kp Y_VSCODE_NEXT_CHANGE,                     LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1ll2ll1,      RH1 LL2 LL1,        &kp Y_VSCODE_DECREMENT_BY_10         )
-CUSTOM_COMBO(  rh2ll2ll1,      RH2 LL2 LL1,        &kp Y_VSCODE_DECREMENT_BY_1          )
-CUSTOM_COMBO(  rh3ll2ll1,      RH3 LL2 LL1,        &kp Y_VSCODE_INCREMENT_BY_1          )
-CUSTOM_COMBO(  rh4ll2ll1,      RH4 LL2 LL1,        &kp Y_VSCODE_INCREMENT_BY_10         )
+ADD_COMBO(1, RH1 LL2 LL1,        &kp Y_VSCODE_DECREMENT_BY_10,                 LAYERS_NORMAL)
+ADD_COMBO(1, RH2 LL2 LL1,        &kp Y_VSCODE_DECREMENT_BY_1,                  LAYERS_NORMAL)
+ADD_COMBO(1, RH3 LL2 LL1,        &kp Y_VSCODE_INCREMENT_BY_1,                  LAYERS_NORMAL)
+ADD_COMBO(1, RH4 LL2 LL1,        &kp Y_VSCODE_INCREMENT_BY_10,                 LAYERS_NORMAL)
 
-CUSTOM_COMBO(  rh1ll1,         RH1 LL1,            &kp Y_VSCODE_PREV_PROBLEM            )
-CUSTOM_COMBO(  rh2ll1,         RH2 LL1,            &kp Y_VSCODE_VIEW_PROBLEMS           )
-CUSTOM_COMBO(  rh3ll1,         RH3 LL1,            &kp Y_VSCODE_VIEW_PROBLEMS           )
-CUSTOM_COMBO(  rh4ll1,         RH4 LL1,            &kp Y_VSCODE_NEXT_PROBLEM            )
-
+ADD_COMBO(1, RH1 LL1,            &kp Y_VSCODE_PREV_PROBLEM,                    LAYERS_NORMAL)
+ADD_COMBO(1, RH2 LL1,            &kp Y_VSCODE_VIEW_PROBLEMS,                   LAYERS_NORMAL)
+ADD_COMBO(1, RH3 LL1,            &kp Y_VSCODE_VIEW_PROBLEMS,                   LAYERS_NORMAL)
+ADD_COMBO(1, RH4 LL1,            &kp Y_VSCODE_NEXT_PROBLEM,                    LAYERS_NORMAL)

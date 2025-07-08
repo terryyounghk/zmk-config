@@ -1,72 +1,38 @@
-/// Combo: ; + ? /// MacOS and utility apps
-/// TODO: Y_MI_NAME_WINDOW
-/// TODO: Toggle AirDrop?
-/// TODO: Search: Google Drive
-
-CUSTOM_COMBO(  lh4lh3lh2,      LH4 LH3 LH2,        &kp K_MUTE                           )
-CUSTOM_COMBO(  rh4rh3rh2,      RH4 RH3 RH2,        &kp K_MUTE                           )
-CUSTOM_COMBO(  ll4ll3ll2,      LL4 LL3 LL2,        &kp Y_LOCK_SCREEN                    )
-CUSTOM_COMBO(  rl4rl3rl2,      RL4 RL3 RL2,        &kp Y_LOCK_SCREEN                    )
-
 /// ---------------------------------------------------------------------------
-// usually it's the second last, next to "Help". Good enough for me.
-///
-CUSTOM_COMBO(  rh5lu5,         RH5 LU5,            &kp Y_MISSION_CONTROL                )
-CUSTOM_COMBO(  rh5lu4,         RH5 LU4,            &m_mac_win_menu                      )
-CUSTOM_COMBO(  rh5lu3,         RH5 LU3,            &kp Y_DOCK                           )
-CUSTOM_COMBO(  rh5lu2,         RH5 LU2,            &kp Y_MI_NAME_WINDOW                 ) // this is specific for Chrome/Brave Browser
-CUSTOM_COMBO(  rh5lu1,         RH5 LU1,            &kp Y_BARTENDER_SEARCH               )
+/// Combo: MacOS and utility apps
 
-/// ---------------------------------------------------------------------------
-/**
-CUSTOM_COMBO(  rh5lh5,         RH5 LH5,            RESERVED: symmetric                  )
-*/
-CUSTOM_COMBO(  rh5lh4,         RH5 LH4,            &kp Y_SPOTLIGHT                      )
-CUSTOM_COMBO(  rh5lh3,         RH5 LH3,            &kp Y_SHORTCAT                       )
-CUSTOM_COMBO(  rh5lh2,         RH5 LH2,            &kp Y_ONE_PASSWORD_QUICK_ACCESS      )
-CUSTOM_COMBO(  rh5lh1,         RH5 LH1,            &kp Y_GOOGLE_DRIVE_SEARCH            )
+ADD_COMBO(0, BK_APPS LU5,            Reserved: symmetric,                 LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LU4,            &kp Y_OKTA,                          LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LU3,            &kp Y_MENUBAR,                       LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LU2,            &kp Y_DOCK,                          LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LU1,            &kp Y_LAUNCHPAD,                     LAYERS_NORMAL)
 
-/// ---------------------------------------------------------------------------
-CUSTOM_COMBO(  rh5ll5,         RH5 LL5,            &kp Y_APPLICATION_WINDOWS            )
-/**
-CUSTOM_COMBO(  rh5ll4,         RH5 LL4,            &kp XXXXXXXXXX                       )
-CUSTOM_COMBO(  rh5ll3,         RH5 LL3,            &kp XXXXXXXXXX                       )
-CUSTOM_COMBO(  rh5ll2,         RH5 LL2,            &kp XXXXXXXXXX                       )
-CUSTOM_COMBO(  rh5ll1,         RH5 LL1,            RESERVED: browser                    )
-*/
+ADD_COMBO(1, BK_APPS RU1,            &kp Y_ONE_PASSWORD_AUTOFILL,         LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS RU2,            &kp Y_ONE_PASSWORD_SHOW,             LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS RU3,            &kp Y_KEYCAST_TOGGLE,                LAYERS_NORMAL)
+ADD_COMBO(0, BK_APPS RU4,            XXXXXXXXXX,                          LAYERS_NORMAL)
+ADD_COMBO(0, BK_APPS RU5,            Reserved: inaccessible,              LAYERS_NORMAL)
 
-/// ---------------------------------------------------------------------------
-/**
-CUSTOM_COMBO(  rh5ru1,         RH5 RU1,            &kp XXXXXXXXXX                       )
-CUSTOM_COMBO(  rh5ru2,         RH5 RU2,            &kp XXXXXXXXXX                       )
-CUSTOM_COMBO(  rh5ru3,         RH5 RU3,            &kp XXXXXXXXXX                       )
-CUSTOM_COMBO(  rh5ru4,         RH5 RU4,            &kp XXXXXXXXXX                       )
-*/
+ADD_COMBO(1, BK_APPS LH5,            &kp Y_BARTENDER_SEARCH,              LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LH4,            &kp Y_RAYCAST,                       LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LH3,            &kp Y_SHORTCAT,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LH2,            &kp Y_ONE_PASSWORD_QUICK_ACCESS,     LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LH1,            &kp Y_GOOGLE_DRIVE_SEARCH,           LAYERS_NORMAL)
 
-/// ---------------------------------------------------------------------------
-CUSTOM_COMBO(  rh5rh1,         RH5 RH1,            &kp Y_HAZEOVER_TOGGLE                )
-CUSTOM_COMBO(  rh5rh2,         RH5 RH2,            &kp Y_KEYCAST_TOGGLE                 )
-CUSTOM_COMBO(  rh5rh3,         RH5 RH3,            &kp Y_OKTA                           )
+ADD_COMBO(1, BK_APPS RH1,            &kp Y_MISSION_CONTROL,               LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS RH2,            &kp Y_APPLICATION_WINDOWS,           LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS RH3,            &kp Y_HAZEOVER_TOGGLE,               LAYERS_NORMAL)
+ADD_COMBO(0, BK_APPS RH4,            Reserved: Misfires,                  LAYERS_NORMAL)
+ADD_COMBO(0, BK_APPS RH5,            Reserved: Adjacent,                  LAYERS_NORMAL)
 
-/// ---------------------------------------------------------------------------
-CUSTOM_COMBO(  rh5rl1,         RH5 RL1,            &kp Y_PRESENTIFY_ANNOTATE            )
-/**
-CUSTOM_COMBO(  rh5rl2,         RH5 RL2,            &kp XXXXXXXXXX                       )
-CUSTOM_COMBO(  rh5rl3,         RH5 RL3,            &kp XXXXXXXXXX                       )
-*/
+ADD_COMBO(0, BK_APPS LL5,            Reserved: Symmetric,                 LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LL4,            &kp Y_SOUND_SETTINGS,                LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LL3,            &kp Y_DISPLAY_SETTINGS,              LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LL2,            &kp Y_CHAR_VIEWER,                   LAYERS_NORMAL)
+ADD_COMBO(0, BK_APPS LL1,            Reserved: browser,                   LAYERS_NORMAL)
 
-/**
-CUSTOM_COMBO(  rl2rl3lu1,               RL2 RL3 LU1,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  rl2rl3lu2,               RL2 RL3 LU2,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  rl2rl3lu3,               RL2 RL3 LU3,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  rl2rl3lu4,               RL2 RL3 LU4,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  rl2rl3lu5,               RL2 RL3 LU5,        XXXXXXXXXX                          )
-*/
-
-/**
-CUSTOM_COMBO(  rl2rl3lu1,               RL2 RL3 LU1,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  rl2rl3lu2,               RL2 RL3 LU2,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  rl2rl3lu3,               RL2 RL3 LU3,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  rl2rl3lu4,               RL2 RL3 LU4,        XXXXXXXXXX                          )
-CUSTOM_COMBO(  rl2rl3lu5,               RL2 RL3 LU5,        XXXXXXXXXX                          )
-*/
+ADD_COMBO(1, BK_APPS RL1,            &kp Y_PRESENTIFY_ANNOTATE,           LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS RL2,            &kp Y_ONE_SWITCH_MUTE_MIC,           LAYERS_NORMAL)
+ADD_COMBO(0, BK_APPS RL3,            XXXXXXXXXX,                          LAYERS_NORMAL)
+ADD_COMBO(0, BK_APPS RL4,            XXXXXXXXXX,                          LAYERS_NORMAL)
+ADD_COMBO(0, BK_APPS RL5,            XXXXXXXXXX,                          LAYERS_NORMAL)

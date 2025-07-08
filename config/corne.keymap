@@ -12,6 +12,7 @@
 
 #include "common/base_keymap.h"
 #include "common/keys.h"
+#include "common/combos.h"
 #include "common/mouse.dtsi"
 #include "common/behaviors.dtsi"
 #include "common/macros.dtsi"
@@ -26,84 +27,84 @@
   };
 };
 
-CUSTOM_LAYER(qwerty, "Qwerty",
+CUSTOM_LAYER(Qwerty,
   QWERTY_UL         QWERTY_UR
   QWERTY_HL         QWERTY_HR
   QWERTY_LL         QWERTY_LR
   QWERTY_TL         QWERTY_TR
 )
 
-CUSTOM_LAYER(numbers, "Numbers",
+CUSTOM_LAYER(Numbers,
   NUMBERS_UL        NUMBERS_UR
   NUMBERS_HL        NUMBERS_HR
   NUMBERS_LL        NUMBERS_LR
   NUMBERS_TL        NUMBERS_TR
 )
 
-CUSTOM_LAYER(numpad, "Numpad",
+CUSTOM_LAYER(Numpad,
   NUMPAD_UL         NUMPAD_UR
   NUMPAD_HL         NUMPAD_HR
   NUMPAD_LL         NUMPAD_LR
   NUMPAD_TL         NUMPAD_TR
 )
 
-CUSTOM_LAYER(symbols, "Symbols",
+CUSTOM_LAYER(Symbols,
   SYMBOLS_UL        SYMBOLS_UR
   SYMBOLS_HL        SYMBOLS_HR
   SYMBOLS_LL        SYMBOLS_LR
   SYMBOLS_TL        SYMBOLS_TR
 )
 
-CUSTOM_LAYER(coding, "Coding",
+CUSTOM_LAYER(Coding,
   CODING_UL         CODING_UR
   CODING_HL         CODING_HR
   CODING_LL         CODING_LR
   CODING_TL         CODING_TR
 )
 
-CUSTOM_LAYER(controls, "Controls",
+CUSTOM_LAYER(Nav,
+  NAV_UL            NAV_UR
+  NAV_HL            NAV_HR
+  NAV_LL            NAV_LR
+  NAV_TL            NAV_TR
+)
+
+CUSTOM_LAYER(Controls,
   CONTROLS_UL       CONTROLS_UR
   CONTROLS_HL       CONTROLS_HR
   CONTROLS_LL       CONTROLS_LR
   CONTROLS_TL       CONTROLS_TR
 )
 
-CUSTOM_LAYER(switch, "Switch",
+CUSTOM_LAYER(Switch,
   SWITCH_UL         SWITCH_UR
   SWITCH_HL         SWITCH_HR
   SWITCH_LL         SWITCH_LR
   SWITCH_TL         SWITCH_TR
 )
 
-CUSTOM_LAYER(mouse, "Mouse",
+CUSTOM_LAYER(Mouse,
   MOUSE_UL          MOUSE_UR
   MOUSE_HL          MOUSE_HR
   MOUSE_LL          MOUSE_LR
   MOUSE_TL          MOUSE_TR
 )
 
-CUSTOM_LAYER(scroll, "Scroll",
+CUSTOM_LAYER(Scroll,
   SCROLL_UL         SCROLL_UR
   SCROLL_HL         SCROLL_HR
   SCROLL_LL         SCROLL_LR
   SCROLL_TL         SCROLL_TR
 )
 
-CUSTOM_LAYER(snipe, "Snipe",
+CUSTOM_LAYER(Snipe,
   SNIPE_UL          SNIPE_UR
   SNIPE_HL          SNIPE_HR
   SNIPE_LL          SNIPE_LR
   SNIPE_TL          SNIPE_TR
 )
 
-CUSTOM_LAYER(funcs, "Funcs",
-  FUNCS_UL          FUNCS_UR
-  FUNCS_HL          FUNCS_HR
-  FUNCS_LL          FUNCS_LR
-  FUNCS_TL          FUNCS_TR
-)
-
-CUSTOM_LAYER(afk, "AFK",
+CUSTOM_LAYER(AFK,
   AFK_UL            AFK_UR
   AFK_HL            AFK_HR
   AFK_LL            AFK_LR
