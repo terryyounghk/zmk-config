@@ -33,6 +33,20 @@ CUSTOM_LAYER(Qwerty,
               QWERTY_TL         QWERTY_TR
 )
 
+CUSTOM_LAYER(Harmony,
+              HARMONY_6_UL      HARMONY_6_UR
+              HARMONY_6_HL      HARMONY_6_HR
+              HARMONY_6_LL      HARMONY_6_LR
+              HARMONY_TL        HARMONY_TR
+)
+
+CUSTOM_LAYER(Colemak,
+              COLEMAK_6_UL      COLEMAK_6_UR
+              COLEMAK_6_HL      COLEMAK_6_HR
+              COLEMAK_6_LL      COLEMAK_6_LR
+              COLEMAK_TL        COLEMAK_TR
+)
+
 CUSTOM_LAYER(Numbers,
               NUMBERS_6_UL      NUMBERS_6_UR
               NUMBERS_6_HL      NUMBERS_6_HR

@@ -10,7 +10,6 @@
 #define Y_RT2                           &ht_mo_kp SYMBOLS SPACE
 #define Y_RT2_NP                        &ht_mo_kp SYMBOLS N0
 #define Y_RT3                           &ht_mo_kp NUMBERS TAB
-#define Y_SEMI                          &td_semi
 #define Y_FSLH                          &ht_mo_kp SNIPE FSLH
 #define Y_COMMA                         &td_comma
 

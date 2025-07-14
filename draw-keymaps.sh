@@ -30,31 +30,33 @@ fi
 specs=(
     "complete overview"
     "qwerty individual 0"
-    "numbers individual 1"
-    "numpad individual 2"
-    "symbols individual 3"
-    "coding individual 4"
-    "nav individual 5"
-    "controls individual 6"
-    "switch individual 7"
-    "mouse individual 8"
-    "afk individual 9"
-    "combo-adjacent individual 10"
-    "combo-layers individual 11"
-    "combo-mods individual 12"
-    "combo-symmetric individual 13"
-    "combo-panic individual 14"
-    "combo-system individual 15"
-    "combo-keyboard individual 16"
-    "combo-tmux individual 17"
-    "combo-neovim individual 18"
-    "combo-apps individual 19"
-    "combo-capturing individual 20"
-    "combo-browser individual 21"
-    "combo-vscode individual 22"
-    "combo-vscode-movement individual 23"
-    # "layers individual 0 1 2 3 4 5 6 7 8 9"
-    # "combos individual 10 11 12 13 14 15 16 17 18 19 20 21 22 23"
+    "harmony individual 1"
+    "colemak-dh individual 2"
+    "numbers individual 3"
+    "numpad individual 4"
+    "symbols individual 5"
+    "coding individual 6"
+    "nav individual 7"
+    "controls individual 8"
+    "switch individual 9"
+    "mouse individual 10"
+    "afk individual 11"
+    "combo-adjacent individual 12"
+    "combo-layers individual 13"
+    "combo-mods individual 14"
+    "combo-symmetric individual 15"
+    "combo-panic individual 16"
+    "combo-system individual 17"
+    "combo-keyboard individual 18"
+    "combo-tmux individual 19"
+    "combo-neovim individual 20"
+    "combo-apps individual 21"
+    "combo-capturing individual 22"
+    "combo-browser individual 23"
+    "combo-vscode individual 24"
+    "combo-vscode-movement individual 25"
+    # "layers individual 1 2 3 4 5 6 7 8 9 10 11"
+    # "combos individual 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25"
 )
 
 prepare_config() {
@@ -66,7 +68,7 @@ prepare_config() {
   yq eval '.draw_config.footer_text = "Created with keymap-drawer"' \
       "$config_file" -i
 
-  yq eval ".draw_config.n_columns = 4" \
+  yq eval ".draw_config.n_columns = 2" \
     "$config_file" -i
 
   \cat "$base_css" >> "$temp_file"

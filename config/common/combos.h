@@ -14,6 +14,9 @@
 #define BK_KTR                  RT2                     // Key Toggle (Right)
 #define BK_KTL                  LT2                     // Key Toggle (Left)
 
+// Base Key for typing layout switching
+#define BK_TYPING               LU5
+
 // Base keys for contextual combos
 #define BK_APPS                 RH5
 #define BK_NEOVIM_L             LT1

@@ -13,6 +13,14 @@ ADD_COMBO(1, LH4 LH1,            &kp Y_NEXT_APPLICATION,        LAYERS_ALL)
 ADD_COMBO(1, RH4 RH1,            &kp Y_NEXT_APPLICATION,        LAYERS_ALL)
 
 /// ---------------------------------------------------------------------------
+/// Combo: Layouts
+
+ADD_COMBO(1, BK_TYPING RH1,      &to QWERTY,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_TYPING RH2,      &to HARMONY,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_TYPING RH3,      &to COLEMAK,                   LAYERS_NORMAL)
+
+
+/// ---------------------------------------------------------------------------
 /// Combo: System
 
 ADD_COMBO(1, LU4 LU3 LU2,        &kp Y_FORCE_QUIT,              LAYERS_NORMAL)

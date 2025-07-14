@@ -1,18 +1,22 @@
 #define QWERTY   0
-#define NUMBERS  1
-#define NUMPAD   2
-#define SYMBOLS  3
-#define CODING   4
-#define NAV      5
-#define CONTROLS 6
-#define SWITCH   7
-#define MOUSE    8
-#define SCROLL   9
-#define SNIPE    10
-#define AFK      11
+#define HARMONY  1
+#define COLEMAK  2
+#define NUMBERS  3
+#define NUMPAD   4
+#define SYMBOLS  5
+#define CODING   6
+#define NAV      7
+#define CONTROLS 8
+#define SWITCH   9
+#define MOUSE    10
+#define SCROLL   11
+#define SNIPE    12
+#define AFK      13
 
 #define LAYERS_ALL \
         QWERTY   \
+        HARMONY  \
+        COLEMAK  \
         NUMBERS  \
         NUMPAD   \
         SYMBOLS  \
@@ -27,6 +31,8 @@
 
 #define LAYERS_NORMAL   \
         QWERTY   \
+        HARMONY  \
+        COLEMAK  \
         NUMBERS  \
         NUMPAD   \
         SYMBOLS  \
@@ -50,7 +56,7 @@
 #define QWERTY_HL \
                           &kp A          &kp S          &kp D          &kp F          &kp G
 #define QWERTY_HR \
-                                                                                                           &kp H          &kp J          &kp K          &kp L          Y_SEMI
+                                                                                                           &kp H          &kp J          &kp K          &kp L          &kp SEMI
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define QWERTY_LL \
                           &kp Z          &kp X          &kp C          &kp V          &kp B
@@ -69,6 +75,66 @@
 #define QWERTY_6_HR                         QWERTY_HR         &td_lctrl
 #define QWERTY_6_LL       &td_lgui          QWERTY_LL
 #define QWERTY_6_LR                         QWERTY_LR         &td_lalt
+
+
+                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
+#define HARMONY_UL \
+                          &kp Q          &kp W          &kp R          &kp N          &kp F
+#define HARMONY_UR \
+                                                                                                           &kp J          &kp U          &kp O          &kp L          &kp P
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define HARMONY_HL \
+                          &kp K          &kp S          &kp T          &kp H          &kp M
+#define HARMONY_HR \
+                                                                                                           &kp G          &kp I          &kp E          &kp A          &kp Y
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define HARMONY_LL \
+                          &kp Z          &kp X          &kp C          &kp V          &kp B
+#define HARMONY_LR \
+                                                                                                           &kp MINUS      &kp D          &td_comma      &kp DOT        Y_FSLH
+                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
+#define HARMONY_TL \
+                                                        Y_LT3          Y_LT2          Y_LT1
+#define HARMONY_TR \
+                                                                                                           Y_RT1          Y_RT2          Y_RT3
+                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
+
+#define HARMONY_6_UL      &kp UNDER         HARMONY_UL
+#define HARMONY_6_UR                        HARMONY_UR         &td_apos
+#define HARMONY_6_HL      &td_lctrl         HARMONY_HL
+#define HARMONY_6_HR                        HARMONY_HR         &td_lctrl
+#define HARMONY_6_LL      &td_lgui          HARMONY_LL
+#define HARMONY_6_LR                        HARMONY_LR         &td_lalt
+
+
+                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
+#define COLEMAK_UL \
+                          &kp Q          &kp W          &kp F          &kp P          &kp B
+#define COLEMAK_UR \
+                                                                                                           &kp J          &kp L          &kp U          &kp Y          &kp SEMI
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define COLEMAK_HL \
+                          &kp A          &kp R          &kp S          &kp T          &kp G
+#define COLEMAK_HR \
+                                                                                                           &kp M          &kp N          &kp E          &kp I          &kp O
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define COLEMAK_LL \
+                          &kp Z          &kp X          &kp C          &kp D          &kp V
+#define COLEMAK_LR \
+                                                                                                           &kp K          &kp H          &td_comma      &kp DOT        Y_FSLH
+                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
+#define COLEMAK_TL \
+                                                        Y_LT3          Y_LT2          Y_LT1
+#define COLEMAK_TR \
+                                                                                                           Y_RT1          Y_RT2          Y_RT3
+                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
+
+#define COLEMAK_6_UL      &kp UNDER         COLEMAK_UL
+#define COLEMAK_6_UR                        COLEMAK_UR         &td_apos
+#define COLEMAK_6_HL      &td_lctrl         COLEMAK_HL
+#define COLEMAK_6_HR                        COLEMAK_HR         &td_lctrl
+#define COLEMAK_6_LL      &td_lgui          COLEMAK_LL
+#define COLEMAK_6_LR                        COLEMAK_LR         &td_lalt
 
 
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */

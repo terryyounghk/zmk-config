@@ -34,6 +34,22 @@ CUSTOM_LAYER_WITH_SENSOR(Qwerty,
   , &encoder_vol
 )
 
+CUSTOM_LAYER_WITH_SENSOR(Harmony,
+  HARMONY_6_UL                             &kp UP                   HARMONY_6_UR
+  HARMONY_6_HL               &kp LEFT      &kp ENTER   &kp RIGHT    HARMONY_6_HR
+  HARMONY_6_LL   &kp SPACE                 &kp DOWN                 HARMONY_6_LR
+  HARMONY_TL                                                        HARMONY_TR
+  , &encoder_vol
+)
+
+CUSTOM_LAYER_WITH_SENSOR(Colemak,
+  COLEMAK_6_UL                             &kp UP                   COLEMAK_6_UR
+  COLEMAK_6_HL               &kp LEFT      &kp ENTER   &kp RIGHT    COLEMAK_6_HR
+  COLEMAK_6_LL   &kp SPACE                 &kp DOWN                 COLEMAK_6_LR
+  COLEMAK_TL                                                        COLEMAK_TR
+  , &encoder_vol
+)
+
 CUSTOM_LAYER_WITH_SENSOR(Numbers,
   NUMBERS_6_UL                             &kp UP                   NUMBERS_6_UR
   NUMBERS_6_HL               &kp LEFT      &kp ENTER   &kp RIGHT    NUMBERS_6_HR

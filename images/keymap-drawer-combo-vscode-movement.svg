@@ -520,8 +520,6 @@ text.label {
     fill: #555;
     stroke-width: 0;
     paint-order: stroke;
-
-    display: none;
 }
 
 /* styling for combo tap, and key hold/shifted label text */

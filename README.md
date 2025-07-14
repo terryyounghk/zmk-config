@@ -48,7 +48,9 @@ More about [my preferences](./docs/preferences.md)
 -->
 
 - Alpha Layers
-  - [Qwerty](./docs/layers.md#qwerty)
+  - [Qwerty](./docs/layers.md#qwerty-layout)
+  - [Harmony](./docs/layers.md#harmony-layout)
+  - [Colemak-DH](./docs/layers.md#colemak-dh-layout)
 - Num and Sym Layers
   - [Numbers](./docs/layers.md#numbers)
   - [Numpad](./docs/layers.md#numpad)
@@ -63,7 +65,7 @@ More about [my preferences](./docs/preferences.md)
   - [Auto-mouse Layer](./docs/layers.md#auto-mouse)
   - [Scroll Layer](./docs/layers.md#scroll)
   - [Snipe Layer](./docs/layers.md#snipe)
-- [AFK Layer](./docs/layers.md#afk)
+- [AFK Layer](./docs/layers.md#afk-layer)
 
 ## Combos
 

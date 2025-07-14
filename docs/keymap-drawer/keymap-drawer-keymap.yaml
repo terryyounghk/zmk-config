@@ -25,6 +25,52 @@ layers:
     - {t: $$mdi:keyboard-space$$, h: "sym"}
     - {t: $$mdi:keyboard-tab$$, h: "numbers", type: ghost}
 
+  Layer Harmony:
+    - [
+        # "_",
+        Q, W, R, N, F, J, U, O, L, P
+        # "'",
+      ]
+    - [
+        # $$mdi:apple-keyboard-control$$,
+        K, S, T, H, M, G, I, E, A, Y
+        # $$mdi:apple-keyboard-control$$,
+      ]
+    - [
+        # $$mdi:apple-keyboard-command$$,
+        Z, X, C, V, B, "-", D, ",", ".", "/"
+        # $$mdi:apple-keyboard-option$$,
+      ]
+    - {t: "numbers", h: "numpad", type: ghost}
+    - $$mdi:apple-keyboard-shift$$
+    - {t: "repeat", h: "tab"}
+    - {t: $$mdi:keyboard-return$$, h: "code"}
+    - {t: $$mdi:keyboard-space$$, h: "sym"}
+    - {t: $$mdi:keyboard-tab$$, h: "numbers", type: ghost}
+
+  Layer Colemak-DH:
+    - [
+        # "_",
+        Q, W, F, P, B, J, L, U, Y, ";"
+        # "'",
+      ]
+    - [
+        # $$mdi:apple-keyboard-control$$,
+        A, R, S, T, G, M, N, E, I, O
+        # $$mdi:apple-keyboard-control$$,
+      ]
+    - [
+        # $$mdi:apple-keyboard-command$$,
+        Z, X, C, D, V, K, H, ",", ".", "/"
+        # $$mdi:apple-keyboard-option$$,
+      ]
+    - {t: "numbers", h: "numpad", type: ghost}
+    - $$mdi:apple-keyboard-shift$$
+    - {t: "repeat", h: "tab"}
+    - {t: $$mdi:keyboard-return$$, h: "code"}
+    - {t: $$mdi:keyboard-space$$, h: "sym"}
+    - {t: $$mdi:keyboard-tab$$, h: "numbers", type: ghost}
+
   Layer Numbers:
     - [
         # "_",

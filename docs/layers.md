@@ -2,7 +2,7 @@
 
 ## Alpha Layers
 
-### QWERTY
+### QWERTY Layout
 
 Nothing special with Qwerty itself, so description here is more on introducing the thumb clusters.
 
@@ -17,6 +17,18 @@ The second most used thumb keys are <kbd>Enter</kbd> on the right, and <kbd>Repe
 The third outermost thumb keys are optional:
 - <kbd>Tab</kbd> have equivalent combo keys, and on Keyball keyboards, it's positioned on the right of the trackball, which means it's typed with the pinky if needed
 - Left third outermost thumb key is a special Hold-Tap where tap is a <kbd>&sl</kbd> switch to "Numbers" layer and hold is a <kbd>&mo</kbd> to "Numpad" layer
+
+### Harmony Layout
+
+This layer is based on the [Harmony keyboard layout](https://github.com/bottilabo/harmony-keyboard-layout).
+
+![Layer Harmony](../images/keymap-drawer-harmony.svg)
+
+### Colemak-DH Layout
+
+This layer is based on the [Colemak-DH keyboard layout](https://colemakmods.github.io/mod-dh/).
+
+![Layer Colemak-DH](../images/keymap-drawer-colemak-dh.svg)
 
 ## Num Layers
 

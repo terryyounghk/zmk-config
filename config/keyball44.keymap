@@ -31,6 +31,8 @@
 #define CONTROLS_6_LR                       CONTROLS_LR       &bootloader
 
 #define QWERTY_KEYBALL44_TL     Y_LT5 Y_LT4 QWERTY_TL
+#define HARMONY_KEYBALL44_TL    Y_LT5 Y_LT4 HARMONY_TL
+#define COLEMAK_KEYBALL44_TL    Y_LT5 Y_LT4 COLEMAK_TL
 #define NUMBERS_KEYBALL44_TL    Y_LT5 Y_LT4 NUMBERS_TL
 #define NUMPAD_KEYBALL44_TL     Y_LT5 Y_LT4 NUMPAD_TL
 #define SYMBOLS_KEYBALL44_TL    Y_LT5 Y_LT4 SYMBOLS_TL
@@ -48,6 +50,20 @@ CUSTOM_LAYER(Qwerty,
               QWERTY_6_HL       QWERTY_6_HR
               QWERTY_6_LL       QWERTY_6_LR
       QWERTY_KEYBALL44_TL       QWERTY_TR
+)
+
+CUSTOM_LAYER(Harmony,
+              HARMONY_6_UL      HARMONY_6_UR
+              HARMONY_6_HL      HARMONY_6_HR
+              HARMONY_6_LL      HARMONY_6_LR
+      HARMONY_KEYBALL44_TL      HARMONY_TR
+)
+
+CUSTOM_LAYER(Colemak,
+              COLEMAK_6_UL      COLEMAK_6_UR
+              COLEMAK_6_HL      COLEMAK_6_HR
+              COLEMAK_6_LL      COLEMAK_6_LR
+      COLEMAK_KEYBALL44_TL      COLEMAK_TR
 )
 
 CUSTOM_LAYER(Numbers,
