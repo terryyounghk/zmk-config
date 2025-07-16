@@ -8,10 +8,11 @@
 #define NAV      7
 #define CONTROLS 8
 #define SWITCH   9
-#define MOUSE    10
-#define SCROLL   11
-#define SNIPE    12
-#define AFK      13
+#define PICO8    10
+#define MOUSE    11
+#define SCROLL   12
+#define SNIPE    13
+#define AFK      14
 
 #define LAYERS_ALL \
         QWERTY   \
@@ -24,6 +25,7 @@
         NAV      \
         CONTROLS \
         SWITCH   \
+        PICO8    \
         MOUSE    \
         SCROLL   \
         SNIPE    \
@@ -350,6 +352,38 @@
 #define SWITCH_6_HR                            SWITCH_HR             &none
 #define SWITCH_6_LL           &none            SWITCH_LL
 #define SWITCH_6_LR                            SWITCH_LR             &none
+
+
+
+                    /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
+#define PICO8_UL \
+                          PIP1_PAUSE     PIP1_O         PIP1_UP        PIP1_X         &none
+#define PICO8_UR \
+                                                                                                           &none          PIP2_X         PIP2_UP        PIP2_O         PIP2_PAUSE
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define PICO8_HL \
+                          PIP1_X         PIP1_LEFT      PIP1_DOWN      PIP1_RIGHT    PIP1_O
+#define PICO8_HR \
+                                                                                                           PIP2_O         PIP2_LEFT      PIP2_DOWN      PIP2_RIGHT     PIP2_X
+                    /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
+#define PICO8_LL \
+                          &none          &none          PIP2_X         PIP2_O         &none
+#define PICO8_LR \
+                                                                                                           &none          PIP1_X         PIP1_O         &none          &none
+                    /* ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯ */
+#define PICO8_TL \
+                                                        Y_LT3          PIP1_X         PIP1_O
+#define PICO8_TR \
+                                                                                                           PIP2_O         PIP2_X         Y_RT3
+                    /*                               ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯                               */
+
+#define PICO8_6_UL            &none            PICO8_UL
+#define PICO8_6_UR                             PICO8_UR             &none
+#define PICO8_6_HL            &none            PICO8_HL
+#define PICO8_6_HR                             PICO8_HR             &none
+#define PICO8_6_LL            &none            PICO8_LL
+#define PICO8_6_LR                             PICO8_LR             &none
+
 
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
 #define MOUSE_UL \

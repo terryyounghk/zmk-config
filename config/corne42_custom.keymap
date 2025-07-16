@@ -130,6 +130,15 @@ CUSTOM_LAYER_WITH_SENSOR(Switch,
   , &encoder_vol
 )
 
+CUSTOM_LAYER_WITH_SENSOR(Pico8,
+                    PICO8_6_UL        &mmv MOVE_UP        PICO8_6_UR
+                    PICO8_6_HL        &mmv MOVE_DOWN      PICO8_6_HR
+                    PICO8_6_LL        &mmv MOVE_LEFT      PICO8_6_LR
+    &none           PICO8_TL          &mmv MOVE_RIGHT     PICO8_TR
+                                      &mkp LCLK
+  , &encoder_vol
+)
+
 CUSTOM_LAYER_WITH_SENSOR(Mouse,
                     MOUSE_6_UL        &mmv MOVE_UP        MOUSE_6_UR
                     MOUSE_6_HL        &mmv MOVE_DOWN      MOUSE_6_HR

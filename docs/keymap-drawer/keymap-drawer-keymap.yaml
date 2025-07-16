@@ -363,6 +363,52 @@ layers:
     - {type: yellow, t: $$mdi:alpha-b-circle$$ }
     - {t: $$mdi:nintendo-switch$$, s: "register"}
 
+  Layer Pico-8:
+    - [
+        {type: lhs, t: $$mdi:pause-box$$, s: "Player 1"},
+        {type: lhs, t: $$mdi:alpha-o-box$$, s: "Player 1"},
+        {type: lhs, t: $$mdi:arrow-up-box$$, s: "Player 1"},
+        {type: lhs, t: $$mdi:alpha-x-box$$, s: "Player 1"},
+        null,
+        null,
+        {type: rhs, t: $$mdi:alpha-x-box$$, s: "Player 2"},
+        {type: rhs, t: $$mdi:arrow-up-box$$, s: "Player 2"},
+        {type: rhs, t: $$mdi:alpha-o-box$$, s: "Player 2"},
+        {type: rhs, t: $$mdi:pause-box$$, s: "Player 2"},
+      ]
+    - [
+        {type: lhs, t: $$mdi:alpha-x-box$$, s: "Player 1"},
+        {type: lhs, t: $$mdi:arrow-left-box$$, s: "Player 1"},
+        {type: lhs, t: $$mdi:arrow-down-box$$, s: "Player 1"},
+        {type: lhs, t: $$mdi:arrow-right-box$$, s: "Player 1"},
+        {type: lhs, t: $$mdi:alpha-o-box$$, s: "Player 1"},
+        {type: rhs, t: $$mdi:alpha-o-box$$, s: "Player 2"},
+        {type: rhs, t: $$mdi:arrow-left-box$$, s: "Player 2"},
+        {type: rhs, t: $$mdi:arrow-down-box$$, s: "Player 2"},
+        {type: rhs, t: $$mdi:arrow-right-box$$, s: "Player 2"},
+        {type: rhs, t: $$mdi:alpha-x-box$$, s: "Player 2"},
+      ]
+    - [
+        null,
+        null,
+        {type: rhs, t: $$mdi:alpha-o-box$$, s: "Player 2"},
+        {type: rhs, t: $$mdi:alpha-x-box$$, s: "Player 2"},
+        null,
+        null,
+        {type: lhs, t: $$mdi:alpha-x-box$$, s: "Player 1"},
+        {type: lhs, t: $$mdi:alpha-o-box$$, s: "Player 1"},
+        null,
+        null
+      ]
+    - [
+        {type: ghost},
+        {type: lhs, t: $$mdi:alpha-x-box$$, s: "Player 1"},
+        {type: lhs, t: $$mdi:alpha-o-box$$, s: "Player 1"},
+        {type: rhs, t: $$mdi:alpha-o-box$$, s: "Player 2"},
+        {type: rhs, t: $$mdi:alpha-x-box$$, s: "Player 2"},
+        {type: ghost}
+      ]
+
   Layer Mouse (Keyball auto-mouse layer):
     - [
         # null,
@@ -1068,15 +1114,12 @@ combos:
   - {l: ["Combo Layers, One-handed"], p: [0, 1], k: "Snipe", a: bottom, offset: 0.3}
   - {l: ["Combo Layers, One-handed"], p: [1, 2], k: "Scroll", a: top, offset: 0.3}
   - {l: ["Combo Layers, One-handed"], p: [2, 3], k: "Mouse", a: bottom, offset: 0.3}
+  - {l: ["Combo Layers, One-handed"], p: [3, 4], k: "Pico-8", a: top, offset: 0.3}
 
+  - {l: ["Combo Layers, One-handed"], p: [5, 6], k: "Pico-8", a: top, offset: 0.3}
   - {l: ["Combo Layers, One-handed"], p: [6, 7], k: "Mouse", a: bottom, offset: 0.3}
   - {l: ["Combo Layers, One-handed"], p: [7, 8], k: "Scroll", a: top, offset: 0.3}
   - {l: ["Combo Layers, One-handed"], p: [8, 9], k: "Snipe", a: bottom, offset: 0.3}
-
-  # - {l: ["Special Combos 1"], p: [11, 13], k: "&tog NUM", a: mid}
-  # - {l: ["Special Combos 1"], p: [16, 18], k: "&tog NUM", a: mid}
-  # - {l: ["Special Combos 1"], p: [21, 23], k: "&to 1", a: mid}
-  # - {l: ["Special Combos 1"], p: [26, 28], k: "&to 1", a: mid}
 
   - {l: ["Contextual Combos - System"], p: [1, 2, 3], k: "Force", a: top, offset: 0.3}
   - {l: ["Contextual Combos - System"], p: [6, 7, 8], k: "Force", a: top, offset: 0.3}

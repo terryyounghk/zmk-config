@@ -47,35 +47,36 @@ More about [my preferences](./docs/preferences.md)
   - [Colemak-DH](https://colemakmods.github.io/mod-dh/)
 -->
 
-- Alpha Layers
+- [Alpha Layers](./docs/layers.md#alpha-layers)
   - [Qwerty](./docs/layers.md#qwerty-layout)
   - [Harmony](./docs/layers.md#harmony-layout)
   - [Colemak-DH](./docs/layers.md#colemak-dh-layout)
-- Num and Sym Layers
+- [Num and Sym Layers](./docs/layers.md#num-layers)
   - [Numbers](./docs/layers.md#numbers)
   - [Numpad](./docs/layers.md#numpad)
   - [Symbols](./docs/layers.md#symbols)
   - [Coding](./docs/layers.md#coding)
-- Functional Layers
+- [Functional Layers](./docs/layers.md#functional-layers)
   - [Nav](./docs/layers.md#nav)
   - [Controls](./docs/layers.md#controls)
-- Gaming Layers
+- [Gaming Layers](./docs/layers.md#gaming-layers)
   - [Switch](./docs/layers.md#switch)
-- Keyball-specific Layers
-  - [Auto-mouse Layer](./docs/layers.md#auto-mouse)
-  - [Scroll Layer](./docs/layers.md#scroll)
-  - [Snipe Layer](./docs/layers.md#snipe)
+  - [Pico-8](./docs/layers.md#pico-8)
+- [Keyball-specific Layers](./docs/layers.md#keyball-specific-layers)
+  - [Auto-mouse](./docs/layers.md#auto-mouse)
+  - [Scroll](./docs/layers.md#scroll)
+  - [Snipe](./docs/layers.md#snipe)
 - [AFK Layer](./docs/layers.md#afk-layer)
 
 ## Combos
 
-- Essential Combos
+- [Essential Combos](./docs/combos.md#essential-combos)
   - [Combo Mods](./docs/combos.md#combos-mods)
   - [Combo Layers](./docs/combos.md#combo-layers)
-- Positional Combos
+- [Positional Combos](./docs/combos.md#positional-combos)
   - [Adjacent Combos](./docs/combos.md#adjacent-combos)
-  - [Symmetric Combos](./docs/combos.md#adjacent-combos)
-- Contextual Combos
+  - [Symmetric Combos](./docs/combos.md#symmetric-combos)
+- [Contextual Combos](./docs/combos.md#contextual-combos)
   - [Panic Combos](./docs/combos.md#panic-combos)
   - [System Combos](./docs/combos.md#system-combos)
   - [Keyboard Setting Combos](./docs/combos.md#keyboard-combos)

@@ -49,10 +49,12 @@ ADD_COMBO(1, BK_SKR RL5,            &sk LA(LG(LSHIFT)),            LAYERS_NORMAL
 ADD_COMBO(1, BK_SLL LU5 LU4,        &sl SNIPE,                     LAYERS_NORMAL)
 ADD_COMBO(1, BK_SLL LU4 LU3,        &sl SCROLL,                    LAYERS_NORMAL)
 ADD_COMBO(1, BK_SLL LU3 LU2,        &sl MOUSE,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLL LU2 LU1,        &sl PICO8,                     LAYERS_NORMAL)
 
-ADD_COMBO(1, BK_SLR LU3 LU2,        &sl MOUSE,                     LAYERS_NORMAL)
-ADD_COMBO(1, BK_SLR LU4 LU3,        &sl SCROLL,                    LAYERS_NORMAL)
-ADD_COMBO(1, BK_SLR LU5 LU4,        &sl SNIPE,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLR RU2 RU1,        &sl PICO8,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLR RU3 RU2,        &sl MOUSE,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLR RU4 RU3,        &sl SCROLL,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_SLR RU5 RU4,        &sl SNIPE,                     LAYERS_NORMAL)
 
 /// ---------------------------------------------------------------------------
 /// Combo: one-handed, multi-fingered one-shots (mods), mirrored
@@ -124,10 +126,12 @@ ADD_COMBO(1, BK_KTR RL5,            &kt LA(LG(LSHIFT)),            LAYERS_NORMAL
 ADD_COMBO(1, BK_TGL LU5 LU4,        &tog SNIPE,                    LAYERS_NORMAL)
 ADD_COMBO(1, BK_TGL LU4 LU3,        &tog SCROLL,                   LAYERS_NORMAL)
 ADD_COMBO(1, BK_TGL LU3 LU2,        &tog MOUSE,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGL LU2 LU1,        &tog PICO8,                    LAYERS_NORMAL)
 
-ADD_COMBO(1, BK_TGR LU3 LU2,        &tog MOUSE,                    LAYERS_NORMAL)
-ADD_COMBO(1, BK_TGR LU4 LU3,        &tog SCROLL,                   LAYERS_NORMAL)
-ADD_COMBO(1, BK_TGR LU5 LU4,        &tog SNIPE,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGR RU2 RU1,        &tog PICO8,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGR RU3 RU2,        &tog MOUSE,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGR RU4 RU3,        &tog SCROLL,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_TGR RU5 RU4,        &tog SNIPE,                    LAYERS_NORMAL)
 
 /// ---------------------------------------------------------------------------
 /// Combo: one-handed, multi-fingered toggles (mods), mirrored

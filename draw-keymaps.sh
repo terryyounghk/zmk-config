@@ -39,24 +39,25 @@ specs=(
     "nav individual 7"
     "controls individual 8"
     "switch individual 9"
-    "mouse individual 10"
-    "afk individual 11"
-    "combo-adjacent individual 12"
-    "combo-layers individual 13"
-    "combo-mods individual 14"
-    "combo-symmetric individual 15"
-    "combo-panic individual 16"
-    "combo-system individual 17"
-    "combo-keyboard individual 18"
-    "combo-tmux individual 19"
-    "combo-neovim individual 20"
-    "combo-apps individual 21"
-    "combo-capturing individual 22"
-    "combo-browser individual 23"
-    "combo-vscode individual 24"
-    "combo-vscode-movement individual 25"
+    "pico-8 individual 10"
+    "mouse individual 11"
+    "afk individual 12"
+    "combo-adjacent individual 13"
+    "combo-layers individual 14"
+    "combo-mods individual 15"
+    "combo-symmetric individual 16"
+    "combo-panic individual 17"
+    "combo-system individual 18"
+    "combo-keyboard individual 19"
+    "combo-tmux individual 20"
+    "combo-neovim individual 21"
+    "combo-apps individual 22"
+    "combo-capturing individual 23"
+    "combo-browser individual 24"
+    "combo-vscode individual 25"
+    "combo-vscode-movement individual 26"
     # "layers individual 1 2 3 4 5 6 7 8 9 10 11"
-    # "combos individual 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25"
+    # "combos individual 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26"
 )
 
 prepare_config() {
@@ -68,7 +69,7 @@ prepare_config() {
   yq eval '.draw_config.footer_text = "Created with keymap-drawer"' \
       "$config_file" -i
 
-  yq eval ".draw_config.n_columns = 2" \
+  yq eval ".draw_config.n_columns = 3" \
     "$config_file" -i
 
   \cat "$base_css" >> "$temp_file"
@@ -81,6 +82,11 @@ prepare_config() {
   fi
 
   yq eval ".draw_config.svg_extra_style = load_str(\"$temp_file\")" \
+      "$config_file" -i
+}
+
+reset_config() {
+  yq eval ".draw_config.svg_extra_style = []" \
       "$config_file" -i
 }
 
@@ -145,5 +151,7 @@ for spec in "${specs[@]}"; do
 done
 
 rm "${temp_file}" 2>/dev/null
+
+reset_config
 
 echo "[DONE] Script completed"

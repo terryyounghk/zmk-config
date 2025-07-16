@@ -194,6 +194,7 @@ I use [Clean Shot X](https://cleanshot.com/) for screen capturing, and [TextSnip
 
 ![Capturing Combos](../images/keymap-drawer-combo-capturing.svg)
 
+### VsCode Combos
 
 > [!NOTE]
 > I use VsCode less nowadays, these combos are not as up-to-date as the others and are subject to changes or removal.

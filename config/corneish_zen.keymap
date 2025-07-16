@@ -96,6 +96,13 @@ CUSTOM_LAYER(Switch,
               SWITCH_TL         SWITCH_TR
 )
 
+CUSTOM_LAYER(Pico8,
+              PICO8_6_UL        PICO8_6_UR
+              PICO8_6_HL        PICO8_6_HR
+              PICO8_6_LL        PICO8_6_LR
+              PICO8_TL          PICO8_TR
+)
+
 CUSTOM_LAYER(Mouse,
               MOUSE_6_UL       MOUSE_6_UR
               MOUSE_6_HL       MOUSE_6_HR

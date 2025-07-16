@@ -75,8 +75,9 @@ This layer is accessible with the combo <kbd>LT1</kbd> and <kbd>RT2</kbd> that u
 
 One notable thing notable the left side of home row are variations of TypeScript function calls.
 
+## Functional Layers
 
-## Nav
+### Nav
 
 This layer is symmetrical on both sides, with Vim-like arrow keys.
 
@@ -86,7 +87,7 @@ The modifiers on this layer are specifically <kbd>&tog</kbd> Toggle Keys, saving
 
 The upper pinky <kbd>Release Mods</kbd> is a macro that resets any toggled modifiers.
 
-## Controls
+### Controls
 
 This layer have keyboard/media controls on the left, and mouse controls on the right.
 
@@ -94,7 +95,11 @@ In MacOS, <kbd>F14</kbd> and <kbd>F15</kbd> are Brightness Down and Up respectiv
 
 ![Layer Controls](../images/keymap-drawer-controls.svg)
 
-## Gaming
+## Gaming Layers
+
+One thing to note about the Gaming Layers is that most combos are not available on these layers, as combos easily conflict and trigger misfires in this scenario.
+
+Once you toggled into a Gaming Layer, use the [Panic Combo](./combos.md#panic-combos) to return to the bottom layer first.
 
 ### Switch
 
@@ -152,7 +157,17 @@ Here's the fixed mapping for the accessory:
 
 ![IINE Keyboard and Mouse Adapter for Switch](../images/iine-adapter.png)
 
-## Keyball
+### Pico-8
+
+This gaming layer is specific to playing [PICO-8](https://www.lexaloffle.com/pico-8.php) games using the [default keys](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#_Keys).
+
+I primarily play as "Player 1", and the "X/O" action buttons are mapped in multiple places, allowing me to play single-handed or with both hands.
+
+For testing purposes, "Player 2" keys are mapped to the right hand.
+
+![Layer Pico-8](../images/keymap-drawer-pico-8.svg)
+
+## Keyball-specific Layers
 
 The Keyball layers consist of three layers:
 - auto-mouse: a layer that is automatically activated when the trackball is moved

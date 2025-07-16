@@ -298,6 +298,9 @@
 // https://chromewebstore.google.com/detail/bulk-image-downloader/lamfengpphafgjdgacmmnpakdphmjlji
 #define Y_CHROME_BULK_IMAGE_DOWNLOADER  LA(A)
 
+/// ---------------------------------------------------------------------------
+// NS key mapping
+
 /**
  * This is very specific to the "IINE Keyboard and Mouse Adapter for Switch"
  * Product link: https://www.iine.top/index.php?m=content&c=index&a=show&catid=205&id=181
@@ -372,3 +375,22 @@
 #define NS_PLUS     &kp CAPS
 #define NS_HOME     &kp ESC
 #define NS_CAPTURE  &kp TILDE
+
+/// ---------------------------------------------------------------------------
+// Pico-8 key mapping
+// https://www.lexaloffle.com/dl/docs/pico-8_manual.html#_Keys
+
+#define PIP1_PAUSE  &kp ENTER
+#define PIP1_O      &kp Z
+#define PIP1_X      &kp X
+#define PIP1_UP     &kp UP
+#define PIP1_LEFT   &kp LEFT
+#define PIP1_RIGHT  &kp RIGHT
+#define PIP1_DOWN   &kp DOWN
+#define PIP2_PAUSE  &kp P
+#define PIP2_O      &kp TAB
+#define PIP2_X      &kp Q
+#define PIP2_UP     &kp E
+#define PIP2_LEFT   &kp S
+#define PIP2_RIGHT  &kp F
+#define PIP2_DOWN   &kp D
