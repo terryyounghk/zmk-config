@@ -638,7 +638,7 @@ text.label {
 <g transform="translate(646, 42)" class="key keypos-6">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:monitor-screenshot" xlink:href="#mdi:monitor-screenshot" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:monitor-screenshot"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Annotate</tspan></text>
+<text x="0" y="30" class="key hold">Annotate</text>
 </g>
 <g transform="translate(714, 34)" class="key keypos-7">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -653,7 +653,7 @@ text.label {
 <g transform="translate(850, 60)" class="key keypos-9">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:monitor-screenshot" xlink:href="#mdi:monitor-screenshot" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:monitor-screenshot"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Pin Last</tspan></text>
+<text x="0" y="30" class="key hold">Pin Last</text>
 </g>
 <g transform="translate(34, 128)" class="key keypos-10">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -693,12 +693,12 @@ text.label {
 <g transform="translate(782, 110)" class="key keypos-18">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:monitor-screenshot" xlink:href="#mdi:monitor-screenshot" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:monitor-screenshot"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">Scrolling</tspan></text>
+<text x="0" y="30" class="key hold">Scrolling</text>
 </g>
 <g transform="translate(850, 128)" class="key keypos-19">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:monitor-screenshot" xlink:href="#mdi:monitor-screenshot" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:monitor-screenshot"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 70%">All-in-One</tspan></text>
+<text x="0" y="30" class="key hold">All-in-One</text>
 </g>
 <g transform="translate(34, 196)" class="key keypos-20">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -728,7 +728,7 @@ text.label {
 <g transform="translate(646, 178)" class="key keypos-26">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:monitor-screenshot" xlink:href="#mdi:monitor-screenshot" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:monitor-screenshot"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">Close All</tspan></text>
+<text x="0" y="30" class="key hold">Close All</text>
 </g>
 <g transform="translate(714, 170)" class="key keypos-27">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>

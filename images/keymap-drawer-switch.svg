@@ -754,7 +754,7 @@ text.label {
 <g transform="translate(680, 249)" class="key keypos-35">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:nintendo-switch" xlink:href="#mdi:nintendo-switch" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:nintendo-switch"/>
-<text x="0" y="-30" class="key shifted"><tspan style="font-size: 88%">register</tspan></text>
+<text x="0" y="-30" class="key shifted">register</text>
 </g>
 </g>
 </g>

@@ -657,12 +657,12 @@ text.label {
 </g>
 <g transform="translate(714, 34)" class="key lhs keypos-7">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key lhs"/>
-<text x="0" y="0" class="key lhs tap"><tspan style="font-size: 88%">Quickfix</tspan></text>
+<text x="0" y="0" class="key lhs tap">Quickfix</text>
 <text x="0" y="30" class="key lhs hold">&lt;L&gt;xQ</text>
 </g>
 <g transform="translate(782, 42)" class="key lhs keypos-8">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key lhs"/>
-<text x="0" y="0" class="key lhs tap"><tspan style="font-size: 88%">Overseer</tspan></text>
+<text x="0" y="0" class="key lhs tap">Overseer</text>
 <text x="0" y="30" class="key lhs hold">&lt;L&gt;ot</text>
 </g>
 <g transform="translate(850, 60)" class="key lhs keypos-9">
@@ -705,7 +705,7 @@ text.label {
 </g>
 <g transform="translate(578, 119)" class="key lhs keypos-15">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key lhs"/>
-<text x="0" y="0" class="key lhs tap"><tspan style="font-size: 78%">Increment</tspan></text>
+<text x="0" y="0" class="key lhs tap">Increment</text>
 <text x="0" y="30" class="key lhs hold">&lt;C-a&gt;</text>
 </g>
 <g transform="translate(646, 110)" class="key lhs keypos-16">
@@ -769,7 +769,7 @@ text.label {
 </g>
 <g transform="translate(578, 187)" class="key lhs keypos-25">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key lhs"/>
-<text x="0" y="0" class="key lhs tap"><tspan style="font-size: 78%">Decrement</tspan></text>
+<text x="0" y="0" class="key lhs tap">Decrement</text>
 <text x="0" y="30" class="key lhs hold">&lt;C-x&gt;</text>
 </g>
 <g transform="translate(646, 178)" class="key lhs keypos-26">
@@ -795,7 +795,7 @@ text.label {
 </g>
 <g transform="translate(850, 196)" class="key lhs keypos-29">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key lhs"/>
-<text x="0" y="0" class="key lhs tap"><tspan style="font-size: 88%">Annotate</tspan></text>
+<text x="0" y="0" class="key lhs tap">Annotate</text>
 <text x="0" y="30" class="key lhs hold">&lt;L&gt;cn</text>
 </g>
 <g transform="translate(204, 249)" class="key ghost keypos-30">

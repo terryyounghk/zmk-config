@@ -617,14 +617,14 @@ text.label {
 <g transform="translate(102, 42)" class="key keypos-1">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em" style="font-size: 88%">Terminal</tspan><tspan x="0" dy="1.2em" style="font-size: 88%">Grp</tspan>
+<tspan x="0" dy="-1.2em">Terminal</tspan><tspan x="0" dy="1.2em">Grp</tspan>
 </text>
 <text x="0" y="30" class="key hold">W+E+RHS</text>
 </g>
 <g transform="translate(170, 34)" class="key keypos-2">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em" style="font-size: 88%">Terminal</tspan><tspan x="0" dy="1.2em" style="font-size: 88%">Size</tspan>
+<tspan x="0" dy="-1.2em">Terminal</tspan><tspan x="0" dy="1.2em">Size</tspan>
 </text>
 <text x="0" y="30" class="key hold">E+R+RHS</text>
 </g>
@@ -740,7 +740,7 @@ text.label {
 </g>
 <g transform="translate(306, 187)" class="key keypos-24">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">Problems</tspan></text>
+<text x="0" y="0" class="key tap">Problems</text>
 <text x="0" y="30" class="key hold">B+RHS</text>
 </g>
 <g transform="translate(578, 187)" class="key keypos-25">

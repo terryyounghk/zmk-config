@@ -729,37 +729,37 @@ text.label {
 <g class="combo combopos-1">
 <path d="M204,28 h-96 a6.0,6.0 0 0 0 -6.0,6.0 v54" class="combo"/>
 <path d="M204,28 h96 a6.0,6.0 0 0 1 6.0,6.0 v62" class="combo"/>
-<rect rx="6" ry="6" x="187" y="13" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="179" y="13" width="50" height="30" class="combo"/>
 <text x="204" y="28" class="combo tap">Cmd-Tab</text>
 </g>
 <g class="combo combopos-2">
 <path d="M170,110 l-45,0" class="combo"/>
 <path d="M170,110 l45,0" class="combo"/>
-<rect rx="6" ry="6" x="153" y="96" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="150" y="96" width="40" height="30" class="combo"/>
 <text x="170" y="110" class="combo tap">Panic</text>
 </g>
 <g class="combo combopos-3">
 <path d="M238,154 h-62 a6.0,6.0 0 0 1 -6.0,-6.0 v-23" class="combo"/>
 <path d="M238,154 h62 a6.0,6.0 0 0 0 6.0,-6.0 v-6" class="combo"/>
-<rect rx="6" ry="6" x="221" y="139" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="218" y="139" width="40" height="30" class="combo"/>
 <text x="238" y="154" class="combo tap">Cmd-`</text>
 </g>
 <g class="combo combopos-4">
 <path d="M646,154 h-62 a6.0,6.0 0 0 1 -6.0,-6.0 v-6" class="combo"/>
 <path d="M646,154 h62 a6.0,6.0 0 0 0 6.0,-6.0 v-23" class="combo"/>
-<rect rx="6" ry="6" x="629" y="139" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="626" y="139" width="40" height="30" class="combo"/>
 <text x="646" y="154" class="combo tap">Cmd-`</text>
 </g>
 <g class="combo combopos-5">
 <path d="M714,110 l-45,0" class="combo"/>
 <path d="M714,110 l45,0" class="combo"/>
-<rect rx="6" ry="6" x="697" y="96" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="694" y="96" width="40" height="30" class="combo"/>
 <text x="714" y="110" class="combo tap">Panic</text>
 </g>
 <g class="combo combopos-6">
 <path d="M680,28 h-96 a6.0,6.0 0 0 0 -6.0,6.0 v62" class="combo"/>
 <path d="M680,28 h96 a6.0,6.0 0 0 1 6.0,6.0 v54" class="combo"/>
-<rect rx="6" ry="6" x="663" y="13" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="655" y="13" width="50" height="30" class="combo"/>
 <text x="680" y="28" class="combo tap">Cmd-Tab</text>
 </g>
 </g>

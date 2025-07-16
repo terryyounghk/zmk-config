@@ -1059,6 +1059,11 @@ layers:
       ]
 
 combos:
+  # switching between typing layers
+  - {l: ["Layer Qwerty"], p: [0, 15], a: top, offset: 0.4, k: "Qwerty", width: 65}
+  - {l: ["Layer Qwerty"], p: [0, 16], a: top, offset: 1, k: "Harmony", width: 65}
+  - {l: ["Layer Qwerty"], p: [0, 17], a: top, offset: 1.6, k: "Colemak-DH", width: 65}
+
   # horizontally adjacent
   - {l: ["Positional Combos - Adjacent"], p: [3, 4], k: $$mdi:plus-thick$$}
   - {l: ["Positional Combos - Adjacent"], p: [5, 6], k: $$mdi:minus-thick$$}
@@ -1111,42 +1116,42 @@ combos:
   - {l: ["Positional Combos - Symmetric"], p: [23, 26], k: $$mdi:content-paste$$, a: bottom, offset: 0.2}
   - {l: ["Positional Combos - Symmetric"], p: [24, 25], k: Hyper, a: mid, offset: 0.6}
 
-  - {l: ["Combo Layers, One-handed"], p: [0, 1], k: "Snipe", a: bottom, offset: 0.3}
-  - {l: ["Combo Layers, One-handed"], p: [1, 2], k: "Scroll", a: top, offset: 0.3}
-  - {l: ["Combo Layers, One-handed"], p: [2, 3], k: "Mouse", a: bottom, offset: 0.3}
-  - {l: ["Combo Layers, One-handed"], p: [3, 4], k: "Pico-8", a: top, offset: 0.3}
+  - {l: ["Combo Layers, One-handed"], p: [0, 1], k: "Snipe", a: bottom, offset: 0.3, width: 40}
+  - {l: ["Combo Layers, One-handed"], p: [1, 2], k: "Scroll", a: top, offset: 0.3, width: 40}
+  - {l: ["Combo Layers, One-handed"], p: [2, 3], k: "Mouse", a: bottom, offset: 0.3, width: 40}
+  - {l: ["Combo Layers, One-handed"], p: [3, 4], k: "Pico-8", a: top, offset: 0.3, width: 40}
 
-  - {l: ["Combo Layers, One-handed"], p: [5, 6], k: "Pico-8", a: top, offset: 0.3}
-  - {l: ["Combo Layers, One-handed"], p: [6, 7], k: "Mouse", a: bottom, offset: 0.3}
-  - {l: ["Combo Layers, One-handed"], p: [7, 8], k: "Scroll", a: top, offset: 0.3}
-  - {l: ["Combo Layers, One-handed"], p: [8, 9], k: "Snipe", a: bottom, offset: 0.3}
+  - {l: ["Combo Layers, One-handed"], p: [5, 6], k: "Pico-8", a: top, offset: 0.3, width: 40}
+  - {l: ["Combo Layers, One-handed"], p: [6, 7], k: "Mouse", a: bottom, offset: 0.3, width: 40}
+  - {l: ["Combo Layers, One-handed"], p: [7, 8], k: "Scroll", a: top, offset: 0.3, width: 40}
+  - {l: ["Combo Layers, One-handed"], p: [8, 9], k: "Snipe", a: bottom, offset: 0.3, width: 40}
 
-  - {l: ["Contextual Combos - System"], p: [1, 2, 3], k: "Force", a: top, offset: 0.3}
-  - {l: ["Contextual Combos - System"], p: [6, 7, 8], k: "Force", a: top, offset: 0.3}
+  - {l: ["Contextual Combos - System"], p: [1, 2, 3], k: "Force", a: top, offset: 0.3, width: 40}
+  - {l: ["Contextual Combos - System"], p: [6, 7, 8], k: "Force", a: top, offset: 0.3, width: 40}
 
-  - {l: ["Contextual Combos - System"], p: [11, 12, 13], k: "Mute", a: top, offset: 0.3}
-  - {l: ["Contextual Combos - System"], p: [16, 17, 18], k: "Mute", a: top, offset: 0.3}
+  - {l: ["Contextual Combos - System"], p: [11, 12, 13], k: "Mute", a: top, offset: 0.3, width: 40}
+  - {l: ["Contextual Combos - System"], p: [16, 17, 18], k: "Mute", a: top, offset: 0.3, width: 40}
 
-  - {l: ["Contextual Combos - System"], p: [21, 22, 23], k: "Lock", a: top, offset: 0.3}
-  - {l: ["Contextual Combos - System"], p: [26, 27, 28], k: "Lock", a: top, offset: 0.3}
+  - {l: ["Contextual Combos - System"], p: [21, 22, 23], k: "Lock", a: top, offset: 0.3, width: 40}
+  - {l: ["Contextual Combos - System"], p: [26, 27, 28], k: "Lock", a: top, offset: 0.3, width: 40}
 
   - {l: ["Contextual Combos - Panic"], p: [20, 23, 26, 29], k: "AFK", a: bottom}
-  - {l: ["Contextual Combos - Panic"], p: [11, 14], k: "Cmd-Tab", a: top, offset: 0.7}
-  - {l: ["Contextual Combos - Panic"], p: [11, 13], k: "Panic", a: mid}
-  - {l: ["Contextual Combos - Panic"], p: [12, 14], k: "Cmd-`", a: bottom}
+  - {l: ["Contextual Combos - Panic"], p: [11, 14], k: "Cmd-Tab", a: top, offset: 0.7, width: 50}
+  - {l: ["Contextual Combos - Panic"], p: [11, 13], k: "Panic", a: mid, width: 40}
+  - {l: ["Contextual Combos - Panic"], p: [12, 14], k: "Cmd-`", a: bottom, width: 40}
 
-  - {l: ["Contextual Combos - Panic"], p: [15, 17], k: "Cmd-`", a: bottom}
-  - {l: ["Contextual Combos - Panic"], p: [16, 18], k: "Panic", a: mid}
-  - {l: ["Contextual Combos - Panic"], p: [15, 18], k: "Cmd-Tab", a: top, offset: 0.7}
+  - {l: ["Contextual Combos - Panic"], p: [15, 17], k: "Cmd-`", a: bottom, width: 40}
+  - {l: ["Contextual Combos - Panic"], p: [16, 18], k: "Panic", a: mid, width: 40}
+  - {l: ["Contextual Combos - Panic"], p: [15, 18], k: "Cmd-Tab", a: top, offset: 0.7, width: 50}
 
-  - {l: ["Contextual Combos - Keyboard"], p: [1, 2, 4], k: "Boot", a: top, offset: 0.3, slide: -0.1}
-  - {l: ["Contextual Combos - Keyboard"], p: [5, 7, 8], k: "Boot", a: top, offset: 0.3, slide: -0.1}
+  - {l: ["Contextual Combos - Keyboard"], p: [1, 2, 4], k: "Boot", a: top, offset: 0.3, slide: -0.1, width: 55}
+  - {l: ["Contextual Combos - Keyboard"], p: [5, 7, 8], k: "Boot", a: top, offset: 0.3, slide: -0.1, width: 55}
 
-  - {l: ["Contextual Combos - Keyboard"], p: [11, 12, 14], k: "Reset", a: top, offset: 0.3, slide: -0.1}
-  - {l: ["Contextual Combos - Keyboard"], p: [15, 17, 18], k: "Reset", a: top, offset: 0.3, slide: -0.1}
+  - {l: ["Contextual Combos - Keyboard"], p: [11, 12, 14], k: "Reset", a: top, offset: 0.3, slide: -0.1, width: 55}
+  - {l: ["Contextual Combos - Keyboard"], p: [15, 17, 18], k: "Reset", a: top, offset: 0.3, slide: -0.1, width: 55}
 
-  - {l: ["Contextual Combos - Keyboard"], p: [21, 22, 24], k: "BT Clr", a: top, offset: 0.3, slide: -0.1}
-  - {l: ["Contextual Combos - Keyboard"], p: [25, 27, 28], k: "BT Clr", a: top, offset: 0.3, slide: -0.1}
+  - {l: ["Contextual Combos - Keyboard"], p: [21, 22, 24], k: "BT-Clear", a: top, offset: 0.3, slide: -0.1, width: 55}
+  - {l: ["Contextual Combos - Keyboard"], p: [25, 27, 28], k: "BT-Clear", a: top, offset: 0.3, slide: -0.1, width: 55}
 
-  - {l: ["Contextual Combos - Keyboard"], p: [32, 33], k: "Caps Lock", a: mid}
-  - {l: ["Contextual Combos - Keyboard"], p: [31, 34], k: "Caps Word", a: bottom, offset: 0.3}
+  - {l: ["Contextual Combos - Keyboard"], p: [32, 33], k: "CapsLock", a: mid, width: 70}
+  - {l: ["Contextual Combos - Keyboard"], p: [31, 34], k: "CapsWord", a: bottom, offset: 0.3, width: 70}

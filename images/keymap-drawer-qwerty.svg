@@ -1,4 +1,4 @@
-<svg width="944" height="446" viewBox="0 0 944 446" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="944" height="545" viewBox="0 0 944 545" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
 <svg id="mdi:alpha-a-circle">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-alpha-a-circle" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,7A2,2 0 0,0 9,9V17H11V13H13V17H15V9A2,2 0 0,0 13,7H11M11,9H13V11H11V9Z" /></svg>
@@ -609,7 +609,7 @@ text.label {
 </style>
 <g transform="translate(30, 0)" class="layer-Layer Qwerty">
 <text x="0" y="28" class="label" id="Layer-Qwerty">Layer Qwerty:</text>
-<g transform="translate(0, 56)">
+<g transform="translate(0, 155)">
 <g transform="translate(34, 60)" class="key keypos-0">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <text x="0" y="0" class="key tap">Q</text>
@@ -758,6 +758,24 @@ text.label {
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key ghost"/>
 <use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-11" y="-11" height="22" width="22.0" class="key ghost tap glyph mdi:keyboard-tab"/>
 <text x="0" y="30" class="key ghost hold">numbers</text>
+</g>
+<g class="combo combopos-0">
+<path d="M306,-3 h-266 a6.0,6.0 0 0 0 -6.0,6.0 v34" class="combo"/>
+<path d="M306,-3 h266 a6.0,6.0 0 0 1 6.0,6.0 v93" class="combo"/>
+<rect rx="6" ry="6" x="274" y="-18" width="65" height="30" class="combo"/>
+<text x="306" y="-3" class="combo tap">Qwerty</text>
+</g>
+<g class="combo combopos-1">
+<path d="M340,-44 h-300 a6.0,6.0 0 0 0 -6.0,6.0 v74" class="combo"/>
+<path d="M340,-44 h300 a6.0,6.0 0 0 1 6.0,6.0 v125" class="combo"/>
+<rect rx="6" ry="6" x="308" y="-58" width="65" height="30" class="combo"/>
+<text x="340" y="-44" class="combo tap">Harmony</text>
+</g>
+<g class="combo combopos-2">
+<path d="M374,-84 h-334 a6.0,6.0 0 0 0 -6.0,6.0 v115" class="combo"/>
+<path d="M374,-84 h334 a6.0,6.0 0 0 1 6.0,6.0 v158" class="combo"/>
+<rect rx="6" ry="6" x="342" y="-99" width="65" height="30" class="combo"/>
+<text x="374" y="-84" class="combo tap">Colemak-DH</text>
 </g>
 </g>
 </g>

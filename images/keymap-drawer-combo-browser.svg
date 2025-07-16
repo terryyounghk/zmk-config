@@ -647,12 +647,12 @@ text.label {
 <g transform="translate(782, 42)" class="key keypos-8">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:image-multiple-outline" xlink:href="#mdi:image-multiple-outline" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:image-multiple-outline"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Download</tspan></text>
+<text x="0" y="30" class="key hold">Download</text>
 </g>
 <g transform="translate(850, 60)" class="key keypos-9">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:image-off-outline" xlink:href="#mdi:image-off-outline" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:image-off-outline"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Paranoid</tspan></text>
+<text x="0" y="30" class="key hold">Paranoid</text>
 </g>
 <g transform="translate(34, 128)" class="key keypos-10">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -679,22 +679,22 @@ text.label {
 <g transform="translate(578, 119)" class="key keypos-15">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:google-chrome" xlink:href="#mdi:google-chrome" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:google-chrome"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">First Tab</tspan></text>
+<text x="0" y="30" class="key hold">First Tab</text>
 </g>
 <g transform="translate(646, 110)" class="key keypos-16">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:google-chrome" xlink:href="#mdi:google-chrome" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:google-chrome"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Prev Tab</tspan></text>
+<text x="0" y="30" class="key hold">Prev Tab</text>
 </g>
 <g transform="translate(714, 102)" class="key keypos-17">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:google-chrome" xlink:href="#mdi:google-chrome" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:google-chrome"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Next Tab</tspan></text>
+<text x="0" y="30" class="key hold">Next Tab</text>
 </g>
 <g transform="translate(782, 110)" class="key keypos-18">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:google-chrome" xlink:href="#mdi:google-chrome" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:google-chrome"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Last Tab</tspan></text>
+<text x="0" y="30" class="key hold">Last Tab</text>
 </g>
 <g transform="translate(850, 128)" class="key keypos-19">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -703,17 +703,17 @@ text.label {
 <g transform="translate(34, 196)" class="key keypos-20">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:google-chrome" xlink:href="#mdi:google-chrome" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:google-chrome"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">[x] Left</tspan></text>
+<text x="0" y="30" class="key hold">[x] Left</text>
 </g>
 <g transform="translate(102, 178)" class="key keypos-21">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:google-chrome" xlink:href="#mdi:google-chrome" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:google-chrome"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 70%">[x] Others</tspan></text>
+<text x="0" y="30" class="key hold">[x] Others</text>
 </g>
 <g transform="translate(170, 170)" class="key keypos-22">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:google-chrome" xlink:href="#mdi:google-chrome" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:google-chrome"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">[x] Right</tspan></text>
+<text x="0" y="30" class="key hold">[x] Right</text>
 </g>
 <g transform="translate(238, 178)" class="key keypos-23">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -730,7 +730,7 @@ text.label {
 <g transform="translate(646, 178)" class="key keypos-26">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:application-variable-outline" xlink:href="#mdi:application-variable-outline" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:application-variable-outline"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Name Win</tspan></text>
+<text x="0" y="30" class="key hold">Name Win</text>
 </g>
 <g transform="translate(714, 170)" class="key keypos-27">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -740,7 +740,7 @@ text.label {
 <g transform="translate(782, 178)" class="key keypos-28">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:google-translate" xlink:href="#mdi:google-translate" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:google-translate"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">Translate</tspan></text>
+<text x="0" y="30" class="key hold">Translate</text>
 </g>
 <g transform="translate(850, 196)" class="key keypos-29">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>

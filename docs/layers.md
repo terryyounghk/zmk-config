@@ -2,6 +2,12 @@
 
 ## Alpha Layers
 
+My primary typing layer is Qwerty, but I'm open in learning other layouts.
+
+I use combos to switch between them, as I don't switch too often.
+
+The base combo key is <kbd>Q</kbd>, plus <kbd>H</kbd> (Qwerty), <kbd>J</kbd> (Harmony) or <kbd>K</kbd> (Colemak-DH).
+
 ### QWERTY Layout
 
 Nothing special with Qwerty itself, so description here is more on introducing the thumb clusters.

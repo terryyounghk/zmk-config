@@ -612,7 +612,7 @@ text.label {
 <g transform="translate(0, 92)">
 <g transform="translate(34, 60)" class="key lhs keypos-0">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key lhs"/>
-<text x="0" y="0" class="key lhs tap"><tspan style="font-size: 88%">Controls</tspan></text>
+<text x="0" y="0" class="key lhs tap">Controls</text>
 </g>
 <g transform="translate(102, 42)" class="key lhs keypos-1">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key lhs"/>
@@ -648,7 +648,7 @@ text.label {
 </g>
 <g transform="translate(850, 60)" class="key rhs keypos-9">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key rhs"/>
-<text x="0" y="0" class="key rhs tap"><tspan style="font-size: 88%">Controls</tspan></text>
+<text x="0" y="0" class="key rhs tap">Controls</text>
 </g>
 <g transform="translate(34, 128)" class="key keypos-10">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -737,49 +737,49 @@ text.label {
 <g class="combo combopos-0">
 <path d="M68,115 h-28 a6.0,6.0 0 0 1 -6.0,-6.0 v-27" class="combo"/>
 <path d="M68,115 h28 a6.0,6.0 0 0 0 6.0,-6.0 v-44" class="combo"/>
-<rect rx="6" ry="6" x="51" y="100" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="48" y="100" width="40" height="30" class="combo"/>
 <text x="68" y="115" class="combo tap">Snipe</text>
 </g>
 <g class="combo combopos-1">
 <path d="M136,-21 h-28 a6.0,6.0 0 0 0 -6.0,6.0 v35" class="combo"/>
 <path d="M136,-21 h28 a6.0,6.0 0 0 1 6.0,6.0 v27" class="combo"/>
-<rect rx="6" ry="6" x="119" y="-36" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="116" y="-36" width="40" height="30" class="combo"/>
 <text x="136" y="-21" class="combo tap">Scroll</text>
 </g>
 <g class="combo combopos-2">
 <path d="M204,98 h-28 a6.0,6.0 0 0 1 -6.0,-6.0 v-35" class="combo"/>
 <path d="M204,98 h28 a6.0,6.0 0 0 0 6.0,-6.0 v-27" class="combo"/>
-<rect rx="6" ry="6" x="187" y="83" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="184" y="83" width="40" height="30" class="combo"/>
 <text x="204" y="98" class="combo tap">Mouse</text>
 </g>
 <g class="combo combopos-3">
 <path d="M272,-13 h-28 a6.0,6.0 0 0 0 -6.0,6.0 v27" class="combo"/>
 <path d="M272,-13 h28 a6.0,6.0 0 0 1 6.0,6.0 v35" class="combo"/>
-<rect rx="6" ry="6" x="255" y="-28" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="252" y="-28" width="40" height="30" class="combo"/>
 <text x="272" y="-13" class="combo tap">Pico-8</text>
 </g>
 <g class="combo combopos-4">
 <path d="M612,-13 h-28 a6.0,6.0 0 0 0 -6.0,6.0 v35" class="combo"/>
 <path d="M612,-13 h28 a6.0,6.0 0 0 1 6.0,6.0 v27" class="combo"/>
-<rect rx="6" ry="6" x="595" y="-28" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="592" y="-28" width="40" height="30" class="combo"/>
 <text x="612" y="-13" class="combo tap">Pico-8</text>
 </g>
 <g class="combo combopos-5">
 <path d="M680,98 h-28 a6.0,6.0 0 0 1 -6.0,-6.0 v-27" class="combo"/>
 <path d="M680,98 h28 a6.0,6.0 0 0 0 6.0,-6.0 v-35" class="combo"/>
-<rect rx="6" ry="6" x="663" y="83" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="660" y="83" width="40" height="30" class="combo"/>
 <text x="680" y="98" class="combo tap">Mouse</text>
 </g>
 <g class="combo combopos-6">
 <path d="M748,-21 h-28 a6.0,6.0 0 0 0 -6.0,6.0 v27" class="combo"/>
 <path d="M748,-21 h28 a6.0,6.0 0 0 1 6.0,6.0 v35" class="combo"/>
-<rect rx="6" ry="6" x="731" y="-36" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="728" y="-36" width="40" height="30" class="combo"/>
 <text x="748" y="-21" class="combo tap">Scroll</text>
 </g>
 <g class="combo combopos-7">
 <path d="M816,115 h-28 a6.0,6.0 0 0 1 -6.0,-6.0 v-44" class="combo"/>
 <path d="M816,115 h28 a6.0,6.0 0 0 0 6.0,-6.0 v-27" class="combo"/>
-<rect rx="6" ry="6" x="799" y="100" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="796" y="100" width="40" height="30" class="combo"/>
 <text x="816" y="115" class="combo tap">Snipe</text>
 </g>
 </g>

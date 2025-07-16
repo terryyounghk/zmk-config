@@ -632,12 +632,12 @@ text.label {
 <g transform="translate(306, 51)" class="key keypos-4">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:apps-box" xlink:href="#mdi:apps-box" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:apps-box"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">Launchpad</tspan></text>
+<text x="0" y="30" class="key hold">Launchpad</text>
 </g>
 <g transform="translate(578, 51)" class="key keypos-5">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:onepassword" xlink:href="#mdi:onepassword" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:onepassword"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">AutoFill</tspan></text>
+<text x="0" y="30" class="key hold">AutoFill</text>
 </g>
 <g transform="translate(646, 42)" class="key keypos-6">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -647,7 +647,7 @@ text.label {
 <g transform="translate(714, 34)" class="key keypos-7">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:alphabetical-variant" xlink:href="#mdi:alphabetical-variant" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:alphabetical-variant"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">KeyCastr</tspan></text>
+<text x="0" y="30" class="key hold">KeyCastr</text>
 </g>
 <g transform="translate(782, 42)" class="key keypos-8">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -660,7 +660,7 @@ text.label {
 <g transform="translate(34, 128)" class="key keypos-10">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:glass-wine" xlink:href="#mdi:glass-wine" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:glass-wine"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">Bartender</tspan></text>
+<text x="0" y="30" class="key hold">Bartender</text>
 </g>
 <g transform="translate(102, 110)" class="key keypos-11">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -670,12 +670,12 @@ text.label {
 <g transform="translate(170, 102)" class="key keypos-12">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:cat" xlink:href="#mdi:cat" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:cat"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Shortcat</tspan></text>
+<text x="0" y="30" class="key hold">Shortcat</text>
 </g>
 <g transform="translate(238, 110)" class="key keypos-13">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:shield-search" xlink:href="#mdi:shield-search" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:shield-search"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">1Password</tspan></text>
+<text x="0" y="30" class="key hold">1Password</text>
 </g>
 <g transform="translate(306, 119)" class="key keypos-14">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -695,7 +695,7 @@ text.label {
 <g transform="translate(714, 102)" class="key keypos-17">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:knob" xlink:href="#mdi:knob" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:knob"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">HazeOver</tspan></text>
+<text x="0" y="30" class="key hold">HazeOver</text>
 </g>
 <g transform="translate(782, 110)" class="key keypos-18">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -712,12 +712,12 @@ text.label {
 <g transform="translate(102, 178)" class="key keypos-21">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:volume-high" xlink:href="#mdi:volume-high" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:volume-high"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Sound...</tspan></text>
+<text x="0" y="30" class="key hold">Sound...</text>
 </g>
 <g transform="translate(170, 170)" class="key keypos-22">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:monitor" xlink:href="#mdi:monitor" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:monitor"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 70%">Display...</tspan></text>
+<text x="0" y="30" class="key hold">Display...</text>
 </g>
 <g transform="translate(238, 178)" class="key keypos-23">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
@@ -731,12 +731,12 @@ text.label {
 <g transform="translate(578, 187)" class="key keypos-25">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:presentation" xlink:href="#mdi:presentation" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:presentation"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Annotate</tspan></text>
+<text x="0" y="30" class="key hold">Annotate</text>
 </g>
 <g transform="translate(646, 178)" class="key keypos-26">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 <use href="#mdi:microphone-off" xlink:href="#mdi:microphone-off" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:microphone-off"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 88%">Mute Mic</tspan></text>
+<text x="0" y="30" class="key hold">Mute Mic</text>
 </g>
 <g transform="translate(714, 170)" class="key keypos-27">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>

@@ -722,42 +722,42 @@ text.label {
 <path d="M170,-21 h-62 a6.0,6.0 0 0 0 -6.0,6.0 v35" class="combo"/>
 <path d="M170,-21 l0,33" class="combo"/>
 <path d="M170,-21 h62 a6.0,6.0 0 0 1 6.0,6.0 v35" class="combo"/>
-<rect rx="6" ry="6" x="153" y="-36" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="150" y="-36" width="40" height="30" class="combo"/>
 <text x="170" y="-21" class="combo tap">Force</text>
 </g>
 <g class="combo combopos-1">
 <path d="M714,-21 h-62 a6.0,6.0 0 0 0 -6.0,6.0 v35" class="combo"/>
 <path d="M714,-21 l0,33" class="combo"/>
 <path d="M714,-21 h62 a6.0,6.0 0 0 1 6.0,6.0 v35" class="combo"/>
-<rect rx="6" ry="6" x="697" y="-36" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="694" y="-36" width="40" height="30" class="combo"/>
 <text x="714" y="-21" class="combo tap">Force</text>
 </g>
 <g class="combo combopos-2">
 <path d="M170,47 h-62 a6.0,6.0 0 0 0 -6.0,6.0 v35" class="combo"/>
 <path d="M170,47 l0,33" class="combo"/>
 <path d="M170,47 h62 a6.0,6.0 0 0 1 6.0,6.0 v35" class="combo"/>
-<rect rx="6" ry="6" x="153" y="32" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="150" y="32" width="40" height="30" class="combo"/>
 <text x="170" y="47" class="combo tap">Mute</text>
 </g>
 <g class="combo combopos-3">
 <path d="M714,47 h-62 a6.0,6.0 0 0 0 -6.0,6.0 v35" class="combo"/>
 <path d="M714,47 l0,33" class="combo"/>
 <path d="M714,47 h62 a6.0,6.0 0 0 1 6.0,6.0 v35" class="combo"/>
-<rect rx="6" ry="6" x="697" y="32" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="694" y="32" width="40" height="30" class="combo"/>
 <text x="714" y="47" class="combo tap">Mute</text>
 </g>
 <g class="combo combopos-4">
 <path d="M170,115 h-62 a6.0,6.0 0 0 0 -6.0,6.0 v35" class="combo"/>
 <path d="M170,115 l0,33" class="combo"/>
 <path d="M170,115 h62 a6.0,6.0 0 0 1 6.0,6.0 v35" class="combo"/>
-<rect rx="6" ry="6" x="153" y="100" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="150" y="100" width="40" height="30" class="combo"/>
 <text x="170" y="115" class="combo tap">Lock</text>
 </g>
 <g class="combo combopos-5">
 <path d="M714,115 h-62 a6.0,6.0 0 0 0 -6.0,6.0 v35" class="combo"/>
 <path d="M714,115 l0,33" class="combo"/>
 <path d="M714,115 h62 a6.0,6.0 0 0 1 6.0,6.0 v35" class="combo"/>
-<rect rx="6" ry="6" x="697" y="100" width="34" height="30" class="combo"/>
+<rect rx="6" ry="6" x="694" y="100" width="40" height="30" class="combo"/>
 <text x="714" y="115" class="combo tap">Lock</text>
 </g>
 </g>
