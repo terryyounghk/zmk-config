@@ -102,6 +102,7 @@ More about [my preferences](./docs/preferences.md)
 
 ## My Keyboards
 
+- [Urchin](./config/urchin.md)
 - [Chocofi](./config/corne.md)
 - [Corne 36 keys](./config/corne.md)
 - [Eyelash Corne](./config/eyelash_corne.md)

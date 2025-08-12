@@ -13,15 +13,9 @@
 #include "common/macros.dtsi"
 #include "common/tap_dances.dtsi"
 
-#include "common/layouts/5_column_36_keys.h"
-#include "common/layouts/5_column_36_keys_thumbs.h"
-#include "common/layouts/5_column_36_keys_combos.dtsi"
-
-/ {
-  chosen {
-    zmk,matrix_transform = &five_column_transform;
-  };
-};
+#include "common/layouts/5_column_34_keys.h"
+#include "common/layouts/5_column_34_keys_thumbs.h"
+#include "common/layouts/5_column_34_keys_combos.dtsi"
 
 CUSTOM_LAYER(Qwerty,
   QWERTY_UL         QWERTY_UR

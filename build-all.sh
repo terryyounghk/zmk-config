@@ -18,6 +18,7 @@ done
 # Define sub-scripts with main side specification
 SUB_SCRIPTS="
 build-corneish-zen-forked.sh left
+build-urchin.sh left
 build-corne36.sh left
 build-corne42-custom.sh left
 build-eyelash-corne.sh left

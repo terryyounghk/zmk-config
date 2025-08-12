@@ -1,14 +1,1 @@
-// special combos - high priority
-#include "../combos/special.dtsi"
-
-// positional combos
-#include "../combos/adjacent.dtsi"
-#include "../combos/thumbs.dtsi"
-#include "../combos/symmetric.dtsi"
-
-// contextual combos
-#include "../combos/browser.dtsi"
-#include "../combos/capturing.dtsi"
-#include "../combos/apps.dtsi"
-#include "../combos/coding.dtsi"
-#include "../combos/vscode.dtsi"
+#include "5_column_34_keys_combos.dtsi"

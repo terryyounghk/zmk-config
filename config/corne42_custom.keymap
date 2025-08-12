@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define TY_COLUMNS 6
 #include "common/base_keymap.h"
 #include "common/keys.h"
 #include "common/combos.h"
@@ -19,12 +20,8 @@
 #include "common/tap_dances.dtsi"
 
 #include "common/layouts/6_column_42_keys_custom.h"
+#include "common/layouts/6_column_42_keys_custom_thumbs.h"
 #include "common/layouts/6_column_42_keys_combos.dtsi"
-
-#define UG(code)                     &rgb_ug code
-
-#define SPECIAL_CONTROLS_TL          &trans              UG(RGB_OFF)         UG(RGB_ON)
-#define SPECIAL_CONTROLS_TR          &mkp LCLK           &mkp RCLK           &mkp MCLK
 
 / {
   chosen {
@@ -116,7 +113,7 @@ CUSTOM_LAYER_WITH_SENSOR(Controls,
                     CONTROLS_6_UL     &mmv MOVE_UP        CONTROLS_6_UR
                     CONTROLS_6_HL     &mmv MOVE_DOWN      CONTROLS_6_HR
                     CONTROLS_6_LL     &mmv MOVE_LEFT      CONTROLS_6_LR
-    &none   SPECIAL_CONTROLS_TL       &mmv MOVE_RIGHT     SPECIAL_CONTROLS_TR
+    &none           CONTROLS_TL       &mmv MOVE_RIGHT     CONTROLS_TR
                                       &mkp LCLK
   , &encoder_scroll
 )

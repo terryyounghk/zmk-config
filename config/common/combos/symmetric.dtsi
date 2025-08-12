@@ -19,6 +19,5 @@ ADD_COMBO(1, LL3 RL3,            &kp Y_COPY,                    LAYERS_NORMAL)
 ADD_COMBO(1, LL2 RL2,            &kp Y_PASTE,                   LAYERS_NORMAL)
 ADD_COMBO(1, LL1 RL1,            &sk LMEH,                      LAYERS_NORMAL)
 
-ADD_COMBO(0, LT3 RT3,            XXXXXXXXXX,                    LAYERS_NORMAL)
 ADD_COMBO(1, LT2 RT2,            &caps_word,                    LAYERS_NORMAL)
 ADD_COMBO(1, LT1 RT1,            &kp CAPS,                      LAYERS_NORMAL)

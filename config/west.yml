@@ -6,6 +6,13 @@ manifest:
       url-base: https://github.com/urob
     - name: terryyounghk
       url-base: https://github.com/terryyounghk
+    - name: duckyb
+      url-base: https://github.com/duckyb
+      # If you don't use animation delete from Here
+      # ulounge
+    # - name: ulounge
+    #   url-base: https://github.com/ulounge
+      # To Here
   projects:
     - name: zmk
       remote: urob
@@ -23,6 +30,9 @@ manifest:
 #     revision: main
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
+      revision: main
+    - name: urchin-zmk-module
+      remote: duckyb
       revision: main
   self:
     path: config

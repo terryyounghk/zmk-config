@@ -3,6 +3,8 @@
 /// ---------------------------------------------------------------------------
 // used in base_keymap.h
 #define Y_RM                            &m_release_mods
+#define Y_LT5                           &ht_mo_sk SCROLL LALT
+#define Y_LT4                           &ht_mo_sk MOUSE LGUI
 #define Y_LT3                           &ht_mo_sl NUMPAD NUMBERS
 #define Y_LT2                           &td_lshift
 #define Y_LT1                           &mm_repeat

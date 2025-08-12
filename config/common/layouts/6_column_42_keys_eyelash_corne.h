@@ -30,7 +30,7 @@
 */
 
 // L/R Encoders
-#define LEC 34 // left rorary click
+#define LEC 34 // left rotary click
 #define REU 6  // right joystick up
 #define REL 19 // right joystick left
 #define REC 20 // right joystick click
