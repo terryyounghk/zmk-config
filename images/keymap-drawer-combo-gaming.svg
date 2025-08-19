@@ -679,157 +679,147 @@ text.label {
   display: none;
 }
 </style>
-<g transform="translate(30, 0)" class="layer-Layer Numbers">
-<text x="0" y="28" class="label" id="Layer-Numbers">Layer Numbers:</text>
+<g transform="translate(30, 0)" class="layer-Contextual Combos - Gaming">
+<text x="0" y="28" class="label" id="Contextual-Combos---Gaming">Contextual Combos - Gaming:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(34, 60)" class="key keypos-0">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">!</text>
 </g>
 <g transform="translate(102, 42)" class="key keypos-1">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">@</text>
 </g>
 <g transform="translate(170, 34)" class="key keypos-2">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">#</text>
 </g>
 <g transform="translate(238, 42)" class="key keypos-3">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">$</text>
 </g>
 <g transform="translate(306, 51)" class="key keypos-4">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">%</text>
 </g>
-<g transform="translate(578, 51)" class="key keypos-5">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">^</text>
-</g>
-<g transform="translate(646, 42)" class="key keypos-6">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">&amp;</text>
-</g>
-<g transform="translate(714, 34)" class="key keypos-7">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">*</text>
-</g>
-<g transform="translate(782, 42)" class="key keypos-8">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">`</text>
-</g>
-<g transform="translate(850, 60)" class="key keypos-9">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">=</text>
-</g>
-<g transform="translate(34, 128)" class="key hilite keypos-10">
+<g transform="translate(578, 51)" class="key hilite keypos-5">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
-<text x="0" y="0" class="key hilite tap">1</text>
+<use href="#mdi:menu" xlink:href="#mdi:menu" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:menu"/>
+<text x="0" y="-30" class="key hilite shifted">Menu</text>
 </g>
-<g transform="translate(102, 110)" class="key hilite keypos-11">
+<g transform="translate(646, 42)" class="key hilite keypos-6">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
-<text x="0" y="0" class="key hilite tap">2</text>
+<use href="#mdi:skew-less" xlink:href="#mdi:skew-less" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:skew-less"/>
+<text x="0" y="-30" class="key hilite shifted">PrevSlot</text>
 </g>
-<g transform="translate(170, 102)" class="key hilite keypos-12">
+<g transform="translate(714, 34)" class="key hilite keypos-7">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
-<text x="0" y="0" class="key hilite tap">3</text>
+<use href="#mdi:skew-more" xlink:href="#mdi:skew-more" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:skew-more"/>
+<text x="0" y="-30" class="key hilite shifted">NextSlot</text>
 </g>
-<g transform="translate(238, 110)" class="key hilite keypos-13">
+<g transform="translate(782, 42)" class="key hilite keypos-8">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
-<text x="0" y="0" class="key hilite tap">4</text>
+<use href="#mdi:open-in-app" xlink:href="#mdi:open-in-app" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:open-in-app"/>
+<text x="0" y="-30" class="key hilite shifted">LoadState</text>
 </g>
-<g transform="translate(306, 119)" class="key hilite keypos-14">
+<g transform="translate(850, 60)" class="key hilite keypos-9">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
-<text x="0" y="0" class="key hilite tap">5</text>
+<use href="#mdi:content-save" xlink:href="#mdi:content-save" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:content-save"/>
+<text x="0" y="-30" class="key hilite shifted">SaveState</text>
+</g>
+<g transform="translate(34, 128)" class="key keypos-10">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
+</g>
+<g transform="translate(102, 110)" class="key keypos-11">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
+</g>
+<g transform="translate(170, 102)" class="key keypos-12">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
+</g>
+<g transform="translate(238, 110)" class="key keypos-13">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
+</g>
+<g transform="translate(306, 119)" class="key keypos-14">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
 </g>
 <g transform="translate(578, 119)" class="key hilite keypos-15">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
-<text x="0" y="0" class="key hilite tap">6</text>
+<use href="#mdi:volume-mute" xlink:href="#mdi:volume-mute" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:volume-mute"/>
+<text x="0" y="-30" class="key hilite shifted">Mute</text>
 </g>
 <g transform="translate(646, 110)" class="key hilite keypos-16">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
-<text x="0" y="0" class="key hilite tap">7</text>
+<use href="#mdi:volume-minus" xlink:href="#mdi:volume-minus" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:volume-minus"/>
+<text x="0" y="-30" class="key hilite shifted">VolDn</text>
 </g>
 <g transform="translate(714, 102)" class="key hilite keypos-17">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
-<text x="0" y="0" class="key hilite tap">8</text>
+<use href="#mdi:volume-plus" xlink:href="#mdi:volume-plus" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:volume-plus"/>
+<text x="0" y="-30" class="key hilite shifted">VolUp</text>
 </g>
 <g transform="translate(782, 110)" class="key hilite keypos-18">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
-<text x="0" y="0" class="key hilite tap">9</text>
+<use href="#mdi:exit-run" xlink:href="#mdi:exit-run" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:exit-run"/>
+<text x="0" y="-30" class="key hilite shifted">Exit</text>
 </g>
 <g transform="translate(850, 128)" class="key hilite keypos-19">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
-<text x="0" y="0" class="key hilite tap">0</text>
+<use href="#mdi:recycle-variant" xlink:href="#mdi:recycle-variant" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:recycle-variant"/>
+<text x="0" y="-30" class="key hilite shifted">Reset</text>
 </g>
-<g transform="translate(34, 196)" class="key keypos-20">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">¥</text>
+<g transform="translate(34, 196)" class="key held keypos-20">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key held"/>
+<text x="0" y="0" class="key held tap">z</text>
 </g>
 <g transform="translate(102, 178)" class="key keypos-21">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">€</text>
 </g>
 <g transform="translate(170, 170)" class="key keypos-22">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">£</text>
 </g>
 <g transform="translate(238, 178)" class="key keypos-23">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">_</text>
 </g>
 <g transform="translate(306, 187)" class="key keypos-24">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">:</text>
 </g>
-<g transform="translate(578, 187)" class="key keypos-25">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">+</text>
+<g transform="translate(578, 187)" class="key hilite keypos-25">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
+<use href="#mdi:monitor-screenshot" xlink:href="#mdi:monitor-screenshot" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:monitor-screenshot"/>
+<text x="0" y="-30" class="key hilite shifted">Screenshot</text>
 </g>
-<g transform="translate(646, 178)" class="key keypos-26">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">-</text>
+<g transform="translate(646, 178)" class="key hilite keypos-26">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
+<use href="#mdi:pause-box-outline" xlink:href="#mdi:pause-box-outline" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:pause-box-outline"/>
+<text x="0" y="-30" class="key hilite shifted">Pause</text>
 </g>
-<g transform="translate(714, 170)" class="key keypos-27">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">,</text>
+<g transform="translate(714, 170)" class="key hilite keypos-27">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
+<use href="#mdi:rewind" xlink:href="#mdi:rewind" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:rewind"/>
+<text x="0" y="-30" class="key hilite shifted">Rewind</text>
 </g>
-<g transform="translate(782, 178)" class="key keypos-28">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">.</text>
+<g transform="translate(782, 178)" class="key hilite keypos-28">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
+<use href="#mdi:fast-forward" xlink:href="#mdi:fast-forward" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:fast-forward"/>
+<text x="0" y="-30" class="key hilite shifted">FastFwd</text>
 </g>
-<g transform="translate(850, 196)" class="key keypos-29">
-<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<text x="0" y="0" class="key tap">/</text>
+<g transform="translate(850, 196)" class="key hilite keypos-29">
+<rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key hilite"/>
+<use href="#mdi:fast-forward-outline" xlink:href="#mdi:fast-forward-outline" x="-11" y="-11" height="22" width="22.0" class="key hilite tap glyph mdi:fast-forward-outline"/>
+<text x="0" y="-30" class="key hilite shifted">TogFFwd</text>
 </g>
 <g transform="translate(204, 249)" class="key ghost keypos-30">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key ghost"/>
-<text x="0" y="0" class="key ghost tap">numbers</text>
-<text x="0" y="30" class="key ghost hold">numpad</text>
 </g>
 <g transform="translate(279, 259) rotate(15.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:apple-keyboard-shift"/>
 </g>
 <g transform="translate(358, 272) rotate(30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-32" y="-49" width="64" height="98" class="key"/>
-<text x="0" y="0" class="key tap">repeat</text>
-<text x="0" y="47" class="key hold">tab</text>
 </g>
 <g transform="translate(526, 272) rotate(-30.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-32" y="-49" width="64" height="98" class="key"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:keyboard-return"/>
-<text x="0" y="47" class="key hold">code</text>
 </g>
 <g transform="translate(605, 259) rotate(-15.0)" class="key keypos-34">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key"/>
-<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:keyboard-space"/>
-<text x="0" y="30" class="key hold">sym</text>
 </g>
 <g transform="translate(680, 249)" class="key ghost keypos-35">
 <rect rx="6" ry="6" x="-32" y="-32" width="64" height="64" class="key ghost"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-11" y="-11" height="22" width="22.0" class="key ghost tap glyph mdi:keyboard-tab"/>
-<text x="0" y="30" class="key ghost hold">numbers</text>
 </g>
 </g>
 </g>

@@ -42,11 +42,6 @@ More about [my preferences](./docs/preferences.md)
 
 ## Layers
 
-<!-- TODO: Other typing layouts: 
-  - [Harmony](https://github.com/bottilabo/harmony-keyboard-layout)
-  - [Colemak-DH](https://colemakmods.github.io/mod-dh/)
--->
-
 - [Alpha Layers](./docs/layers.md#alpha-layers)
   - [Qwerty](./docs/layers.md#qwerty-layout)
   - [Harmony](./docs/layers.md#harmony-layout)
@@ -62,6 +57,7 @@ More about [my preferences](./docs/preferences.md)
 - [Gaming Layers](./docs/layers.md#gaming-layers)
   - [Switch](./docs/layers.md#switch)
   - [Pico-8](./docs/layers.md#pico-8)
+  - [RetroArch](./docs/layers.md#retroarch)
 - [Keyball-specific Layers](./docs/layers.md#keyball-specific-layers)
   - [Auto-mouse](./docs/layers.md#auto-mouse)
   - [Scroll](./docs/layers.md#scroll)
@@ -85,6 +81,7 @@ More about [my preferences](./docs/preferences.md)
   - [Application Combos](./docs/combos.md#application-combos)
   - [Browser Combos](./docs/combos.md#browser-combos)
   - [Capturing Combos](./docs/combos.md#capturing-combos)
+  - [Gaming Combos](./docs/combos.md#gaming-combos)
   - [VsCode Combos](./docs/combos.md#vscode-combos)
   - [VsCode Movement Combos](./docs/combos.md#vscode-movement-combos)
 

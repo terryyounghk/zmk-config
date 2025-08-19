@@ -409,6 +409,50 @@ layers:
         {type: ghost}
       ]
 
+  Layer RetroArch:
+    - [
+        {type: hilite, t: $$mdi:minus-circle$$, s: "Select"},
+        null,
+        {type: hilite, t: $$mdi:gamepad-up$$, s: "DPad-Up"},
+        null,
+        {type: hilite, t: $$mdi:plus-circle$$, s: "Start"},
+        {type: hilite, t: $$mdi:alpha-r-circle-outline$$, s: "R3"},
+        {type: green, t: $$mdi:alpha-y-circle$$ },
+        {type: blue, t: $$mdi:alpha-x-circle$$ },
+        {type: hilite, t: $$mdi:alpha-r-box-outline$$, s: "R"},
+        {type: hilite, t: $$mdi:alpha-l-box-outline$$, s: "L"},
+      ]
+    - [
+        {type: hilite, t: $$mdi:run-fast$$, s: "SlowMo"},
+        {type: hilite, t: $$mdi:gamepad-left$$, s: "DPad-Left"},
+        {type: hilite, t: $$mdi:gamepad-down$$, s: "DPad-Down"},
+        {type: hilite, t: $$mdi:gamepad-right$$, s: "DPad-Right"},
+        null,
+        {type: hilite, t: $$mdi:alpha-l-circle-outline$$, s: "L3"},
+        {type: yellow, t: $$mdi:alpha-b-circle$$ },
+        {type: red, t: $$mdi:alpha-a-circle$$ },
+        {type: hilite, t: $$mdi:alpha-r-box$$, s: "R2"},
+        {type: hilite, t: $$mdi:alpha-l-box$$, s: "L2"},
+      ]
+    - [
+        {type: hilite, t: $$mdi:alpha-l-circle$$, s: "L-Click"},
+        {type: hilite, t: $$mdi:arrow-left-drop-circle$$, s: "L-Left"},
+        {type: hilite, t: $$mdi:arrow-up-drop-circle$$, s: "L-Up"},
+        {type: hilite, t: $$mdi:arrow-down-drop-circle$$, s: "L-Down"},
+        {type: hilite, t: $$mdi:arrow-right-drop-circle$$, s: "L-Right"},
+        {type: hilite, t: $$mdi:arrow-left-bold-circle$$, s: "R-Left"},
+        {type: hilite, t: $$mdi:arrow-down-bold-circle$$, s: "R-Down"},
+        {type: hilite, t: $$mdi:arrow-up-bold-circle$$, s: "R-Up"},
+        {type: hilite, t: $$mdi:arrow-right-bold-circle$$, s: "R-Right"},
+        {type: hilite, t: $$mdi:alpha-r-circle$$, s: "R-Click"},
+      ]
+    - null
+    - {type: hilite, t: $$mdi:menu$$, s: "Menu"}
+    - {type: hilite, t: $$mdi:repeat$$, s: "&key_repeat"}
+    - {type: hilite, t: $$mdi:speedometer$$, s: "Turbo"}
+    - {type: hilite, t: $$mdi:pause-box-outline$$, s: "Pause"}
+    - null
+
   Layer Mouse (Keyball auto-mouse layer):
     - [
         # null,
@@ -735,6 +779,7 @@ layers:
         null,
         {type: ghost}
       ]
+
   Contextual Combos - Tmux:
     - [
         {type: rhs, t: "Detach"},
@@ -966,6 +1011,52 @@ layers:
         {type: ghost}
       ]
 
+  Contextual Combos - Gaming:
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {type: hilite, t: $$mdi:menu$$, s: "Menu"},
+        {type: hilite, t: $$mdi:skew-less$$, s: "PrevSlot"},
+        {type: hilite, t: $$mdi:skew-more$$, s: "NextSlot"},
+        {type: hilite, t: $$mdi:open-in-app$$, s: "LoadState"},
+        {type: hilite, t: $$mdi:content-save$$, s: "SaveState"},
+      ]
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {type: hilite, t: $$mdi:volume-mute$$, s: "Mute"},
+        {type: hilite, t: $$mdi:volume-minus$$, s: "VolDn"},
+        {type: hilite, t: $$mdi:volume-plus$$, s: "VolUp"},
+        {type: hilite, t: $$mdi:exit-run$$, s: "Exit"},
+        {type: hilite, t: $$mdi:recycle-variant$$, s: "Reset"},
+      ]
+    - [
+        {type: held, t: "z"},
+        null,
+        null,
+        null,
+        null,
+        {type: hilite, t: $$mdi:monitor-screenshot$$, s: "Screenshot"},
+        {type: hilite, t: $$mdi:pause-box-outline$$, s: "Pause"},
+        {type: hilite, t: $$mdi:rewind$$, s: "Rewind"},
+        {type: hilite, t: $$mdi:fast-forward$$, s: "FastFwd"},
+        {type: hilite, t: $$mdi:fast-forward-outline$$, s: "TogFFwd"},
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+
   Contextual Combos - VsCode:
     - [
         $$mdi:block-helper$$,
@@ -1119,9 +1210,11 @@ combos:
   - {l: ["Combo Layers, One-handed"], p: [0, 1], k: "Snipe", a: bottom, offset: 0.3, width: 40}
   - {l: ["Combo Layers, One-handed"], p: [1, 2], k: "Scroll", a: top, offset: 0.3, width: 40}
   - {l: ["Combo Layers, One-handed"], p: [2, 3], k: "Mouse", a: bottom, offset: 0.3, width: 40}
-  - {l: ["Combo Layers, One-handed"], p: [3, 4], k: "Pico-8", a: top, offset: 0.3, width: 40}
+  - {l: ["Combo Layers, One-handed"], p: [3, 4], k: "RetroArch", a: top, offset: 0.3, width: 40}
+  - {l: ["Combo Layers, One-handed"], p: [0, 3], k: "Pico-8", a: top, offset: 1.0, width: 40}
 
-  - {l: ["Combo Layers, One-handed"], p: [5, 6], k: "Pico-8", a: top, offset: 0.3, width: 40}
+  - {l: ["Combo Layers, One-handed"], p: [6, 9], k: "Pico-8", a: top, offset: 1.0, width: 40}
+  - {l: ["Combo Layers, One-handed"], p: [5, 6], k: "RetroArch", a: top, offset: 0.3, width: 40}
   - {l: ["Combo Layers, One-handed"], p: [6, 7], k: "Mouse", a: bottom, offset: 0.3, width: 40}
   - {l: ["Combo Layers, One-handed"], p: [7, 8], k: "Scroll", a: top, offset: 0.3, width: 40}
   - {l: ["Combo Layers, One-handed"], p: [8, 9], k: "Snipe", a: bottom, offset: 0.3, width: 40}

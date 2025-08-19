@@ -18,6 +18,8 @@
 #define CONTROLS_TR    &mkp LCLK      &mkp RCLK      &mkp MCLK
 #define SWITCH_TL      Y_LT3          &out OUT_USB   &out OUT_BLE
 #define SWITCH_TR      NS_A           NS_B           NS_REGISTER
+#define RETRO_TL       &none          RA_MENU        &key_repeat
+#define RETRO_TR       RA_TURBO       RA_PAUSE       &none
 #define PICO8_TL       Y_LT3          PIP1_X         PIP1_O
 #define PICO8_TR       PIP2_O         PIP2_X         Y_RT3
 #define MOUSE_TL       Y_LT3          Y_LT2          Y_LT1

@@ -173,6 +173,40 @@ For testing purposes, "Player 2" keys are mapped to the right hand.
 
 ![Layer Pico-8](../images/keymap-drawer-pico-8.svg)
 
+### RetroArch
+
+This gaming layer is specific to playing games on [RetroArch](https://www.retroarch.com/), where the frontend can be [ArkOS](https://github.com/christianhaitian/arkos/wiki) on retro handhelds such as the [Powkiddy RGB30](https://powkiddy.com/), or [EmulationStation Desktop Edition (ES-DE)](https://es-de.org)
+
+![Layer RetroArch](../images/keymap-drawer-retro.svg)
+
+The layout mostly resembles most generic Hitbox Controller buttons layouts, where the left side focuses on `ESDF` (as opposed to `WASD`) for movement, and the right side focusing on other in-game action buttons.
+
+The [Default RetroArch Keyboard Bindings](https://docs.libretro.com/guides/input-and-controls/#default-retroarch-keyboard-bindings) do not just include general controller mappings, but also [Hotkey Controls](https://docs.libretro.com/guides/input-and-controls/#hotkey-controls), of which I use combos to trigger.
+
+Certain keys are `nul` by default in RetroArch, namely <kbd>L2</kbd>, <kbd>R2</kbd>, <kbd>L3</kbd> and <kbd>R3</kbd>:
+
+```
+input_player1_l2 = "nul"
+input_player1_r2 = "nul"
+input_player1_l3 = "nul"
+input_player1_r3 = "nul"
+```
+
+Change them to <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> and <kbd>O</kbd> respectively:
+
+```
+input_player1_l2 = "c"
+input_player1_r2 = "v"
+input_player1_l3 = "b"
+input_player1_r3 = "o"
+```
+
+You may need to locate the `retroarch.cfg` file to edit these changes.
+
+For instance, in ArkOS, the file may be located at `/home/ark/.config/retroarch/retroarch.cfg`, and in RetroArch on MacOS, the file may be located at `~/Library/Application Support/RetroArch/retroarch.cfg`. Consult their latest documentation for the exact location.
+
+Additional keys for ES-DE include Up/Down/Left/Right keys and clicks for the Left and Right Thumbsticks.
+
 ## Keyball-specific Layers
 
 The Keyball layers consist of three layers:

@@ -93,6 +93,13 @@ CUSTOM_LAYER(Switch,
   SWITCH_TL         SWITCH_TR
 )
 
+CUSTOM_LAYER(RetroArch,
+  RETRO_UL          RETRO_UR
+  RETRO_HL          RETRO_HR
+  RETRO_LL          RETRO_LR
+  RETRO_TL          RETRO_TR
+)
+
 CUSTOM_LAYER(Pico8,
   PICO8_UL          PICO8_UR
   PICO8_HL          PICO8_HR

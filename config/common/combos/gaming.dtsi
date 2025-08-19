@@ -1,0 +1,20 @@
+/// ---------------------------------------------------------------------------
+/// Combo: RETRO
+
+ADD_COMBO(1, BK_RA RU1,                RA_MENU,                             RETRO)
+ADD_COMBO(1, BK_RA RU2,                RA_SLOTDEC,                          RETRO)
+ADD_COMBO(1, BK_RA RU3,                RA_SLOTINC,                          RETRO)
+ADD_COMBO(1, BK_RA RU4,                RA_STLOAD,                           RETRO)
+ADD_COMBO(1, BK_RA RU5,                RA_STSAVE,                           RETRO)
+
+ADD_COMBO(1, BK_RA RH1,                RA_MUTE,                             RETRO)
+ADD_COMBO(1, BK_RA RH2,                RA_VOLDN,                            RETRO)
+ADD_COMBO(1, BK_RA RH3,                RA_VOLUP,                            RETRO)
+ADD_COMBO(1, BK_RA RH4,                RA_EXIT,                             RETRO)
+ADD_COMBO(1, BK_RA RH5,                RA_RESET,                            RETRO)
+
+ADD_COMBO(1, BK_RA RL1,                RA_SCRSHOT,                          RETRO)
+ADD_COMBO(1, BK_RA RL2,                RA_PAUSE,                            RETRO)
+ADD_COMBO(1, BK_RA RL3,                RA_REWIND,                           RETRO)
+ADD_COMBO(1, BK_RA RL4,                RA_FASTFWD,                          RETRO)
+ADD_COMBO(1, BK_RA RL5,                RA_TOGFFWD,                          RETRO)

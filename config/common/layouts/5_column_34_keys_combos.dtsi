@@ -12,3 +12,4 @@
 #include "../combos/apps.dtsi"
 #include "../combos/coding.dtsi"
 #include "../combos/vscode.dtsi"
+#include "../combos/gaming.dtsi"

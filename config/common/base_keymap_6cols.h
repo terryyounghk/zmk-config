@@ -78,6 +78,13 @@
 #define SWITCH_6_LL       &none             SWITCH_LL
 #define SWITCH_6_LR                         SWITCH_LR         &none
 
+#define RETRO_6_UL        &none             RETRO_UL
+#define RETRO_6_UR                          RETRO_UR          &none
+#define RETRO_6_HL        &none             RETRO_HL
+#define RETRO_6_HR                          RETRO_HR          &none
+#define RETRO_6_LL        &none             RETRO_LL
+#define RETRO_6_LR                          RETRO_LR          &none
+
 #define PICO8_6_UL        &none             PICO8_UL
 #define PICO8_6_UR                          PICO8_UR          &none
 #define PICO8_6_HL        &none             PICO8_HL

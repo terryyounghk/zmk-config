@@ -36,3 +36,9 @@
 
 // vscode
 #define BK_VSCODE               RL4
+
+// Switch
+#define BK_SWITCH               LL5
+
+// RetroArch
+#define BK_RA                   LL5

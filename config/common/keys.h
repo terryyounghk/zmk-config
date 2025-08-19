@@ -396,3 +396,69 @@
 #define PIP2_LEFT   &kp S
 #define PIP2_RIGHT  &kp F
 #define PIP2_DOWN   &kp D
+
+/// ---------------------------------------------------------------------------
+// RETRO key mapping
+
+#define RA_UP       &kp UP
+#define RA_LEFT     &kp LEFT
+#define RA_RIGHT    &kp RIGHT
+#define RA_DOWN     &kp DOWN
+
+
+#define RA_A        &kp X
+#define RA_B        &kp Z
+#define RA_X        &kp A
+#define RA_Y        &kp S
+#define RA_L        &kp Q
+#define RA_R        &kp W
+#define RA_SELECT   &kp RSHIFT
+#define RA_START    &kp RETURN
+
+#define RA_MENU     &kp F1
+#define RA_STSAVE   &kp F2
+#define RA_STLOAD   &kp F4
+#define RA_SLOTDEC  &kp F6
+#define RA_SLOTINC  &kp F7
+#define RA_VOLDN    &kp KP_MINUS
+#define RA_VOLUP    &kp KP_PLUS
+#define RA_PAUSE    &kp P
+#define RA_RESET    &kp H
+#define RA_FULLSCR  &kp F
+#define RA_SLOWMO   &kp E
+#define RA_REWIND   &kp R
+#define RA_FASTFWD  &kp L
+#define RA_TOGFFWD  &kp SPACE
+#define RA_SCRSHOT  &kp F8
+#define RA_MUTE     &kp F9
+#define RA_EXIT     &kp ESC
+
+// The following requires changes the defaults (nul) to certain keys.
+// AFAIK, the keys assigned below are by default unused keys in RetroArch.
+// input_player1_l2 = "c"
+// input_player1_l3 = "b"
+// input_player1_r2 = "v"
+// input_player1_r3 = "o"
+// input_player1_turbo = "g"
+#define RA_L2       &kp C
+#define RA_L3       &kp B
+#define RA_R2       &kp V
+#define RA_R3       &kp O
+#define RA_TURBO    &kp G
+// Also, set this in retroarch.cfg or in the RetroArch settings,
+// so that you hold the Turbo key plus any one of A/B/X/Y to turbo that button.
+// input_turbo_mode = "2"
+
+// Additional keys mainly for ES-DE
+#define ES_MINUS    RA_SELECT
+#define ES_PLUS     RA_START
+#define ES_L_UP     &kp N1
+#define ES_L_DOWN   &kp N2
+#define ES_L_LEFT   &kp N3
+#define ES_L_RIGHT  &kp N4
+#define ES_R_UP     &kp N5
+#define ES_R_DOWN   &kp N6
+#define ES_R_LEFT   &kp N7
+#define ES_R_RIGHT  &kp N8
+#define ES_L_CLICK  RA_L3
+#define ES_R_CLICK  RA_R3

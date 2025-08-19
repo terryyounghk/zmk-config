@@ -127,6 +127,15 @@ CUSTOM_LAYER_WITH_SENSOR(Switch,
   , &encoder_vol
 )
 
+CUSTOM_LAYER_WITH_SENSOR(RetroArch,
+                    RETRO_6_UL        &mmv MOVE_UP        RETRO_6_UR
+                    RETRO_6_HL        &mmv MOVE_DOWN      RETRO_6_HR
+                    RETRO_6_LL        &mmv MOVE_LEFT      RETRO_6_LR
+    &none           RETRO_TL          &mmv MOVE_RIGHT     RETRO_TR
+                                      &mkp LCLK
+  , &encoder_vol
+)
+
 CUSTOM_LAYER_WITH_SENSOR(Pico8,
                     PICO8_6_UL        &mmv MOVE_UP        PICO8_6_UR
                     PICO8_6_HL        &mmv MOVE_DOWN      PICO8_6_HR

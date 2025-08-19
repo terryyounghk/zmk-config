@@ -8,11 +8,12 @@
 #define NAV      7
 #define CONTROLS 8
 #define SWITCH   9
-#define PICO8    10
-#define MOUSE    11
-#define SCROLL   12
-#define SNIPE    13
-#define AFK      14
+#define RETRO    10
+#define PICO8    11
+#define MOUSE    12
+#define SCROLL   13
+#define SNIPE    14
+#define AFK      15
 
 #define LAYERS_ALL \
         QWERTY   \
@@ -25,12 +26,14 @@
         NAV      \
         CONTROLS \
         SWITCH   \
+        RETRO    \
         PICO8    \
         MOUSE    \
         SCROLL   \
         SNIPE    \
         AFK
 
+// for non-gaming combos
 #define LAYERS_NORMAL \
         QWERTY   \
         HARMONY  \
@@ -45,6 +48,12 @@
         SCROLL   \
         SNIPE    \
         AFK
+
+// for gaming combos
+#define LAYERS_GAMING \
+        SWITCH   \
+        PICO8    \
+        RETRO
 
 // all keyboards I have are based on this
 #include "base_keymap_5cols.h"

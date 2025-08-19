@@ -1,10 +1,11 @@
 /// ---------------------------------------------------------------------------
-/// Combo: Panic (available in all layers, including AFK, Switch, etc)
+/// Combo: High-priority combos mostly for all layers
 
 ADD_COMBO(1, LL5 LL2 RL5 RL2,    &tog AFK,                      LAYERS_ALL)
 
-ADD_COMBO(1, RH4 RH2,            &m_reset_layers,               LAYERS_ALL)
-ADD_COMBO(1, LH4 LH2,            &m_reset_layers,               LAYERS_ALL)
+ADD_COMBO(1, LH5 LH2 RH5 RH2,    &m_reset_layers,               LAYERS_GAMING)
+ADD_COMBO(1, RH4 RH2,            &m_reset_layers,               LAYERS_NORMAL)
+ADD_COMBO(1, LH4 LH2,            &m_reset_layers,               LAYERS_NORMAL)
 
 ADD_COMBO(1, LH3 LH1,            &kp Y_NEXT_WINDOW,             LAYERS_ALL)
 ADD_COMBO(1, RH3 RH1,            &kp Y_NEXT_WINDOW,             LAYERS_ALL)

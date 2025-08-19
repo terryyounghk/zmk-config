@@ -194,6 +194,12 @@ I use [Clean Shot X](https://cleanshot.com/) for screen capturing, and [TextSnip
 
 ![Capturing Combos](../images/keymap-drawer-combo-capturing.svg)
 
+### Gaming Combos
+
+To supplement the [RetroArch Layer](./layers.md#retroarch-layer), I have a set of Gaming Combos that are activated with the <kbd>Z</kbd> key plus any non-thumb key on the right, which mostly corresponds to the [Hotkey Controls](https://docs.libretro.com/guides/input-and-controls/#default-retroarch-keyboard-bindings) of the Default RetroArch Keyboard Bindings.
+
+![Gaming Combos](../images/keymap-drawer-combo-gaming.svg)
+
 ### VsCode Combos
 
 > [!NOTE]
