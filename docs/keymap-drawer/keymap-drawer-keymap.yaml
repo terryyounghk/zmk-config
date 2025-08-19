@@ -315,52 +315,47 @@ layers:
 
   Layer Switch:
     - [
-        # $$mdi:block-helper$$,
-        $$mdi:home-circle$$,
-        "ZL",
+        {t: $$mdi:alpha-l-circle-outline$$, s: "L3"},
+        {t: $$mdi:alpha-l-box$$, s: "ZL"},
         {type: hilite, t: $$mdi:arrow-up-bold-circle$$ },
-        $$mdi:alpha-l-box-outline$$,
+        {t: $$mdi:alpha-l-box-outline$$, s: "L1"},
         $$mdi:minus-thick$$,
         $$mdi:plus-thick$$,
-        $$mdi:alpha-r-box-outline$$,
+        {t: $$mdi:alpha-r-box-outline$$, s: "R1"},
         {type: hilite, t: $$mdi:chevron-up-circle$$ },
-        "ZR",
-        $$mdi:square-circle-outline$$
-        # $$mdi:block-helper$$,
+        {t: $$mdi:alpha-r-box$$, s: "ZR"},
+        {t: $$mdi:alpha-r-circle-outline$$, s: "R3"},
       ]
     - [
-        # $$mdi:block-helper$$,
-        {type: green, t: $$mdi:alpha-y-circle$$ },
-        {type: hilite, t: $$mdi:arrow-left-bold-circle$$ },
-        {type: hilite, t: $$mdi:arrow-down-bold-circle$$ },
-        {type: hilite, t: $$mdi:arrow-right-bold-circle$$ },
-        {type: blue, t: $$mdi:alpha-x-circle$$ },
-        {type: blue, t: $$mdi:alpha-x-circle$$ },
-        {type: hilite, t: $$mdi:chevron-left-circle$$ },
-        {type: hilite, t: $$mdi:chevron-down-circle$$ },
-        {type: hilite, t: $$mdi:chevron-right-circle$$ },
-        {type: green, t: $$mdi:alpha-y-circle$$ },
-        # $$mdi:block-helper$$,
+        $$mdi:square-circle-outline$$,
+        {type: hilite, t: $$mdi:arrow-left-bold-circle$$},
+        {type: hilite, t: $$mdi:arrow-down-bold-circle$$},
+        {type: hilite, t: $$mdi:arrow-right-bold-circle$$},
+        {type: blue, t: $$mdi:alpha-x-circle$$},
+        {type: blue, t: $$mdi:alpha-x-circle$$},
+        {type: hilite, t: $$mdi:chevron-left-circle$$},
+        {type: hilite, t: $$mdi:chevron-down-circle$$},
+        {type: hilite, t: $$mdi:chevron-right-circle$$},
+        {type: green, t: $$mdi:alpha-y-circle$$},
       ]
     - [
-        # $$mdi:block-helper$$,
-        $$mdi:alpha-l-circle-outline$$,
-        $$mdi:alpha-r-circle-outline$$,
-        $$mdi:gamepad-down$$,
-        $$mdi:gamepad-up$$,
-        {type: green, t: $$mdi:alpha-y-circle$$ },
+        $$mdi:home-circle$$,
         $$mdi:gamepad-left$$,
-        $$mdi:gamepad-down$$,
         $$mdi:gamepad-up$$,
+        $$mdi:gamepad-down$$,
         $$mdi:gamepad-right$$,
-        $$mdi:alpha-r-circle-outline$$,
-        # $$mdi:block-helper$$,
+
+        {type: green, t: $$mdi:alpha-y-circle$$},
+        {type: yellow, t: $$mdi:alpha-b-circle$$},
+        {type: red, t: $$mdi:alpha-a-circle$$},
+        {type: blue, t: $$mdi:alpha-x-circle$$},
+        {t: $$mdi:alpha-r-circle-outline$$, s: "R3"},
       ]
-    - {t: "numbers", h: "numpad", type: ghost}
+    - null
     - $$mdi:usb$$
     - $$mdi:bluetooth$$
-    - {type: red, t: $$mdi:alpha-a-circle$$ }
-    - {type: yellow, t: $$mdi:alpha-b-circle$$ }
+    - {type: red, t: $$mdi:alpha-a-circle$$}
+    - {type: yellow, t: $$mdi:alpha-b-circle$$}
     - {t: $$mdi:nintendo-switch$$, s: "register"}
 
   Layer Pico-8:
