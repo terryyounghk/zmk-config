@@ -16,7 +16,7 @@
 #define NAV_TL         Y_LT5          Y_LT4          Y_LT3          Y_LT2          Y_LT1
 #define NAV_TR         Y_RT1          Y_RT2          Y_RT3
 #define CONTROLS_TL    Y_LT5          Y_LT4          Y_LT3          Y_LT2          Y_LT1
-#define CONTROLS_TR    &kp LCLK       &mkp RCLK      &mkp MCLK
+#define CONTROLS_TR    &mkp LCLK      &mkp RCLK      &mkp MCLK
 #define SWITCH_TL      Y_LT5          Y_LT4          Y_LT3          &out OUT_USB   &out OUT_BLE
 #define SWITCH_TR      NS_A           NS_B           NS_REGISTER
 #define RETRO_TL       Y_LT5          Y_LT4          &none          RA_MENU        &key_repeat
