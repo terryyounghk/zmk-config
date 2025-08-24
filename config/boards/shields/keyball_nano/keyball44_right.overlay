@@ -56,13 +56,13 @@
         irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
         // layers: mouse
-        automouse-layer = <12>;
+        automouse-layer = <13>;
 
         // layers: controls, scroll
-        scroll-layers = <8 13>;
+        scroll-layers = <9 14>;
 
         // layers: switch, snipe
-        snipe-layers = <9 14>;
+        snipe-layers = <10 15>;
     };
 };
 

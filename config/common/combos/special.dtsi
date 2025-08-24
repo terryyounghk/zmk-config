@@ -19,6 +19,7 @@ ADD_COMBO(1, RH4 RH1,            &kp Y_NEXT_APPLICATION,        LAYERS_ALL)
 ADD_COMBO(1, BK_TYPING RH1,      &to QWERTY,                    LAYERS_NORMAL)
 ADD_COMBO(1, BK_TYPING RH2,      &to HARMONY,                   LAYERS_NORMAL)
 ADD_COMBO(1, BK_TYPING RH3,      &to COLEMAK,                   LAYERS_NORMAL)
+ADD_COMBO(1, BK_TYPING RH4,      &sl MACROS,                    LAYERS_NORMAL)
 
 
 /// ---------------------------------------------------------------------------

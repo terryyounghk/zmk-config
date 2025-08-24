@@ -5,11 +5,13 @@
 #define HARMONY_TR     Y_RT1          Y_RT2          Y_RT3
 #define COLEMAK_TL     Y_LT5          Y_LT4          Y_LT3          Y_LT2          Y_LT1
 #define COLEMAK_TR     Y_RT1          Y_RT2          Y_RT3
+#define MACROS_TL      Y_LT5          Y_LT4          Y_LT3          Y_LT2          Y_LT1
+#define MACROS_TR      Y_RT1          Y_RT2          Y_RT3
 #define NUMBERS_TL     Y_LT5          Y_LT4          Y_LT3          Y_LT2          Y_LT1
 #define NUMBERS_TR     Y_RT1          Y_RT2          Y_RT3
 #define NUMPAD_TL      Y_LT5          Y_LT4          Y_LT3          Y_LT2          Y_LT1
 #define NUMPAD_TR      Y_RT1          Y_RT2_NP       Y_RT3
-#define SYMBOLS_TL     Y_LT5          Y_LT4          Y_LT3          Y_LT2          Y_LT1
+#define SYMBOLS_TL     Y_LT5          Y_LT4          Y_LT3          &kp SPACE      Y_LT1
 #define SYMBOLS_TR     Y_RT1          Y_RT2          Y_RT3
 #define CODING_TL      Y_LT5          Y_LT4          Y_LT3          Y_LT2          Y_LT1
 #define CODING_TR      Y_RT1          Y_RT2          Y_RT3

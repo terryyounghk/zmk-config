@@ -4,11 +4,13 @@
 #define HARMONY_TR     Y_RT1          Y_RT2
 #define COLEMAK_TL     Y_LT2          Y_LT1
 #define COLEMAK_TR     Y_RT1          Y_RT2
+#define MACROS_TL      Y_LT2          Y_LT1
+#define MACROS_TR      Y_RT1          Y_RT2
 #define NUMBERS_TL     Y_LT2          Y_LT1
 #define NUMBERS_TR     Y_RT1          Y_RT2
 #define NUMPAD_TL      Y_LT2          Y_LT1
 #define NUMPAD_TR      Y_RT1          Y_RT2_NP
-#define SYMBOLS_TL     Y_LT2          Y_LT1
+#define SYMBOLS_TL     &kp SPACE      Y_LT1
 #define SYMBOLS_TR     Y_RT1          Y_RT2
 #define CODING_TL      Y_LT2          Y_LT1
 #define CODING_TR      Y_RT1          Y_RT2

@@ -67,9 +67,13 @@ ADD_COMBO(1, LU2 LH1,            &kp EQUAL,                     LAYERS_NORMAL)
 ADD_COMBO(1, LH2 LL1,            &kp SPACE,                     LAYERS_NORMAL)
 ADD_COMBO(1, LU3 LH2,            &kp TAB,                       LAYERS_NORMAL)
 ADD_COMBO(1, LH3 LL2,            &kp RETURN,                    LAYERS_NORMAL)
+ADD_COMBO(1, LU3 LH4,            &kp APOSTROPHE,                LAYERS_NORMAL)
+ADD_COMBO(1, LH3 LL4,            &kp DQT,                       LAYERS_NORMAL)
 
 /// diagonal combos: right handed
 ADD_COMBO(1, RU2 RH1,            &kp UNDERSCORE,                LAYERS_NORMAL)
 ADD_COMBO(1, RH2 RL1,            &kp BACKSLASH,                 LAYERS_NORMAL)
 ADD_COMBO(1, RU3 RH2,            &kp LS(TAB),                   LAYERS_NORMAL)
 ADD_COMBO(1, RH3 RL2,            &kp RETURN,                    LAYERS_NORMAL)
+ADD_COMBO(0, RU3 RH4,            XXXXXXXXXX,                    LAYERS_NORMAL)
+ADD_COMBO(0, RH3 RL4,            Reserved: VsCode,              LAYERS_NORMAL)

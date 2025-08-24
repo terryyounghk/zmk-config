@@ -1,24 +1,26 @@
 #define QWERTY   0
 #define HARMONY  1
 #define COLEMAK  2
-#define NUMBERS  3
-#define NUMPAD   4
-#define SYMBOLS  5
-#define CODING   6
-#define NAV      7
-#define CONTROLS 8
-#define SWITCH   9
-#define RETRO    10
+#define MACROS   3
+#define NUMBERS  4
+#define NUMPAD   5
+#define SYMBOLS  6
+#define CODING   7
+#define NAV      8
+#define CONTROLS 9
+#define SWITCH   10
+#define RETRO    11
 #define PICO8    11
-#define MOUSE    12
-#define SCROLL   13
-#define SNIPE    14
-#define AFK      15
+#define MOUSE    13
+#define SCROLL   14
+#define SNIPE    15
+#define AFK      16
 
 #define LAYERS_ALL \
         QWERTY   \
         HARMONY  \
         COLEMAK  \
+        MACROS   \
         NUMBERS  \
         NUMPAD   \
         SYMBOLS  \
@@ -38,6 +40,7 @@
         QWERTY   \
         HARMONY  \
         COLEMAK  \
+        MACROS   \
         NUMBERS  \
         NUMPAD   \
         SYMBOLS  \

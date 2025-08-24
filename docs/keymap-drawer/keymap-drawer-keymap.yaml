@@ -4,19 +4,16 @@ layout:
 layers:
   Layer Qwerty:
     - [
-        # "_",
-        Q, W, E, R, T, Y, U, I, O, P
-        # "'",
+        {type: held, t: Q},
+         W, E, R, T, Y, U, I, O, P
       ]
     - [
-        # $$mdi:apple-keyboard-control$$,
-        A, S, D, F, G, H, J, K, L, ";"
-        # $$mdi:apple-keyboard-control$$,
+        A, S, D, F, G,
+        {type: held, t: H},
+        J, K, L, ";"
       ]
     - [
-        # $$mdi:apple-keyboard-command$$,
         Z, X, C, V, B, N, M, ",", ".", "/"
-        # $$mdi:apple-keyboard-option$$,
       ]
     - {t: "numbers", h: "numpad", type: ghost}
     - $$mdi:apple-keyboard-shift$$
@@ -27,19 +24,16 @@ layers:
 
   Layer Harmony:
     - [
-        # "_",
-        Q, W, R, N, F, J, U, O, L, P
-        # "'",
+        {type: held, t: Q},
+        W, R, N, F, J, U, O, L, P
       ]
     - [
-        # $$mdi:apple-keyboard-control$$,
-        K, S, T, H, M, G, I, E, A, Y
-        # $$mdi:apple-keyboard-control$$,
+        K, S, T, H, M, G,
+        {type: held, t: I},
+        E, A, Y
       ]
     - [
-        # $$mdi:apple-keyboard-command$$,
         Z, X, C, V, B, "-", D, ",", ".", "/"
-        # $$mdi:apple-keyboard-option$$,
       ]
     - {t: "numbers", h: "numpad", type: ghost}
     - $$mdi:apple-keyboard-shift$$
@@ -50,19 +44,16 @@ layers:
 
   Layer Colemak-DH:
     - [
-        # "_",
-        Q, W, F, P, B, J, L, U, Y, ";"
-        # "'",
+        {type: held, t: Q},
+        W, F, P, B, J, L, U, Y, ";"
       ]
     - [
-        # $$mdi:apple-keyboard-control$$,
-        A, R, S, T, G, M, N, E, I, O
-        # $$mdi:apple-keyboard-control$$,
+        A, R, S, T, G, M, N,
+        {type: held, t: E},
+        I, O
       ]
     - [
-        # $$mdi:apple-keyboard-command$$,
         Z, X, C, D, V, K, H, ",", ".", "/"
-        # $$mdi:apple-keyboard-option$$,
       ]
     - {t: "numbers", h: "numpad", type: ghost}
     - $$mdi:apple-keyboard-shift$$
@@ -71,14 +62,57 @@ layers:
     - {t: $$mdi:keyboard-space$$, h: "sym"}
     - {t: $$mdi:keyboard-tab$$, h: "numbers", type: ghost}
 
-  Layer Numbers:
+  Layer Macros:
     - [
-        # "_",
-        "!", "@", "#", "$", "%", "^", "&", "*", "`", "="
-        # "'",
+        {type: held, t: $$mdi:bash$$, h: "shebang"},
+        null,
+        null,
+        {t: $$mdi:bash$$, h: "DRY_RUN"},
+        null,
+        {t: $$mdi:code-block-braces$$, h: "YYYY-MM-DD"},
+        {t: $$mdi:gmail$$, h: "Unread"},
+        {t: $$mdi:gmail$$, h: "Inbox"},
+        null,
+        null
       ]
     - [
-        # $$mdi:apple-keyboard-control$$,
+        {t: $$mdi:cellphone-screenshot$$, h: "nice!nano"},
+        null,
+        {t: $$mdi:bug$$, h: "DEBUG"},
+        null,
+        null,
+        {t: $$mdi:code-block-braces$$, h: "hh:mm:ss"},
+        null,
+        null,
+        {type: held, t: $$mdi:message-reply-text$$, h: "LGTM,tks"},
+        null
+      ]
+    - [
+        {t: $$mdi:cellphone-screenshot$$, h: "nice!view"},
+        {t: $$mdi:duck$$, h: ".maxrows"},
+        null,
+        {t: $$mdi:bash$$, h: "VERBOSE"},
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    - [
+        {type: ghost},
+        null,
+        null,
+        null,
+        null,
+        {type: ghost}
+      ]
+
+  Layer Numbers:
+    - [
+        "!", "@", "#", "$", "%", "^", "&", "*", "`", "="
+      ]
+    - [
       {type: hilite, t: "1" },
       {type: hilite, t: "2" },
       {type: hilite, t: "3" },
@@ -89,12 +123,9 @@ layers:
       {type: hilite, t: "8" },
       {type: hilite, t: "9" },
       {type: hilite, t: "0" },
-        # $$mdi:apple-keyboard-control$$,
       ]
     - [
-        # $$mdi:apple-keyboard-command$$,
         "¥", "€", "£", "_", ":", "+", "-", ",", ".", "/"
-        # $$mdi:apple-keyboard-option$$,
       ]
     - {t: "numbers", h: "numpad", type: ghost}
     - $$mdi:apple-keyboard-shift$$
@@ -105,34 +136,28 @@ layers:
 
   Layer Numpad:
     - [
-        # "_",
         "F1", "F2", "F3", "F4", "F5",
         {t: "/", right: "#"},
         {type: hilite, t: "7" },
         {type: hilite, t: "8" },
         {type: hilite, t: "9" },
         {t: "+", right: "="}
-        # "'",
       ]
     - [
-        # $$mdi:apple-keyboard-control$$,
         "F6", "F7", "F8", "F9", "F10",
         {t: "*", right: "$"},
         {type: hilite, t: "4" },
         {type: hilite, t: "5" },
         {type: hilite, t: "6" },
         {t: "-", right: "_"}
-        # $$mdi:apple-keyboard-control$$,
       ]
     - [
-        # $$mdi:apple-keyboard-command$$,
         "F11", "F12", "F13", "F14", "F15",
         {t: ",", right: "!"},
         {type: hilite, t: "1" },
         {type: hilite, t: "2" },
         {type: hilite, t: "3" },
         {t: ".", right: ":"}
-        # $$mdi:apple-keyboard-option$$,
       ]
     - {t: "numbers", h: "numpad", type: ghost}
     - $$mdi:apple-keyboard-shift$$
@@ -143,12 +168,9 @@ layers:
 
   Layer Symbols:
     - [
-        # "_",
         "<", ";", "(", "[", "{", "}", "]", ")", "~", ">"
-        # "'",
       ]
     - [
-        # $$mdi:apple-keyboard-control$$,
         {type: hilite, t: "!" },
         {type: hilite, t: "@" },
         {type: hilite, t: "#" },
@@ -159,12 +181,9 @@ layers:
         {type: hilite, t: "*" },
         {type: hilite, t: "`" },
         {type: hilite, t: "=" },
-        # $$mdi:apple-keyboard-control$$,
       ]
     - [
-        # $$mdi:apple-keyboard-command$$,
         "\\", ":", "_", "-", "+", "'", "|", ",", ".", "/"
-        # $$mdi:apple-keyboard-option$$,
       ]
     - {t: "numbers", h: "numpad", type: ghost}
     - $$mdi:apple-keyboard-shift$$
@@ -181,7 +200,7 @@ layers:
         {t: "${}"},
         {t: "-> "},
         {t: "+= "},
-        {t: ""},
+        {t: "$()"},
         {t: "/*"},
         {t: ">="},
         {t: "://"},
@@ -199,7 +218,7 @@ layers:
         {t: "\\\""},
       ]
     - [
-        {t: ""},
+        {t: "[]"},
         {t: "[x]"},
         {t: "```"},
         {t: "<!--"},
@@ -265,7 +284,6 @@ layers:
 
   Layer Controls:
     - [
-        # {t: $$mdi:restart$$, s: "Reset"},
         $$mdi:apple-keyboard-caps$$,
         $$mdi:skip-previous$$,
         $$mdi:play-pause$$,
@@ -276,10 +294,8 @@ layers:
         {type: hilite, t: $$mdi:arrow-up-circle-outline$$ },
         {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 5"},
         {t: $$mdi:usb$$, s: "OUT_USB"},
-        # {t: $$mdi:restart$$, s: "Reset"},
       ]
     - [
-        # {t: $$mdi:led-on$$, s: "RGB"},
         {t: "$$mdi:bluetooth$$", s: "BT1"},
         {t: "$$mdi:bluetooth$$", s: "BT2"},
         {t: "$$mdi:bluetooth$$", s: "BT3"},
@@ -290,10 +306,8 @@ layers:
         {type: hilite, t: $$mdi:arrow-down-circle-outline$$ },
         {type: hilite, t: $$mdi:arrow-right-circle-outline$$ },
         F15
-        # {t: $$mdi:led-on$$, s: "RGB FX"},
       ]
     - [
-        # {t: $$mdi:chip$$, s: "Boot"},
         $$mdi:block-helper$$,
         {t: $$mdi:mouse-left-click$$, s: "L Click"},
         {t: $$mdi:mouse-scroll-wheel$$, s: "M Click"},
@@ -304,7 +318,6 @@ layers:
         F12,
         F13,
         F14
-        # {t: $$mdi:chip$$, s: "Boot"},
       ]
     - {t: "numbers", h: "numpad", type: ghost}
     - $$mdi:apple-keyboard-shift$$
@@ -450,16 +463,12 @@ layers:
 
   Layer Mouse (Keyball auto-mouse layer):
     - [
-        # null,
         null, {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 4"}, null, {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 5"}, null,
         null, {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 5"}, null, {t: $$mdi:mouse-scroll-wheel$$, s: "Btn 4"}, null
-        # null,
       ]
     - [
-        # null,
         null, {t: $$mdi:mouse-left-click$$, s: "R Click"}, {t: $$mdi:mouse-left-click$$, s: "M Click"}, {t: $$mdi:mouse-left-click$$, s: "L Click"}, null,
         null, {t: $$mdi:mouse-left-click$$, s: "L Click"}, {t: $$mdi:mouse-left-click$$, s: "M Click"}, {t: $$mdi:mouse-left-click$$, s: "R Click"}, null
-        # null,
       ]
     - [null, null, null, null, null, null, null, null, null, null]
     - {t: "numbers", h: "numpad", type: ghost}
@@ -869,7 +878,7 @@ layers:
 
   Contextual Combos - Applications:
     - [
-        $$mdi:block-helper$$,
+        {t: $$mdi:glass-wine$$, h: "Bartender"},
         {t: $$mdi:security$$, h: "Okta"},
         {t: $$mdi:dock-top$$, h: "Menu"},
         {t: $$mdi:dock-bottom$$, h: "Dock"},
@@ -881,7 +890,7 @@ layers:
         $$mdi:block-helper$$
       ]
     - [
-        {t: $$mdi:glass-wine$$, h: "Bartender"},
+        $$mdi:block-helper$$,
         {t: $$mdi:card-search-outline$$, h: "Raycast"},
         {t: $$mdi:cat$$, h: "Shortcat"},
         {t: $$mdi:shield-search$$, h: "1Password"},
@@ -968,13 +977,13 @@ layers:
         $$mdi:block-helper$$,
         $$mdi:block-helper$$,
         $$mdi:block-helper$$,
-        {t: $$mdi:gmail$$, h: "Unread"},
-        {t: $$mdi:gmail$$, h: "Inbox"},
+        $$mdi:block-helper$$,
+        $$mdi:block-helper$$,
         {t: $$mdi:image-multiple-outline$$, h: "Download"},
         {t: $$mdi:image-off-outline$$, h: "Paranoid"}
       ]
     - [
-        $$mdi:block-helper$$,
+        {t: $$mdi:google-chrome$$, h: "TabSearch"},
         {t: $$mdi:google-chrome$$, h: "Back"},
         {t: $$mdi:google-chrome$$, h: "Forward"},
         $$mdi:block-helper$$,
@@ -1149,6 +1158,7 @@ combos:
   - {l: ["Layer Qwerty"], p: [0, 15], a: top, offset: 0.4, k: "Qwerty", width: 65}
   - {l: ["Layer Qwerty"], p: [0, 16], a: top, offset: 1, k: "Harmony", width: 65}
   - {l: ["Layer Qwerty"], p: [0, 17], a: top, offset: 1.6, k: "Colemak-DH", width: 65}
+  - {l: ["Layer Qwerty"], p: [0, 18], a: top, offset: 2.2, k: "Macros", width: 65}
 
   # horizontally adjacent
   - {l: ["Positional Combos - Adjacent"], p: [3, 4], k: $$mdi:plus-thick$$}

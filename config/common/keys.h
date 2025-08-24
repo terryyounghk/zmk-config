@@ -17,7 +17,7 @@
 
 /// ---------------------------------------------------------------------------
 // used in base_keymap.h
-#define LU5_CODING                      &m_code_esc_dqt
+#define LU5_CODING                      &m_code_regex_not
 #define LU4_CODING                      &m_code_lte
 #define LU3_CODING                      &m_code_esc_fslh
 #define LU2_CODING                      &m_code_literal
@@ -27,8 +27,8 @@
 #define LH3_CODING                      &m_code_fn_arrow_open
 #define LH2_CODING                      &m_code_fn_call_arrow
 #define LH1_CODING                      &m_code_fn_arrow
-#define LL5_CODING                      &none
-#define LL4_CODING                      &none
+#define LL5_CODING                      &m_code_md_todo
+#define LL4_CODING                      &m_code_md_checked
 #define LL3_CODING                      &m_code_md_code_open
 #define LL2_CODING                      &m_code_html_comment_open
 #define LL1_CODING                      &m_code_html_comment_close
@@ -37,12 +37,12 @@
 #define RU2_CODING                      &m_code_decrement_assign
 #define RU3_CODING                      &m_code_comment_ml_open
 #define RU4_CODING                      &m_code_gte
-#define RU5_CODING                      &none
+#define RU5_CODING                      &m_code_command
 #define RH1_CODING                      &m_code_increment
 #define RH2_CODING                      &m_code_and
 #define RH3_CODING                      &m_code_equal
-#define RH4_CODING                      &none
-#define RH5_CODING                      &none
+#define RH4_CODING                      &m_code_esc_apos
+#define RH5_CODING                      &m_code_esc_dqt
 #define RL1_CODING                      &m_code_decrement
 #define RL2_CODING                      &m_code_or
 #define RL3_CODING                      &m_code_not_equal
@@ -278,6 +278,7 @@
 // browser shortcuts
 
 #define Y_CHROME_PROFILES               LG(LS(M))
+#define Y_CHROME_TAB_SEARCH             LG(LS(A))
 
 /// ---------------------------------------------------------------------------
 // browser extension shortcuts

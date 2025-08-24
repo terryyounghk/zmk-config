@@ -6,13 +6,18 @@ My primary typing layer is Qwerty, but I'm open in learning other layouts.
 
 I use combos to switch between them, as I don't switch too often.
 
-The base combo key is <kbd>Q</kbd>, plus <kbd>H</kbd> (Qwerty), <kbd>J</kbd> (Harmony) or <kbd>K</kbd> (Colemak-DH).
+The base combo key is <kbd>Q</kbd> to switch between the Alpha layers:
+
+  - <kbd>Q + H</kbd>: `&to` Qwerty
+  - <kbd>Q + J</kbd>: `&to` Harmony
+  - <kbd>Q + K</kbd>: `&to` Colemak-DH
+  - <kbd>Q + L</kbd>: `&sl` Macros (one-shot layer)
 
 ### QWERTY Layout
 
 Nothing special with Qwerty itself, so description here is more on introducing the thumb clusters.
 
-![Layer Qwerty](../images/keymap-drawer-qwerty.svg)
+![Layer Qwerty](../images/keymap-drawer-layer-qwerty.svg)
 
 The thumb keys remain the same on all layers except for the Numpad layer.
 
@@ -28,13 +33,24 @@ The third outermost thumb keys are optional:
 
 This layer is based on the [Harmony keyboard layout](https://github.com/bottilabo/harmony-keyboard-layout).
 
-![Layer Harmony](../images/keymap-drawer-harmony.svg)
+![Layer Harmony](../images/keymap-drawer-layer-harmony.svg)
 
 ### Colemak-DH Layout
 
 This layer is based on the [Colemak-DH keyboard layout](https://colemakmods.github.io/mod-dh/).
 
-![Layer Colemak-DH](../images/keymap-drawer-colemak-dh.svg)
+![Layer Colemak-DH](../images/keymap-drawer-layer-colemak-dh.svg)
+
+### Macros Layout
+
+This one-shot layer hosts all the textual macros I often use.
+
+(There is also a [Coding Layer](#coding) that hosts coding symbol sequences as macros.)
+
+> [!NOTE]
+> This layer is still a work-in-progress and is subject to change.
+
+![Layer Macros](../images/keymap-drawer-layer-macros.svg)
 
 ## Num Layers
 
@@ -42,7 +58,7 @@ This layer is based on the [Colemak-DH keyboard layout](https://colemakmods.gith
 
 This layer places all numbers on the home row.
 
-![Layer Numbers](../images/keymap-drawer-numbers.svg)
+![Layer Numbers](../images/keymap-drawer-layer-numbers.svg)
 
 I use this layer for short bursts of number typing, such as dates, times or small digits when coding.
 
@@ -56,7 +72,7 @@ This layers places all numbers on the right in a numpad layout, with Fn keys on 
 
 I use this more on spreadsheets and number-heavy calculations.
 
-![Layer Numpad](../images/keymap-drawer-numpad.svg)
+![Layer Numpad](../images/keymap-drawer-layer-numpad.svg)
 
 
 ## Sym
@@ -65,7 +81,7 @@ I use this more on spreadsheets and number-heavy calculations.
 
 This layer places all symbols on the home row, mostly resembling same symbols a Qwerty keyboard's number keys, except for `9` and `0`, which are replaced with `` ` `` and `=` respectively, same as the Numbers layer.
 
-![Layer Symbols](../images/keymap-drawer-symbols.svg)
+![Layer Symbols](../images/keymap-drawer-layer-symbols.svg)
 
 The upper row consists mainly with different brackets commonly used in coding.
 
@@ -75,7 +91,7 @@ The lower row consists of other symbols commonly used in coding.
 
 This layer consists of coding symbol sequences as macros common to most languages with more focus on TypeScript.
 
-![Layer Coding](../images/keymap-drawer-coding.svg)
+![Layer Coding](../images/keymap-drawer-layer-coding.svg)
 
 This layer is accessible with the combo <kbd>LT1</kbd> and <kbd>RT2</kbd> that uses <kbd>&sl</kbd> (Sticky Layer), as most of these only require one-shot keystrokes most of the time.
 
@@ -87,7 +103,7 @@ One notable thing notable the left side of home row are variations of TypeScript
 
 This layer is symmetrical on both sides, with Vim-like arrow keys.
 
-![Layer Nav](../images/keymap-drawer-nav.svg)
+![Layer Nav](../images/keymap-drawer-layer-nav.svg)
 
 The modifiers on this layer are specifically <kbd>&tog</kbd> Toggle Keys, saving the need for combo mod keystrokes.
 
@@ -99,7 +115,7 @@ This layer have keyboard/media controls on the left, and mouse controls on the r
 
 In MacOS, <kbd>F14</kbd> and <kbd>F15</kbd> are Brightness Down and Up respectively.
 
-![Layer Controls](../images/keymap-drawer-controls.svg)
+![Layer Controls](../images/keymap-drawer-layer-controls.svg)
 
 ## Gaming Layers
 
@@ -112,7 +128,7 @@ Once you toggled into a Gaming Layer, use the [Panic Combo](./combos.md#panic-co
 This gaming layer is very specific to the [IINE Keyboard and Mouse Adapter for Switch](https://www.iine.top/index.php?m=content&c=index&a=show&catid=205&id=181).
 
 
-![Layer Gaming](../images/keymap-drawer-switch.svg)
+![Layer Gaming](../images/keymap-drawer-layer-switch.svg)
 
 For something that is low cost and just plug-and-play, there is very little to no documentation, and this accessory does not allow custom mapping.
 
@@ -171,13 +187,13 @@ I primarily play as "Player 1", and the "X/O" action buttons are mapped in multi
 
 For testing purposes, "Player 2" keys are mapped to the right hand.
 
-![Layer Pico-8](../images/keymap-drawer-pico-8.svg)
+![Layer Pico-8](../images/keymap-drawer-layer-pico-8.svg)
 
 ### RetroArch
 
 This gaming layer is specific to playing games on [RetroArch](https://www.retroarch.com/), where the frontend can be [ArkOS](https://github.com/christianhaitian/arkos/wiki) on retro handhelds such as the [Powkiddy RGB30](https://powkiddy.com/), or [EmulationStation Desktop Edition (ES-DE)](https://es-de.org)
 
-![Layer RetroArch](../images/keymap-drawer-retro.svg)
+![Layer RetroArch](../images/keymap-drawer-layer-retro.svg)
 
 The layout mostly resembles most generic Hitbox Controller buttons layouts, where the left side focuses on `ESDF` (as opposed to `WASD`) for movement, and the right side focusing on other in-game action buttons.
 
@@ -220,7 +236,7 @@ This layer is automatically activated when the trackball is moved, and deactivat
 
 Both sides are symmetrical.
 
-![Layer Keyball Mouse](../images/keymap-drawer-mouse.svg)
+![Layer Keyball Mouse](../images/keymap-drawer-layer-mouse.svg)
 
 ### Scroll
 
@@ -236,5 +252,5 @@ On this layer, all keys are inactive individually.
 
 Simply toggle this layer with the combo highlighted in the diagram.
 
-![AFK Layer](../images/keymap-drawer-afk.svg)
+![AFK Layer](../images/keymap-drawer-layer-afk.svg)
 

@@ -20,6 +20,13 @@
 #define COLEMAK_6_LL      &td_lgui          COLEMAK_LL
 #define COLEMAK_6_LR                        COLEMAK_LR        &td_lalt
 
+#define MACROS_6_UL       &none             MACROS_UL
+#define MACROS_6_UR                         MACROS_UR         &none
+#define MACROS_6_HL       &none             MACROS_HL
+#define MACROS_6_HR                         MACROS_HR         &none
+#define MACROS_6_LL       &none             MACROS_LL
+#define MACROS_6_LR                         MACROS_LR         &none
+
 #define NUMBERS_6_UL      &kp UNDER         NUMBERS_UL
 #define NUMBERS_6_UR                        NUMBERS_UR        &td_apos
 #define NUMBERS_6_HL      &td_lctrl         NUMBERS_HL

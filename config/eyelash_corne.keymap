@@ -47,6 +47,14 @@ CUSTOM_LAYER_WITH_SENSOR(Colemak,
   , &encoder_vol
 )
 
+CUSTOM_LAYER_WITH_SENSOR(Macros,
+  MACROS_6_UL                              &kp UP                   MACROS_6_UR
+  MACROS_6_HL                &kp LEFT      &kp ENTER   &kp RIGHT    MACROS_6_HR
+  MACROS_6_LL    &kp SPACE                 &kp DOWN                 MACROS_6_LR
+  MACROS_TL                                                         MACROS_TR
+  , &encoder_vol
+)
+
 CUSTOM_LAYER_WITH_SENSOR(Numbers,
   NUMBERS_6_UL                             &kp UP                   NUMBERS_6_UR
   NUMBERS_6_HL               &kp LEFT      &kp ENTER   &kp RIGHT    NUMBERS_6_HR

@@ -7,10 +7,11 @@ ADD_COMBO(1, BK_BROWSER LL3,            &m_sk_x_all_right,                      
 
 ADD_COMBO(1, BK_BROWSER LH3,            &kp LG(RBKT),                           LAYERS_NORMAL)
 ADD_COMBO(1, BK_BROWSER LH4,            &kp LG(LBKT),                           LAYERS_NORMAL)
+ADD_COMBO(1, BK_BROWSER LH5,            &kp Y_CHROME_TAB_SEARCH,                LAYERS_NORMAL)
 
 ADD_COMBO(1, BK_BROWSER RU1,            &kp Y_CHROME_PROFILES,                  LAYERS_NORMAL)
-ADD_COMBO(1, BK_BROWSER RU2,            &m_is_unread,                           LAYERS_NORMAL)
-ADD_COMBO(1, BK_BROWSER RU3,            &m_in_inbox,                            LAYERS_NORMAL)
+ADD_COMBO(0, BK_BROWSER RU2,            Reserved: Misfires,                     LAYERS_NORMAL)
+ADD_COMBO(0, BK_BROWSER RU3,            Reserved: Misfires,                     LAYERS_NORMAL)
 ADD_COMBO(1, BK_BROWSER RU4,            &kp Y_CHROME_BULK_IMAGE_DOWNLOADER,     LAYERS_NORMAL)
 ADD_COMBO(1, BK_BROWSER RU5,            &kp Y_CHROME_DP_PARANOID,               LAYERS_NORMAL)
 

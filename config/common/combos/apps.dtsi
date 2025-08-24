@@ -1,7 +1,7 @@
 /// ---------------------------------------------------------------------------
 /// Combo: MacOS and utility apps
 
-ADD_COMBO(0, BK_APPS LU5,            Reserved: symmetric,                 LAYERS_NORMAL)
+ADD_COMBO(1, BK_APPS LU5,            &kp Y_BARTENDER_SEARCH,              LAYERS_NORMAL)
 ADD_COMBO(1, BK_APPS LU4,            &kp Y_OKTA,                          LAYERS_NORMAL)
 ADD_COMBO(1, BK_APPS LU3,            &kp Y_MENUBAR,                       LAYERS_NORMAL)
 ADD_COMBO(1, BK_APPS LU2,            &kp Y_DOCK,                          LAYERS_NORMAL)
@@ -13,7 +13,7 @@ ADD_COMBO(1, BK_APPS RU3,            &kp Y_KEYCAST_TOGGLE,                LAYERS
 ADD_COMBO(0, BK_APPS RU4,            XXXXXXXXXX,                          LAYERS_NORMAL)
 ADD_COMBO(0, BK_APPS RU5,            Reserved: inaccessible,              LAYERS_NORMAL)
 
-ADD_COMBO(1, BK_APPS LH5,            &kp Y_BARTENDER_SEARCH,              LAYERS_NORMAL)
+ADD_COMBO(0, BK_APPS LH5,            Reserved: symmetric,                 LAYERS_NORMAL)
 ADD_COMBO(1, BK_APPS LH4,            &kp Y_RAYCAST,                       LAYERS_NORMAL)
 ADD_COMBO(1, BK_APPS LH3,            &kp Y_SHORTCAT,                      LAYERS_NORMAL)
 ADD_COMBO(1, BK_APPS LH2,            &kp Y_ONE_PASSWORD_QUICK_ACCESS,     LAYERS_NORMAL)

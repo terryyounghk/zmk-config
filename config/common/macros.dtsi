@@ -109,12 +109,17 @@ CUSTOM_MACRO(  m_nvim_annotate,                    NVIM_LDR &kp C &kp N)
 #define M_CODE_FN_CALL_ARROW_OPEN                  M_CODE_FN_CALL_ARROW &kp SPACE &kp LBRC &kp RETURN
 #define M_CODE_ASYNC_FN_OPEN                       &kp A &kp S &kp Y &kp N &kp C &kp SPACE M_CODE_FN_CALL_ARROW_OPEN
 
+CUSTOM_MACRO(  m_code_esc_apos,                    &kp BSLH &kp APOS)
 CUSTOM_MACRO(  m_code_esc_dqt,                     &kp BSLH &kp DQT)
 CUSTOM_MACRO(  m_code_esc_fslh,                    &kp BSLH &kp FSLH)
+CUSTOM_MACRO(  m_code_regex_not,                   &kp LBKT &kp CARET &kp RBKT)
+CUSTOM_MACRO(  m_code_md_todo,                     &kp LBKT &kp SPACE &kp RBKT)
+CUSTOM_MACRO(  m_code_md_checked,                  &kp LBKT &kp X &kp RBKT)
 CUSTOM_MACRO(  m_code_lte,                         &kp LT &kp EQUAL)
 CUSTOM_MACRO(  m_code_gte,                         &kp GT &kp EQUAL)
 CUSTOM_MACRO(  m_code_arrow,                       &kp MINUS &kp GT)
 CUSTOM_MACRO(  m_code_literal,                     &kp DOLLAR &kp LBRC &kp RBRC &kp LEFT)
+CUSTOM_MACRO(  m_code_command,                     &kp DOLLAR &kp LPAR &kp RPAR &kp LEFT)
 CUSTOM_MACRO(  m_code_increment_assign,            &kp PLUS &kp EQL)
 CUSTOM_MACRO(  m_code_decrement_assign,            &kp MINUS &kp EQL)
 CUSTOM_MACRO(  m_code_increment,                   &kp PLUS &kp PLUS)
@@ -133,14 +138,32 @@ CUSTOM_MACRO(  m_code_html_comment_open,           &kp LT &kp EXCL &kp MINUS &kp
 CUSTOM_MACRO(  m_code_html_comment_close,          &kp MINUS &kp MINUS &kp GT)
 CUSTOM_MACRO(  m_code_md_code_open,                &kp GRAVE &kp GRAVE &kp GRAVE)
 
-
-/// Browser: Gmail
-CUSTOM_MACRO(  m_is_unread,                        &kp I &kp S &kp COLON &kp U &kp N &kp R &kp E &kp A &kp D)
-CUSTOM_MACRO(  m_in_inbox,                         &kp I &kp N &kp COLON &kp I &kp N &kp B &kp O &kp X)
-
 /// Browser: Surfingkeys
 CUSTOM_MACRO(  m_sk_go_first_tab,                  &kp G &kp N0)
 CUSTOM_MACRO(  m_sk_go_last_tab,                   &kp G &kp DOLLAR)
 CUSTOM_MACRO(  m_sk_x_all_left,                    &kp G &kp X &kp N0)
 CUSTOM_MACRO(  m_sk_x_all_right,                   &kp G &kp X &kp DOLLAR)
 CUSTOM_MACRO(  m_sk_x_all_except,                  &kp G &kp X &kp X)
+
+
+/// Textual: for Macros Layer
+
+// Gmail
+CUSTOM_MACRO(  m_is_unread,                        &kp I &kp S &kp COLON &kp U &kp N &kp R &kp E &kp A &kp D)
+CUSTOM_MACRO(  m_in_inbox,                         &kp I &kp N &kp COLON &kp I &kp N &kp B &kp O &kp X)
+
+// bash/zsh/coding/constants
+CUSTOM_MACRO(  m_verbose,                          &kp CAPS &kp V &kp E &kp R &kp B &kp O &kp S &kp E &kp CAPS)
+CUSTOM_MACRO(  m_dryrun,                           &kp D &kp R &kp Y &kp UNDER &kp R &kp U &kp N)
+CUSTOM_MACRO(  m_debug,                            &kp CAPS &kp D &kp E &kp B &kp U &kp G &kp CAPS)
+CUSTOM_MACRO(  m_shebang,                          &kp HASH &kp EXCL &kp FSLH &kp B &kp I &kp N &kp FSLH &kp Z &kp S &kp H)
+CUSTOM_MACRO(  m_yyyymmdd,                         &kp CAPS &kp Y &kp Y &kp Y &kp Y &kp MINUS &kp M &kp M &kp MINUS &kp D &kp D &kp CAPS)
+CUSTOM_MACRO(  m_hhmmss,                           &kp H &kp H &kp COLON &kp M &kp M &kp COLON &kp S &kp S)
+CUSTOM_MACRO(  m_maxrows,                          &kp DOT &kp M &kp A &kp X &kp R &kp O &kp W &kp S &kp SPACE &kp N1 &kp N0 &kp N0 &kp N0)
+
+// replies/comments
+CUSTOM_MACRO(  m_lgtmtks,                          &kp CAPS &kp L &kp G &kp T &kp M &kp CAPS &kp COMMA &kp SPACE &kp T &kp H &kp A &kp N &kp K &kp S)
+
+// other text/strings/phrases
+CUSTOM_MACRO(  m_nicenano,                         &kp N &kp I &kp C &kp E &kp EXCL &kp N &kp A &kp N &kp O)
+CUSTOM_MACRO(  m_niceview,                         &kp N &kp I &kp C &kp E &kp EXCL &kp V &kp I &kp E &kp W)
