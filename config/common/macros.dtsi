@@ -153,16 +153,22 @@ CUSTOM_MACRO(  m_is_unread,                        &kp I &kp S &kp COLON &kp U &
 CUSTOM_MACRO(  m_in_inbox,                         &kp I &kp N &kp COLON &kp I &kp N &kp B &kp O &kp X)
 
 // bash/zsh/coding/constants
-CUSTOM_MACRO(  m_verbose,                          &kp CAPS &kp V &kp E &kp R &kp B &kp O &kp S &kp E &kp CAPS)
+CUSTOM_MACRO(  m_verbose,                          &macro_press &kp LSHIFT &macro_tap &kp V &kp E &kp R &kp B &kp O &kp S &kp E &macro_release &kp LSHIFT)
 CUSTOM_MACRO(  m_dryrun,                           &kp D &kp R &kp Y &kp UNDER &kp R &kp U &kp N)
-CUSTOM_MACRO(  m_debug,                            &kp CAPS &kp D &kp E &kp B &kp U &kp G &kp CAPS)
+CUSTOM_MACRO(  m_debug,                            &macro_press &kp LSHIFT &macro_tap &kp D &kp E &kp B &kp U &kp G &macro_release &kp LSHIFT)
 CUSTOM_MACRO(  m_shebang,                          &kp HASH &kp EXCL &kp FSLH &kp B &kp I &kp N &kp FSLH &kp Z &kp S &kp H)
-CUSTOM_MACRO(  m_yyyymmdd,                         &kp CAPS &kp Y &kp Y &kp Y &kp Y &kp MINUS &kp M &kp M &kp MINUS &kp D &kp D &kp CAPS)
+CUSTOM_MACRO(  m_yyyymmdd,                         &macro_press &kp LSHIFT &macro_tap &kp Y &kp Y &kp Y &kp Y &kp MINUS &kp M &kp M &kp MINUS &kp D &kp D &macro_release &kp LSHIFT)
 CUSTOM_MACRO(  m_hhmmss,                           &kp H &kp H &kp COLON &kp M &kp M &kp COLON &kp S &kp S)
 CUSTOM_MACRO(  m_maxrows,                          &kp DOT &kp M &kp A &kp X &kp R &kp O &kp W &kp S &kp SPACE &kp N1 &kp N0 &kp N0 &kp N0)
+CUSTOM_MACRO(  m_linksys,                          &kp N1 &kp N9 &kp N2 &kp DOT &kp N1 &kp N6 &kp N8 &kp DOT &kp N1 &kp DOT &kp N1)
+CUSTOM_MACRO(  m_localhost,                        &kp N1 &kp N2 &kp N7 &kp DOT &kp N0 &kp DOT &kp N0 &kp DOT &kp N1)
+CUSTOM_MACRO(  m_http,                             &kp H &kp T &kp T &kp P &kp COLON &kp FSLH &kp FSLH)
+CUSTOM_MACRO(  m_https,                            &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH)
+CUSTOM_MACRO(  m_sudo,                             &kp S &kp U &kp D &kp O &kp SPACE &kp EXCL &kp EXCL)
+CUSTOM_MACRO(  m_strict,                           &kp S &kp E &kp T &kp SPACE &kp MINUS &kp E &kp U &kp O &kp SPACE &kp P &kp I &kp P &kp E &kp F &kp A &kp I &kp L)
 
 // replies/comments
-CUSTOM_MACRO(  m_lgtmtks,                          &kp CAPS &kp L &kp G &kp T &kp M &kp CAPS &kp COMMA &kp SPACE &kp T &kp H &kp A &kp N &kp K &kp S)
+CUSTOM_MACRO(  m_lgtmtks,                          &macro_press &kp LSHIFT &macro_tap &kp L &kp G &kp T &kp M &macro_release &kp LSHIFT &macro_tap &kp COMMA &kp SPACE &kp T &kp H &kp A &kp N &kp K &kp S)
 
 // other text/strings/phrases
 CUSTOM_MACRO(  m_nicenano,                         &kp N &kp I &kp C &kp E &kp EXCL &kp N &kp A &kp N &kp O)

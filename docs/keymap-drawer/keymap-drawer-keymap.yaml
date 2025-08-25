@@ -65,19 +65,19 @@ layers:
   Layer Macros:
     - [
         {type: held, t: $$mdi:bash$$, h: "shebang"},
-        null,
+        {t: $$mdi:web$$, h: "http://"},
         null,
         {t: $$mdi:bash$$, h: "DRY_RUN"},
         null,
         {t: $$mdi:code-block-braces$$, h: "YYYY-MM-DD"},
         {t: $$mdi:gmail$$, h: "Unread"},
         {t: $$mdi:gmail$$, h: "Inbox"},
-        null,
-        null
+        {t: $$mdi:console$$, h: "sudo!!"},
+        {t: $$mdi:ip$$, h: "192.168.1.1"},
       ]
     - [
         {t: $$mdi:cellphone-screenshot$$, h: "nice!nano"},
-        null,
+        {t: $$mdi:web$$, h: "https://"},
         {t: $$mdi:bug$$, h: "DEBUG"},
         null,
         null,
@@ -85,19 +85,19 @@ layers:
         null,
         null,
         {type: held, t: $$mdi:message-reply-text$$, h: "LGTM,tks"},
-        null
+        {t: $$mdi:ip$$, h: "127.0.0.1"},
       ]
     - [
         {t: $$mdi:cellphone-screenshot$$, h: "nice!view"},
         {t: $$mdi:duck$$, h: ".maxrows"},
-        null,
+        {t: $$mdi:bash$$, h: "strict"},
         {t: $$mdi:bash$$, h: "VERBOSE"},
         null,
         null,
         null,
         null,
         null,
-        null
+        null,
       ]
     - [
         {type: ghost},

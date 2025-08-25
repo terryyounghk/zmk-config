@@ -62,17 +62,17 @@
 
                     /* ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ */
 #define MACROS_UL \
-                          &m_shebang     &none          &none          &m_dryrun      &none
+                          &m_shebang     &m_http        &none          &m_dryrun      &none
 #define MACROS_UR \
-                                                                                                           &m_yyyymmdd    &m_is_unread   &m_in_inbox    &none          &none
+                                                                                                           &m_yyyymmdd    &m_is_unread   &m_in_inbox    &m_sudo        &m_linksys
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define MACROS_HL \
-                          &m_nicenano    &none          &m_debug       &none          &none
+                          &m_nicenano    &m_https       &m_debug       &none          &none
 #define MACROS_HR \
-                                                                                                           &m_hhmmss      &none          &none          &m_lgtmtks     &none
+                                                                                                           &m_hhmmss      &none          &none          &m_lgtmtks     &m_localhost
                     /* ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ */
 #define MACROS_LL \
-                          &m_niceview    &m_maxrows     &none          &m_verbose     &none
+                          &m_niceview    &m_maxrows     &m_strict      &m_verbose     &none
 #define MACROS_LR \
                                                                                                            &none          &none          &none          &none          &none
                     /* ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯ */
