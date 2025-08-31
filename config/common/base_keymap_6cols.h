@@ -1,24 +1,24 @@
 // extends base_keymap.h on both left and ride sides
-#define QWERTY_6_UL       &kp UNDER         QWERTY_UL
-#define QWERTY_6_UR                         QWERTY_UR         &td_apos
-#define QWERTY_6_HL       &td_lctrl         QWERTY_HL
-#define QWERTY_6_HR                         QWERTY_HR         &td_lctrl
-#define QWERTY_6_LL       &td_lgui          QWERTY_LL
-#define QWERTY_6_LR                         QWERTY_LR         &td_lalt
+#define QWERTY_6_UL       &kp ESC           QWERTY_UL
+#define QWERTY_6_UR                         QWERTY_UR         &kp LC(C)
+#define QWERTY_6_HL       &sk LCTRL         QWERTY_HL
+#define QWERTY_6_HR                         QWERTY_HR         &sk LCTRL
+#define QWERTY_6_LL       &sk LGUI          QWERTY_LL
+#define QWERTY_6_LR                         QWERTY_LR         &sk LALT
 
-#define HARMONY_6_UL      &kp UNDER         HARMONY_UL
-#define HARMONY_6_UR                        HARMONY_UR        &td_apos
-#define HARMONY_6_HL      &td_lctrl         HARMONY_HL
-#define HARMONY_6_HR                        HARMONY_HR        &td_lctrl
-#define HARMONY_6_LL      &td_lgui          HARMONY_LL
-#define HARMONY_6_LR                        HARMONY_LR        &td_lalt
+#define HARMONY_6_UL      &kp ESC           HARMONY_UL
+#define HARMONY_6_UR                        HARMONY_UR        &kp LC(C)
+#define HARMONY_6_HL      &sk LCTRL         HARMONY_HL
+#define HARMONY_6_HR                        HARMONY_HR        &sk LCTRL
+#define HARMONY_6_LL      &sk LGUI          HARMONY_LL
+#define HARMONY_6_LR                        HARMONY_LR        &sk LALT
 
-#define COLEMAK_6_UL      &kp UNDER         COLEMAK_UL
-#define COLEMAK_6_UR                        COLEMAK_UR        &td_apos
-#define COLEMAK_6_HL      &td_lctrl         COLEMAK_HL
-#define COLEMAK_6_HR                        COLEMAK_HR        &td_lctrl
-#define COLEMAK_6_LL      &td_lgui          COLEMAK_LL
-#define COLEMAK_6_LR                        COLEMAK_LR        &td_lalt
+#define COLEMAK_6_UL      &kp ESC           COLEMAK_UL
+#define COLEMAK_6_UR                        COLEMAK_UR        &kp LC(C)
+#define COLEMAK_6_HL      &sk LCTRL         COLEMAK_HL
+#define COLEMAK_6_HR                        COLEMAK_HR        &sk LCTRL
+#define COLEMAK_6_LL      &sk LGUI          COLEMAK_LL
+#define COLEMAK_6_LR                        COLEMAK_LR        &sk LALT
 
 #define MACROS_6_UL       &none             MACROS_UL
 #define MACROS_6_UR                         MACROS_UR         &none
@@ -27,40 +27,40 @@
 #define MACROS_6_LL       &none             MACROS_LL
 #define MACROS_6_LR                         MACROS_LR         &none
 
-#define NUMBERS_6_UL      &kp UNDER         NUMBERS_UL
-#define NUMBERS_6_UR                        NUMBERS_UR        &td_apos
-#define NUMBERS_6_HL      &td_lctrl         NUMBERS_HL
-#define NUMBERS_6_HR                        NUMBERS_HR        &td_lctrl
-#define NUMBERS_6_LL      &td_lgui          NUMBERS_LL
-#define NUMBERS_6_LR                        NUMBERS_LR        &td_lalt
+#define NUMBERS_6_UL      &kp ESC           NUMBERS_UL
+#define NUMBERS_6_UR                        NUMBERS_UR        &kp LC(C)
+#define NUMBERS_6_HL      &sk LCTRL         NUMBERS_HL
+#define NUMBERS_6_HR                        NUMBERS_HR        &sk LCTRL
+#define NUMBERS_6_LL      &sk LGUI          NUMBERS_LL
+#define NUMBERS_6_LR                        NUMBERS_LR        &sk LALT
 
-#define NUMPAD_6_UL       &kp UNDER         NUMPAD_UL
-#define NUMPAD_6_UR                         NUMPAD_UR         &td_apos
-#define NUMPAD_6_HL       &td_lctrl         NUMPAD_HL
-#define NUMPAD_6_HR                         NUMPAD_HR         &td_lctrl
-#define NUMPAD_6_LL       &td_lgui          NUMPAD_LL
-#define NUMPAD_6_LR                         NUMPAD_LR         &td_lalt
+#define NUMPAD_6_UL       &kp ESC           NUMPAD_UL
+#define NUMPAD_6_UR                         NUMPAD_UR         &kp LC(C)
+#define NUMPAD_6_HL       &sk LCTRL         NUMPAD_HL
+#define NUMPAD_6_HR                         NUMPAD_HR         &sk LCTRL
+#define NUMPAD_6_LL       &sk LGUI          NUMPAD_LL
+#define NUMPAD_6_LR                         NUMPAD_LR         &sk LALT
 
-#define SYMBOLS_6_UL      &kp UNDER         SYMBOLS_UL
-#define SYMBOLS_6_UR                        SYMBOLS_UR        &td_apos
-#define SYMBOLS_6_HL      &td_lctrl         SYMBOLS_HL
-#define SYMBOLS_6_HR                        SYMBOLS_HR        &td_lctrl
-#define SYMBOLS_6_LL      &td_lgui          SYMBOLS_LL
-#define SYMBOLS_6_LR                        SYMBOLS_LR        &td_lalt
+#define SYMBOLS_6_UL      &kp ESC           SYMBOLS_UL
+#define SYMBOLS_6_UR                        SYMBOLS_UR        &kp LC(C)
+#define SYMBOLS_6_HL      &sk LCTRL         SYMBOLS_HL
+#define SYMBOLS_6_HR                        SYMBOLS_HR        &sk LCTRL
+#define SYMBOLS_6_LL      &sk LGUI          SYMBOLS_LL
+#define SYMBOLS_6_LR                        SYMBOLS_LR        &sk LALT
 
-#define CODING_6_UL       &kp UNDER         CODING_UL
-#define CODING_6_UR                         CODING_UR         &td_apos
-#define CODING_6_HL       &td_lctrl         CODING_HL
-#define CODING_6_HR                         CODING_HR         &td_lctrl
-#define CODING_6_LL       &td_lgui          CODING_LL
-#define CODING_6_LR                         CODING_LR         &td_lalt
+#define CODING_6_UL       &kp ESC           CODING_UL
+#define CODING_6_UR                         CODING_UR         &kp LC(C)
+#define CODING_6_HL       &sk LCTRL         CODING_HL
+#define CODING_6_HR                         CODING_HR         &sk LCTRL
+#define CODING_6_LL       &sk LGUI          CODING_LL
+#define CODING_6_LR                         CODING_LR         &sk LALT
 
-#define NAV_6_UL          &kp UNDER         NAV_UL
-#define NAV_6_UR                            NAV_UR            &td_apos
-#define NAV_6_HL          &td_lctrl         NAV_HL
-#define NAV_6_HR                            NAV_HR            &td_lctrl
-#define NAV_6_LL          &td_lgui          NAV_LL
-#define NAV_6_LR                            NAV_LR            &td_lalt
+#define NAV_6_UL          &kp ESC           NAV_UL
+#define NAV_6_UR                            NAV_UR            &kp LC(C)
+#define NAV_6_HL          &sk LCTRL         NAV_HL
+#define NAV_6_HR                            NAV_HR            &sk LCTRL
+#define NAV_6_LL          &sk LGUI          NAV_LL
+#define NAV_6_LR                            NAV_LR            &sk LALT
 
 #if IS_ENABLED(CONFIG_ZMK_RGB_UNDERGLOW)
 #define CONTROLS_6_UL     &rgb_ug RGB_BRI   CONTROLS_UL
@@ -72,8 +72,8 @@
 #else
 #define CONTROLS_6_UL     &sys_reset        CONTROLS_UL
 #define CONTROLS_6_UR                       CONTROLS_UR       &sys_reset
-#define CONTROLS_6_HL     &td_lctrl         CONTROLS_HL
-#define CONTROLS_6_HR                       CONTROLS_HR       &td_lctrl
+#define CONTROLS_6_HL     &sk LCTRL         CONTROLS_HL
+#define CONTROLS_6_HR                       CONTROLS_HR       &sk LCTRL
 #define CONTROLS_6_LL     &bootloader       CONTROLS_LL
 #define CONTROLS_6_LR                       CONTROLS_LR       &bootloader
 #endif

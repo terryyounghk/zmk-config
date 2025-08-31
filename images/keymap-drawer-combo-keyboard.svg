@@ -846,26 +846,22 @@ text.label {
 <text x="670" y="47" class="combo tap">Reset</text>
 </g>
 <g class="combo combopos-4">
-<path d="M214,115 h-106 a6.0,6.0 0 0 0 -6.0,6.0 v35" class="combo"/>
-<path d="M214,115 h-38 a6.0,6.0 0 0 0 -6.0,6.0 v27" class="combo"/>
-<path d="M214,115 h86 a6.0,6.0 0 0 1 6.0,6.0 v44" class="combo"/>
-<rect rx="6" ry="6" x="187" y="100" width="55" height="30" class="combo"/>
-<text x="214" y="115" class="combo tap">BT-Clear</text>
+<path d="M442,115 h-334 a6.0,6.0 0 0 0 -6.0,6.0 v35" class="combo"/>
+<path d="M442,115 h-266 a6.0,6.0 0 0 0 -6.0,6.0 v27" class="combo"/>
+<path d="M442,115 h-130 a6.0,6.0 0 0 0 -6.0,6.0 v44" class="combo"/>
+<path d="M442,115 h130 a6.0,6.0 0 0 1 6.0,6.0 v44" class="combo"/>
+<path d="M442,115 h266 a6.0,6.0 0 0 1 6.0,6.0 v27" class="combo"/>
+<path d="M442,115 h334 a6.0,6.0 0 0 1 6.0,6.0 v35" class="combo"/>
+<rect rx="6" ry="6" x="414" y="100" width="55" height="30" class="combo"/>
+<text x="442" y="115" class="combo tap">BT_CLR</text>
 </g>
 <g class="combo combopos-5">
-<path d="M670,115 h-86 a6.0,6.0 0 0 0 -6.0,6.0 v44" class="combo"/>
-<path d="M670,115 h38 a6.0,6.0 0 0 1 6.0,6.0 v27" class="combo"/>
-<path d="M670,115 h106 a6.0,6.0 0 0 1 6.0,6.0 v35" class="combo"/>
-<rect rx="6" ry="6" x="642" y="100" width="55" height="30" class="combo"/>
-<text x="670" y="115" class="combo tap">BT-Clear</text>
-</g>
-<g class="combo combopos-6">
 <path d="M442,272 l-61,0" class="combo"/>
 <path d="M442,272 l61,0" class="combo"/>
 <rect rx="6" ry="6" x="407" y="257" width="70" height="30" class="combo"/>
 <text x="442" y="272" class="combo tap">CapsLock</text>
 </g>
-<g class="combo combopos-7">
+<g class="combo combopos-6">
 <path d="M442,314 h-157 a6.0,6.0 0 0 1 -6.0,-6.0 v-27" class="combo"/>
 <path d="M442,314 h157 a6.0,6.0 0 0 0 6.0,-6.0 v-27" class="combo"/>
 <rect rx="6" ry="6" x="407" y="299" width="70" height="30" class="combo"/>

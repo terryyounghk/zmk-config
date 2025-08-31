@@ -2,8 +2,12 @@
 /// Combo: High-priority combos mostly for all layers
 
 ADD_COMBO(1, LL5 LL2 RL5 RL2,    &tog AFK,                      LAYERS_ALL)
-
 ADD_COMBO(1, LH5 LH2 RH5 RH2,    &m_reset_layers,               LAYERS_GAMING)
+ADD_COMBO(1, LU5 LU2 RU5 RU2,    &bt BT_CLR,                    LAYERS_NORMAL)
+ADD_COMBO(0, LL4 LL3 LL1 RR4 RR3 RR1, &bt BT_CLR,               LAYERS_NORMAL)
+
+/// ---------------------------------------------------------------------------
+
 ADD_COMBO(1, RH4 RH2,            &m_reset_layers,               LAYERS_NORMAL)
 ADD_COMBO(1, LH4 LH2,            &m_reset_layers,               LAYERS_NORMAL)
 
@@ -12,6 +16,18 @@ ADD_COMBO(1, RH3 RH1,            &kp Y_NEXT_WINDOW,             LAYERS_ALL)
 
 ADD_COMBO(1, LH4 LH1,            &kp Y_NEXT_APPLICATION,        LAYERS_ALL)
 ADD_COMBO(1, RH4 RH1,            &kp Y_NEXT_APPLICATION,        LAYERS_ALL)
+
+/// ---------------------------------------------------------------------------
+
+ADD_COMBO(1, RL4 RL2,            &kp SPACE,                     LAYERS_NORMAL)
+ADD_COMBO(1, LL4 LL2,            &kp SPACE,                     LAYERS_NORMAL)
+
+ADD_COMBO(1, LL3 LL1,            &kp RETURN,                    LAYERS_NORMAL)
+ADD_COMBO(1, RL3 RL1,            &kp RETURN,                    LAYERS_NORMAL)
+
+ADD_COMBO(1, LL4 LL1,            &kp LS(RETURN),                LAYERS_NORMAL)
+ADD_COMBO(1, RL4 RL1,            &kp LS(RETURN),                LAYERS_NORMAL)
+
 
 /// ---------------------------------------------------------------------------
 /// Combo: Layouts
@@ -38,17 +54,8 @@ ADD_COMBO(1, RL4 RL3 RL2,        &kp Y_LOCK_SCREEN,             LAYERS_NORMAL)
 
 ADD_COMBO(1, RU4 RU3 RU1,        &bootloader,                   LAYERS_NORMAL)
 ADD_COMBO(1, RH4 RH3 RH1,        &sys_reset,                    LAYERS_NORMAL)
-ADD_COMBO(1, RL4 RL3 RL1,        &bt BT_CLR,                    LAYERS_NORMAL)
+ADD_COMBO(0, RL4 RL3 RL1,        &bt BT_CLR,                    LAYERS_NORMAL)
 
 ADD_COMBO(1, LU4 LU3 LU1,        &bootloader,                   LAYERS_NORMAL)
 ADD_COMBO(1, LH4 LH3 LH1,        &sys_reset,                    LAYERS_NORMAL)
-ADD_COMBO(1, LL4 LL3 LL1,        &bt BT_CLR,                    LAYERS_NORMAL)
-
-/// ---------------------------------------------------------------------------
-/// Combo: Misc
-
-ADD_COMBO(1, RU2 RH4,            &kp MINUS,                     LAYERS_NORMAL)
-ADD_COMBO(1, LU2 LH4,            &kp EQUAL,                     LAYERS_NORMAL)
-
-ADD_COMBO(1, RH2 RU4,            &kp MINUS,                     LAYERS_NORMAL)
-ADD_COMBO(1, LH2 LU4,            &kp EQUAL,                     LAYERS_NORMAL)
+ADD_COMBO(0, LL4 LL3 LL1,        &bt BT_CLR,                    LAYERS_NORMAL)

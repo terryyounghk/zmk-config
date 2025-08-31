@@ -22,7 +22,7 @@ ADD_COMBO(1, RL4 LL1,            &kp Y_VSCODE_GITLENS_TOGGLE_BLAME,            L
 
 ADD_COMBO(1, RL4 RH1,            &kp Y_VSCODE_COMMENT_LINE,                    LAYERS_NORMAL)
 ADD_COMBO(1, RL4 RH2,            &kp Y_VSCODE_SURROUND_WITH,                   LAYERS_NORMAL)
-ADD_COMBO(1, RL4 RH3,            &kp Y_VSCODE_SURROUND_WITH_COMMENT,           LAYERS_NORMAL)
+ADD_COMBO(0, RL4 RH3,            &kp Y_VSCODE_SURROUND_WITH_COMMENT,           LAYERS_NORMAL)
 
 /// ---------------------------------------------------------------------------
 /// Combo: H/J/K/L + ? vscode navigation / adjustments

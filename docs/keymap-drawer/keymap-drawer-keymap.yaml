@@ -971,40 +971,40 @@ layers:
 
   Contextual Combos - Browser:
     - [
-        $$mdi:block-helper$$,
-        $$mdi:block-helper$$,
-        $$mdi:block-helper$$,
-        $$mdi:block-helper$$,
-        $$mdi:block-helper$$,
-        $$mdi:block-helper$$,
-        $$mdi:block-helper$$,
-        $$mdi:block-helper$$,
-        {t: $$mdi:image-multiple-outline$$, h: "Download"},
-        {t: $$mdi:image-off-outline$$, h: "Paranoid"}
+        {type: rhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: rhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: rhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: rhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: rhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: lhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: lhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: lhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: lhs, t: "$$mdi:image-multiple-outline$$", h: "Download"},
+        {type: lhs, t: "$$mdi:image-off-outline$$", h: "Paranoid"},
       ]
     - [
-        {t: $$mdi:google-chrome$$, h: "TabSearch"},
-        {t: $$mdi:google-chrome$$, h: "Back"},
-        {t: $$mdi:google-chrome$$, h: "Forward"},
-        $$mdi:block-helper$$,
-        $$mdi:block-helper$$,
-        {t: $$mdi:google-chrome$$, h: "First Tab"},
-        {t: $$mdi:google-chrome$$, h: "Prev Tab"},
-        {t: $$mdi:google-chrome$$, h: "Next Tab"},
-        {t: $$mdi:google-chrome$$, h: "Last Tab"},
-        $$mdi:block-helper$$,
+        {type: rhs, t: "$$mdi:google-chrome$$", h: "TabSearch"},
+        {type: rhs, t: "$$mdi:google-chrome$$", h: "Back"},
+        {type: rhs, t: "$$mdi:google-chrome$$", h: "Forward"},
+        {type: rhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: rhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: lhs, t: "$$mdi:google-chrome$$", h: "First Tab"},
+        {type: lhs, t: "$$mdi:google-chrome$$", h: "Prev Tab"},
+        {type: lhs, t: "$$mdi:google-chrome$$", h: "Next Tab"},
+        {type: lhs, t: "$$mdi:google-chrome$$", h: "Last Tab"},
+        {type: lhs, t: "$$mdi:block-helper$$", h: ""},
       ]
     - [
-        {t: $$mdi:google-chrome$$, h: "[x] Left"},
-        {t: $$mdi:google-chrome$$, h: "[x] Others"},
-        {t: $$mdi:google-chrome$$, h: "[x] Right"},
-        $$mdi:block-helper$$,
-        {type: held, t: "b"},
-        $$mdi:block-helper$$,
-        {t: $$mdi:application-variable-outline$$, h: "Name Win"},
-        {t: $$mdi:compare$$, h: "Dark"},
-        {t: $$mdi:google-translate$$, h: "Translate"},
-        {t: $$mdi:qrcode$$, h: "Gen QR"}
+        {type: rhs, t: "$$mdi:google-chrome$$", h: "[x] Left"},
+        {type: rhs, t: "$$mdi:google-chrome$$", h: "[x] Others"},
+        {type: rhs, t: "$$mdi:google-chrome$$", h: "[x] Right"},
+        {type: rhs, t: "$$mdi:block-helper$$", h: ""},
+        {type: lhs-main, t: "b"},
+        {type: rhs-main, t: "n"},
+        {type: lhs, t: "$$mdi:application-variable-outline$$", h: "Name Win"},
+        {type: lhs, t: "$$mdi:compare$$", h: "Dark"},
+        {type: lhs, t: "$$mdi:google-translate$$", h: "Translate"},
+        {type: lhs, t: "$$mdi:qrcode$$", h: "Gen QR"}
       ]
     - [
         {type: ghost},
@@ -1248,8 +1248,7 @@ combos:
   - {l: ["Contextual Combos - Keyboard"], p: [11, 12, 14], k: "Reset", a: top, offset: 0.3, slide: -0.1, width: 55}
   - {l: ["Contextual Combos - Keyboard"], p: [15, 17, 18], k: "Reset", a: top, offset: 0.3, slide: -0.1, width: 55}
 
-  - {l: ["Contextual Combos - Keyboard"], p: [21, 22, 24], k: "BT-Clear", a: top, offset: 0.3, slide: -0.1, width: 55}
-  - {l: ["Contextual Combos - Keyboard"], p: [25, 27, 28], k: "BT-Clear", a: top, offset: 0.3, slide: -0.1, width: 55}
+  - {l: ["Contextual Combos - Keyboard"], p: [21, 22, 24, 25, 27, 28], k: "BT_CLR", a: top, offset: 0.3, width: 55}
 
   - {l: ["Contextual Combos - Keyboard"], p: [32, 33], k: "CapsLock", a: mid, width: 70}
   - {l: ["Contextual Combos - Keyboard"], p: [31, 34], k: "CapsWord", a: bottom, offset: 0.3, width: 70}

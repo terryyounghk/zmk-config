@@ -7,8 +7,8 @@ ADD_COMBO(1, LT1 RT2,                  &sl CODING,                   LAYERS_NORM
 /// Combo: Coding: tmux
 
 // tmux: leader
-ADD_COMBO(1, BK_TMUX_LLDR,             TMUX_PFX,                     LAYERS_NORMAL)
-ADD_COMBO(1, BK_TMUX_RLDR,             TMUX_PFX,                     LAYERS_NORMAL)
+/* ADD_COMBO(1, BK_TMUX_LLDR,             TMUX_PFX,                     LAYERS_NORMAL) */
+/* ADD_COMBO(1, BK_TMUX_RLDR,             TMUX_PFX,                     LAYERS_NORMAL) */
 
 // tmux: window
 ADD_COMBO(1, BK_TMUX_CBK_L RU1,        &m_tmux_move_window_left,     LAYERS_NORMAL)
@@ -60,7 +60,8 @@ ADD_COMBO(1, BK_NEOVIM_R LU1,          &kp Y_NVIM_TERMINAL,          LAYERS_NORM
 ADD_COMBO(1, BK_NEOVIM_L RU1,          &m_nvim_workspace_symbols,    LAYERS_NORMAL)
 ADD_COMBO(1, BK_NEOVIM_L RU2,          &m_nvim_redo,                 LAYERS_NORMAL)
 ADD_COMBO(1, BK_NEOVIM_L RU3,          &m_nvim_quickfix_list,        LAYERS_NORMAL)
-ADD_COMBO(1, BK_NEOVIM_L RU4,          &m_nvim_overseer,             LAYERS_NORMAL) ADD_COMBO(1, BK_NEOVIM_L RU5,          &m_nvim_insert_calc_results,  LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RU4,          &m_nvim_overseer,             LAYERS_NORMAL)
+ADD_COMBO(1, BK_NEOVIM_L RU5,          &m_nvim_insert_calc_results,  LAYERS_NORMAL)
 
 ADD_COMBO(1, BK_NEOVIM_R LH5,          &m_nvim_copilot_chat,         LAYERS_NORMAL)
 ADD_COMBO(1, BK_NEOVIM_R LH4,          &kp Y_NVIM_SAVE,              LAYERS_NORMAL)

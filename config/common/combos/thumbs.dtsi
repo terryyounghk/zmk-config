@@ -32,10 +32,10 @@ ADD_COMBO(1, BK_SLR RU4,            &sl NUMPAD,                    LAYERS_NORMAL
 ADD_COMBO(1, BK_SLR RU5,            &sl CONTROLS,                  LAYERS_NORMAL)
 
 ADD_COMBO(1, BK_SLR RH1,            &sl NAV,                       LAYERS_NORMAL)
-ADD_COMBO(1, BK_SKR RH2,            &sk RSHIFT,                    LAYERS_NORMAL)
-ADD_COMBO(1, BK_SKR RH3,            &sk RGUI,                      LAYERS_NORMAL)
-ADD_COMBO(1, BK_SKR RH4,            &sk RALT,                      LAYERS_NORMAL)
-ADD_COMBO(1, BK_SKR RH5,            &sk RCTRL,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH2,            &sk LSHIFT,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH3,            &sk LGUI,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH4,            &sk LALT,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_SKR RH5,            &sk LCTRL,                     LAYERS_NORMAL)
 
 ADD_COMBO(1, BK_SKR RL1,            &sk LHYPER,                    LAYERS_NORMAL)
 ADD_COMBO(1, BK_SKR RL2,            &sk LC(LA(LGUI)),              LAYERS_NORMAL)
@@ -111,10 +111,10 @@ ADD_COMBO(1, BK_TGR RU4,            &tog NUMPAD,                   LAYERS_NORMAL
 ADD_COMBO(1, BK_TGR RU5,            &tog CONTROLS,                 LAYERS_NORMAL)
 
 ADD_COMBO(1, BK_TGR RH1,            &tog NAV,                      LAYERS_NORMAL)
-ADD_COMBO(1, BK_KTR RH2,            &kt RSHIFT,                    LAYERS_NORMAL)
-ADD_COMBO(1, BK_KTR RH3,            &kt RGUI,                      LAYERS_NORMAL)
-ADD_COMBO(1, BK_KTR RH4,            &kt RALT,                      LAYERS_NORMAL)
-ADD_COMBO(1, BK_KTR RH5,            &kt RCTRL,                     LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH2,            &kt LSHIFT,                    LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH3,            &kt LGUI,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH4,            &kt LALT,                      LAYERS_NORMAL)
+ADD_COMBO(1, BK_KTR RH5,            &kt LCTRL,                     LAYERS_NORMAL)
 
 ADD_COMBO(1, BK_KTR RL1,            &kt LHYPER,                    LAYERS_NORMAL)
 ADD_COMBO(1, BK_KTR RL2,            &kt LC(LA(LGUI)),              LAYERS_NORMAL)

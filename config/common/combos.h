@@ -24,7 +24,8 @@
 #define BK_CODING_L             LT1 // unused but reserved
 #define BK_CODING_R             RT1 // unused but reserved
 #define BK_CAPTURE              LH4 LL3
-#define BK_BROWSER              LL1
+#define BK_BROWSER_L            LL1
+#define BK_BROWSER_R            RL1
 
 // different combos to trigger the same tmux leader key
 #define BK_TMUX_LLDR            LH4 LL2
